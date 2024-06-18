@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_8d60c5596adeee824ef0528b6b22af4c" kind="dir">
+    <compoundname>doc/source/dev/examples</compoundname>
+    <innerfile refid="doxy__class_8hpp">doxy_class.hpp</innerfile>
+    <innerfile refid="doxy__func_8h">doxy_func.h</innerfile>
+    <innerfile refid="doxy__rst_8h">doxy_rst.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="doc/source/dev/examples/"/>
+  </compounddef>
+</doxygen>

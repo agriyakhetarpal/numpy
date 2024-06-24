@@ -61,7 +61,7 @@
     <link rel="prev" title="numpy.fft.fftn" href="numpy.fft.fftn.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jun 18, 2024"/>
+    <meta name="docbuild:last-update" content="Jun 24, 2024"/>
   </head>
   
   
@@ -692,8 +692,8 @@ the input along the specified dimension.  Although this is the common
 approach, it might lead to surprising results.  If another form of zero
 padding is desired, it must be performed before <a class="reference internal" href="#numpy.fft.ifftn" title="numpy.fft.ifftn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifftn</span></code></a> is called.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="1cce8f00-3e3f-41de-a6f7-2aff03673086">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('1cce8f00-3e3f-41de-a6f7-2aff03673086','ce2240f6-aec9-4b76-9317-46e76205162a','a9261c89-8d08-4908-b10d-c7aad12d8291','../../lite/tree/../notebooks/?path=f15d400b_79ab_46ed_911f_0881fafdc125.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="a67b1130-887a-49dc-8ccf-533f5f5245c4">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a67b1130-887a-49dc-8ccf-533f5f5245c4','69f6b82b-54c4-4e6f-8e38-a2e3ae9d004b','26a666ed-892f-40bd-8b7d-18a64c50ac40','../../lite/tree/../notebooks/?path=33c6da8b_6b57_48c8_84ef_88ae72bf3730.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifftn</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftn</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,)),</span> <span class="n">axes</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
@@ -718,7 +718,7 @@ padding is desired, it must be performed before <a class="reference internal" hr
 </figure>
 </div>
 </div>
-<div id="a9261c89-8d08-4908-b10d-c7aad12d8291" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('1cce8f00-3e3f-41de-a6f7-2aff03673086','a9261c89-8d08-4908-b10d-c7aad12d8291')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('1cce8f00-3e3f-41de-a6f7-2aff03673086','a9261c89-8d08-4908-b10d-c7aad12d8291')">Open In Tab</button></div><div id="ce2240f6-aec9-4b76-9317-46e76205162a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="26a666ed-892f-40bd-8b7d-18a64c50ac40" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a67b1130-887a-49dc-8ccf-533f5f5245c4','26a666ed-892f-40bd-8b7d-18a64c50ac40')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a67b1130-887a-49dc-8ccf-533f5f5245c4','26a666ed-892f-40bd-8b7d-18a64c50ac40')">Open In Tab</button></div><div id="69f6b82b-54c4-4e6f-8e38-a2e3ae9d004b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

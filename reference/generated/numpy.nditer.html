@@ -61,7 +61,7 @@
     <link rel="prev" title="numpy.fill_diagonal" href="numpy.fill_diagonal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jun 18, 2024"/>
+    <meta name="docbuild:last-update" content="Jun 24, 2024"/>
   </head>
   
   
@@ -729,8 +729,8 @@ the Python iterator protocol, and another which mirrors the C-style
 do-while pattern.  The native Python approach is better in most cases, but
 if you need the coordinates or index of an iterator, use the C-style pattern.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="aef09c30-01be-459d-8f0a-1288d854bec1">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('aef09c30-01be-459d-8f0a-1288d854bec1','89d07399-0b84-41a5-a267-cee5092c703e','6fb71d8a-1e5a-4310-b252-eb416f98c399','../../lite/tree/../notebooks/?path=2d2bb60d_b8cc_4eec_a62a_6c38c1f9a33d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b313692b-489d-4b58-a3b7-c007601d0fb1">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b313692b-489d-4b58-a3b7-c007601d0fb1','9b421a28-daad-4c32-b0e3-84e79db3f7d2','33fc38ca-8146-4b66-83df-8d7f87d8d30e','../../lite/tree/../notebooks/?path=60cebe45_095b_4f3b_98d2_f70d9ee8add7.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Here is how we might write an <code class="docutils literal notranslate"><span class="pre">iter_add</span></code> function, using the
 Python iterator protocol:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -832,7 +832,7 @@ one will affect the other.</p>
 <p>Context management and the <a class="reference internal" href="numpy.nditer.close.html#numpy.nditer.close" title="numpy.nditer.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a> method appeared in version 1.15.0.</p>
 </div>
 </div>
-<div id="6fb71d8a-1e5a-4310-b252-eb416f98c399" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('aef09c30-01be-459d-8f0a-1288d854bec1','6fb71d8a-1e5a-4310-b252-eb416f98c399')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('aef09c30-01be-459d-8f0a-1288d854bec1','6fb71d8a-1e5a-4310-b252-eb416f98c399')">Open In Tab</button></div><div id="89d07399-0b84-41a5-a267-cee5092c703e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><dl class="field-list simple">
+<div id="33fc38ca-8146-4b66-83df-8d7f87d8d30e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b313692b-489d-4b58-a3b7-c007601d0fb1','33fc38ca-8146-4b66-83df-8d7f87d8d30e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b313692b-489d-4b58-a3b7-c007601d0fb1','33fc38ca-8146-4b66-83df-8d7f87d8d30e')">Open In Tab</button></div><div id="9b421a28-daad-4c32-b0e3-84e79db3f7d2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>dtypes</strong><span class="classifier">tuple of dtype(s)</span></dt><dd><p>The data types of the values provided in <a class="reference internal" href="numpy.nditer.value.html#numpy.nditer.value" title="numpy.nditer.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a>. This may be

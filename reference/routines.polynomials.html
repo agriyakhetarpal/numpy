@@ -62,7 +62,7 @@
     <link rel="prev" title="numpy.info" href="generated/numpy.info.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jun 18, 2024"/>
+    <meta name="docbuild:last-update" content="Jun 24, 2024"/>
   </head>
   
   
@@ -661,8 +661,8 @@ For example, the following demonstrates how you would convert a <a class="refere
 instance representing the expression <span class="math notranslate nohighlight">\(x^{2} + 2x + 3\)</span> to a
 <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.html#numpy.polynomial.polynomial.Polynomial" title="numpy.polynomial.polynomial.Polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polynomial</span></code></a> instance representing the same
 expression:</p>
-<div class="try_examples_outer_container docutils container" id="a7a288e5-5592-4a28-98e7-aa5ed7ee9a8d">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a7a288e5-5592-4a28-98e7-aa5ed7ee9a8d','b4a51133-f158-48d1-b4b2-04b7d2688b45','0edcbe73-9cd1-416b-8699-9bb29b7fbed5','../lite/tree/../notebooks/?path=dc31c588_b82b_4146_85bd_535800b0869e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="caee69bd-8c6e-4cec-b26a-69607c61b86d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('caee69bd-8c6e-4cec-b26a-69607c61b86d','930af01d-bf32-4065-8b95-702d2127bc51','3eae675f-399f-4ae3-8354-bdc35e1d7130','../lite/tree/../notebooks/?path=abdd98e1_fda9_43cb_a238_64331b903f76.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -690,7 +690,7 @@ can’t be mixed in arithmetic:</p>
 </div>
 </div>
 </div>
-<div id="0edcbe73-9cd1-416b-8699-9bb29b7fbed5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a7a288e5-5592-4a28-98e7-aa5ed7ee9a8d','0edcbe73-9cd1-416b-8699-9bb29b7fbed5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a7a288e5-5592-4a28-98e7-aa5ed7ee9a8d','0edcbe73-9cd1-416b-8699-9bb29b7fbed5')">Open In Tab</button></div><div id="b4a51133-f158-48d1-b4b2-04b7d2688b45" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>See the documentation for the
+<div id="3eae675f-399f-4ae3-8354-bdc35e1d7130" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('caee69bd-8c6e-4cec-b26a-69607c61b86d','3eae675f-399f-4ae3-8354-bdc35e1d7130')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('caee69bd-8c6e-4cec-b26a-69607c61b86d','3eae675f-399f-4ae3-8354-bdc35e1d7130')">Open In Tab</button></div><div id="930af01d-bf32-4065-8b95-702d2127bc51" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>See the documentation for the
 <a class="reference external" href="routines.polynomials.classes">convenience classes</a> for further details on
 the <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">window</span></code> attributes.</p>
 <p>Another major difference between the legacy polynomial module and the
@@ -708,7 +708,7 @@ example, consider a simple linear fit to the following data:</p>
 <p>With the legacy polynomial module, a linear fit (i.e. polynomial of degree 1)
 could be applied to these data with <a class="reference internal" href="generated/numpy.polyfit.html#numpy.polyfit" title="numpy.polyfit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfit</span></code></a>:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="gh">Out[4]: </span><span class="go">array([0.79647145, 0.8409481 ])</span>
+<span class="gh">Out[4]: </span><span class="go">array([0.97756946, 0.12004994])</span>
 </pre></div>
 </div>
 <p>With the new polynomial API, the <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.fit.html#numpy.polynomial.polynomial.Polynomial.fit" title="numpy.polynomial.polynomial.Polynomial.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>
@@ -716,7 +716,7 @@ class method is preferred:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">p_fitted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">Polynomial</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="gp">In [6]: </span><span class="n">p_fitted</span>
-<span class="gh">Out[6]: </span><span class="go">Polynomial([4.42506963, 3.58412154], domain=[0., 9.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
+<span class="gh">Out[6]: </span><span class="go">Polynomial([4.51911249, 4.39906255], domain=[0., 9.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
 </pre></div>
 </div>
 <p>Note that the coefficients are given <em>in the scaled domain</em> defined by the
@@ -724,7 +724,7 @@ linear mapping between the <code class="docutils literal notranslate"><span clas
 <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.convert.html#numpy.polynomial.polynomial.Polynomial.convert" title="numpy.polynomial.polynomial.Polynomial.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a> can be used to get the
 coefficients in the unscaled data domain.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">p_fitted</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
-<span class="gh">Out[7]: </span><span class="go">Polynomial([0.8409481 , 0.79647145], domain=[-1.,  1.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
+<span class="gh">Out[7]: </span><span class="go">Polynomial([0.12004994, 0.97756946], domain=[-1.,  1.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
 </pre></div>
 </div>
 </section>

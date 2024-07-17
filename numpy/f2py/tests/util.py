@@ -218,13 +218,9 @@ def check_language(lang, code_snippet=None):
             ["meson", "setup", "btmp"],
             check=False,
             cwd=tmpdir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            capture_output=True,
         )
-        if runmeson.returncode == 0:
-            return True
-        else:
-            return False
+        return runmeson.returncode == 0
     finally:
         shutil.rmtree(tmpdir)
     return False
@@ -332,7 +328,7 @@ def build_meson(source_files, module_name=None, **kwargs):
     # compiler stack is on the CI
     try:
         backend.compile()
-    except:
+    except subprocess.CalledProcessError:
         pytest.skip("Failed to compile module")
 
     # Import the compiled module

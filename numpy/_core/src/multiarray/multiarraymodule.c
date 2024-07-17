@@ -4702,7 +4702,7 @@ setup_scalartypes(PyObject *NPY_UNUSED(dict))
     DUAL_INHERIT(CDouble, Complex, ComplexFloating);
     SINGLE_INHERIT(CLongDouble, ComplexFloating);
 
-    DUAL_INHERIT2(String, String, Character);
+    DUAL_INHERIT2(String, Bytes, Character);
     DUAL_INHERIT2(Unicode, Unicode, Character);
 
     SINGLE_INHERIT(Void, Flexible);
@@ -4839,6 +4839,10 @@ PyMODINIT_FUNC PyInit__multiarray_umath(void) {
     }
 
     if (initialize_thread_unsafe_state() < 0) {
+        goto err;
+    }
+
+    if (init_import_mutex() < 0) {
         goto err;
     }
 
@@ -5067,14 +5071,15 @@ PyMODINIT_FUNC PyInit__multiarray_umath(void) {
      * init_string_dtype() but that needs to happen after
      * the legacy dtypemeta classes are available.
      */
-    npy_cache_import("numpy.dtypes", "_add_dtype_helper",
-                     &npy_thread_unsafe_state._add_dtype_helper);
-    if (npy_thread_unsafe_state._add_dtype_helper == NULL) {
+    
+    if (npy_cache_import_runtime(
+            "numpy.dtypes", "_add_dtype_helper",
+            &npy_runtime_imports._add_dtype_helper) == -1) {
         goto err;
     }
 
     if (PyObject_CallFunction(
-            npy_thread_unsafe_state._add_dtype_helper,
+            npy_runtime_imports._add_dtype_helper,
             "Os", (PyObject *)&PyArray_StringDType, NULL) == NULL) {
         goto err;
     }
@@ -5131,6 +5136,11 @@ PyMODINIT_FUNC PyInit__multiarray_umath(void) {
     if (PyErr_Occurred()) {
         goto err;
     }
+
+#if Py_GIL_DISABLED
+    // signal this module supports running with the GIL disabled
+    PyUnstable_Module_SetGIL(m, Py_MOD_GIL_NOT_USED);
+#endif
 
     return m;
 

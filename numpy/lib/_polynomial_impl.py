@@ -101,9 +101,10 @@ def poly(seq_of_zeros):
 
     Examples
     --------
-    >>> import numpy as np
 
     Given a sequence of a polynomial's zeros:
+
+    >>> import numpy as np
 
     >>> np.poly((0, 0, 0)) # Multiple root example
     array([1., 0., 0., 0.])
@@ -298,9 +299,10 @@ def polyint(p, m=1, k=None):
 
     Examples
     --------
-    >>> import numpy as np
 
     The defining property of the antiderivative:
+
+    >>> import numpy as np
 
     >>> p = np.poly1d([1,1,1])
     >>> P = np.polyint(p)
@@ -395,9 +397,10 @@ def polyder(p, m=1):
 
     Examples
     --------
-    >>> import numpy as np
 
     The derivative of the polynomial :math:`x^3 + x^2 + x^1 + 1` is:
+
+    >>> import numpy as np
 
     >>> p = np.poly1d([1,1,1,1])
     >>> p2 = np.polyder(p)
@@ -683,7 +686,7 @@ def polyfit(x, y, deg, rcond=None, full=False, w=None, cov=False):
                 raise ValueError("the number of data points must exceed order "
                                  "to scale the covariance matrix")
             # note, this used to be: fac = resids / (len(x) - order - 2.0)
-            # it was deciced that the "- 2" (originally justified by "Bayesian
+            # it was decided that the "- 2" (originally justified by "Bayesian
             # uncertainty analysis") is not what the user expects
             # (see gh-11196 and gh-11197)
             fac = resids / (len(x) - order)
@@ -883,9 +886,10 @@ def polysub(a1, a2):
 
     Examples
     --------
-    >>> import numpy as np
 
     .. math:: (2 x^2 + 10 x - 2) - (3 x^2 + 10 x -4) = (-x^2 + 2)
+
+    >>> import numpy as np
 
     >>> np.polysub([2, 10, -2], [3, 10, -4])
     array([-1,  0,  2])
@@ -1020,9 +1024,10 @@ def polydiv(u, v):
 
     Examples
     --------
-    >>> import numpy as np
 
     .. math:: \\frac{3x^2 + 5x + 2}{2x + 1} = 1.5x + 1.75, remainder 0.25
+
+    >>> import numpy as np
 
     >>> x = np.array([3.0, 5.0, 2.0])
     >>> y = np.array([2.0, 1.0])
@@ -1114,6 +1119,8 @@ class poly1d:
     >>> import numpy as np
 
     Construct the polynomial :math:`x^2 + 2x + 3`:
+
+    >>> import numpy as np
 
     >>> p = np.poly1d([1, 2, 3])
     >>> print(np.poly1d(p))

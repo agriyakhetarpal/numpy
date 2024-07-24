@@ -2,6 +2,7 @@
 sphinx==7.2.6
 numpydoc==1.4
 pydata-sphinx-theme>=0.15.2
+sphinx-copybutton
 sphinx-design
 scipy
 matplotlib
@@ -17,5 +18,5 @@ towncrier
 toml
 
 # interactive documentation utilities
-jupyterlite-sphinx>=0.15.0
+jupyterlite-sphinx>=0.16.2
 jupyterlite-pyodide-kernel

@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
@@ -32,24 +32,27 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script src="../_static/jupyterlite_sphinx.js"></script>
     <script src="../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/arrays.datetime';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
@@ -61,7 +64,7 @@
     <link rel="prev" title="The array interface protocol" href="arrays.interface.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jun 24, 2024"/>
+    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
   </head>
   
   
@@ -115,7 +118,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -124,6 +127,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -148,57 +153,57 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user/index.html">
     User Guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../building/index.html">
     Building from source
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../dev/index.html">
     Development
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release.html">
     Release notes
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
     Learn
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://numpy.org/neps">
     NEPs
   </a>
@@ -220,7 +225,7 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -230,10 +235,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -244,7 +249,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-2"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-2"
@@ -262,7 +267,7 @@ document.write(`
 `);
 </script></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -273,7 +278,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -285,7 +290,7 @@ document.write(`
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -311,52 +316,52 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user/index.html">
     User Guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../building/index.html">
     Building from source
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../dev/index.html">
     Development
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release.html">
     Release notes
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
     Learn
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/neps">
     NEPs
   </a>
@@ -376,7 +381,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -386,10 +391,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -400,7 +405,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-3"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-3"
@@ -418,7 +423,7 @@ document.write(`
 `);
 </script></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -429,7 +434,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -595,8 +600,8 @@ also accepts the string “NAT”, in any combination of lowercase/uppercase
 letters, for a “Not A Time” value.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="a197e99e-5fb9-4289-88b3-d7eafe30112e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a197e99e-5fb9-4289-88b3-d7eafe30112e','ac468c54-ab54-4681-9a7e-015614e7a07d','9a1d52d5-a628-49d8-88c6-86d847b7a17f','../lite/tree/../notebooks/?path=035ddb8a_e00d_481e_b769_25634ac88615.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="45fe5c17-52b9-4607-88a4-516d112047ff">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('45fe5c17-52b9-4607-88a4-516d112047ff','71982913-a3bb-4a68-8571-5fbd2a090491','a50be81c-735e-4b0b-a365-b112ce1831ef','../lite/tree/../notebooks/index.html?path=e2e642b7_72eb_468a_b7cb_33abca5b47a1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>A simple ISO date:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -632,14 +637,14 @@ letters, for a “Not A Time” value.</p>
 </div>
 </div>
 </div>
-<div id="9a1d52d5-a628-49d8-88c6-86d847b7a17f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a197e99e-5fb9-4289-88b3-d7eafe30112e','9a1d52d5-a628-49d8-88c6-86d847b7a17f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a197e99e-5fb9-4289-88b3-d7eafe30112e','9a1d52d5-a628-49d8-88c6-86d847b7a17f')">Open In Tab</button></div><div id="ac468c54-ab54-4681-9a7e-015614e7a07d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="a50be81c-735e-4b0b-a365-b112ce1831ef" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('45fe5c17-52b9-4607-88a4-516d112047ff','a50be81c-735e-4b0b-a365-b112ce1831ef')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('45fe5c17-52b9-4607-88a4-516d112047ff','a50be81c-735e-4b0b-a365-b112ce1831ef')">Open In Tab</button></div><div id="71982913-a3bb-4a68-8571-5fbd2a090491" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>When creating an array of datetimes from a string, it is still possible
 to automatically select the unit from the inputs, by using the
 datetime type with generic units.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="2f184763-58e9-4d86-89dd-36a167eba380">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2f184763-58e9-4d86-89dd-36a167eba380','fa493f03-8d4e-4b70-807c-cf8a28181dc5','ee48289f-73bc-4134-b1fc-97c14fab1f8a','../lite/tree/../notebooks/?path=0603dbfa_4965_4f5f_a3b0_abd29fc10501.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="9ef42abf-efa0-4041-8ca7-c2248f83ff91">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9ef42abf-efa0-4041-8ca7-c2248f83ff91','74f1c447-22f2-45a5-917d-643ba509ca22','5de93411-d109-4161-ae1d-5435a038638d','../lite/tree/../notebooks/index.html?path=947355c6_3757_426f_b76c_4990b40beaea.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -654,13 +659,13 @@ datetime type with generic units.</p>
 </div>
 </div>
 </div>
-<div id="ee48289f-73bc-4134-b1fc-97c14fab1f8a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2f184763-58e9-4d86-89dd-36a167eba380','ee48289f-73bc-4134-b1fc-97c14fab1f8a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2f184763-58e9-4d86-89dd-36a167eba380','ee48289f-73bc-4134-b1fc-97c14fab1f8a')">Open In Tab</button></div><div id="fa493f03-8d4e-4b70-807c-cf8a28181dc5" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="5de93411-d109-4161-ae1d-5435a038638d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9ef42abf-efa0-4041-8ca7-c2248f83ff91','5de93411-d109-4161-ae1d-5435a038638d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9ef42abf-efa0-4041-8ca7-c2248f83ff91','5de93411-d109-4161-ae1d-5435a038638d')">Open In Tab</button></div><div id="74f1c447-22f2-45a5-917d-643ba509ca22" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>An array of datetimes can be constructed from integers representing
 POSIX timestamps with the given unit.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="ec076191-73b7-407d-b8da-9e436aba3862">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ec076191-73b7-407d-b8da-9e436aba3862','23391854-02eb-4fb5-b243-e7e05fd07654','56de515f-a921-4ec8-bf4a-a14896daa1cb','../lite/tree/../notebooks/?path=91ecd6ee_a7a2_4e1f_927f_f1e5e63801a4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="f733ae8b-a344-460f-8c04-2d79e40aa457">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f733ae8b-a344-460f-8c04-2d79e40aa457','fe21aa44-411e-423b-9a57-a3ebb867366f','7932f851-6099-4bc9-98b0-8874692ba1bb','../lite/tree/../notebooks/index.html?path=e815f0e1_c29a_4e86_8fa1_117a042c1614.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -676,13 +681,13 @@ POSIX timestamps with the given unit.</p>
 </div>
 </div>
 </div>
-<div id="56de515f-a921-4ec8-bf4a-a14896daa1cb" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ec076191-73b7-407d-b8da-9e436aba3862','56de515f-a921-4ec8-bf4a-a14896daa1cb')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ec076191-73b7-407d-b8da-9e436aba3862','56de515f-a921-4ec8-bf4a-a14896daa1cb')">Open In Tab</button></div><div id="23391854-02eb-4fb5-b243-e7e05fd07654" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="7932f851-6099-4bc9-98b0-8874692ba1bb" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f733ae8b-a344-460f-8c04-2d79e40aa457','7932f851-6099-4bc9-98b0-8874692ba1bb')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f733ae8b-a344-460f-8c04-2d79e40aa457','7932f851-6099-4bc9-98b0-8874692ba1bb')">Open In Tab</button></div><div id="fe21aa44-411e-423b-9a57-a3ebb867366f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>The datetime type works with many common NumPy functions, for
 example <a class="reference internal" href="generated/numpy.arange.html#numpy.arange" title="numpy.arange"><code class="xref py py-func docutils literal notranslate"><span class="pre">arange</span></code></a> can be used to generate ranges of dates.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="2d64e4cb-53d9-45ee-9282-2e03d97b85d1">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2d64e4cb-53d9-45ee-9282-2e03d97b85d1','c47122ef-87ab-4a35-b1ef-4af28804f952','b3e666d4-89c0-4090-9e5a-4473852407e5','../lite/tree/../notebooks/?path=4db57a2c_2cab_436a_bd5a_70e563561452.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="df7ba51c-52a0-452b-a57e-918863143180">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('df7ba51c-52a0-452b-a57e-918863143180','31435f9d-c8b5-4c5b-881d-5b1e16bd09e0','0c697c0f-3616-42ee-a335-e050459bc28f','../lite/tree/../notebooks/index.html?path=974bd9ac_e0a9_4c52_9b1e_3f74bd5e3fc3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>All the dates for one month:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -700,7 +705,7 @@ example <a class="reference internal" href="generated/numpy.arange.html#numpy.ar
 </div>
 </div>
 </div>
-<div id="b3e666d4-89c0-4090-9e5a-4473852407e5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2d64e4cb-53d9-45ee-9282-2e03d97b85d1','b3e666d4-89c0-4090-9e5a-4473852407e5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2d64e4cb-53d9-45ee-9282-2e03d97b85d1','b3e666d4-89c0-4090-9e5a-4473852407e5')">Open In Tab</button></div><div id="c47122ef-87ab-4a35-b1ef-4af28804f952" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="0c697c0f-3616-42ee-a335-e050459bc28f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('df7ba51c-52a0-452b-a57e-918863143180','0c697c0f-3616-42ee-a335-e050459bc28f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('df7ba51c-52a0-452b-a57e-918863143180','0c697c0f-3616-42ee-a335-e050459bc28f')">Open In Tab</button></div><div id="31435f9d-c8b5-4c5b-881d-5b1e16bd09e0" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>The datetime object represents a single moment in time. If two
 datetimes have different units, they may still be representing
 the same moment of time, and converting from a bigger unit like
@@ -708,8 +713,8 @@ months to a smaller unit like days is considered a ‘safe’ cast
 because the moment of time is still being represented exactly.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="9e5474d5-7fa6-4d86-a953-cf9481ab64f8">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9e5474d5-7fa6-4d86-a953-cf9481ab64f8','f5041a0f-cfca-4de7-8524-d283e5ee6be8','b4524e05-3b6d-4d23-818e-7cd95efb5bfe','../lite/tree/../notebooks/?path=e887eed5_200e_41d0_a633_ddf55afede3d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b8b4bb3d-c5d4-458b-9892-cb83cfc38ffc">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b8b4bb3d-c5d4-458b-9892-cb83cfc38ffc','07aa0108-8215-4472-bec4-bc9ad64abfc3','d4a544f8-ef86-42c3-8f07-365f24a97bf4','../lite/tree/../notebooks/index.html?path=0aea061f_0fd2_4f93_abc4_2996f40f49a9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -723,7 +728,7 @@ because the moment of time is still being represented exactly.</p>
 </div>
 </div>
 </div>
-<div id="b4524e05-3b6d-4d23-818e-7cd95efb5bfe" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9e5474d5-7fa6-4d86-a953-cf9481ab64f8','b4524e05-3b6d-4d23-818e-7cd95efb5bfe')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9e5474d5-7fa6-4d86-a953-cf9481ab64f8','b4524e05-3b6d-4d23-818e-7cd95efb5bfe')">Open In Tab</button></div><div id="f5041a0f-cfca-4de7-8524-d283e5ee6be8" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="d4a544f8-ef86-42c3-8f07-365f24a97bf4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b8b4bb3d-c5d4-458b-9892-cb83cfc38ffc','d4a544f8-ef86-42c3-8f07-365f24a97bf4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b8b4bb3d-c5d4-458b-9892-cb83cfc38ffc','d4a544f8-ef86-42c3-8f07-365f24a97bf4')">Open In Tab</button></div><div id="07aa0108-8215-4472-bec4-bc9ad64abfc3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">Deprecated since version 1.11.0: </span>NumPy does not store timezone information. For backwards compatibility, datetime64
 still parses timezone offsets, which it handles by converting to
@@ -742,8 +747,8 @@ to represent the number of units, and a date/time unit, such as
 data type also accepts the string “NAT” in place of the number for a “Not A Time” value.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="982b4941-ea3f-4ddb-a4f9-c8c4e07e7e07">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('982b4941-ea3f-4ddb-a4f9-c8c4e07e7e07','6ae4eee7-3694-44b2-baf1-1a07941bed59','20535193-33e2-450e-adf4-fa0ab706dfe3','../lite/tree/../notebooks/?path=12cdb181_281d_46c3_8f75_35ac5bce0270.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="ab5c5bf2-fca8-43a5-b6a2-9df6163b4041">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ab5c5bf2-fca8-43a5-b6a2-9df6163b4041','05cda94b-1495-4e68-bda6-0d801de85ff9','77f39746-e508-4ebb-a6a1-15979d047171','../lite/tree/../notebooks/index.html?path=2a24745a_015a_49f7_93a0_5d75974966e9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -761,13 +766,13 @@ data type also accepts the string “NAT” in place of the number for a “Not 
 </div>
 </div>
 </div>
-<div id="20535193-33e2-450e-adf4-fa0ab706dfe3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('982b4941-ea3f-4ddb-a4f9-c8c4e07e7e07','20535193-33e2-450e-adf4-fa0ab706dfe3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('982b4941-ea3f-4ddb-a4f9-c8c4e07e7e07','20535193-33e2-450e-adf4-fa0ab706dfe3')">Open In Tab</button></div><div id="6ae4eee7-3694-44b2-baf1-1a07941bed59" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="77f39746-e508-4ebb-a6a1-15979d047171" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ab5c5bf2-fca8-43a5-b6a2-9df6163b4041','77f39746-e508-4ebb-a6a1-15979d047171')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ab5c5bf2-fca8-43a5-b6a2-9df6163b4041','77f39746-e508-4ebb-a6a1-15979d047171')">Open In Tab</button></div><div id="05cda94b-1495-4e68-bda6-0d801de85ff9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>Datetimes and Timedeltas work together to provide ways for
 simple datetime calculations.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="b8923bf4-476d-433b-a333-a7b0e4a3ec10">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b8923bf4-476d-433b-a333-a7b0e4a3ec10','58025d75-c673-47eb-b010-3e0716cd89e3','ab8e52d6-62d8-4273-90f5-aaed89c3c15d','../lite/tree/../notebooks/?path=87c514b1_0f23_4424_b5e0_f461dba9e764.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="47c29977-9a97-4560-b900-a50beb575d3f">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('47c29977-9a97-4560-b900-a50beb575d3f','b292581a-40db-4fc0-86cf-fb3d7cf46cb6','d4ce5ae1-a70e-4820-be44-29b3c6f2ec87','../lite/tree/../notebooks/index.html?path=a57fbbf4_e699_44e9_9146_38806a1ef772.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -801,7 +806,7 @@ simple datetime calculations.</p>
 </div>
 </div>
 </div>
-<div id="ab8e52d6-62d8-4273-90f5-aaed89c3c15d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b8923bf4-476d-433b-a333-a7b0e4a3ec10','ab8e52d6-62d8-4273-90f5-aaed89c3c15d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b8923bf4-476d-433b-a333-a7b0e4a3ec10','ab8e52d6-62d8-4273-90f5-aaed89c3c15d')">Open In Tab</button></div><div id="58025d75-c673-47eb-b010-3e0716cd89e3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="d4ce5ae1-a70e-4820-be44-29b3c6f2ec87" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('47c29977-9a97-4560-b900-a50beb575d3f','d4ce5ae1-a70e-4820-be44-29b3c6f2ec87')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('47c29977-9a97-4560-b900-a50beb575d3f','d4ce5ae1-a70e-4820-be44-29b3c6f2ec87')">Open In Tab</button></div><div id="b292581a-40db-4fc0-86cf-fb3d7cf46cb6" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>There are two Timedelta units (‘Y’, years and ‘M’, months) which are treated
 specially, because how much time they represent changes depending
 on when they are used. While a timedelta day unit is equivalent to
@@ -812,8 +817,8 @@ conversion of months/years to days. The conversion follows
 calculating the averaged values from the 400 year leap-year cycle.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="7348ad97-aa0a-4e51-b5b0-e86edbdb6438">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7348ad97-aa0a-4e51-b5b0-e86edbdb6438','a48daf95-c58f-4ad3-93fd-da9f2c641018','4abb4947-47a3-459d-b429-7faf8346cb01','../lite/tree/../notebooks/?path=1972031c_3284_4f78_adff_4b4ce7ed8d9a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="77ad1197-070a-45c5-80de-e5dc9d0d3991">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('77ad1197-070a-45c5-80de-e5dc9d0d3991','c5d9c520-7bbc-4632-9fec-bf1e2887e51f','699bc602-2f98-4170-b9f8-20306688b374','../lite/tree/../notebooks/index.html?path=c7a67511_5186_4283_8547_4e11b1e33039.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -832,7 +837,7 @@ calculating the averaged values from the 400 year leap-year cycle.</p>
 </div>
 </div>
 </div>
-<div id="4abb4947-47a3-459d-b429-7faf8346cb01" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7348ad97-aa0a-4e51-b5b0-e86edbdb6438','4abb4947-47a3-459d-b429-7faf8346cb01')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7348ad97-aa0a-4e51-b5b0-e86edbdb6438','4abb4947-47a3-459d-b429-7faf8346cb01')">Open In Tab</button></div><div id="a48daf95-c58f-4ad3-93fd-da9f2c641018" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="699bc602-2f98-4170-b9f8-20306688b374" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('77ad1197-070a-45c5-80de-e5dc9d0d3991','699bc602-2f98-4170-b9f8-20306688b374')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('77ad1197-070a-45c5-80de-e5dc9d0d3991','699bc602-2f98-4170-b9f8-20306688b374')">Open In Tab</button></div><div id="c5d9c520-7bbc-4632-9fec-bf1e2887e51f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 </section>
 <section id="datetime-units">
 <h2>Datetime units<a class="headerlink" href="#datetime-units" title="Permalink to this heading">#</a></h2>
@@ -954,8 +959,8 @@ specific dates that are not valid days.</p>
 specified in business days to datetimes with a unit of ‘D’ (day).</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="6ec03110-cf25-4f40-a250-b20c9bbcad6b">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6ec03110-cf25-4f40-a250-b20c9bbcad6b','546da14d-bec2-44ff-a773-392a64b3852c','c551130e-a577-4a8f-b7c6-495694bc0180','../lite/tree/../notebooks/?path=d2acfcdb_bd83_45ed_8230_3617e09840d0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="93db6ec9-5bab-448d-a16d-5a87f26c1734">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('93db6ec9-5bab-448d-a16d-5a87f26c1734','db68e320-f669-406c-9971-8783bc72f636','b4269d1e-1da7-4010-9129-75fb94f2e49e','../lite/tree/../notebooks/index.html?path=75994865_85e8_4abf_b31b_5df4ef41aea1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -969,7 +974,7 @@ specified in business days to datetimes with a unit of ‘D’ (day).</p>
 </div>
 </div>
 </div>
-<div id="c551130e-a577-4a8f-b7c6-495694bc0180" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6ec03110-cf25-4f40-a250-b20c9bbcad6b','c551130e-a577-4a8f-b7c6-495694bc0180')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6ec03110-cf25-4f40-a250-b20c9bbcad6b','c551130e-a577-4a8f-b7c6-495694bc0180')">Open In Tab</button></div><div id="546da14d-bec2-44ff-a773-392a64b3852c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="b4269d1e-1da7-4010-9129-75fb94f2e49e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('93db6ec9-5bab-448d-a16d-5a87f26c1734','b4269d1e-1da7-4010-9129-75fb94f2e49e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('93db6ec9-5bab-448d-a16d-5a87f26c1734','b4269d1e-1da7-4010-9129-75fb94f2e49e')">Open In Tab</button></div><div id="db68e320-f669-406c-9971-8783bc72f636" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>When an input date falls on the weekend or a holiday,
 <a class="reference internal" href="generated/numpy.busday_offset.html#numpy.busday_offset" title="numpy.busday_offset"><code class="xref py py-func docutils literal notranslate"><span class="pre">busday_offset</span></code></a> first applies a rule to roll the
 date to a valid business day, then applies the offset. The
@@ -977,8 +982,8 @@ default rule is ‘raise’, which simply raises an exception.
 The rules most typically used are ‘forward’ and ‘backward’.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="04fb4dd5-fcb2-4580-b65b-69fa24695438">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('04fb4dd5-fcb2-4580-b65b-69fa24695438','ce901b12-1ecb-4d05-8f6a-dd9a15d58157','1ae9ddd1-c02e-4825-bbd3-7cf90a8abbc8','../lite/tree/../notebooks/?path=6eea1443_ab0e_47d4_9bf2_3cccf1e99e65.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="457cbf9f-8255-48f4-b1f8-a3d9b17207aa">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('457cbf9f-8255-48f4-b1f8-a3d9b17207aa','4aecc272-6654-4f01-b013-c71cbaf6edf4','f7acff4f-10bb-412e-9f35-0328a9fc750f','../lite/tree/../notebooks/index.html?path=135e3d8b_af3b_46c3_979b_88837f27c61c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1006,13 +1011,13 @@ The rules most typically used are ‘forward’ and ‘backward’.</p>
 </div>
 </div>
 </div>
-<div id="1ae9ddd1-c02e-4825-bbd3-7cf90a8abbc8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('04fb4dd5-fcb2-4580-b65b-69fa24695438','1ae9ddd1-c02e-4825-bbd3-7cf90a8abbc8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('04fb4dd5-fcb2-4580-b65b-69fa24695438','1ae9ddd1-c02e-4825-bbd3-7cf90a8abbc8')">Open In Tab</button></div><div id="ce901b12-1ecb-4d05-8f6a-dd9a15d58157" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="f7acff4f-10bb-412e-9f35-0328a9fc750f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('457cbf9f-8255-48f4-b1f8-a3d9b17207aa','f7acff4f-10bb-412e-9f35-0328a9fc750f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('457cbf9f-8255-48f4-b1f8-a3d9b17207aa','f7acff4f-10bb-412e-9f35-0328a9fc750f')">Open In Tab</button></div><div id="4aecc272-6654-4f01-b013-c71cbaf6edf4" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>In some cases, an appropriate use of the roll and the offset
 is necessary to get a desired answer.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="38d1428e-5e8e-474b-aef2-95b1dba0e303">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('38d1428e-5e8e-474b-aef2-95b1dba0e303','b2551f06-6a1a-43d4-a585-f42ed21408a9','4c595b95-4065-4eb4-9703-b1e75fc34be1','../lite/tree/../notebooks/?path=2e044d64_1bba_4543_a96c_bd3840ad3b38.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="e455917f-96d8-4712-bf7a-adbead9f2d76">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e455917f-96d8-4712-bf7a-adbead9f2d76','d35fe49b-a9ac-46ad-bffd-92fb88ecbc67','dc40fba6-57a7-42b6-a613-af4ce22c6939','../lite/tree/../notebooks/index.html?path=b9c94b6d_59dd_4e34_977c_7b325aea8a0d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>The first business day on or after a date:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
@@ -1032,15 +1037,15 @@ is necessary to get a desired answer.</p>
 </div>
 </div>
 </div>
-<div id="4c595b95-4065-4eb4-9703-b1e75fc34be1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('38d1428e-5e8e-474b-aef2-95b1dba0e303','4c595b95-4065-4eb4-9703-b1e75fc34be1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('38d1428e-5e8e-474b-aef2-95b1dba0e303','4c595b95-4065-4eb4-9703-b1e75fc34be1')">Open In Tab</button></div><div id="b2551f06-6a1a-43d4-a585-f42ed21408a9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="dc40fba6-57a7-42b6-a613-af4ce22c6939" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e455917f-96d8-4712-bf7a-adbead9f2d76','dc40fba6-57a7-42b6-a613-af4ce22c6939')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e455917f-96d8-4712-bf7a-adbead9f2d76','dc40fba6-57a7-42b6-a613-af4ce22c6939')">Open In Tab</button></div><div id="d35fe49b-a9ac-46ad-bffd-92fb88ecbc67" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>The function is also useful for computing some kinds of days
 like holidays. In Canada and the U.S., Mother’s day is on
 the second Sunday in May, which can be computed with a custom
 weekmask.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="335c1988-64e9-4caf-a11d-4970bc15db9b">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('335c1988-64e9-4caf-a11d-4970bc15db9b','090a610c-fce9-42bc-b328-c1f55755ebf4','b7dcd85c-143a-47a4-ad55-a93c288abbfc','../lite/tree/../notebooks/?path=e696afa5_338e_4a28_8ff4_ef5d1a5c329e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="3fbc9ea6-79bb-4dd8-95bf-865c3ead2eb0">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3fbc9ea6-79bb-4dd8-95bf-865c3ead2eb0','fc311fe7-af69-4384-b32a-d1dcac158033','fc7c8168-68c6-4cb5-94ef-37e8ef697a69','../lite/tree/../notebooks/index.html?path=4ceb8417_d50e_49af_a622_28a7e2b2acf3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1050,7 +1055,7 @@ weekmask.</p>
 </div>
 </div>
 </div>
-<div id="b7dcd85c-143a-47a4-ad55-a93c288abbfc" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('335c1988-64e9-4caf-a11d-4970bc15db9b','b7dcd85c-143a-47a4-ad55-a93c288abbfc')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('335c1988-64e9-4caf-a11d-4970bc15db9b','b7dcd85c-143a-47a4-ad55-a93c288abbfc')">Open In Tab</button></div><div id="090a610c-fce9-42bc-b328-c1f55755ebf4" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="fc7c8168-68c6-4cb5-94ef-37e8ef697a69" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3fbc9ea6-79bb-4dd8-95bf-865c3ead2eb0','fc7c8168-68c6-4cb5-94ef-37e8ef697a69')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3fbc9ea6-79bb-4dd8-95bf-865c3ead2eb0','fc7c8168-68c6-4cb5-94ef-37e8ef697a69')">Open In Tab</button></div><div id="fc311fe7-af69-4384-b32a-d1dcac158033" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>When performance is important for manipulating many business dates
 with one particular choice of weekmask and holidays, there is
 an object <a class="reference internal" href="generated/numpy.busdaycalendar.html#numpy.busdaycalendar" title="numpy.busdaycalendar"><code class="xref py py-class docutils literal notranslate"><span class="pre">busdaycalendar</span></code></a> which stores the data necessary
@@ -1060,8 +1065,8 @@ in an optimized form.</p>
 <p>To test a <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a> value to see if it is a valid day, use <a class="reference internal" href="generated/numpy.is_busday.html#numpy.is_busday" title="numpy.is_busday"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_busday</span></code></a>.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="03161db0-bb94-4c11-868e-ecf1bd100890">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('03161db0-bb94-4c11-868e-ecf1bd100890','84255c9c-5c34-4f9c-9035-f62b5d357958','7aa27043-6370-4dd3-9641-e3228fb915f4','../lite/tree/../notebooks/?path=48b78786_6929_4cad_8974_98d467538281.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="fea87fae-9a1a-4500-96de-86ae32e07336">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fea87fae-9a1a-4500-96de-86ae32e07336','37c03e59-5ad7-43a2-857f-3a0ec2b861b2','5dae01b3-2e3a-4f78-9a18-96894728fab6','../lite/tree/../notebooks/index.html?path=aa5c3cad_ffce_46fc_9338_8c794654c81a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1078,7 +1083,7 @@ in an optimized form.</p>
 </div>
 </div>
 </div>
-<div id="7aa27043-6370-4dd3-9641-e3228fb915f4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('03161db0-bb94-4c11-868e-ecf1bd100890','7aa27043-6370-4dd3-9641-e3228fb915f4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('03161db0-bb94-4c11-868e-ecf1bd100890','7aa27043-6370-4dd3-9641-e3228fb915f4')">Open In Tab</button></div><div id="84255c9c-5c34-4f9c-9035-f62b5d357958" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="5dae01b3-2e3a-4f78-9a18-96894728fab6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fea87fae-9a1a-4500-96de-86ae32e07336','5dae01b3-2e3a-4f78-9a18-96894728fab6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fea87fae-9a1a-4500-96de-86ae32e07336','5dae01b3-2e3a-4f78-9a18-96894728fab6')">Open In Tab</button></div><div id="37c03e59-5ad7-43a2-857f-3a0ec2b861b2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 </section>
 <section id="np-busday-count">
 <h3>np.busday_count():<a class="headerlink" href="#np-busday-count" title="Permalink to this heading">#</a></h3>
@@ -1086,8 +1091,8 @@ in an optimized form.</p>
 dates, use <a class="reference internal" href="generated/numpy.busday_count.html#numpy.busday_count" title="numpy.busday_count"><code class="xref py py-func docutils literal notranslate"><span class="pre">busday_count</span></code></a>:</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="0e4ddc92-8ef3-489c-be11-e243d7a12d86">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0e4ddc92-8ef3-489c-be11-e243d7a12d86','96db5be0-0768-4804-9dfa-384a861effd0','6c35c739-7f1e-49b2-a924-3f5e00f9da59','../lite/tree/../notebooks/?path=74c6d61e_83ce_41f0_903f_4430cf5f0a48.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="3ab0c02a-d20b-4579-9ed7-73e30d8bbeaa">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3ab0c02a-d20b-4579-9ed7-73e30d8bbeaa','4a3a6045-877b-497e-88b1-fb82365ae5d7','cdc3e2b6-7608-45b2-8e83-6c932c173c09','../lite/tree/../notebooks/index.html?path=e1624b03_76f2_4261_8f38_bb385c7c9c25.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1099,13 +1104,13 @@ dates, use <a class="reference internal" href="generated/numpy.busday_count.html
 </div>
 </div>
 </div>
-<div id="6c35c739-7f1e-49b2-a924-3f5e00f9da59" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0e4ddc92-8ef3-489c-be11-e243d7a12d86','6c35c739-7f1e-49b2-a924-3f5e00f9da59')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0e4ddc92-8ef3-489c-be11-e243d7a12d86','6c35c739-7f1e-49b2-a924-3f5e00f9da59')">Open In Tab</button></div><div id="96db5be0-0768-4804-9dfa-384a861effd0" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="cdc3e2b6-7608-45b2-8e83-6c932c173c09" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3ab0c02a-d20b-4579-9ed7-73e30d8bbeaa','cdc3e2b6-7608-45b2-8e83-6c932c173c09')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3ab0c02a-d20b-4579-9ed7-73e30d8bbeaa','cdc3e2b6-7608-45b2-8e83-6c932c173c09')">Open In Tab</button></div><div id="4a3a6045-877b-497e-88b1-fb82365ae5d7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>If you have an array of datetime64 day values, and you want a count of
 how many of them are valid dates, you can do this:</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="5e41d884-b3e9-44af-8f6f-baa4d641e03e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5e41d884-b3e9-44af-8f6f-baa4d641e03e','1c5c51da-6dfe-4127-b961-c7958787c640','39b8d270-e865-4228-aaba-a957cce79fbc','../lite/tree/../notebooks/?path=5ff9d424_fb10_409f_8ad7_1ddd3834a5c5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="49d91867-d4c2-43df-87b4-057f1ed3ca54">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('49d91867-d4c2-43df-87b4-057f1ed3ca54','80fb4518-d258-4fba-99bd-2c4af454640b','f81b64bb-4e9a-4d23-9328-62f18e791fb9','../lite/tree/../notebooks/index.html?path=ca25252c_d76c_4fb3_afe8_8e0a520fd30c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1116,7 +1121,7 @@ how many of them are valid dates, you can do this:</p>
 </div>
 </div>
 </div>
-<div id="39b8d270-e865-4228-aaba-a957cce79fbc" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5e41d884-b3e9-44af-8f6f-baa4d641e03e','39b8d270-e865-4228-aaba-a957cce79fbc')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5e41d884-b3e9-44af-8f6f-baa4d641e03e','39b8d270-e865-4228-aaba-a957cce79fbc')">Open In Tab</button></div><div id="1c5c51da-6dfe-4127-b961-c7958787c640" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="f81b64bb-4e9a-4d23-9328-62f18e791fb9" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('49d91867-d4c2-43df-87b4-057f1ed3ca54','f81b64bb-4e9a-4d23-9328-62f18e791fb9')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('49d91867-d4c2-43df-87b4-057f1ed3ca54','f81b64bb-4e9a-4d23-9328-62f18e791fb9')">Open In Tab</button></div><div id="80fb4518-d258-4fba-99bd-2c4af454640b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 </section>
 <section id="custom-weekmasks">
 <h3>Custom weekmasks<a class="headerlink" href="#custom-weekmasks" title="Permalink to this heading">#</a></h3>
@@ -1153,8 +1158,8 @@ leap second.</p>
 <p>“2016-12-31 23:59:60 UTC” was a leap second, therefore “2016-12-31
 23:59:60.450 UTC” is a valid timestamp which is not parseable by
 <a class="reference internal" href="arrays.scalars.html#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime64</span></code></a>:</p>
-<div class="try_examples_outer_container docutils container" id="554f71cd-49b6-402e-b5da-6c2dabaf24e8">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('554f71cd-49b6-402e-b5da-6c2dabaf24e8','4b73ab48-988f-4e4a-b09f-53c4d042e602','6d1df944-524b-402a-83fa-5765a6e12a69','../lite/tree/../notebooks/?path=7dcf5cc3_e6f7_4484_8ecc_2a6b781831d8.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="60872a1b-5959-43dc-9138-638acc57c07f">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('60872a1b-5959-43dc-9138-638acc57c07f','a952dbc3-ff18-45e8-b047-19251bc448ac','c3b7f880-d4c6-48b6-a9af-15d432e5f8a5','../lite/tree/../notebooks/index.html?path=2b13d4b5_f353_4fb4_8564_13a7a93eac67.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1166,7 +1171,7 @@ leap second.</p>
 </div>
 </div>
 </div>
-<div id="6d1df944-524b-402a-83fa-5765a6e12a69" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('554f71cd-49b6-402e-b5da-6c2dabaf24e8','6d1df944-524b-402a-83fa-5765a6e12a69')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('554f71cd-49b6-402e-b5da-6c2dabaf24e8','6d1df944-524b-402a-83fa-5765a6e12a69')">Open In Tab</button></div><div id="4b73ab48-988f-4e4a-b09f-53c4d042e602" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="c3b7f880-d4c6-48b6-a9af-15d432e5f8a5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('60872a1b-5959-43dc-9138-638acc57c07f','c3b7f880-d4c6-48b6-a9af-15d432e5f8a5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('60872a1b-5959-43dc-9138-638acc57c07f','c3b7f880-d4c6-48b6-a9af-15d432e5f8a5')">Open In Tab</button></div><div id="a952dbc3-ff18-45e8-b047-19251bc448ac" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 </li>
 <li><p>Timedelta64 computations between two UTC dates can be wrong by an integer
 number of SI seconds.</p>
@@ -1174,8 +1179,8 @@ number of SI seconds.</p>
 <p class="admonition-title">Example</p>
 <p>Compute the number of SI seconds between “2021-01-01 12:56:23.423 UTC” and
 “2001-01-01 00:00:00.000 UTC”:</p>
-<div class="try_examples_outer_container docutils container" id="d083b4e5-1399-4298-ae44-231b45d8d9a3">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d083b4e5-1399-4298-ae44-231b45d8d9a3','535b23f8-c6c5-4290-a6bf-40b8f2752e9f','ad7eb615-4c75-4102-9a0d-13c16c3f71c1','../lite/tree/../notebooks/?path=1706d5b1_91ce_4f2a_ba2a_a70f565be6de.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="2ab9a8be-a8b4-4ec9-9759-58fbc029ec6b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2ab9a8be-a8b4-4ec9-9759-58fbc029ec6b','b8486915-7f46-47e0-9409-0aec35762e8e','f3af9fdb-fd21-41e1-a886-27b9b5cde538','../lite/tree/../notebooks/index.html?path=e833443c_89dc_49aa_9c4a_7c7547810546.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1190,7 +1195,7 @@ number of SI seconds.</p>
 5 leap seconds between 2001 and 2021.</p>
 </div>
 </div>
-<div id="ad7eb615-4c75-4102-9a0d-13c16c3f71c1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d083b4e5-1399-4298-ae44-231b45d8d9a3','ad7eb615-4c75-4102-9a0d-13c16c3f71c1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d083b4e5-1399-4298-ae44-231b45d8d9a3','ad7eb615-4c75-4102-9a0d-13c16c3f71c1')">Open In Tab</button></div><div id="535b23f8-c6c5-4290-a6bf-40b8f2752e9f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="f3af9fdb-fd21-41e1-a886-27b9b5cde538" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2ab9a8be-a8b4-4ec9-9759-58fbc029ec6b','f3af9fdb-fd21-41e1-a886-27b9b5cde538')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2ab9a8be-a8b4-4ec9-9759-58fbc029ec6b','f3af9fdb-fd21-41e1-a886-27b9b5cde538')">Open In Tab</button></div><div id="b8486915-7f46-47e0-9409-0aec35762e8e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 </li>
 <li><p>Timedelta64 computations for dates in the past do not return SI seconds, as
 one would expect.</p>
@@ -1200,8 +1205,8 @@ one would expect.</p>
 <div><p>Compute the number of seconds between “000-01-01 UT” and “1600-01-01 UT”,
 where UT is <a class="reference external" href="https://en.wikipedia.org/wiki/Universal_Time">universal time</a>:</p>
 </div></blockquote>
-<div class="try_examples_outer_container docutils container" id="8df4ee98-0c65-435f-ab90-ca4c3f96d1ca">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8df4ee98-0c65-435f-ab90-ca4c3f96d1ca','34929b09-fa63-4cbc-8e6f-4bfbe2af8c5a','81ab272b-e155-4109-9058-5dccb22f30b4','../lite/tree/../notebooks/?path=56086704_4011_499f_8c42_54b4b1a5bfd9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c47d8068-4597-4196-abe5-3e9a60be0251">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c47d8068-4597-4196-abe5-3e9a60be0251','29300662-8373-4b56-9179-28187d7e5263','69407039-fdfb-4a39-9385-6db76e6ce14b','../lite/tree/../notebooks/index.html?path=5085dc0b_b0f2_4496_9a74_4d62f8d2bda7.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1221,7 +1226,7 @@ sensible estimate is <em class="xref py py-obj">50491112870 ± 90</em> seconds, 
 seconds.</p>
 </div>
 </div>
-<div id="81ab272b-e155-4109-9058-5dccb22f30b4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8df4ee98-0c65-435f-ab90-ca4c3f96d1ca','81ab272b-e155-4109-9058-5dccb22f30b4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8df4ee98-0c65-435f-ab90-ca4c3f96d1ca','81ab272b-e155-4109-9058-5dccb22f30b4')">Open In Tab</button></div><div id="34929b09-fa63-4cbc-8e6f-4bfbe2af8c5a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="69407039-fdfb-4a39-9385-6db76e6ce14b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c47d8068-4597-4196-abe5-3e9a60be0251','69407039-fdfb-4a39-9385-6db76e6ce14b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c47d8068-4597-4196-abe5-3e9a60be0251','69407039-fdfb-4a39-9385-6db76e6ce14b')">Open In Tab</button></div><div id="29300662-8373-4b56-9179-28187d7e5263" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 </li>
 </ul>
 </section>
@@ -1300,8 +1305,8 @@ seconds.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1334,7 +1339,7 @@ seconds.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>

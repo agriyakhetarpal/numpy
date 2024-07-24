@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
@@ -32,24 +32,27 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
     <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
     <script src="../_static/jupyterlite_sphinx.js"></script>
     <script src="../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/maskedarray.generic';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
@@ -61,7 +64,7 @@
     <link rel="prev" title="Masked arrays" href="maskedarray.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jun 24, 2024"/>
+    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
   </head>
   
   
@@ -115,7 +118,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -124,6 +127,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -148,57 +153,57 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user/index.html">
     User Guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../building/index.html">
     Building from source
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../dev/index.html">
     Development
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release.html">
     Release notes
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
     Learn
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://numpy.org/neps">
     NEPs
   </a>
@@ -220,7 +225,7 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -230,10 +235,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -244,7 +249,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-2"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-2"
@@ -262,7 +267,7 @@ document.write(`
 `);
 </script></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -273,7 +278,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -285,7 +290,7 @@ document.write(`
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -311,52 +316,52 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user/index.html">
     User Guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../building/index.html">
     Building from source
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../dev/index.html">
     Development
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release.html">
     Release notes
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
     Learn
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/neps">
     NEPs
   </a>
@@ -376,7 +381,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -386,10 +391,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -400,7 +405,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-3"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-3"
@@ -418,7 +423,7 @@ document.write(`
 `);
 </script></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -429,7 +434,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -577,8 +582,8 @@ array is valid and is said to be unmasked. When an element of the mask is
 <code class="docutils literal notranslate"><span class="pre">True</span></code>, the corresponding element of the associated array is said to be
 masked (invalid).</p>
 <p>The package ensures that masked entries are not used in computations.</p>
-<div class="try_examples_outer_container docutils container" id="99396e10-7950-43aa-b7a2-0cfab4d15ecc">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('99396e10-7950-43aa-b7a2-0cfab4d15ecc','be5b63b3-2e06-4caa-847f-7c493d8eecf9','0236669a-2a56-48a5-8fa8-0fb672c74e09','../lite/tree/../notebooks/?path=2c33630e_de82_4f65_8ddc_971ca1eb1a9e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="8437f948-e22a-456a-8826-2d5b2f76f3e9">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8437f948-e22a-456a-8826-2d5b2f76f3e9','a8d6f0b0-995b-4dd3-aec7-70814c142e19','71f217b0-9c9b-431f-b883-06fa6489b042','../lite/tree/../notebooks/index.html?path=a7c3e8dd_ccf3_47c6_a827_7c9093c572f2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>As an illustration, let’s consider the following dataset:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
@@ -598,18 +603,18 @@ into account:</p>
 </div>
 </div>
 </div>
-<div id="0236669a-2a56-48a5-8fa8-0fb672c74e09" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('99396e10-7950-43aa-b7a2-0cfab4d15ecc','0236669a-2a56-48a5-8fa8-0fb672c74e09')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('99396e10-7950-43aa-b7a2-0cfab4d15ecc','0236669a-2a56-48a5-8fa8-0fb672c74e09')">Open In Tab</button></div><div id="be5b63b3-2e06-4caa-847f-7c493d8eecf9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="71f217b0-9c9b-431f-b883-06fa6489b042" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8437f948-e22a-456a-8826-2d5b2f76f3e9','71f217b0-9c9b-431f-b883-06fa6489b042')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8437f948-e22a-456a-8826-2d5b2f76f3e9','71f217b0-9c9b-431f-b883-06fa6489b042')">Open In Tab</button></div><div id="a8d6f0b0-995b-4dd3-aec7-70814c142e19" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="id1">
 <h2>The <a class="reference internal" href="#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>The main feature of the <a class="reference internal" href="#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module is the <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a>
 class, which is a subclass of <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>. The class, its
 attributes and methods are described in more details in the
 <a class="reference internal" href="maskedarray.baseclass.html#maskedarray-baseclass"><span class="std std-ref">MaskedArray class</span></a> section.</p>
-<div class="try_examples_outer_container docutils container" id="796c2454-60a6-41bc-8ac8-2b28285f019a">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('796c2454-60a6-41bc-8ac8-2b28285f019a','384e62f2-7728-4a14-8788-b61bae44847f','9e16da09-3387-4839-811d-6cb7ca54169c','../lite/tree/../notebooks/?path=9627096f_de7a_4fa4_b591_c35eeffb6a81.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="32d5e42d-9bac-4c3e-adbe-8b8d6ed4afff">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('32d5e42d-9bac-4c3e-adbe-8b8d6ed4afff','36825cd6-4893-4aaf-9793-c37f5ae1f6c5','62e29c51-90e8-4672-8055-67da01870b7e','../lite/tree/../notebooks/index.html?path=f26b07a1_1419_4b81_a4c7_0f34c87d2310.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 </div>
 </div>
-<div id="9e16da09-3387-4839-811d-6cb7ca54169c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('796c2454-60a6-41bc-8ac8-2b28285f019a','9e16da09-3387-4839-811d-6cb7ca54169c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('796c2454-60a6-41bc-8ac8-2b28285f019a','9e16da09-3387-4839-811d-6cb7ca54169c')">Open In Tab</button></div><div id="384e62f2-7728-4a14-8788-b61bae44847f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>The <a class="reference internal" href="#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module can be used as an addition to <a class="reference internal" href="index.html#module-numpy" title="numpy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a>:</p>
+<div id="62e29c51-90e8-4672-8055-67da01870b7e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('32d5e42d-9bac-4c3e-adbe-8b8d6ed4afff','62e29c51-90e8-4672-8055-67da01870b7e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('32d5e42d-9bac-4c3e-adbe-8b8d6ed4afff','62e29c51-90e8-4672-8055-67da01870b7e')">Open In Tab</button></div><div id="36825cd6-4893-4aaf-9793-c37f5ae1f6c5" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>The <a class="reference internal" href="#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module can be used as an addition to <a class="reference internal" href="index.html#module-numpy" title="numpy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy</span></code></a>:</p>
 <blockquote>
 <div><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
@@ -654,8 +659,8 @@ section <a class="reference internal" href="#maskedarray-generic-constructing"><
 mask of the view is set to <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.nomask" title="numpy.ma.nomask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">nomask</span></code></a> if the array has no named fields,
 or an array of boolean with the same structure as the array otherwise.</p></li>
 </ul>
-<div class="try_examples_outer_container docutils container" id="27dd3885-d862-4d80-a5b5-f45bada5d445">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('27dd3885-d862-4d80-a5b5-f45bada5d445','73b9728d-0c41-494d-824b-f21a994ea654','338db39e-badd-4ae1-9907-df5d9e01c2c6','../lite/tree/../notebooks/?path=b5b8ef62_d68d_4057_887d_dba565e0d110.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b04938eb-6799-452b-a5ca-1c239a631b3a">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b04938eb-6799-452b-a5ca-1c239a631b3a','e158cd4c-7177-45da-ad56-0591ac0e461a','fcd6dd91-de6d-46ae-857b-2181932f715a','../lite/tree/../notebooks/index.html?path=923dc56e_e818_4ab1_9655_753be493c9b3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">ma</span><span class="o">.</span><span class="n">MaskedArray</span><span class="p">)</span>
@@ -672,7 +677,7 @@ or an array of boolean with the same structure as the array otherwise.</p></li>
 </div>
 </div>
 </div>
-<div id="338db39e-badd-4ae1-9907-df5d9e01c2c6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('27dd3885-d862-4d80-a5b5-f45bada5d445','338db39e-badd-4ae1-9907-df5d9e01c2c6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('27dd3885-d862-4d80-a5b5-f45bada5d445','338db39e-badd-4ae1-9907-df5d9e01c2c6')">Open In Tab</button></div><div id="73b9728d-0c41-494d-824b-f21a994ea654" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><ul>
+<div id="fcd6dd91-de6d-46ae-857b-2181932f715a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b04938eb-6799-452b-a5ca-1c239a631b3a','fcd6dd91-de6d-46ae-857b-2181932f715a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b04938eb-6799-452b-a5ca-1c239a631b3a','fcd6dd91-de6d-46ae-857b-2181932f715a')">Open In Tab</button></div><div id="e158cd4c-7177-45da-ad56-0591ac0e461a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><ul>
 <li><p>Yet another possibility is to use any of the following functions:</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
@@ -763,8 +768,8 @@ entry or is not a masked array, the function outputs  a boolean array of
 <p>To retrieve only the valid entries, we can use the inverse of the mask as an
 index. The inverse of the mask can be calculated with the
 <a class="reference internal" href="generated/numpy.logical_not.html#numpy.logical_not" title="numpy.logical_not"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.logical_not</span></code></a> function or simply with the <code class="docutils literal notranslate"><span class="pre">~</span></code> operator:</p>
-<div class="try_examples_outer_container docutils container" id="ae873fab-6cc7-418c-adbd-bf7de42fac8c">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ae873fab-6cc7-418c-adbd-bf7de42fac8c','3db9f364-d4f7-4f9d-bb44-4245ff8ca596','73b8be9d-bfdf-4247-81d5-c12060d1a65c','../lite/tree/../notebooks/?path=23fcc52e_32c7_4766_8aba_ef7fde562d31.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="58efa6ad-425f-462e-92fd-bb485423e4b0">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('58efa6ad-425f-462e-92fd-bb485423e4b0','7ac6f132-1bc9-4362-bd72-5cf7cfab19c4','bbb23f9c-2122-4bdc-9a51-960450354223','../lite/tree/../notebooks/index.html?path=cb26a477_3a41_46f3_a6c8_9801500e44ed.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="o">~</span><span class="n">x</span><span class="o">.</span><span class="n">mask</span><span class="p">]</span>
@@ -784,15 +789,15 @@ attribute):</p>
 <p>Note that the output of <a class="reference internal" href="generated/numpy.ma.compressed.html#numpy.ma.compressed" title="numpy.ma.compressed"><code class="xref py py-meth docutils literal notranslate"><span class="pre">compressed</span></code></a> is always 1D.</p>
 </div>
 </div>
-<div id="73b8be9d-bfdf-4247-81d5-c12060d1a65c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ae873fab-6cc7-418c-adbd-bf7de42fac8c','73b8be9d-bfdf-4247-81d5-c12060d1a65c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ae873fab-6cc7-418c-adbd-bf7de42fac8c','73b8be9d-bfdf-4247-81d5-c12060d1a65c')">Open In Tab</button></div><div id="3db9f364-d4f7-4f9d-bb44-4245ff8ca596" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="bbb23f9c-2122-4bdc-9a51-960450354223" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('58efa6ad-425f-462e-92fd-bb485423e4b0','bbb23f9c-2122-4bdc-9a51-960450354223')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('58efa6ad-425f-462e-92fd-bb485423e4b0','bbb23f9c-2122-4bdc-9a51-960450354223')">Open In Tab</button></div><div id="7ac6f132-1bc9-4362-bd72-5cf7cfab19c4" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="modifying-the-mask">
 <h2>Modifying the mask<a class="headerlink" href="#modifying-the-mask" title="Permalink to this heading">#</a></h2>
 <section id="masking-an-entry">
 <h3>Masking an entry<a class="headerlink" href="#masking-an-entry" title="Permalink to this heading">#</a></h3>
 <p>The recommended way to mark one or several specific entries of a masked array
 as invalid is to assign the special value <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.masked" title="numpy.ma.masked"><code class="xref py py-attr docutils literal notranslate"><span class="pre">masked</span></code></a> to them:</p>
-<div class="try_examples_outer_container docutils container" id="b2138ed7-3edf-4678-b50c-bcc52a68e0e5">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b2138ed7-3edf-4678-b50c-bcc52a68e0e5','43ee9cce-4c01-4180-9d5c-a555f6206d31','0049f4dc-7ce2-466d-84ff-870832889944','../lite/tree/../notebooks/?path=2d60d596_a7e5_4d8c_862a_80439a51700d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="f3233d62-33c6-4886-8072-af915c3c8555">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f3233d62-33c6-4886-8072-af915c3c8555','825afe4f-3d28-40fc-bd75-877b1ee70151','234d021a-4662-4b8c-a44f-710a46c1b6f4','../lite/tree/../notebooks/index.html?path=8aebeea7_6182_4455_8857_880bfdec2bf6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
@@ -820,7 +825,7 @@ as invalid is to assign the special value <a class="reference internal" href="ma
 </div>
 </div>
 </div>
-<div id="0049f4dc-7ce2-466d-84ff-870832889944" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b2138ed7-3edf-4678-b50c-bcc52a68e0e5','0049f4dc-7ce2-466d-84ff-870832889944')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b2138ed7-3edf-4678-b50c-bcc52a68e0e5','0049f4dc-7ce2-466d-84ff-870832889944')">Open In Tab</button></div><div id="43ee9cce-4c01-4180-9d5c-a555f6206d31" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>A second possibility is to modify the <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.MaskedArray.mask" title="numpy.ma.MaskedArray.mask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mask</span></code></a> directly,
+<div id="234d021a-4662-4b8c-a44f-710a46c1b6f4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f3233d62-33c6-4886-8072-af915c3c8555','234d021a-4662-4b8c-a44f-710a46c1b6f4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f3233d62-33c6-4886-8072-af915c3c8555','234d021a-4662-4b8c-a44f-710a46c1b6f4')">Open In Tab</button></div><div id="825afe4f-3d28-40fc-bd75-877b1ee70151" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>A second possibility is to modify the <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.MaskedArray.mask" title="numpy.ma.MaskedArray.mask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mask</span></code></a> directly,
 but this usage is discouraged.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -832,8 +837,8 @@ does not support item assignment.</p>
 </div>
 <p>All the entries of an array can be masked at once by assigning <code class="docutils literal notranslate"><span class="pre">True</span></code> to the
 mask:</p>
-<div class="try_examples_outer_container docutils container" id="b345a3c4-4008-4d67-a223-3f2d0c3d83c4">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b345a3c4-4008-4d67-a223-3f2d0c3d83c4','d92841b6-af5f-4666-bf4b-d96db1ca3742','2fd6262a-3708-4f9b-bdea-eaaf4ec177ca','../lite/tree/../notebooks/?path=18462a42_d2b1_450b_8624_28b89a7faeea.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c3daa368-39ad-4d62-aed1-70f003eeccb6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c3daa368-39ad-4d62-aed1-70f003eeccb6','0a54da8b-1800-4ece-b60c-ab7d1e84b845','7d3e3f01-a503-41a4-a749-01ab548b6e68','../lite/tree/../notebooks/index.html?path=414b6edd_4eb6_449a_a3f9_5b08f95f10e0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="kc">True</span>
@@ -856,13 +861,13 @@ mask a sequence of booleans:</p>
 </div>
 </div>
 </div>
-<div id="2fd6262a-3708-4f9b-bdea-eaaf4ec177ca" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b345a3c4-4008-4d67-a223-3f2d0c3d83c4','2fd6262a-3708-4f9b-bdea-eaaf4ec177ca')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b345a3c4-4008-4d67-a223-3f2d0c3d83c4','2fd6262a-3708-4f9b-bdea-eaaf4ec177ca')">Open In Tab</button></div><div id="d92841b6-af5f-4666-bf4b-d96db1ca3742" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="7d3e3f01-a503-41a4-a749-01ab548b6e68" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c3daa368-39ad-4d62-aed1-70f003eeccb6','7d3e3f01-a503-41a4-a749-01ab548b6e68')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c3daa368-39ad-4d62-aed1-70f003eeccb6','7d3e3f01-a503-41a4-a749-01ab548b6e68')">Open In Tab</button></div><div id="0a54da8b-1800-4ece-b60c-ab7d1e84b845" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="unmasking-an-entry">
 <h3>Unmasking an entry<a class="headerlink" href="#unmasking-an-entry" title="Permalink to this heading">#</a></h3>
 <p>To unmask one or several specific entries, we can just assign one or several
 new valid values to them:</p>
-<div class="try_examples_outer_container docutils container" id="ef6793bc-7342-4a7e-82de-851a3b0c1dc4">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ef6793bc-7342-4a7e-82de-851a3b0c1dc4','9e9fed1a-2c31-4d74-b412-81f8c0ef90f7','57347315-f972-44b5-be30-ee120a80b014','../lite/tree/../notebooks/?path=31d48be1_09b7_4ee5_9646_18ca021d7021.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="2b03970c-ceba-4018-aee3-d2e01f356855">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2b03970c-ceba-4018-aee3-d2e01f356855','59c46dd8-277d-4bb3-8223-2cb67db602cd','b54c03f0-05bd-412f-8ced-59bb22ad3d73','../lite/tree/../notebooks/index.html?path=68482339_9453_45db_acd1_94bc381b1871.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
@@ -878,7 +883,7 @@ new valid values to them:</p>
 </div>
 </div>
 </div>
-<div id="57347315-f972-44b5-be30-ee120a80b014" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ef6793bc-7342-4a7e-82de-851a3b0c1dc4','57347315-f972-44b5-be30-ee120a80b014')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ef6793bc-7342-4a7e-82de-851a3b0c1dc4','57347315-f972-44b5-be30-ee120a80b014')">Open In Tab</button></div><div id="9e9fed1a-2c31-4d74-b412-81f8c0ef90f7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><div class="admonition note">
+<div id="b54c03f0-05bd-412f-8ced-59bb22ad3d73" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2b03970c-ceba-4018-aee3-d2e01f356855','b54c03f0-05bd-412f-8ced-59bb22ad3d73')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2b03970c-ceba-4018-aee3-d2e01f356855','b54c03f0-05bd-412f-8ced-59bb22ad3d73')">Open In Tab</button></div><div id="59c46dd8-277d-4bb3-8223-2cb67db602cd" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unmasking an entry by direct assignment will silently fail if the masked
 array has a <em>hard</em> mask, as shown by the <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.MaskedArray.hardmask" title="numpy.ma.MaskedArray.hardmask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">hardmask</span></code></a>
@@ -888,8 +893,8 @@ the mask must first to be softened using the <a class="reference internal" href=
 before the allocation. It can be re-hardened with <a class="reference internal" href="generated/numpy.ma.harden_mask.html#numpy.ma.harden_mask" title="numpy.ma.harden_mask"><code class="xref py py-meth docutils literal notranslate"><span class="pre">harden_mask</span></code></a> as
 follows:</p>
 </div>
-<div class="try_examples_outer_container docutils container" id="11296805-89be-462e-814c-003ea7c3ec69">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('11296805-89be-462e-814c-003ea7c3ec69','0d29b692-2b7f-4a00-92b7-f93c6ef16a35','c3541d69-95eb-43fa-8df8-46568abdc543','../lite/tree/../notebooks/?path=81a36856_ee85_4fd2_9dfd_3a83843f2205.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="dce6d949-48d2-425c-8205-e10f091574bc">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('dce6d949-48d2-425c-8205-e10f091574bc','4c67d42c-5055-4406-91c1-9fdc1519fd44','ef4ab2d2-2f7c-437f-bc41-e1c1457ebbd2','../lite/tree/../notebooks/index.html?path=baa05aef_b1f0_409c_ae9c_5c2ab2376d2c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">hard_mask</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
@@ -918,11 +923,11 @@ follows:</p>
 </div>
 </div>
 </div>
-<div id="c3541d69-95eb-43fa-8df8-46568abdc543" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('11296805-89be-462e-814c-003ea7c3ec69','c3541d69-95eb-43fa-8df8-46568abdc543')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('11296805-89be-462e-814c-003ea7c3ec69','c3541d69-95eb-43fa-8df8-46568abdc543')">Open In Tab</button></div><div id="0d29b692-2b7f-4a00-92b7-f93c6ef16a35" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>To unmask all masked entries of a masked array (provided the mask isn’t a hard
+<div id="ef4ab2d2-2f7c-437f-bc41-e1c1457ebbd2" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('dce6d949-48d2-425c-8205-e10f091574bc','ef4ab2d2-2f7c-437f-bc41-e1c1457ebbd2')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('dce6d949-48d2-425c-8205-e10f091574bc','ef4ab2d2-2f7c-437f-bc41-e1c1457ebbd2')">Open In Tab</button></div><div id="4c67d42c-5055-4406-91c1-9fdc1519fd44" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>To unmask all masked entries of a masked array (provided the mask isn’t a hard
 mask), the simplest solution is to assign the constant <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.nomask" title="numpy.ma.nomask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">nomask</span></code></a> to the
 mask:</p>
-<div class="try_examples_outer_container docutils container" id="3dc3db30-1681-4db6-9b32-a5819f2d0f56">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3dc3db30-1681-4db6-9b32-a5819f2d0f56','76758bdb-fd61-41ad-997f-e0e8f4314edb','42ded138-e3f9-482a-b5a7-2025cd9c064d','../lite/tree/../notebooks/?path=19bc63ad_ed73_41fa_b55e_d1cb7e8d69ed.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="ca5c1130-ba71-4cf0-a6dd-301f687f34e6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ca5c1130-ba71-4cf0-a6dd-301f687f34e6','fab64e08-6214-4d8e-841f-e1fddce59967','9a2202c4-1c27-4ae3-98f5-ccfeb00f8b45','../lite/tree/../notebooks/index.html?path=87fab2ca_68c0_4b98_833a_ae625fc90e98.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
@@ -938,7 +943,7 @@ mask:</p>
 </div>
 </div>
 </div>
-<div id="42ded138-e3f9-482a-b5a7-2025cd9c064d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3dc3db30-1681-4db6-9b32-a5819f2d0f56','42ded138-e3f9-482a-b5a7-2025cd9c064d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3dc3db30-1681-4db6-9b32-a5819f2d0f56','42ded138-e3f9-482a-b5a7-2025cd9c064d')">Open In Tab</button></div><div id="76758bdb-fd61-41ad-997f-e0e8f4314edb" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="9a2202c4-1c27-4ae3-98f5-ccfeb00f8b45" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ca5c1130-ba71-4cf0-a6dd-301f687f34e6','9a2202c4-1c27-4ae3-98f5-ccfeb00f8b45')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ca5c1130-ba71-4cf0-a6dd-301f687f34e6','9a2202c4-1c27-4ae3-98f5-ccfeb00f8b45')">Open In Tab</button></div><div id="fab64e08-6214-4d8e-841f-e1fddce59967" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 </section>
 <section id="indexing-and-slicing">
 <h2>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this heading">#</a></h2>
@@ -948,8 +953,8 @@ its mechanisms for indexing and slicing.</p>
 output is either a scalar (if the corresponding entry of the mask is
 <code class="docutils literal notranslate"><span class="pre">False</span></code>) or the special value <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.masked" title="numpy.ma.masked"><code class="xref py py-attr docutils literal notranslate"><span class="pre">masked</span></code></a> (if the corresponding entry of
 the mask is <code class="docutils literal notranslate"><span class="pre">True</span></code>):</p>
-<div class="try_examples_outer_container docutils container" id="f19ed730-e057-42a0-bbb2-8422695997bf">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f19ed730-e057-42a0-bbb2-8422695997bf','ee26fd6a-7164-49b8-8a0e-7dfb297ebb89','8046d237-f88d-4685-8d77-22602876fbf1','../lite/tree/../notebooks/?path=7b2c867e_094f_4601_ad31_79b7a2d01e4e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="4805421a-c8ea-496f-ad96-78abfc181ee7">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4805421a-c8ea-496f-ad96-78abfc181ee7','52006d3a-d4c0-4e12-ba3e-6fbda1331981','32eafc8d-5891-4785-b190-6ab100866b0e','../lite/tree/../notebooks/index.html?path=335a49b0_9af8_4d3f_9e5d_9a64347dfcf7.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -962,12 +967,12 @@ the mask is <code class="docutils literal notranslate"><span class="pre">True</s
 </div>
 </div>
 </div>
-<div id="8046d237-f88d-4685-8d77-22602876fbf1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f19ed730-e057-42a0-bbb2-8422695997bf','8046d237-f88d-4685-8d77-22602876fbf1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f19ed730-e057-42a0-bbb2-8422695997bf','8046d237-f88d-4685-8d77-22602876fbf1')">Open In Tab</button></div><div id="ee26fd6a-7164-49b8-8a0e-7dfb297ebb89" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>If the masked array has named fields, accessing a single entry returns a
+<div id="32eafc8d-5891-4785-b190-6ab100866b0e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4805421a-c8ea-496f-ad96-78abfc181ee7','32eafc8d-5891-4785-b190-6ab100866b0e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4805421a-c8ea-496f-ad96-78abfc181ee7','32eafc8d-5891-4785-b190-6ab100866b0e')">Open In Tab</button></div><div id="52006d3a-d4c0-4e12-ba3e-6fbda1331981" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>If the masked array has named fields, accessing a single entry returns a
 <a class="reference internal" href="arrays.scalars.html#numpy.void" title="numpy.void"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.void</span></code></a> object if none of the fields are masked, or a 0d masked
 array with the same dtype as the initial array if at least one of the fields
 is masked.</p>
-<div class="try_examples_outer_container docutils container" id="865c80e4-831c-4fa7-83f1-d40f1fc43a89">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('865c80e4-831c-4fa7-83f1-d40f1fc43a89','509593e4-3f42-4a9a-a132-388b4b02ffc1','95bb8e2e-d44e-4a19-8a27-dd9ccf95a334','../lite/tree/../notebooks/?path=ce7596ee_0988_42f4_9b41_0b5d18f997ce.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="4b47026c-8a1e-4e07-b89d-9feafdb0473d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4b47026c-8a1e-4e07-b89d-9feafdb0473d','39379692-ef48-428d-acd3-e7e981f3944d','9e8d9a9e-ac84-49b0-b045-dead566b0164','../lite/tree/../notebooks/index.html?path=7c9dd193_0457_4cc6_bbad_72cea2b80663.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)],</span>
 <span class="gp">... </span>               <span class="n">mask</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span>
@@ -980,13 +985,13 @@ is masked.</p>
 </div>
 </div>
 </div>
-<div id="95bb8e2e-d44e-4a19-8a27-dd9ccf95a334" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('865c80e4-831c-4fa7-83f1-d40f1fc43a89','95bb8e2e-d44e-4a19-8a27-dd9ccf95a334')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('865c80e4-831c-4fa7-83f1-d40f1fc43a89','95bb8e2e-d44e-4a19-8a27-dd9ccf95a334')">Open In Tab</button></div><div id="509593e4-3f42-4a9a-a132-388b4b02ffc1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>When accessing a slice, the output is a masked array whose
+<div id="9e8d9a9e-ac84-49b0-b045-dead566b0164" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4b47026c-8a1e-4e07-b89d-9feafdb0473d','9e8d9a9e-ac84-49b0-b045-dead566b0164')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4b47026c-8a1e-4e07-b89d-9feafdb0473d','9e8d9a9e-ac84-49b0-b045-dead566b0164')">Open In Tab</button></div><div id="39379692-ef48-428d-acd3-e7e981f3944d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>When accessing a slice, the output is a masked array whose
 <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.MaskedArray.data" title="numpy.ma.MaskedArray.data"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> attribute is a view of the original data, and whose
 mask is either <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.nomask" title="numpy.ma.nomask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">nomask</span></code></a> (if there was no invalid entries in the original
 array) or a view of the corresponding slice of the original mask. The view is
 required to ensure propagation of any modification of the mask to the original.</p>
-<div class="try_examples_outer_container docutils container" id="9e378dbf-32a7-4824-8ca8-9fc0da917333">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9e378dbf-32a7-4824-8ca8-9fc0da917333','9d0aee32-bcd5-4671-a77b-a41ee7e6a0c8','78798f76-c186-40e0-b40c-7924fe3413ae','../lite/tree/../notebooks/?path=39cb3f01_a2df_47b3_b04c_4d092dc33808.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="10a45705-c429-4cf4-b1da-4b974a8500a2">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('10a45705-c429-4cf4-b1da-4b974a8500a2','9368ab51-8615-4c44-91d2-18dec55dc2ae','472b5c18-92a1-4332-a166-678b174d1a47','../lite/tree/../notebooks/index.html?path=fa686b3b_d417_4775_936d_a45cffec6889.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mx</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
@@ -1007,7 +1012,7 @@ required to ensure propagation of any modification of the mask to the original.<
 </div>
 </div>
 </div>
-<div id="78798f76-c186-40e0-b40c-7924fe3413ae" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9e378dbf-32a7-4824-8ca8-9fc0da917333','78798f76-c186-40e0-b40c-7924fe3413ae')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9e378dbf-32a7-4824-8ca8-9fc0da917333','78798f76-c186-40e0-b40c-7924fe3413ae')">Open In Tab</button></div><div id="9d0aee32-bcd5-4671-a77b-a41ee7e6a0c8" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Accessing a field of a masked array with structured datatype returns a
+<div id="472b5c18-92a1-4332-a166-678b174d1a47" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('10a45705-c429-4cf4-b1da-4b974a8500a2','472b5c18-92a1-4332-a166-678b174d1a47')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('10a45705-c429-4cf4-b1da-4b974a8500a2','472b5c18-92a1-4332-a166-678b174d1a47')">Open In Tab</button></div><div id="9368ab51-8615-4c44-91d2-18dec55dc2ae" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Accessing a field of a masked array with structured datatype returns a
 <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a>.</p>
 </section>
 <section id="operations-on-masked-arrays">
@@ -1026,8 +1031,8 @@ should not rely on this data remaining unchanged.</p>
 ufuncs. Unary and binary functions that have a validity domain (such as
 <a class="reference internal" href="generated/numpy.log.html#numpy.log" title="numpy.log"><code class="xref py py-func docutils literal notranslate"><span class="pre">log</span></code></a> or <a class="reference internal" href="generated/numpy.divide.html#numpy.divide" title="numpy.divide"><code class="xref py py-func docutils literal notranslate"><span class="pre">divide</span></code></a>) return the <a class="reference internal" href="maskedarray.baseclass.html#numpy.ma.masked" title="numpy.ma.masked"><code class="xref py py-data docutils literal notranslate"><span class="pre">masked</span></code></a>
 constant whenever the input is masked or falls outside the validity domain:</p>
-<div class="try_examples_outer_container docutils container" id="56194793-72c4-46f6-8015-d8c0a7c29e29">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('56194793-72c4-46f6-8015-d8c0a7c29e29','7a45d76a-4336-4e97-914f-f85eae4aa866','374e71e2-10aa-4fe1-9217-caacae059a35','../lite/tree/../notebooks/?path=6d8dd7fc_d712_4519_b3f2_34396495cb2b.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="4e2a9999-2d83-42ab-9ca8-928d2470c311">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4e2a9999-2d83-42ab-9ca8-928d2470c311','8ba839f5-da01-4978-a60d-d984cca3041e','8a47b69c-f240-4770-8dbf-d18c923482f7','../lite/tree/../notebooks/index.html?path=2b7604a9_8c91_4b2c_be75_be04794b46b6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ma</span><span class="o">.</span><span class="n">log</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="go">masked_array(data=[--, --, 0.0, 0.6931471805599453],</span>
@@ -1037,15 +1042,15 @@ constant whenever the input is masked or falls outside the validity domain:</p>
 </div>
 </div>
 </div>
-<div id="374e71e2-10aa-4fe1-9217-caacae059a35" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('56194793-72c4-46f6-8015-d8c0a7c29e29','374e71e2-10aa-4fe1-9217-caacae059a35')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('56194793-72c4-46f6-8015-d8c0a7c29e29','374e71e2-10aa-4fe1-9217-caacae059a35')">Open In Tab</button></div><div id="7a45d76a-4336-4e97-914f-f85eae4aa866" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Masked arrays also support standard numpy ufuncs. The output is then a masked
+<div id="8a47b69c-f240-4770-8dbf-d18c923482f7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4e2a9999-2d83-42ab-9ca8-928d2470c311','8a47b69c-f240-4770-8dbf-d18c923482f7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4e2a9999-2d83-42ab-9ca8-928d2470c311','8a47b69c-f240-4770-8dbf-d18c923482f7')">Open In Tab</button></div><div id="8ba839f5-da01-4978-a60d-d984cca3041e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Masked arrays also support standard numpy ufuncs. The output is then a masked
 array. The result of a unary ufunc is masked wherever the input is masked. The
 result of a binary ufunc is masked wherever any of the input is masked. If the
 ufunc also returns the optional context output (a 3-element tuple containing
 the name of the ufunc, its arguments and its domain), the context is processed
 and entries of the output masked array are masked wherever the corresponding
 input fall outside the validity domain:</p>
-<div class="try_examples_outer_container docutils container" id="5e076fba-a554-4a1e-a4bc-692bd6ea8aae">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5e076fba-a554-4a1e-a4bc-692bd6ea8aae','0edbc2f3-402e-44fd-b743-8d49b6d6389f','e9655e34-398e-4016-a228-1792f541e1aa','../lite/tree/../notebooks/?path=58a57ebb_5ee3_4719_b93b_91cf6b2b3ba8.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="0cc27229-0d21-4029-b183-f766044078af">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0cc27229-0d21-4029-b183-f766044078af','1db3b06f-f664-4c5d-a037-33b3ecfba08a','56df9d38-b4be-4a9c-9403-269d7593c61b','../lite/tree/../notebooks/index.html?path=cb7dd94a_024a_46ed_8001_757df1dad592.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -1056,7 +1061,7 @@ input fall outside the validity domain:</p>
 </div>
 </div>
 </div>
-<div id="e9655e34-398e-4016-a228-1792f541e1aa" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5e076fba-a554-4a1e-a4bc-692bd6ea8aae','e9655e34-398e-4016-a228-1792f541e1aa')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5e076fba-a554-4a1e-a4bc-692bd6ea8aae','e9655e34-398e-4016-a228-1792f541e1aa')">Open In Tab</button></div><div id="0edbc2f3-402e-44fd-b743-8d49b6d6389f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="56df9d38-b4be-4a9c-9403-269d7593c61b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0cc27229-0d21-4029-b183-f766044078af','56df9d38-b4be-4a9c-9403-269d7593c61b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0cc27229-0d21-4029-b183-f766044078af','56df9d38-b4be-4a9c-9403-269d7593c61b')">Open In Tab</button></div><div id="1db3b06f-f664-4c5d-a037-33b3ecfba08a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 </section>
 <section id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
@@ -1065,8 +1070,8 @@ input fall outside the validity domain:</p>
 <p>Let’s consider a list of elements, <code class="docutils literal notranslate"><span class="pre">x</span></code>, where values of -9999. represent
 missing data. We wish to compute the average value of the data and the vector
 of anomalies (deviations from the average):</p>
-<div class="try_examples_outer_container docutils container" id="37c6f021-e863-487a-bce1-c44929a090a6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('37c6f021-e863-487a-bce1-c44929a090a6','efa24923-945e-4ee0-b739-66dd32b5d02e','0e8d989c-cff6-4852-8c0b-9c4513de6a5d','../lite/tree/../notebooks/?path=7523ad03_149d_4074_a76d_fc89224ccd59.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="6269128d-95b6-49eb-afd1-3b2235b90cbd">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6269128d-95b6-49eb-afd1-3b2235b90cbd','ef468c59-257e-4dc5-a6e1-3765f1c878ac','551bb9ac-2468-46ea-a60f-6cb2915539ff','../lite/tree/../notebooks/index.html?path=119e766e_a149_44bb_b1a8_718949e96f6e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="o">-</span><span class="mf">9999.</span><span class="p">,</span><span class="mf">3.</span><span class="p">,</span><span class="mf">4.</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mx</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_values</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mf">9999.</span><span class="p">)</span>
@@ -1080,13 +1085,13 @@ of anomalies (deviations from the average):</p>
 </div>
 </div>
 </div>
-<div id="0e8d989c-cff6-4852-8c0b-9c4513de6a5d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('37c6f021-e863-487a-bce1-c44929a090a6','0e8d989c-cff6-4852-8c0b-9c4513de6a5d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('37c6f021-e863-487a-bce1-c44929a090a6','0e8d989c-cff6-4852-8c0b-9c4513de6a5d')">Open In Tab</button></div><div id="efa24923-945e-4ee0-b739-66dd32b5d02e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="551bb9ac-2468-46ea-a60f-6cb2915539ff" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6269128d-95b6-49eb-afd1-3b2235b90cbd','551bb9ac-2468-46ea-a60f-6cb2915539ff')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6269128d-95b6-49eb-afd1-3b2235b90cbd','551bb9ac-2468-46ea-a60f-6cb2915539ff')">Open In Tab</button></div><div id="ef468c59-257e-4dc5-a6e1-3765f1c878ac" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="filling-in-the-missing-data">
 <h2>Filling in the missing data<a class="headerlink" href="#filling-in-the-missing-data" title="Permalink to this heading">#</a></h2>
 <p>Suppose now that we wish to print that same data, but with the missing values
 replaced by the average value.</p>
-<div class="try_examples_outer_container docutils container" id="65fa0297-932f-4526-b1b0-2107b71557cf">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('65fa0297-932f-4526-b1b0-2107b71557cf','fb4afb71-cc1d-4cc8-982d-49c670cc1ac3','43cc6f42-5b0e-44a5-90ba-26dbfceb03d6','../lite/tree/../notebooks/?path=40306ca2_aa92_45c5_aa37_7ca27828b446.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="f727b99e-b545-4327-9453-8f17d90db356">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f727b99e-b545-4327-9453-8f17d90db356','8b52d808-6221-4a9c-b162-b263824e65da','88f8f34b-f3bf-46b8-bdc9-221f2b68d8af','../lite/tree/../notebooks/index.html?path=7e46a35c_8c5c_4b09_a83a_220c3c32ebd9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mx</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_values</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mf">9999.</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mx</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">mx</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
@@ -1095,7 +1100,7 @@ replaced by the average value.</p>
 </div>
 </div>
 </div>
-<div id="43cc6f42-5b0e-44a5-90ba-26dbfceb03d6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('65fa0297-932f-4526-b1b0-2107b71557cf','43cc6f42-5b0e-44a5-90ba-26dbfceb03d6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('65fa0297-932f-4526-b1b0-2107b71557cf','43cc6f42-5b0e-44a5-90ba-26dbfceb03d6')">Open In Tab</button></div><div id="fb4afb71-cc1d-4cc8-982d-49c670cc1ac3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="88f8f34b-f3bf-46b8-bdc9-221f2b68d8af" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f727b99e-b545-4327-9453-8f17d90db356','88f8f34b-f3bf-46b8-bdc9-221f2b68d8af')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f727b99e-b545-4327-9453-8f17d90db356','88f8f34b-f3bf-46b8-bdc9-221f2b68d8af')">Open In Tab</button></div><div id="8b52d808-6221-4a9c-b162-b263824e65da" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="numerical-operations">
 <h2>Numerical operations<a class="headerlink" href="#numerical-operations" title="Permalink to this heading">#</a></h2>
 <p>Numerical operations can be easily performed without worrying about missing
@@ -1119,8 +1124,8 @@ the last two where the inputs were masked.</p>
 <p>Let’s consider an array <code class="docutils literal notranslate"><span class="pre">d</span></code> of floats between 0 and 1. We wish to
 compute the average of the values of <code class="docutils literal notranslate"><span class="pre">d</span></code> while ignoring any data outside
 the range <code class="docutils literal notranslate"><span class="pre">[0.2,</span> <span class="pre">0.9]</span></code>:</p>
-<div class="try_examples_outer_container docutils container" id="524dde1f-5ad2-4ed7-8a5a-006e0ce7adf7">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('524dde1f-5ad2-4ed7-8a5a-006e0ce7adf7','34cd8558-755e-44a2-a387-bbf6e0c3248c','d6a8a1dc-8260-4176-a158-de70e16821cc','../lite/tree/../notebooks/?path=aafd1416_c16a_4549_8904_6ce610608599.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="fb52fa7d-83b6-452f-b859-e0954bf9c36f">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fb52fa7d-83b6-452f-b859-e0954bf9c36f','4fd78b50-97b2-4531-a80f-6b70a197b191','0cbbc2d2-6ab4-40b8-b33f-fced9a469ded','../lite/tree/../notebooks/index.html?path=2bee7a6c_9a52_4845_923e_53073a3986d4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -1130,7 +1135,7 @@ the range <code class="docutils literal notranslate"><span class="pre">[0.2,</sp
 </div>
 </div>
 </div>
-<div id="d6a8a1dc-8260-4176-a158-de70e16821cc" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('524dde1f-5ad2-4ed7-8a5a-006e0ce7adf7','d6a8a1dc-8260-4176-a158-de70e16821cc')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('524dde1f-5ad2-4ed7-8a5a-006e0ce7adf7','d6a8a1dc-8260-4176-a158-de70e16821cc')">Open In Tab</button></div><div id="34cd8558-755e-44a2-a387-bbf6e0c3248c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="0cbbc2d2-6ab4-40b8-b33f-fced9a469ded" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fb52fa7d-83b6-452f-b859-e0954bf9c36f','0cbbc2d2-6ab4-40b8-b33f-fced9a469ded')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fb52fa7d-83b6-452f-b859-e0954bf9c36f','0cbbc2d2-6ab4-40b8-b33f-fced9a469ded')">Open In Tab</button></div><div id="4fd78b50-97b2-4531-a80f-6b70a197b191" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 </section>
 
 
@@ -1225,8 +1230,8 @@ the range <code class="docutils literal notranslate"><span class="pre">[0.2,</sp
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1259,7 +1264,7 @@ the range <code class="docutils literal notranslate"><span class="pre">[0.2,</sp
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>

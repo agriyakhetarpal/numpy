@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
@@ -32,24 +32,27 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/numpy.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/jupyterlite_sphinx.js"></script>
     <script src="../../_static/design-tabs.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/c-api/generalized-ufuncs';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
@@ -61,7 +64,7 @@
     <link rel="prev" title="ufunc API" href="ufunc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jun 24, 2024"/>
+    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
   </head>
   
   
@@ -115,7 +118,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -124,6 +127,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -148,57 +153,57 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../user/index.html">
     User Guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../building/index.html">
     Building from source
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../dev/index.html">
     Development
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../release.html">
     Release notes
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
     Learn
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://numpy.org/neps">
     NEPs
   </a>
@@ -220,7 +225,7 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -230,10 +235,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -244,7 +249,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-2"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-2"
@@ -262,7 +267,7 @@ document.write(`
 `);
 </script></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -273,7 +278,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -285,7 +290,7 @@ document.write(`
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -311,52 +316,52 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../user/index.html">
     User Guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../building/index.html">
     Building from source
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../dev/index.html">
     Development
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../release.html">
     Release notes
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/numpy-tutorials/">
     Learn
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://numpy.org/neps">
     NEPs
   </a>
@@ -376,7 +381,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -386,10 +391,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -400,7 +405,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-3"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-3"
@@ -418,7 +423,7 @@ document.write(`
 `);
 </script></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -429,7 +434,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/numpy/numpy" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
@@ -558,7 +563,7 @@ what the “core” dimensionality of the inputs is, as well as the
 corresponding dimensionality of the outputs (the element-wise ufuncs
 have zero core dimensions).  The list of the core dimensions for all
 arguments is called the “signature” of a ufunc.  For example, the
-ufunc numpy.add has signature <code class="docutils literal notranslate"><span class="pre">(),()-&gt;()</span></code> defining two scalar inputs
+ufunc <code class="docutils literal notranslate"><span class="pre">numpy.add</span></code> has signature <code class="docutils literal notranslate"><span class="pre">(),()-&gt;()</span></code> defining two scalar inputs
 and one scalar output.</p>
 <p>Another example is the function <code class="docutils literal notranslate"><span class="pre">inner1d(a,</span> <span class="pre">b)</span></code> with a signature of
 <code class="docutils literal notranslate"><span class="pre">(i),(i)-&gt;()</span></code>.  This applies the inner product along the last axis of
@@ -595,10 +600,12 @@ taken when calling such a function. An example would be the function
 <code class="docutils literal notranslate"><span class="pre">euclidean_pdist(a)</span></code>, with signature <code class="docutils literal notranslate"><span class="pre">(n,d)-&gt;(p)</span></code>, that given an array of
 <code class="docutils literal notranslate"><span class="pre">n</span></code> <code class="docutils literal notranslate"><span class="pre">d</span></code>-dimensional vectors, computes all unique pairwise Euclidean
 distances among them. The output dimension <code class="docutils literal notranslate"><span class="pre">p</span></code> must therefore be equal to
-<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">*</span> <span class="pre">(n</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">2</span></code>, but it is the caller’s responsibility to pass in an
-output array of the right size. If the size of a core dimension of an output
+<code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">*</span> <span class="pre">(n</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">2</span></code>, but by default, it is the caller’s responsibility to pass
+in an output array of the right size. If the size of a core dimension of an output
 cannot be determined from a passed in input or output array, an error will be
-raised.</p>
+raised.  This can be changed by defining a <code class="docutils literal notranslate"><span class="pre">PyUFunc_ProcessCoreDimsFunc</span></code> function
+and assigning it to the <code class="docutils literal notranslate"><span class="pre">proces_core_dims_func</span></code> field of the <code class="docutils literal notranslate"><span class="pre">PyUFuncObject</span></code>
+structure.  See below for more details.</p>
 <p>Note: Prior to NumPy 1.10.0, less strict checks were in place: missing core
 dimensions were created by prepending 1’s to the shape as necessary, core
 dimensions with the same label were broadcast together, and undetermined
@@ -611,7 +618,7 @@ most basic operation on the smallest portion of array arguments
 (e.g. adding two numbers is the most basic operation in adding two
 arrays).  The ufunc applies the elementary function multiple times
 on different parts of the arrays.  The input/output of elementary
-functions can be vectors; e.g., the elementary function of inner1d
+functions can be vectors; e.g., the elementary function of <code class="docutils literal notranslate"><span class="pre">inner1d</span></code>
 takes two vectors as input.</p>
 </dd>
 <dt>Signature</dt><dd><p>A signature is a string describing the input/output dimensions of
@@ -760,6 +767,116 @@ input/output arrays <code class="docutils literal notranslate"><span class="pre"
 for the core dimensions <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>.  Finally, <code class="docutils literal notranslate"><span class="pre">steps</span></code> will be
 <code class="docutils literal notranslate"><span class="pre">[a_N,</span> <span class="pre">b_N,</span> <span class="pre">c_N,</span> <span class="pre">a_i,</span> <span class="pre">a_j,</span> <span class="pre">b_i]</span></code>, containing all necessary strides.</p>
 </section>
+<section id="customizing-core-dimension-size-processing">
+<h2>Customizing core dimension size processing<a class="headerlink" href="#customizing-core-dimension-size-processing" title="Permalink to this heading">#</a></h2>
+<p>The optional function of type <code class="docutils literal notranslate"><span class="pre">PyUFunc_ProcessCoreDimsFunc</span></code>, stored
+on the <code class="docutils literal notranslate"><span class="pre">process_core_dims_func</span></code> attribute of the ufunc, provides the
+author of the ufunc a “hook” into the processing of the core dimensions
+of the arrays that were passed to the ufunc.  The two primary uses of
+this “hook” are:</p>
+<ul class="simple">
+<li><p>Check that constraints on the core dimensions required
+by the ufunc are satisfied (and set an exception if they are not).</p></li>
+<li><p>Compute output shapes for any output core dimensions that were not
+determined by the input arrays.</p></li>
+</ul>
+<p>As an example of the first use, consider the generalized ufunc <code class="docutils literal notranslate"><span class="pre">minmax</span></code>
+with signature <code class="docutils literal notranslate"><span class="pre">(n)-&gt;(2)</span></code> that simultaneously computes the minimum and
+maximum of a sequence.  It should require that <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, because
+the minimum and maximum of a sequence with length 0 is not meaningful.
+In this case, the ufunc author might define the function like this:</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">minmax_process_core_dims</span><span class="p">(</span><span class="n">PyUFuncObject</span><span class="w"> </span><span class="n">ufunc</span><span class="p">,</span>
+<span class="w">                             </span><span class="n">npy_intp</span><span class="w"> </span><span class="o">*</span><span class="n">core_dim_sizes</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">npy_intp</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">core_dim_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PyExc_SetString</span><span class="p">(</span><span class="s">&quot;minmax requires the core dimension &quot;</span>
+<span class="w">                        </span><span class="s">&quot;to be at least 1.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>In this case, the length of the array <code class="docutils literal notranslate"><span class="pre">core_dim_sizes</span></code> will be 2.
+The second value in the array will always be 2, so there is no need
+for the function to inspect it.  The core dimension <code class="docutils literal notranslate"><span class="pre">n</span></code> is stored
+in the first element.  The function sets an exception and returns -1
+if it finds that <code class="docutils literal notranslate"><span class="pre">n</span></code> is 0.</p>
+<p>The second use for the “hook” is to compute the size of output arrays
+when the output arrays are not provided by the caller and one or more
+core dimension of the output is not also an input core dimension.
+If the ufunc does not have a function defined on the
+<code class="docutils literal notranslate"><span class="pre">process_core_dims_func</span></code> attribute, an unspecified output core
+dimension size will result in an exception being raised.  With the
+“hook” provided by <code class="docutils literal notranslate"><span class="pre">process_core_dims_func</span></code>, the author of the ufunc
+can set the output size to whatever is appropriate for the ufunc.</p>
+<p>In the array passed to the “hook” function, core dimensions that
+were not determined by the input are indicating by having the value -1
+in the <code class="docutils literal notranslate"><span class="pre">core_dim_sizes</span></code> array.  The function can replace the -1 with
+whatever value is appropriate for the ufunc, based on the core dimensions
+that occurred in the input arrays.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function must never change a value in <code class="docutils literal notranslate"><span class="pre">core_dim_sizes</span></code> that
+is not -1 on input.  Changing a value that was not -1 will generally
+result in incorrect output from the ufunc, and could result in the
+Python interpreter crashing.</p>
+</div>
+<p>For example, consider the generalized ufunc <code class="docutils literal notranslate"><span class="pre">conv1d</span></code> for which
+the elementary function computes the “full” convolution of two
+one-dimensional arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> with lengths <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code>,
+respectively.  The output of this convolution has length <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code>.
+To implement this as a generalized ufunc, the signature is set to
+<code class="docutils literal notranslate"><span class="pre">(m),(n)-&gt;(p)</span></code>, and in the “hook” function, if the core dimension
+<code class="docutils literal notranslate"><span class="pre">p</span></code> is found to be -1, it is replaced with <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code>.  If <code class="docutils literal notranslate"><span class="pre">p</span></code>
+is <em>not</em> -1, it must be verified that the given value equals <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code>.
+If it does not, the function must set an exception and return -1.
+For a meaningful result, the operation also requires that <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">+</span> <span class="pre">n</span></code>
+is at least 1, i.e. both inputs can’t have length 0.</p>
+<p>Here’s how that might look in code:</p>
+<blockquote>
+<div><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">conv1d_process_core_dims</span><span class="p">(</span><span class="n">PyUFuncObject</span><span class="w"> </span><span class="o">*</span><span class="n">ufunc</span><span class="p">,</span>
+<span class="w">                             </span><span class="n">npy_intp</span><span class="w"> </span><span class="o">*</span><span class="n">core_dim_sizes</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// core_dim_sizes will hold the core dimensions [m, n, p].</span>
+<span class="w">    </span><span class="c1">// p will be -1 if the caller did not provide the out argument.</span>
+<span class="w">    </span><span class="n">npy_intp</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">core_dim_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">    </span><span class="n">npy_intp</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">core_dim_sizes</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="n">npy_intp</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">core_dim_sizes</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="n">npy_intp</span><span class="w"> </span><span class="n">required_p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Disallow both inputs having length 0.</span>
+<span class="w">        </span><span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_ValueError</span><span class="p">,</span>
+<span class="w">            </span><span class="s">&quot;conv1d: both inputs have core dimension 0; the function &quot;</span>
+<span class="w">            </span><span class="s">&quot;requires that at least one input has size greater than 0.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Output array was not given in the call of the ufunc.</span>
+<span class="w">        </span><span class="c1">// Set the correct output size here.</span>
+<span class="w">        </span><span class="n">core_dim_sizes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">required_p</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// An output array *was* given.  Validate its core dimension.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">required_p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PyErr_Format</span><span class="p">(</span><span class="n">PyExc_ValueError</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;conv1d: the core dimension p of the out parameter &quot;</span>
+<span class="w">                </span><span class="s">&quot;does not equal m + n - 1, where m and n are the &quot;</span>
+<span class="w">                </span><span class="s">&quot;core dimensions of the inputs x and y; got m=%zd &quot;</span>
+<span class="w">                </span><span class="s">&quot;and n=%zd so p must be %zd, but got p=%zd.&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">required_p</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 
@@ -811,6 +928,7 @@ for the core dimensions <code class="docutils literal notranslate"><span class="
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-signature">Details of signature</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-api-for-implementing-elementary-functions">C-API for implementing elementary functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-core-dimension-size-processing">Customizing core dimension size processing</a></li>
 </ul>
   </nav></div>
 
@@ -827,8 +945,8 @@ for the core dimensions <code class="docutils literal notranslate"><span class="
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -861,7 +979,7 @@ for the core dimensions <code class="docutils literal notranslate"><span class="
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>

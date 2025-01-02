@@ -1,0 +1,50 @@
+name: Publish docs to GitHub Pages
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-docs:
+    name: Build and deploy docs
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      with:
+        submodules: recursive
+        fetch-tags: true
+
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@a4260408e20b96e80095f42ff7f1a15b27dd94ca # v3.0.4
+      with:
+        python-version: 3.11
+        channels: conda-forge
+        channel-priority: true
+        activate-environment: numpy-dev
+        use-only-tar-bz2: false
+        miniforge-version: latest
+        use-mamba: true
+
+    - name: Build NumPy docs
+      shell: bash -l {0}
+      run: |
+        mamba env update -n numpy-dev -f environment.yml --prune
+        conda activate numpy-dev
+        spin build -- -Dallow-noblas=true
+        spin docs --no-build
+    - name: Sanity check docs
+      run: tree doc/build/
+
+    - name: Upload docs
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation_artifact
+        path: doc/build/html/
+
+    - name: Deploy docs to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/build/html/
+        user_name: agriyakhetarpal
+        user_email: "74401230+agriyakhetarpal@users.noreply.github.com"

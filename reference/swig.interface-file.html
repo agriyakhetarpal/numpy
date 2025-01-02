@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>numpy.i: a SWIG interface file for NumPy &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>numpy.i: a SWIG interface file for NumPy &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/swig.interface-file';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="NumPy and SWIG" href="swig.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -462,7 +433,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -470,7 +440,8 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -486,9 +457,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -506,8 +482,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -522,7 +496,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="swig.html" class="nav-link">NumPy and SWIG</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">numpy.i: a...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">numpy.i: a SWIG interface file for NumPy</span></li>
   </ul>
 </nav>
 </div>
@@ -540,9 +514,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="numpy-i-a-swig-interface-file-for-numpy">
-<h1>numpy.i: a SWIG interface file for NumPy<a class="headerlink" href="#numpy-i-a-swig-interface-file-for-numpy" title="Permalink to this heading">#</a></h1>
+<h1>numpy.i: a SWIG interface file for NumPy<a class="headerlink" href="#numpy-i-a-swig-interface-file-for-numpy" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>The Simple Wrapper and Interface Generator (or <a class="reference external" href="https://www.swig.org">SWIG</a>) is a powerful tool for generating wrapper
 code for interfacing to a wide variety of scripting languages.
 <a class="reference external" href="https://www.swig.org">SWIG</a> can parse header files, and using only the code prototypes,
@@ -695,7 +669,7 @@ and <code class="docutils literal notranslate"><span class="pre">arg2</span></co
 assignments in lines 19 and 20.</p>
 </section>
 <section id="using-numpy-i">
-<h2>Using numpy.i<a class="headerlink" href="#using-numpy-i" title="Permalink to this heading">#</a></h2>
+<h2>Using numpy.i<a class="headerlink" href="#using-numpy-i" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> file is currently located in the <code class="docutils literal notranslate"><span class="pre">tools/swig</span></code>
 sub-directory under the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> installation directory.  Typically,
 you will want to copy it to the directory where you are developing
@@ -722,7 +696,7 @@ one <a class="reference external" href="https://www.swig.org">SWIG</a> interface
 <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">SWIG_FILE_WITH_INIT</span></code> and call <code class="docutils literal notranslate"><span class="pre">import_array()</span></code>.</p>
 </section>
 <section id="available-typemaps">
-<h2>Available typemaps<a class="headerlink" href="#available-typemaps" title="Permalink to this heading">#</a></h2>
+<h2>Available typemaps<a class="headerlink" href="#available-typemaps" title="Link to this heading">#</a></h2>
 <p>The typemap directives provided by <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> for arrays of different
 data types, say <code class="docutils literal notranslate"><span class="pre">double</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span></code>, and dimensions of different
 types, say <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">long</span></code>, are identical to one another except
@@ -761,7 +735,7 @@ should be one of the many types of integers.</p>
 the buffer pointer.  Names with <code class="docutils literal notranslate"><span class="pre">FARRAY</span></code> are for Fortran-ordered
 arrays, and names with <code class="docutils literal notranslate"><span class="pre">ARRAY</span></code> are for C-ordered (or 1D arrays).</p>
 <section id="input-arrays">
-<h3>Input Arrays<a class="headerlink" href="#input-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Input Arrays<a class="headerlink" href="#input-arrays" title="Link to this heading">#</a></h3>
 <p>Input arrays are defined as arrays of data that are passed into a
 routine but are not altered in-place or returned to the user.  The
 Python input array is therefore allowed to be almost any Python
@@ -803,7 +777,7 @@ one-dimensional arrays with hard-coded dimensions.  Likewise,
 with hard-coded dimensions, and similarly for three-dimensional.</p>
 </section>
 <section id="in-place-arrays">
-<h3>In-Place Arrays<a class="headerlink" href="#in-place-arrays" title="Permalink to this heading">#</a></h3>
+<h3>In-Place Arrays<a class="headerlink" href="#in-place-arrays" title="Link to this heading">#</a></h3>
 <p>In-place arrays are defined as arrays that are modified in-place.  The
 input values may or may not be used, but the values at the time the
 function returns are significant.  The provided Python argument
@@ -852,7 +826,7 @@ This form checks for continuity but allows either C or Fortran ordering.</p>
 </ul>
 </section>
 <section id="argout-arrays">
-<h3>Argout Arrays<a class="headerlink" href="#argout-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Argout Arrays<a class="headerlink" href="#argout-arrays" title="Link to this heading">#</a></h3>
 <p>Argout arrays are arrays that appear in the input arguments in C, but
 are in fact output arrays.  This pattern occurs often when there is
 more than one output variable and the single return argument is
@@ -893,7 +867,7 @@ cannot be avoided.  Note that for these types of 1D typemaps, the
 Python function will take a single argument representing <code class="docutils literal notranslate"><span class="pre">DIM1</span></code>.</p>
 </section>
 <section id="argout-view-arrays">
-<h3>Argout View Arrays<a class="headerlink" href="#argout-view-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Argout View Arrays<a class="headerlink" href="#argout-view-arrays" title="Link to this heading">#</a></h3>
 <p>Argoutview arrays are for when your C code provides you with a view of
 its internal data and does not require any memory to be allocated by
 the user.  This can be dangerous.  There is almost no way to guarantee
@@ -938,7 +912,7 @@ typemap signatures are therefore</p>
 cannot follow the double pointer signatures of these typemaps.</p>
 </section>
 <section id="memory-managed-argout-view-arrays">
-<h3>Memory Managed Argout View Arrays<a class="headerlink" href="#memory-managed-argout-view-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Memory Managed Argout View Arrays<a class="headerlink" href="#memory-managed-argout-view-arrays" title="Link to this heading">#</a></h3>
 <p>A recent addition to <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> are typemaps that permit argout
 arrays with views into memory that is managed.</p>
 <p>1D:</p>
@@ -969,7 +943,7 @@ arrays with views into memory that is managed.</p>
 </ul>
 </section>
 <section id="output-arrays">
-<h3>Output Arrays<a class="headerlink" href="#output-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Output Arrays<a class="headerlink" href="#output-arrays" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> interface file does not support typemaps for output
 arrays, for several reasons.  First, C/C++ return arguments are
 limited to a single value.  This prevents obtaining dimension
@@ -989,7 +963,7 @@ function to be wrapped, either with <code class="docutils literal notranslate"><
 methods or <code class="docutils literal notranslate"><span class="pre">%ignore</span></code> and <code class="docutils literal notranslate"><span class="pre">%rename</span></code> for the case of functions.</p>
 </section>
 <section id="other-common-types-bool">
-<h3>Other Common Types: bool<a class="headerlink" href="#other-common-types-bool" title="Permalink to this heading">#</a></h3>
+<h3>Other Common Types: bool<a class="headerlink" href="#other-common-types-bool" title="Link to this heading">#</a></h3>
 <p>Note that C++ type <code class="docutils literal notranslate"><span class="pre">bool</span></code> is not supported in the list in the
 <a class="reference internal" href="#available-typemaps">Available Typemaps</a> section.  NumPy bools are a single byte, while
 the C++ <code class="docutils literal notranslate"><span class="pre">bool</span></code> is four bytes (at least on my system).  Therefore:</p>
@@ -1006,7 +980,7 @@ expansion:</p>
 but <a class="reference internal" href="#in-place-arrays">In-Place Arrays</a> might fail type-checking.</p>
 </section>
 <section id="other-common-types-complex">
-<h3>Other Common Types: complex<a class="headerlink" href="#other-common-types-complex" title="Permalink to this heading">#</a></h3>
+<h3>Other Common Types: complex<a class="headerlink" href="#other-common-types-complex" title="Link to this heading">#</a></h3>
 <p>Typemap conversions for complex floating-point types is also not
 supported automatically.  This is because Python and NumPy are
 written in C, which does not have native complex types.  Both
@@ -1040,7 +1014,7 @@ work.</p>
 </section>
 </section>
 <section id="numpy-array-scalars-and-swig">
-<h2>NumPy array scalars and SWIG<a class="headerlink" href="#numpy-array-scalars-and-swig" title="Permalink to this heading">#</a></h2>
+<h2>NumPy array scalars and SWIG<a class="headerlink" href="#numpy-array-scalars-and-swig" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.swig.org">SWIG</a> has sophisticated type checking for numerical types.  For
 example, if your C/C++ routine expects an integer as input, the code
 generated by <a class="reference external" href="https://www.swig.org">SWIG</a> will check for both Python integers and
@@ -1072,7 +1046,7 @@ the file:</p>
 be fixed.  It is suggested that you do this anyway, as it only
 increases the capabilities of your Python interface.</p>
 <section id="why-is-there-a-second-file">
-<h3>Why is There a Second File?<a class="headerlink" href="#why-is-there-a-second-file" title="Permalink to this heading">#</a></h3>
+<h3>Why is There a Second File?<a class="headerlink" href="#why-is-there-a-second-file" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://www.swig.org">SWIG</a> type checking and conversion system is a complicated
 combination of C macros, <a class="reference external" href="https://www.swig.org">SWIG</a> macros, <a class="reference external" href="https://www.swig.org">SWIG</a> typemaps and <a class="reference external" href="https://www.swig.org">SWIG</a>
 fragments.  Fragments are a way to conditionally insert code into your
@@ -1093,7 +1067,7 @@ in <code class="docutils literal notranslate"><span class="pre">numpy.i</span></
 </section>
 </section>
 <section id="helper-functions">
-<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this heading">#</a></h2>
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> file contains several macros and routines that it
 uses internally to build its typemaps.  However, these functions may
 be useful elsewhere in your interface file.  These macros and routines
@@ -1107,7 +1081,7 @@ in your code using:</p>
 </div>
 <p>in your <a class="reference external" href="https://www.swig.org">SWIG</a> interface file.</p>
 <section id="macros">
-<h3>Macros<a class="headerlink" href="#macros" title="Permalink to this heading">#</a></h3>
+<h3>Macros<a class="headerlink" href="#macros" title="Link to this heading">#</a></h3>
 <dl class="simple">
 <dt><strong>is_array(a)</strong></dt><dd><p>Evaluates as true if <code class="docutils literal notranslate"><span class="pre">a</span></code> is non-<code class="docutils literal notranslate"><span class="pre">NULL</span></code> and can be cast to a
 <code class="docutils literal notranslate"><span class="pre">PyArrayObject*</span></code>.</p>
@@ -1158,7 +1132,7 @@ order.  Equivalent to <code class="docutils literal notranslate"><span class="pr
 </dl>
 </section>
 <section id="routines">
-<h3>Routines<a class="headerlink" href="#routines" title="Permalink to this heading">#</a></h3>
+<h3>Routines<a class="headerlink" href="#routines" title="Link to this heading">#</a></h3>
 <dl>
 <dt><strong>pytype_string()</strong></dt><dd><p>Return type: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char*</span></code></p>
 <p>Arguments:</p>
@@ -1329,11 +1303,11 @@ Else, set the Fortran ordering flag and recompute the strides.</p>
 </section>
 </section>
 <section id="beyond-the-provided-typemaps">
-<h2>Beyond the provided typemaps<a class="headerlink" href="#beyond-the-provided-typemaps" title="Permalink to this heading">#</a></h2>
+<h2>Beyond the provided typemaps<a class="headerlink" href="#beyond-the-provided-typemaps" title="Link to this heading">#</a></h2>
 <p>There are many C or C++ array/NumPy array situations not covered by
 a simple <code class="docutils literal notranslate"><span class="pre">%include</span> <span class="pre">&quot;numpy.i&quot;</span></code> and subsequent <code class="docutils literal notranslate"><span class="pre">%apply</span></code> directives.</p>
 <section id="a-common-example">
-<h3>A Common Example<a class="headerlink" href="#a-common-example" title="Permalink to this heading">#</a></h3>
+<h3>A Common Example<a class="headerlink" href="#a-common-example" title="Link to this heading">#</a></h3>
 <p>Consider a reasonable prototype for a dot product function:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">double</span> <span class="n">dot</span><span class="p">(</span><span class="nb">int</span> <span class="nb">len</span><span class="p">,</span> <span class="n">double</span><span class="o">*</span> <span class="n">vec1</span><span class="p">,</span> <span class="n">double</span><span class="o">*</span> <span class="n">vec2</span><span class="p">);</span>
 </pre></div>
@@ -1389,7 +1363,7 @@ above for <code class="docutils literal notranslate"><span class="pre">my_dot</s
 macro to perform this task.</p>
 </section>
 <section id="other-situations">
-<h3>Other Situations<a class="headerlink" href="#other-situations" title="Permalink to this heading">#</a></h3>
+<h3>Other Situations<a class="headerlink" href="#other-situations" title="Link to this heading">#</a></h3>
 <p>There are other wrapping situations in which <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> may be
 helpful when you encounter them.</p>
 <ul>
@@ -1421,7 +1395,7 @@ developers of <code class="docutils literal notranslate"><span class="pre">numpy
 </ul>
 </section>
 <section id="a-final-note">
-<h3>A Final Note<a class="headerlink" href="#a-final-note" title="Permalink to this heading">#</a></h3>
+<h3>A Final Note<a class="headerlink" href="#a-final-note" title="Link to this heading">#</a></h3>
 <p>When you use the <code class="docutils literal notranslate"><span class="pre">%apply</span></code> directive, as is usually necessary to use
 <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code>, it will remain in effect until you tell <a class="reference external" href="https://www.swig.org">SWIG</a> that it
 shouldn’t be.  If the arguments to the functions or methods that you
@@ -1439,7 +1413,7 @@ where you want them, and then clear them after you are done.</p>
 </section>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>Out of the box, <code class="docutils literal notranslate"><span class="pre">numpy.i</span></code> provides typemaps that support conversion
 between NumPy arrays and C arrays:</p>
 <ul class="simple">
@@ -1513,7 +1487,8 @@ the deprecation of some aspects of the API after version 1.6.</p></li>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1569,8 +1544,8 @@ the deprecation of some aspects of the API after version 1.6.</p></li>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1581,7 +1556,7 @@ the deprecation of some aspects of the API after version 1.6.</p></li>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1590,7 +1565,7 @@ the deprecation of some aspects of the API after version 1.6.</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1603,7 +1578,8 @@ the deprecation of some aspects of the API after version 1.6.</p></li>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

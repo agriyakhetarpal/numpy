@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Scalars &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Scalars &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/arrays.scalars';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="numpy.ndarray.__class_getitem__" href="generated/numpy.ndarray.__class_getitem__.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -484,6 +455,7 @@ document.write(`
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.dtypes.html">Data type objects (<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.promotion.html">Data type promotion in NumPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.nditer.html">Iterating over arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.classes.html">Standard array subclasses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maskedarray.html">Masked arrays</a></li>
@@ -500,7 +472,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -508,7 +479,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -520,9 +492,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -540,8 +517,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -556,7 +531,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="arrays.html" class="nav-link">Array objects</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Scalars</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Scalars</span></li>
   </ul>
 </nav>
 </div>
@@ -574,7 +549,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="scalars">
-<span id="arrays-scalars"></span><h1>Scalars<a class="headerlink" href="#scalars" title="Permalink to this heading">#</a></h1>
+<span id="arrays-scalars"></span><h1>Scalars<a class="headerlink" href="#scalars" title="Link to this heading">#</a></h1>
 <p>Python defines only one type of a particular data class (there is only
 one integer type, one floating-point type, etc.). This can be
 convenient in applications that don’t need to be concerned with all
@@ -589,11 +564,11 @@ the same footing as arrays, smoothing out rough edges that result when
 mixing scalar and array operations.</p>
 <p>Array scalars live in a hierarchy (see the Figure below) of data
 types. They can be detected using the hierarchy: For example,
-<code class="docutils literal notranslate"><span class="pre">isinstance(val,</span> <span class="pre">np.generic)</span></code> will return <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <em>val</em> is
+<code class="docutils literal notranslate"><span class="pre">isinstance(val,</span> <span class="pre">np.generic)</span></code> will return <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <em>val</em> is
 an array scalar object. Alternatively, what kind of array scalar is
 present can be determined using other members of the data type
 hierarchy. Thus, for example <code class="docutils literal notranslate"><span class="pre">isinstance(val,</span> <span class="pre">np.complexfloating)</span></code>
-will return <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.12)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <em>val</em> is a complex valued type, while
+will return <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref py py-data docutils literal notranslate"><span class="pre">True</span></code></a> if <em>val</em> is a complex valued type, while
 <code class="docutils literal notranslate"><span class="pre">isinstance(val,</span> <span class="pre">np.flexible)</span></code> will return true if <em>val</em> is one
 of the flexible itemsize array types (<a class="reference internal" href="#numpy.str_" title="numpy.str_"><code class="xref py py-class docutils literal notranslate"><span class="pre">str_</span></code></a>,
 <a class="reference internal" href="#numpy.bytes_" title="numpy.bytes_"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes_</span></code></a>, <a class="reference internal" href="#numpy.void" title="numpy.void"><code class="xref py py-class docutils literal notranslate"><span class="pre">void</span></code></a>).</p>
@@ -603,18 +578,18 @@ of the flexible itemsize array types (<a class="reference internal" href="#numpy
 <p><span class="caption-text"><strong>Figure:</strong> Hierarchy of type objects representing the array data
 types. Not shown are the two integer types <a class="reference internal" href="#numpy.intp" title="numpy.intp"><code class="xref py py-class docutils literal notranslate"><span class="pre">intp</span></code></a> and
 <a class="reference internal" href="#numpy.uintp" title="numpy.uintp"><code class="xref py py-class docutils literal notranslate"><span class="pre">uintp</span></code></a> which are used for indexing (the same as the
-default integer since NumPy 2).</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+default integer since NumPy 2).</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="note">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>However, array scalars are immutable, so none of the array
 scalar attributes are settable.</p>
 </aside>
 </aside>
 <section id="built-in-scalar-types">
-<span id="arrays-scalars-built-in"></span><span id="arrays-scalars-character-codes"></span><h2>Built-in scalar types<a class="headerlink" href="#built-in-scalar-types" title="Permalink to this heading">#</a></h2>
+<span id="arrays-scalars-built-in"></span><span id="arrays-scalars-character-codes"></span><h2>Built-in scalar types<a class="headerlink" href="#built-in-scalar-types" title="Link to this heading">#</a></h2>
 <p>The built-in scalar types are shown below. The C-like names are associated with character codes,
 which are shown in their descriptions. Use of the character codes, however,
 is discouraged.</p>
@@ -630,23 +605,23 @@ generic array scalar type:</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#numpy.int_" title="numpy.int_"><code class="xref py py-class docutils literal notranslate"><span class="pre">int_</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></p></td>
 <td><p>Python 2 only</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#numpy.double" title="numpy.double"><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p></td>
 <td><p>yes</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#numpy.cdouble" title="numpy.cdouble"><code class="xref py py-class docutils literal notranslate"><span class="pre">cdouble</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a></p></td>
 <td><p>yes</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#numpy.bytes_" title="numpy.bytes_"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes_</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a></p></td>
 <td><p>yes</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#numpy.str_" title="numpy.str_"><code class="xref py py-class docutils literal notranslate"><span class="pre">str_</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p></td>
 <td><p>yes</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#numpy.bool_" title="numpy.bool_"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool_</span></code></a></p></td>
@@ -654,11 +629,11 @@ generic array scalar type:</p>
 <td><p>no</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#numpy.datetime64" title="numpy.datetime64"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime64</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a></p></td>
 <td><p>no</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#numpy.timedelta64" title="numpy.timedelta64"><code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta64</span></code></a></p></td>
-<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.timedelta</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.timedelta" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.timedelta</span></code></a></p></td>
 <td><p>no</p></td>
 </tr>
 </tbody>
@@ -672,7 +647,7 @@ Python Boolean scalar.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The <a class="reference internal" href="#numpy.int_" title="numpy.int_"><code class="xref py py-class docutils literal notranslate"><span class="pre">int_</span></code></a> type does <strong>not</strong> inherit from the
-<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> built-in under Python 3, because type <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> is no
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> built-in under Python 3, because type <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> is no
 longer a fixed-width integer type.</p>
 </div>
 <div class="admonition tip">
@@ -681,7 +656,7 @@ longer a fixed-width integer type.</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.generic">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">generic</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.generic" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">generic</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.generic" title="Link to this definition">#</a></dt>
 <dd><p>Base class for numpy scalar types.</p>
 <p>Class from which most (all?) numpy scalar types are derived.  For
 consistency, exposes the same API as <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, despite many
@@ -692,15 +667,15 @@ custom scalar types.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.number">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">number</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.number" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">number</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.number" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all numeric scalar types.</p>
 </dd></dl>
 
 <section id="integer-types">
-<h3>Integer types<a class="headerlink" href="#integer-types" title="Permalink to this heading">#</a></h3>
+<h3>Integer types<a class="headerlink" href="#integer-types" title="Link to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.integer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">integer</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.integer" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">integer</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.integer" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all integer scalar types.</p>
 </dd></dl>
 
@@ -710,16 +685,16 @@ custom scalar types.</p>
 be subject to <a class="reference internal" href="../user/basics.types.html#overflow-errors"><span class="std std-ref">Overflow errors</span></a>.</p>
 </div>
 <section id="signed-integer-types">
-<h4>Signed integer types<a class="headerlink" href="#signed-integer-types" title="Permalink to this heading">#</a></h4>
+<h4>Signed integer types<a class="headerlink" href="#signed-integer-types" title="Link to this heading">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.signedinteger">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">signedinteger</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.signedinteger" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">signedinteger</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.signedinteger" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all signed integer scalar types.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.byte">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">byte</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.byte" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">byte</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.byte" title="Link to this definition">#</a></dt>
 <dd><p>Signed integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">char</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -736,7 +711,7 @@ be subject to <a class="reference internal" href="../user/basics.types.html#over
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.short">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">short</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.short" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">short</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.short" title="Link to this definition">#</a></dt>
 <dd><p>Signed integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">short</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -753,7 +728,7 @@ be subject to <a class="reference internal" href="../user/basics.types.html#over
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.intc">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">intc</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.intc" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">intc</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.intc" title="Link to this definition">#</a></dt>
 <dd><p>Signed integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -770,7 +745,7 @@ be subject to <a class="reference internal" href="../user/basics.types.html#over
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.int_">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.int_" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.int_" title="Link to this definition">#</a></dt>
 <dd><p>Default signed integer type, 64bit on 64bit systems and 32bit on 32bit
 systems.</p>
 <dl class="field-list simple">
@@ -791,13 +766,13 @@ systems.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.long">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">long</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.long" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">long</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.long" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.int_" title="numpy.int_"><code class="xref py py-class docutils literal notranslate"><span class="pre">int_</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.longlong">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">longlong</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.longlong" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">longlong</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.longlong" title="Link to this definition">#</a></dt>
 <dd><p>Signed integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -808,16 +783,16 @@ systems.</p>
 
 </section>
 <section id="unsigned-integer-types">
-<h4>Unsigned integer types<a class="headerlink" href="#unsigned-integer-types" title="Permalink to this heading">#</a></h4>
+<h4>Unsigned integer types<a class="headerlink" href="#unsigned-integer-types" title="Link to this heading">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.unsignedinteger">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">unsignedinteger</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.unsignedinteger" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">unsignedinteger</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.unsignedinteger" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all unsigned integer scalar types.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.ubyte">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ubyte</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ubyte" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ubyte</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ubyte" title="Link to this definition">#</a></dt>
 <dd><p>Unsigned integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">char</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -834,7 +809,7 @@ systems.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.ushort">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ushort</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ushort" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ushort</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ushort" title="Link to this definition">#</a></dt>
 <dd><p>Unsigned integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">short</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -851,7 +826,7 @@ systems.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.uintc">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uintc</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uintc" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uintc</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uintc" title="Link to this definition">#</a></dt>
 <dd><p>Unsigned integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">int</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -868,7 +843,7 @@ systems.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.uint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uint" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uint" title="Link to this definition">#</a></dt>
 <dd><p>Unsigned signed integer type, 64bit on 64bit systems and 32bit on 32bit
 systems.</p>
 <dl class="field-list simple">
@@ -889,13 +864,13 @@ systems.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ulong">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ulong</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ulong" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ulong</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ulong" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.uint" title="numpy.uint"><code class="xref py py-class docutils literal notranslate"><span class="pre">uint</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.ulonglong">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ulonglong</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ulonglong" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">ulonglong</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ulonglong" title="Link to this definition">#</a></dt>
 <dd><p>Signed integer type, compatible with C <code class="docutils literal notranslate"><span class="pre">unsigned</span> <span class="pre">long</span> <span class="pre">long</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -907,10 +882,10 @@ systems.</p>
 </section>
 </section>
 <section id="inexact-types">
-<h3>Inexact types<a class="headerlink" href="#inexact-types" title="Permalink to this heading">#</a></h3>
+<h3>Inexact types<a class="headerlink" href="#inexact-types" title="Link to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.inexact">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">inexact</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.inexact" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">inexact</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.inexact" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all numeric scalar types with a (potentially)
 inexact representation of the values in its range, such as
 floating-point numbers.</p>
@@ -924,8 +899,8 @@ by judicious rounding. See the <code class="docutils literal notranslate"><span 
 <a class="reference internal" href="generated/numpy.format_float_positional.html#numpy.format_float_positional" title="numpy.format_float_positional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_float_positional</span></code></a> and <a class="reference internal" href="generated/numpy.format_float_scientific.html#numpy.format_float_scientific" title="numpy.format_float_scientific"><code class="xref py py-obj docutils literal notranslate"><span class="pre">format_float_scientific</span></code></a>.</p>
 <p>This means that variables with equal binary values but whose datatypes are of
 different precisions may display differently:</p>
-<div class="try_examples_outer_container docutils container" id="f3b33b10-ef0a-4867-8389-972e68876bd1">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f3b33b10-ef0a-4867-8389-972e68876bd1','80e0e60d-77ee-40b5-8d1d-a672d7cc6dc9','efbe11e1-cab3-4091-9c5f-38e1b0234484','../lite/tree/../notebooks/index.html?path=e45c5a63_54b0_4825_b90f_e806954225b6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="611c932a-528e-4cc3-8051-829a6d3e4655">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('611c932a-528e-4cc3-8051-829a6d3e4655','7edb8ae2-17aa-4061-89ac-f40d346afc22','96f89c78-9ba3-4870-a781-9042472ed968','../lite/tree/../notebooks/index.html?path=a04591d3_6a4f_4ff9_a1be_84db0e2c13e0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -955,18 +930,18 @@ the same decimal value may compare unequal despite printing identically:</p>
 </div>
 </div>
 </div>
-<div id="efbe11e1-cab3-4091-9c5f-38e1b0234484" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f3b33b10-ef0a-4867-8389-972e68876bd1','efbe11e1-cab3-4091-9c5f-38e1b0234484')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f3b33b10-ef0a-4867-8389-972e68876bd1','efbe11e1-cab3-4091-9c5f-38e1b0234484')">Open In Tab</button></div><div id="80e0e60d-77ee-40b5-8d1d-a672d7cc6dc9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="96f89c78-9ba3-4870-a781-9042472ed968" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('611c932a-528e-4cc3-8051-829a6d3e4655','96f89c78-9ba3-4870-a781-9042472ed968')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('611c932a-528e-4cc3-8051-829a6d3e4655','96f89c78-9ba3-4870-a781-9042472ed968')">Open In Tab</button></div><div id="7edb8ae2-17aa-4061-89ac-f40d346afc22" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <section id="floating-point-types">
-<h4>Floating-point types<a class="headerlink" href="#floating-point-types" title="Permalink to this heading">#</a></h4>
+<h4>Floating-point types<a class="headerlink" href="#floating-point-types" title="Link to this heading">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.floating">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">floating</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.floating" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">floating</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.floating" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all floating-point scalar types.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.half">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">half</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.half" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">half</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.half" title="Link to this definition">#</a></dt>
 <dd><p>Half-precision floating-point number type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -983,7 +958,7 @@ the same decimal value may compare unequal despite printing identically:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.single">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">single</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.single" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">single</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.single" title="Link to this definition">#</a></dt>
 <dd><p>Single-precision floating-point number type, compatible with C <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -1000,9 +975,9 @@ the same decimal value may compare unequal despite printing identically:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.double">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">double</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.double" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">double</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.double" title="Link to this definition">#</a></dt>
 <dd><p>Double-precision floating-point number type, compatible with Python
-<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> and C <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> and C <code class="docutils literal notranslate"><span class="pre">double</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'d'</span></code></p>
@@ -1018,7 +993,7 @@ the same decimal value may compare unequal despite printing identically:</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.longdouble">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">longdouble</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.longdouble" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">longdouble</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.longdouble" title="Link to this definition">#</a></dt>
 <dd><p>Extended-precision floating-point number type, compatible with C
 <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">double</span></code> but not necessarily with IEEE 754 quadruple-precision.</p>
 <dl class="field-list simple">
@@ -1033,17 +1008,17 @@ the same decimal value may compare unequal despite printing identically:</p>
 
 </section>
 <section id="complex-floating-point-types">
-<h4>Complex floating-point types<a class="headerlink" href="#complex-floating-point-types" title="Permalink to this heading">#</a></h4>
+<h4>Complex floating-point types<a class="headerlink" href="#complex-floating-point-types" title="Link to this heading">#</a></h4>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.complexfloating">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complexfloating</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complexfloating" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complexfloating</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complexfloating" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all complex number scalar types that are made up of
 floating-point numbers.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.csingle">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">csingle</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.csingle" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">csingle</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.csingle" title="Link to this definition">#</a></dt>
 <dd><p>Complex number type composed of two single-precision floating-point
 numbers.</p>
 <dl class="field-list simple">
@@ -1061,9 +1036,9 @@ numbers.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.cdouble">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">cdouble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.cdouble" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">cdouble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.cdouble" title="Link to this definition">#</a></dt>
 <dd><p>Complex number type composed of two double-precision floating-point
-numbers, compatible with Python <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>.</p>
+numbers, compatible with Python <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
 <dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'D'</span></code></p>
@@ -1079,7 +1054,7 @@ numbers, compatible with Python <a class="reference external" href="https://docs
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.clongdouble">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">clongdouble</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.clongdouble" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">clongdouble</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.clongdouble" title="Link to this definition">#</a></dt>
 <dd><p>Complex number type composed of two extended-precision floating-point
 numbers.</p>
 <dl class="field-list simple">
@@ -1095,23 +1070,23 @@ numbers.</p>
 </section>
 </section>
 <section id="other-types">
-<h3>Other types<a class="headerlink" href="#other-types" title="Permalink to this heading">#</a></h3>
+<h3>Other types<a class="headerlink" href="#other-types" title="Link to this heading">#</a></h3>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.bool_">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">bool_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.bool_" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">bool_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.bool_" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.bool" title="numpy.bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.bool">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">bool</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.bool" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">bool</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.bool" title="Link to this definition">#</a></dt>
 <dd><p>Boolean type (True or False), stored as a byte.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The <a class="reference internal" href="#numpy.bool" title="numpy.bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> type is not a subclass of the <a class="reference internal" href="#numpy.int_" title="numpy.int_"><code class="xref py py-class docutils literal notranslate"><span class="pre">int_</span></code></a> type
 (the <a class="reference internal" href="#numpy.bool" title="numpy.bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> is not even a number type). This is different
 than Python’s default implementation of <a class="reference internal" href="#numpy.bool" title="numpy.bool"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a> as a
-sub-class of <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.</p>
+sub-class of <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -1122,15 +1097,15 @@ sub-class of <a class="reference external" href="https://docs.python.org/3/libra
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.datetime64">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">datetime64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.datetime64" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">datetime64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.datetime64" title="Link to this definition">#</a></dt>
 <dd><p>If created from a 64-bit integer, it represents an offset from
 <code class="docutils literal notranslate"><span class="pre">1970-01-01T00:00:00</span></code>.
 If created from string, the string can be in ISO 8601 date
 or datetime format.</p>
 <p>When parsing a string to create a datetime object, if the string contains
-a trailing timezone (A ‘Z’ or a timezone offset), the timezone will be 
+a trailing timezone (A ‘Z’ or a timezone offset), the timezone will be
 dropped and a User Warning is given.</p>
-<p>Datetime64 objects should be considered to be UTC and therefore have an 
+<p>Datetime64 objects should be considered to be UTC and therefore have an
 offset of +0000.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">)</span>
 <span class="go">np.datetime64(&#39;1980&#39;)</span>
@@ -1150,7 +1125,7 @@ offset of +0000.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.timedelta64">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">timedelta64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.timedelta64" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">timedelta64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.timedelta64" title="Link to this definition">#</a></dt>
 <dd><p>A timedelta stored as a 64-bit integer.</p>
 <p>See <a class="reference internal" href="arrays.datetime.html#arrays-datetime"><span class="std std-ref">Datetimes and timedeltas</span></a> for more information.</p>
 <dl class="field-list simple">
@@ -1162,7 +1137,7 @@ offset of +0000.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.object_">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">object_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.object_" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">object_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.object_" title="Link to this definition">#</a></dt>
 <dd><p>Any Python object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Character code<span class="colon">:</span></dt>
@@ -1176,7 +1151,7 @@ offset of +0000.</p>
 <p>The data actually stored in object arrays
 (<em>i.e.</em>, arrays having dtype <a class="reference internal" href="#numpy.object_" title="numpy.object_"><code class="xref py py-class docutils literal notranslate"><span class="pre">object_</span></code></a>) are references to
 Python objects, not the objects themselves. Hence, object arrays
-behave more like usual Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">lists</span></code></a>, in the sense
+behave more like usual Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">lists</span></code></a>, in the sense
 that their contents need not be of the same Python type.</p>
 <p>The object type is also special because an array containing
 <a class="reference internal" href="#numpy.object_" title="numpy.object_"><code class="xref py py-class docutils literal notranslate"><span class="pre">object_</span></code></a> items does not return an <a class="reference internal" href="#numpy.object_" title="numpy.object_"><code class="xref py py-class docutils literal notranslate"><span class="pre">object_</span></code></a> object
@@ -1189,7 +1164,7 @@ arrays. (In the character codes <code class="docutils literal notranslate"><span
 elements the data type consists of.)</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.flexible">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">flexible</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.flexible" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">flexible</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.flexible" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all scalar types without predefined length.
 The actual size of these types depends on the specific <a class="reference internal" href="generated/numpy.dtype.html#numpy.dtype" title="numpy.dtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a>
 instantiation.</p>
@@ -1197,13 +1172,13 @@ instantiation.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.character">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">character</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.character" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">character</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.character" title="Link to this definition">#</a></dt>
 <dd><p>Abstract base class of all character string scalar types.</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.bytes_">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">bytes_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.bytes_" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">bytes_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.bytes_" title="Link to this definition">#</a></dt>
 <dd><p>A byte string.</p>
 <p>When used in arrays, this type strips trailing null bytes.</p>
 <dl class="field-list simple">
@@ -1215,7 +1190,7 @@ instantiation.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.str_">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">str_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.str_" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">str_</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.str_" title="Link to this definition">#</a></dt>
 <dd><p>A unicode string.</p>
 <p>This type strips trailing null codepoints.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">str_</span><span class="p">(</span><span class="s2">&quot;abc</span><span class="se">\x00</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -1223,8 +1198,8 @@ instantiation.</p>
 <span class="go">&#39;abc&#39;</span>
 </pre></div>
 </div>
-<p>Unlike the builtin <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, this supports the
-<a class="reference external" href="https://docs.python.org/3/c-api/buffer.html#bufferobjects" title="(in Python v3.12)"><span>Buffer Protocol</span></a>, exposing its contents as UCS4:</p>
+<p>Unlike the builtin <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, this supports the
+<a class="reference external" href="https://docs.python.org/3/c-api/buffer.html#bufferobjects" title="(in Python v3.13)"><span>Buffer Protocol</span></a>, exposing its contents as UCS4:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="nb">memoryview</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">str_</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">m</span><span class="o">.</span><span class="n">format</span>
 <span class="go">&#39;3w&#39;</span>
@@ -1241,7 +1216,7 @@ instantiation.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.void">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">void</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length_or_data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.void" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">void</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length_or_data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.void" title="Link to this definition">#</a></dt>
 <dd><p>Create a new structured or unstructured void scalar.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1257,7 +1232,7 @@ be returned.</p>
 be “void” dtype (i.e. a structured or unstructured void,
 see also <a class="reference internal" href="../user/basics.rec.html#defining-structured-types"><span class="std std-ref">Structured datatypes</span></a>).</p>
 <div class="versionadded">
-<p><span class="versionmodified added">New in version 1.24.</span></p>
+<p><span class="versionmodified added">Added in version 1.24.</span></p>
 </div>
 </dd>
 </dl>
@@ -1277,8 +1252,8 @@ array creation.  However, a void scalar rather than array is returned.</p></li>
 </ol>
 <p>Please see the examples which show all three different conventions.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="aad7afbb-fdc2-486a-a8b0-5a7be5dcf252">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('aad7afbb-fdc2-486a-a8b0-5a7be5dcf252','01a9d673-7080-452b-8d98-52ac14348fb8','8376a2ff-21ea-4c47-9053-d96be2f9147a','../lite/tree/../notebooks/index.html?path=806f3f04_f5a7_4830_9542_f02f0346b7a4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="e5a3078c-2e9c-43f2-a388-386ee94ec712">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e5a3078c-2e9c-43f2-a388-386ee94ec712','977c4b18-4c32-4027-bc16-d8378df13ae7','a27dd3ee-895b-4c9f-9245-f65b46044ce1','../lite/tree/../notebooks/index.html?path=148768ce_71a9_4700_af5f_3b74aede5aba.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">void</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="go">np.void(b&#39;\x00\x00\x00\x00\x00&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">void</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;abcd&#39;</span><span class="p">)</span>
@@ -1296,7 +1271,7 @@ array creation.  However, a void scalar rather than array is returned.</p></li>
 </dl>
 </div>
 </div>
-<div id="8376a2ff-21ea-4c47-9053-d96be2f9147a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('aad7afbb-fdc2-486a-a8b0-5a7be5dcf252','8376a2ff-21ea-4c47-9053-d96be2f9147a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('aad7afbb-fdc2-486a-a8b0-5a7be5dcf252','8376a2ff-21ea-4c47-9053-d96be2f9147a')">Open In Tab</button></div><div id="01a9d673-7080-452b-8d98-52ac14348fb8" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="a27dd3ee-895b-4c9f-9245-f65b46044ce1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e5a3078c-2e9c-43f2-a388-386ee94ec712','a27dd3ee-895b-4c9f-9245-f65b46044ce1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e5a3078c-2e9c-43f2-a388-386ee94ec712','a27dd3ee-895b-4c9f-9245-f65b46044ce1')">Open In Tab</button></div><div id="977c4b18-4c32-4027-bc16-d8378df13ae7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1307,11 +1282,11 @@ some of them to the new characters. In particular, the needed
 changes are <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">-&gt;</span> <span class="pre">S1</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">-&gt;</span> <span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-&gt;</span> <span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">-&gt;</span> <span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">-&gt;</span>
 <span class="pre">H</span></code>, and <code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">-&gt;</span> <span class="pre">I</span></code>. These changes make the type character
 convention more consistent with other Python modules such as the
-<a class="reference external" href="https://docs.python.org/3/library/struct.html#module-struct" title="(in Python v3.12)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">struct</span></code></a> module.</p>
+<a class="reference external" href="https://docs.python.org/3/library/struct.html#module-struct" title="(in Python v3.13)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">struct</span></code></a> module.</p>
 </div>
 </section>
 <section id="sized-aliases">
-<span id="id3"></span><h3>Sized aliases<a class="headerlink" href="#sized-aliases" title="Permalink to this heading">#</a></h3>
+<span id="id3"></span><h3>Sized aliases<a class="headerlink" href="#sized-aliases" title="Link to this heading">#</a></h3>
 <p>Along with their (mostly)
 C-derived names, the integer, float, and complex data-types are also
 available using a bit-width convention so that an array of the right
@@ -1320,13 +1295,13 @@ pointing to the integer type that is sufficiently large to hold a C pointer
 are also provided.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.int8">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int8</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.int8" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int8</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.int8" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.int16">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int16</span></span><a class="headerlink" href="#numpy.int16" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int16</span></span><a class="headerlink" href="#numpy.int16" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.int32">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int32</span></span><a class="headerlink" href="#numpy.int32" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int32</span></span><a class="headerlink" href="#numpy.int32" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.int64">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int64</span></span><a class="headerlink" href="#numpy.int64" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">int64</span></span><a class="headerlink" href="#numpy.int64" title="Link to this definition">#</a></dt>
 <dd><p>Aliases for the signed integer types (one of <a class="reference internal" href="#numpy.byte" title="numpy.byte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.byte</span></code></a>, <a class="reference internal" href="#numpy.short" title="numpy.short"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.short</span></code></a>,
 <a class="reference internal" href="#numpy.intc" title="numpy.intc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.intc</span></code></a>, <a class="reference internal" href="#numpy.int_" title="numpy.int_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.int_</span></code></a>, <a class="reference internal" href="#numpy.long" title="numpy.long"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.long</span></code></a> and <a class="reference internal" href="#numpy.longlong" title="numpy.longlong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.longlong</span></code></a>)
 with the specified number of bits.</p>
@@ -1336,13 +1311,13 @@ with the specified number of bits.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.uint8">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint8</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uint8" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint8</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uint8" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.uint16">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint16</span></span><a class="headerlink" href="#numpy.uint16" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint16</span></span><a class="headerlink" href="#numpy.uint16" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.uint32">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint32</span></span><a class="headerlink" href="#numpy.uint32" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint32</span></span><a class="headerlink" href="#numpy.uint32" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.uint64">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint64</span></span><a class="headerlink" href="#numpy.uint64" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uint64</span></span><a class="headerlink" href="#numpy.uint64" title="Link to this definition">#</a></dt>
 <dd><p>Alias for the unsigned integer types (one of <a class="reference internal" href="#numpy.ubyte" title="numpy.ubyte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ubyte</span></code></a>, <a class="reference internal" href="#numpy.ushort" title="numpy.ushort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ushort</span></code></a>,
 <a class="reference internal" href="#numpy.uintc" title="numpy.uintc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.uintc</span></code></a>, <a class="reference internal" href="#numpy.uint" title="numpy.uint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.uint</span></code></a>, <a class="reference internal" href="#numpy.ulong" title="numpy.ulong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ulong</span></code></a> and <a class="reference internal" href="#numpy.ulonglong" title="numpy.ulonglong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ulonglong</span></code></a>)
 with the specified number of bits.</p>
@@ -1352,7 +1327,7 @@ with the specified number of bits.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.intp">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">intp</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.intp" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">intp</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.intp" title="Link to this definition">#</a></dt>
 <dd><p>Alias for the signed integer type (one of <a class="reference internal" href="#numpy.byte" title="numpy.byte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.byte</span></code></a>, <a class="reference internal" href="#numpy.short" title="numpy.short"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.short</span></code></a>,
 <a class="reference internal" href="#numpy.intc" title="numpy.intc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.intc</span></code></a>, <a class="reference internal" href="#numpy.int_" title="numpy.int_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.int_</span></code></a>, <a class="reference internal" href="#numpy.long" title="numpy.long"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.long</span></code></a> and <a class="reference internal" href="#numpy.longlong" title="numpy.longlong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.longlong</span></code></a>)
 that is used as a default integer and for indexing.</p>
@@ -1371,7 +1346,7 @@ is almost always identical, but the character code <code class="docutils literal
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.uintp">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uintp</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uintp" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">uintp</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.uintp" title="Link to this definition">#</a></dt>
 <dd><p>Alias for the unsigned integer type that is the same size as <code class="docutils literal notranslate"><span class="pre">intp</span></code>.</p>
 <p>Compatible with the C <code class="docutils literal notranslate"><span class="pre">size_t</span></code>.</p>
 <dl class="field-list simple">
@@ -1388,48 +1363,48 @@ is almost always identical, but the character code <code class="docutils literal
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.float16">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float16</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float16" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float16</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float16" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.half" title="numpy.half"><code class="xref py py-class docutils literal notranslate"><span class="pre">half</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.float32">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float32</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float32" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float32</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float32" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.single" title="numpy.single"><code class="xref py py-class docutils literal notranslate"><span class="pre">single</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.float64">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float64" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float64" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.double" title="numpy.double"><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.float96">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float96</span></span><a class="headerlink" href="#numpy.float96" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float96</span></span><a class="headerlink" href="#numpy.float96" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.float128">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float128</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float128" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">float128</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.float128" title="Link to this definition">#</a></dt>
 <dd><p>Alias for <a class="reference internal" href="#numpy.longdouble" title="numpy.longdouble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.longdouble</span></code></a>, named after its size in bits.
 The existence of these aliases depends on the platform.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.complex64">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complex64" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex64</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complex64" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.csingle" title="numpy.csingle"><code class="xref py py-class docutils literal notranslate"><span class="pre">csingle</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.complex128">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex128</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complex128" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex128</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complex128" title="Link to this definition">#</a></dt>
 <dd><p>alias of <a class="reference internal" href="#numpy.cdouble" title="numpy.cdouble"><code class="xref py py-class docutils literal notranslate"><span class="pre">cdouble</span></code></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.complex192">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex192</span></span><a class="headerlink" href="#numpy.complex192" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex192</span></span><a class="headerlink" href="#numpy.complex192" title="Link to this definition">#</a></dt>
 <dt class="sig sig-object py" id="numpy.complex256">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex256</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complex256" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">complex256</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/src/multiarray/scalartypes.c.src"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.complex256" title="Link to this definition">#</a></dt>
 <dd><p>Alias for <a class="reference internal" href="#numpy.clongdouble" title="numpy.clongdouble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.clongdouble</span></code></a>, named after its size in bits.
 The existence of these aliases depends on the platform.</p>
 </dd></dl>
@@ -1437,7 +1412,7 @@ The existence of these aliases depends on the platform.</p>
 </section>
 </section>
 <section id="attributes">
-<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h2>
+<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">#</a></h2>
 <p>The array scalar objects have an <a class="reference internal" href="arrays.classes.html#numpy.class.__array_priority__" title="numpy.class.__array_priority__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span> <span class="pre">priority</span></code></a> of <a class="reference internal" href="c-api/array.html#c.NPY_SCALAR_PRIORITY" title="NPY_SCALAR_PRIORITY"><code class="xref c c-data docutils literal notranslate"><span class="pre">NPY_SCALAR_PRIORITY</span></code></a>
 (-1,000,000.0). They also do not (yet) have a <a class="reference internal" href="generated/numpy.ndarray.ctypes.html#numpy.ndarray.ctypes" title="numpy.ndarray.ctypes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ctypes</span></code></a>
 attribute. Otherwise, they share the same attributes as arrays:</p>
@@ -1492,14 +1467,14 @@ attribute. Otherwise, they share the same attributes as arrays:</p>
 <td><p>Array priority.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.generic.__array_wrap__.html#numpy.generic.__array_wrap__" title="numpy.generic.__array_wrap__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generic.__array_wrap__</span></code></a></p></td>
-<td><p>sc.__array_wrap__(obj) return scalar from array</p></td>
+<td><p>__array_wrap__ implementation for scalar types</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="indexing">
-<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h2>
+<h2>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="routines.indexing.html#arrays-indexing"><span class="std std-ref">Indexing routines</span></a>, <a class="reference internal" href="arrays.dtypes.html#arrays-dtypes"><span class="std std-ref">Data type objects (dtype)</span></a></p>
@@ -1514,7 +1489,7 @@ array scalar,</p>
 </ul>
 </section>
 <section id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h2>
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h2>
 <p>Array scalars have exactly the same methods as arrays. The default
 behavior of these methods is to internally convert the scalar to an
 equivalent 0-dimensional array and to call the corresponding array
@@ -1529,7 +1504,7 @@ also carries over to the math on array scalars.</p>
 <td><p>sc.__array__(dtype) return 0-dim array from scalar with specified dtype</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.generic.__array_wrap__.html#numpy.generic.__array_wrap__" title="numpy.generic.__array_wrap__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generic.__array_wrap__</span></code></a></p></td>
-<td><p>sc.__array_wrap__(obj) return scalar from array</p></td>
+<td><p>__array_wrap__ implementation for scalar types</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.generic.squeeze.html#numpy.generic.squeeze" title="numpy.generic.squeeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generic.squeeze</span></code></a></p></td>
 <td><p>Scalar method identical to the corresponding array attribute.</p></td>
@@ -1560,7 +1535,7 @@ also carries over to the math on array scalars.</p>
 </div>
 </section>
 <section id="defining-new-types">
-<h2>Defining new types<a class="headerlink" href="#defining-new-types" title="Permalink to this heading">#</a></h2>
+<h2>Defining new types<a class="headerlink" href="#defining-new-types" title="Link to this heading">#</a></h2>
 <p>There are two ways to effectively define a new array scalar type
 (apart from composing structured types <a class="reference internal" href="arrays.dtypes.html#arrays-dtypes"><span class="std std-ref">dtypes</span></a> from
 the built-in scalar types): One way is to simply subclass the
@@ -1607,7 +1582,8 @@ be defined in C, using the <a class="reference internal" href="c-api/index.html#
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1723,8 +1699,8 @@ be defined in C, using the <a class="reference internal" href="c-api/index.html#
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1735,7 +1711,7 @@ be defined in C, using the <a class="reference internal" href="c-api/index.html#
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1744,7 +1720,7 @@ be defined in C, using the <a class="reference internal" href="c-api/index.html#
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1757,7 +1733,8 @@ be defined in C, using the <a class="reference internal" href="c-api/index.html#
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

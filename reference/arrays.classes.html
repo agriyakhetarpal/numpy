@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Standard array subclasses &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Standard array subclasses &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/arrays.classes';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="Iterating over arrays" href="arrays.nditer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -457,6 +428,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="arrays.ndarray.html">The N-dimensional array (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.scalars.html">Scalars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.dtypes.html">Data type objects (<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.promotion.html">Data type promotion in NumPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.nditer.html">Iterating over arrays</a></li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Standard array subclasses</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.matrix.T.html">numpy.matrix.T</a></li>
@@ -492,7 +464,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -500,7 +471,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -512,9 +484,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -532,8 +509,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -548,7 +523,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="arrays.html" class="nav-link">Array objects</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Standard...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Standard array subclasses</span></li>
   </ul>
 </nav>
 </div>
@@ -566,7 +541,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="standard-array-subclasses">
-<span id="arrays-classes"></span><h1>Standard array subclasses<a class="headerlink" href="#standard-array-subclasses" title="Permalink to this heading">#</a></h1>
+<span id="arrays-classes"></span><h1>Standard array subclasses<a class="headerlink" href="#standard-array-subclasses" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Subclassing a <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> is possible but if your goal is to create
@@ -598,7 +573,7 @@ however, of why your subroutine may not be able to handle an arbitrary
 subclass of an array is that matrices redefine the “*” operator to be
 matrix-multiplication, rather than element-by-element multiplication.</p>
 <section id="special-attributes-and-methods">
-<span id="id1"></span><h2>Special attributes and methods<a class="headerlink" href="#special-attributes-and-methods" title="Permalink to this heading">#</a></h2>
+<span id="id1"></span><h2>Special attributes and methods<a class="headerlink" href="#special-attributes-and-methods" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="../user/basics.subclassing.html#basics-subclassing"><span class="std std-ref">Subclassing ndarray</span></a></p>
@@ -606,11 +581,8 @@ matrix-multiplication, rather than element-by-element multiplication.</p>
 <p>NumPy provides several hooks that classes can customize:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="numpy.class.__array_ufunc__">
-<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_ufunc__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ufunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_ufunc__" title="Permalink to this definition">#</a></dt>
-<dd><div class="versionadded">
-<p><span class="versionmodified added">New in version 1.13.</span></p>
-</div>
-<p>Any class, ndarray subclass or not, can define this method or set it to
+<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_ufunc__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ufunc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_ufunc__" title="Link to this definition">#</a></dt>
+<dd><p>Any class, ndarray subclass or not, can define this method or set it to
 None in order to override the behavior of NumPy’s ufuncs. This works
 quite similarly to Python’s <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> and other binary operation routines.</p>
 <ul class="simple">
@@ -621,20 +593,20 @@ quite similarly to Python’s <code class="docutils literal notranslate"><span c
 <li><p><em>inputs</em> is a tuple of the input arguments to the <code class="docutils literal notranslate"><span class="pre">ufunc</span></code>.</p></li>
 <li><p><em>kwargs</em> is a dictionary containing the optional input arguments
 of the ufunc. If given, any <code class="docutils literal notranslate"><span class="pre">out</span></code> arguments, both positional
-and keyword, are passed as a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> in <em>kwargs</em>. See the
+and keyword, are passed as a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tuple</span></code></a> in <em>kwargs</em>. See the
 discussion in <a class="reference internal" href="ufuncs.html#ufuncs"><span class="std std-ref">Universal functions (ufunc)</span></a> for details.</p></li>
 </ul>
 <p>The method should return either the result of the operation, or
-<a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> if the operation requested is not implemented.</p>
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> if the operation requested is not implemented.</p>
 <p>If one of the input, output, or <code class="docutils literal notranslate"><span class="pre">where</span></code> arguments has a <a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a>
 method, it is executed <em>instead</em> of the ufunc.  If more than one of the
 arguments implements <a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a>, they are tried in the
 order: subclasses before superclasses, inputs before outputs,
 outputs before <code class="docutils literal notranslate"><span class="pre">where</span></code>, otherwise
 left to right. The first routine returning something other than
-<a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> determines the result. If all of the
-<a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a> operations return <a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a>, a
-<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> is raised.</p>
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> determines the result. If all of the
+<a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a> operations return <a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a>, a
+<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> is raised.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We intend to re-implement numpy functions as (generalized)
@@ -648,7 +620,7 @@ same may happen with functions such as <a class="reference internal" href="gener
 <p>Like with some other special methods in python, such as <code class="docutils literal notranslate"><span class="pre">__hash__</span></code> and
 <code class="docutils literal notranslate"><span class="pre">__iter__</span></code>, it is possible to indicate that your class does <em>not</em>
 support ufuncs by setting <code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span> <span class="pre">=</span> <span class="pre">None</span></code>. Ufuncs always raise
-<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> when called on an object that sets
+<a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a> when called on an object that sets
 <code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span> <span class="pre">=</span> <span class="pre">None</span></code>.</p>
 <p>The presence of <a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a> also influences how
 <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> handles binary operations like <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+</span> <span class="pre">obj</span></code> and <code class="docutils literal notranslate"><span class="pre">arr</span>
@@ -661,7 +633,7 @@ meaning that <code class="docutils literal notranslate"><span class="pre">arr</s
 want to define an object that acts like an array.</p>
 <p>Alternatively, if <code class="docutils literal notranslate"><span class="pre">obj.__array_ufunc__</span></code> is set to None, then as a
 special case, special methods like <code class="docutils literal notranslate"><span class="pre">ndarray.__add__</span></code> will notice this
-and <em>unconditionally</em> raise <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>. This is useful if you want to
+and <em>unconditionally</em> raise <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>. This is useful if you want to
 create objects that interact with arrays via binary operations, but
 are not themselves arrays. For example, a units handling system might have
 an object <code class="docutils literal notranslate"><span class="pre">m</span></code> representing the “meters” unit, and want to support the
@@ -669,13 +641,13 @@ syntax <code class="docutils literal notranslate"><span class="pre">arr</span> <
 not want to otherwise interact with arrays via ufuncs or otherwise. This
 can be done by setting <code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span> <span class="pre">=</span> <span class="pre">None</span></code> and defining <code class="docutils literal notranslate"><span class="pre">__mul__</span></code>
 and <code class="docutils literal notranslate"><span class="pre">__rmul__</span></code> methods. (Note that this means that writing an
-<code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span></code> that always returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> is not
+<code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span></code> that always returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> is not
 quite the same as setting <code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span> <span class="pre">=</span> <span class="pre">None</span></code>: in the former
-case, <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+</span> <span class="pre">obj</span></code> will raise <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>, while in the latter
+case, <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+</span> <span class="pre">obj</span></code> will raise <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>, while in the latter
 case it is possible to define a <code class="docutils literal notranslate"><span class="pre">__radd__</span></code> method to prevent this.)</p>
 <p>The above does not hold for in-place operators, for which <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>
-never returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a>.  Hence, <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+=</span> <span class="pre">obj</span></code> would always
-lead to a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.  This is because for arrays in-place operations
+never returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a>.  Hence, <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+=</span> <span class="pre">obj</span></code> would always
+lead to a <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.  This is because for arrays in-place operations
 cannot generically be replaced by a simple reverse operation.  (For
 instance, by default, <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">+=</span> <span class="pre">obj</span></code> would be translated to <code class="docutils literal notranslate"><span class="pre">arr</span> <span class="pre">=</span>
 <span class="pre">arr</span> <span class="pre">+</span> <span class="pre">obj</span></code>, i.e., <code class="docutils literal notranslate"><span class="pre">arr</span></code> would be replaced, contrary to what is expected
@@ -699,7 +671,7 @@ unexpected and thus confusing, as then the subclass would not work at
 all with ufuncs).</p></li>
 <li><p><a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> defines its own <a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a>, which,
 evaluates the ufunc if no arguments have overrides, and returns
-<a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> otherwise. This may be useful for subclasses
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#NotImplemented" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NotImplemented</span></code></a> otherwise. This may be useful for subclasses
 for which <a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a> converts any instances of its own
 class to <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>: it can then pass these on to its
 superclass using <code class="docutils literal notranslate"><span class="pre">super().__array_ufunc__(*inputs,</span> <span class="pre">**kwargs)</span></code>,
@@ -713,14 +685,11 @@ to have a hierarchy of subclasses that extend the behaviour. See
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpy.class.__array_function__">
-<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_function__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_function__" title="Permalink to this definition">#</a></dt>
-<dd><div class="versionadded">
-<p><span class="versionmodified added">New in version 1.16.</span></p>
-</div>
-<ul class="simple">
+<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_function__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_function__" title="Link to this definition">#</a></dt>
+<dd><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">func</span></code> is an arbitrary callable exposed by NumPy’s public API,
 which was called in the form <code class="docutils literal notranslate"><span class="pre">func(*args,</span> <span class="pre">**kwargs)</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> is a collection <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Collection</span></code></a>
+<li><p><code class="docutils literal notranslate"><span class="pre">types</span></code> is a collection <a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Collection</span></code></a>
 of unique argument types from the original NumPy function call that
 implement <code class="docutils literal notranslate"><span class="pre">__array_function__</span></code>.</p></li>
 <li><p>The tuple <code class="docutils literal notranslate"><span class="pre">args</span></code> and dict <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> are directly passed on from the
@@ -814,7 +783,7 @@ there are a large number of overloaded arguments.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpy.class.__array_finalize__">
-<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_finalize__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_finalize__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_finalize__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_finalize__" title="Link to this definition">#</a></dt>
 <dd><p>This method is called whenever the system internally allocates a
 new array from <em>obj</em>, where <em>obj</em> is a subclass (subtype) of the
 <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>. It can be used to change attributes of <em>self</em>
@@ -825,7 +794,7 @@ a default implementation of this method that does nothing.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpy.class.__array_wrap__">
-<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_wrap__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_scalar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_wrap__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_wrap__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_scalar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array_wrap__" title="Link to this definition">#</a></dt>
 <dd><p>At the end of every <a class="reference internal" href="../user/basics.ufuncs.html#ufuncs-output-type"><span class="std std-ref">ufunc</span></a>, this method
 is called on the input object with the highest array priority, or
 the output object if one was specified. The ufunc-computed array
@@ -846,14 +815,14 @@ like NumPy.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is hoped to eventually deprecate this method in favour of
-func:<em class="xref py py-obj">__array_ufunc__</em> for ufuncs (and <a class="reference internal" href="#numpy.class.__array_function__" title="numpy.class.__array_function__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_function__</span></code></a>
+<a class="reference internal" href="#numpy.class.__array_ufunc__" title="numpy.class.__array_ufunc__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_ufunc__</span></code></a> for ufuncs (and <a class="reference internal" href="#numpy.class.__array_function__" title="numpy.class.__array_function__"><code class="xref py py-func docutils literal notranslate"><span class="pre">__array_function__</span></code></a>
 for a few other functions like <a class="reference internal" href="generated/numpy.squeeze.html#numpy.squeeze" title="numpy.squeeze"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.squeeze</span></code></a>).</p>
 </div>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.class.__array_priority__">
-<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_priority__</span></span><a class="headerlink" href="#numpy.class.__array_priority__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array_priority__</span></span><a class="headerlink" href="#numpy.class.__array_priority__" title="Link to this definition">#</a></dt>
 <dd><p>The value of this attribute is used to determine what type of
 object to return in situations where there is more than one
 possibility for the Python type of the returned object. Subclasses
@@ -867,7 +836,7 @@ favour of <a class="reference internal" href="#numpy.class.__array_ufunc__" titl
 
 <dl class="py method">
 <dt class="sig sig-object py" id="numpy.class.__array__">
-<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">class.</span></span><span class="sig-name descname"><span class="pre">__array__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.class.__array__" title="Link to this definition">#</a></dt>
 <dd><p>If defined on an object, should return an <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.
 This method is called by array-coercion functions like np.array()
 if an object implementing this interface is passed to those functions.
@@ -895,7 +864,7 @@ returned by <a class="reference internal" href="#numpy.class.__array__" title="n
 
 </section>
 <section id="matrix-objects">
-<span id="id2"></span><h2>Matrix objects<a class="headerlink" href="#matrix-objects" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2>Matrix objects<a class="headerlink" href="#matrix-objects" title="Link to this heading">#</a></h2>
 <div class="admonition note" id="index-0">
 <p class="admonition-title">Note</p>
 <p>It is strongly advised <em>not</em> to use the matrix subclass.  As described
@@ -978,8 +947,8 @@ alias for “matrix “in NumPy.</p>
 </table>
 </div>
 <p>Example 1: Matrix creation from a string</p>
-<div class="try_examples_outer_container docutils container" id="0ad21fa7-2d27-4b1b-a2e5-ebcc7dbd2b74">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0ad21fa7-2d27-4b1b-a2e5-ebcc7dbd2b74','0c8190a5-2a42-4e6d-a41c-86495d17dda2','b6fa24b8-2411-48b3-9b43-ada390669a44','../lite/tree/../notebooks/index.html?path=8bb108cf_df76_4a5a_9774_2f5699f661ef.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="06f08690-77c7-40b7-9cac-c01471060e72">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('06f08690-77c7-40b7-9cac-c01471060e72','6f347b5a-c11e-457c-8d33-bac4f172177e','847eca6c-6e65-405e-8b47-15263ca8dba8','../lite/tree/../notebooks/index.html?path=07bf9a56_7113_4f3f_96b0_1bcb2053ef01.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="s1">&#39;1 2 3; 4 5 3&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
@@ -989,9 +958,9 @@ alias for “matrix “in NumPy.</p>
 </div>
 </div>
 </div>
-<div id="b6fa24b8-2411-48b3-9b43-ada390669a44" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0ad21fa7-2d27-4b1b-a2e5-ebcc7dbd2b74','b6fa24b8-2411-48b3-9b43-ada390669a44')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0ad21fa7-2d27-4b1b-a2e5-ebcc7dbd2b74','b6fa24b8-2411-48b3-9b43-ada390669a44')">Open In Tab</button></div><div id="0c8190a5-2a42-4e6d-a41c-86495d17dda2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 2: Matrix creation from a nested sequence</p>
-<div class="try_examples_outer_container docutils container" id="12b43223-7bdb-4a8e-af4b-51a5ab61dfe4">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('12b43223-7bdb-4a8e-af4b-51a5ab61dfe4','3b3c9214-f4d9-4182-b31b-b155368bce3f','832bebe7-31d2-4bf5-9356-3ed669b9ba6f','../lite/tree/../notebooks/index.html?path=a8fe4a3c_1240_49ce_ade3_19b6a6a0bdb4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div id="847eca6c-6e65-405e-8b47-15263ca8dba8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('06f08690-77c7-40b7-9cac-c01471060e72','847eca6c-6e65-405e-8b47-15263ca8dba8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('06f08690-77c7-40b7-9cac-c01471060e72','847eca6c-6e65-405e-8b47-15263ca8dba8')">Open In Tab</button></div><div id="6f347b5a-c11e-457c-8d33-bac4f172177e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 2: Matrix creation from a nested sequence</p>
+<div class="try_examples_outer_container docutils container" id="a42be3a1-1ca5-400f-a2d9-534a28059a7e">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a42be3a1-1ca5-400f-a2d9-534a28059a7e','8d076aac-a127-4404-960c-544f127aeb3f','59081c72-32ad-4a9a-8745-0d740eec33ef','../lite/tree/../notebooks/index.html?path=33b5d640_8222_48b1_ace7_4f2d049e6279.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="n">j</span><span class="p">]])</span>
 <span class="go">matrix([[  1.+0.j,   5.+0.j,  10.+0.j],</span>
@@ -1000,9 +969,9 @@ alias for “matrix “in NumPy.</p>
 </div>
 </div>
 </div>
-<div id="832bebe7-31d2-4bf5-9356-3ed669b9ba6f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('12b43223-7bdb-4a8e-af4b-51a5ab61dfe4','832bebe7-31d2-4bf5-9356-3ed669b9ba6f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('12b43223-7bdb-4a8e-af4b-51a5ab61dfe4','832bebe7-31d2-4bf5-9356-3ed669b9ba6f')">Open In Tab</button></div><div id="3b3c9214-f4d9-4182-b31b-b155368bce3f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 3: Matrix creation from an array</p>
-<div class="try_examples_outer_container docutils container" id="613e6519-137b-401f-88a6-2a67d6a5d068">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('613e6519-137b-401f-88a6-2a67d6a5d068','cde2a84e-3743-4f46-89fa-dd9566c79279','6d7f5566-a53b-4840-9fa5-37cc4d2b4352','../lite/tree/../notebooks/index.html?path=dab4a33a_38be_43b6_88f7_1de9072e857e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div id="59081c72-32ad-4a9a-8745-0d740eec33ef" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a42be3a1-1ca5-400f-a2d9-534a28059a7e','59081c72-32ad-4a9a-8745-0d740eec33ef')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a42be3a1-1ca5-400f-a2d9-534a28059a7e','59081c72-32ad-4a9a-8745-0d740eec33ef')">Open In Tab</button></div><div id="8d076aac-a127-4404-960c-544f127aeb3f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 3: Matrix creation from an array</p>
+<div class="try_examples_outer_container docutils container" id="3ad30928-6986-462d-9deb-9b613c9a7ec6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3ad30928-6986-462d-9deb-9b613c9a7ec6','b1ca4c0c-da43-41a7-9d8f-2625a20874b1','f03c4cc5-083c-4609-9edf-3ad017997ddc','../lite/tree/../notebooks/index.html?path=e0de89b2_5729_47c8_aa9b_49e998bf683c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
 <span class="go">matrix([[4.17022005e-01, 3.02332573e-01, 1.86260211e-01],</span>
@@ -1012,9 +981,9 @@ alias for “matrix “in NumPy.</p>
 </div>
 </div>
 </div>
-<div id="6d7f5566-a53b-4840-9fa5-37cc4d2b4352" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('613e6519-137b-401f-88a6-2a67d6a5d068','6d7f5566-a53b-4840-9fa5-37cc4d2b4352')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('613e6519-137b-401f-88a6-2a67d6a5d068','6d7f5566-a53b-4840-9fa5-37cc4d2b4352')">Open In Tab</button></div><div id="cde2a84e-3743-4f46-89fa-dd9566c79279" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="f03c4cc5-083c-4609-9edf-3ad017997ddc" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3ad30928-6986-462d-9deb-9b613c9a7ec6','f03c4cc5-083c-4609-9edf-3ad017997ddc')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3ad30928-6986-462d-9deb-9b613c9a7ec6','f03c4cc5-083c-4609-9edf-3ad017997ddc')">Open In Tab</button></div><div id="b1ca4c0c-da43-41a7-9d8f-2625a20874b1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="memory-mapped-file-arrays">
-<h2>Memory-mapped file arrays<a class="headerlink" href="#memory-mapped-file-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Memory-mapped file arrays<a class="headerlink" href="#memory-mapped-file-arrays" title="Link to this heading">#</a></h2>
 <p id="index-1">Memory-mapped files are useful for reading and/or modifying small
 segments of a large file with regular layout, without reading the
 entire file into memory. A simple subclass of the ndarray uses a
@@ -1038,8 +1007,8 @@ array actually get written to disk.</p>
 </table>
 </div>
 <p>Example:</p>
-<div class="try_examples_outer_container docutils container" id="4e51cd17-8d44-454b-b9c1-cc7a6b58a5a2">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4e51cd17-8d44-454b-b9c1-cc7a6b58a5a2','71cc6dca-ceb0-4517-98d1-cdf5ea3443fd','26c29d55-ca67-4b54-8159-3d3dbfb60bf7','../lite/tree/../notebooks/index.html?path=eb09e269_56fa_4599_bf2c_c047f487e7a3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c318bb12-a32e-4736-a646-0d9e8202ad50">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c318bb12-a32e-4736-a646-0d9e8202ad50','cdd300b3-1f79-4dd7-8655-f290a8d93c57','14e985c2-602a-4e24-a7a1-c91e96a715c0','../lite/tree/../notebooks/index.html?path=c284fbc3_7b84_4d0e_8d66_fcdc436eff58.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1061,9 +1030,9 @@ array actually get written to disk.</p>
 </div>
 </div>
 </div>
-<div id="26c29d55-ca67-4b54-8159-3d3dbfb60bf7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4e51cd17-8d44-454b-b9c1-cc7a6b58a5a2','26c29d55-ca67-4b54-8159-3d3dbfb60bf7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4e51cd17-8d44-454b-b9c1-cc7a6b58a5a2','26c29d55-ca67-4b54-8159-3d3dbfb60bf7')">Open In Tab</button></div><div id="71cc6dca-ceb0-4517-98d1-cdf5ea3443fd" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="14e985c2-602a-4e24-a7a1-c91e96a715c0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c318bb12-a32e-4736-a646-0d9e8202ad50','14e985c2-602a-4e24-a7a1-c91e96a715c0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c318bb12-a32e-4736-a646-0d9e8202ad50','14e985c2-602a-4e24-a7a1-c91e96a715c0')">Open In Tab</button></div><div id="cdd300b3-1f79-4dd7-8655-f290a8d93c57" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="character-arrays-numpy-char">
-<h2>Character arrays (<a class="reference internal" href="routines.char.html#module-numpy.char" title="numpy.char"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.char</span></code></a>)<a class="headerlink" href="#character-arrays-numpy-char" title="Permalink to this heading">#</a></h2>
+<h2>Character arrays (<a class="reference internal" href="routines.char.html#module-numpy.char" title="numpy.char"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.char</span></code></a>)<a class="headerlink" href="#character-arrays-numpy-char" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="routines.array-creation.html#routines-array-creation-char"><span class="std std-ref">Creating character arrays (numpy.char)</span></a></p>
@@ -1082,7 +1051,7 @@ in the <a class="reference internal" href="routines.char.html#module-numpy.char"
 and <code class="docutils literal notranslate"><span class="pre">%</span></code> on a (broadcasting) element-by-element basis.  These
 operations are not available on the standard <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> of
 character type. In addition, the <a class="reference internal" href="generated/numpy.char.chararray.html#numpy.char.chararray" title="numpy.char.chararray"><code class="xref py py-class docutils literal notranslate"><span class="pre">chararray</span></code></a> has all of the
-standard <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> (and <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>) methods,
+standard <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> (and <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>) methods,
 executing them on an element-by-element basis. Perhaps the easiest
 way to create a chararray is to use <a class="reference internal" href="generated/numpy.ndarray.view.html#numpy.ndarray.view" title="numpy.ndarray.view"><code class="xref py py-meth docutils literal notranslate"><span class="pre">self.view(chararray)</span></code></a> where <em>self</em> is an ndarray of str or unicode
 data-type. However, a chararray can also be created using the
@@ -1105,7 +1074,7 @@ white-space at the end of any element in the array will be ignored
 on item retrieval and comparison operations.</p>
 </section>
 <section id="record-arrays">
-<span id="arrays-classes-rec"></span><h2>Record arrays<a class="headerlink" href="#record-arrays" title="Permalink to this heading">#</a></h2>
+<span id="arrays-classes-rec"></span><h2>Record arrays<a class="headerlink" href="#record-arrays" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="routines.array-creation.html#routines-array-creation-rec"><span class="std std-ref">Creating record arrays</span></a>, <a class="reference internal" href="routines.dtype.html#routines-dtype"><span class="std std-ref">Data type routines</span></a>,
@@ -1132,14 +1101,14 @@ please use pandas DataFrame instead.</p>
 </div>
 </section>
 <section id="masked-arrays-numpy-ma">
-<h2>Masked arrays (<a class="reference internal" href="maskedarray.generic.html#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a>)<a class="headerlink" href="#masked-arrays-numpy-ma" title="Permalink to this heading">#</a></h2>
+<h2>Masked arrays (<a class="reference internal" href="maskedarray.generic.html#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a>)<a class="headerlink" href="#masked-arrays-numpy-ma" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="maskedarray.html#maskedarray"><span class="std std-ref">Masked arrays</span></a></p>
 </div>
 </section>
 <section id="standard-container-class">
-<h2>Standard container class<a class="headerlink" href="#standard-container-class" title="Permalink to this heading">#</a></h2>
+<h2>Standard container class<a class="headerlink" href="#standard-container-class" title="Link to this heading">#</a></h2>
 <p>For backward compatibility and as a standard “container “class, the
 UserArray from Numeric has been brought over to NumPy and named
 <a class="reference internal" href="generated/numpy.lib.user_array.container.html#numpy.lib.user_array.container" title="numpy.lib.user_array.container"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.lib.user_array.container</span></code></a> The container class is a
@@ -1158,7 +1127,7 @@ encouraged to use the ndarray class directly if you can.</p>
 </div>
 </section>
 <section id="array-iterators">
-<span id="index-3"></span><h2>Array iterators<a class="headerlink" href="#array-iterators" title="Permalink to this heading">#</a></h2>
+<span id="index-3"></span><h2>Array iterators<a class="headerlink" href="#array-iterators" title="Link to this heading">#</a></h2>
 <p id="index-4">Iterators are a powerful concept for array processing. Essentially,
 iterators implement a generalized for-loop. If <em>myiter</em> is an iterator
 object, then the Python code:</p>
@@ -1168,12 +1137,12 @@ object, then the Python code:</p>
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>calls <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">next(myiter)</span></code> repeatedly until <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#StopIteration" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> is
+<p>calls <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">next(myiter)</span></code> repeatedly until <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#StopIteration" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">StopIteration</span></code></a> is
 raised by the iterator. There are several ways to iterate over an
 array that may be useful: default iteration, flat iteration, and
 <span class="math notranslate nohighlight">\(N\)</span>-dimensional enumeration.</p>
 <section id="default-iteration">
-<h3>Default iteration<a class="headerlink" href="#default-iteration" title="Permalink to this heading">#</a></h3>
+<h3>Default iteration<a class="headerlink" href="#default-iteration" title="Link to this heading">#</a></h3>
 <p>The default iterator of an ndarray object is the default Python
 iterator of a sequence type. Thus, when the array object itself is
 used as an iterator. The default behavior is equivalent to:</p>
@@ -1184,8 +1153,8 @@ used as an iterator. The default behavior is equivalent to:</p>
 <p>This default iterator selects a sub-array of dimension <span class="math notranslate nohighlight">\(N-1\)</span>
 from the array. This can be a useful construct for defining recursive
 algorithms. To loop over the entire array requires <span class="math notranslate nohighlight">\(N\)</span> for-loops.</p>
-<div class="try_examples_outer_container docutils container" id="96e350cc-25f2-4840-b6f5-a8588868d9ee">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('96e350cc-25f2-4840-b6f5-a8588868d9ee','da20267b-8037-49a9-a4ed-bae0bbe35d85','0079d95a-7c11-43f2-865e-6097570e283f','../lite/tree/../notebooks/index.html?path=8766f00d_aa04_4819_97e0_bf9603284996.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="fc755871-57bd-4902-b998-aba04d9c8e54">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fc755871-57bd-4902-b998-aba04d9c8e54','8180cee2-3a82-452f-904a-2417ba4ff275','eb60f269-8f3f-4df8-9476-169b5e90e0e0','../lite/tree/../notebooks/index.html?path=c31932b7_5ceb_4f14_9d55_83c4a77491ee.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
@@ -1200,9 +1169,9 @@ algorithms. To loop over the entire array requires <span class="math notranslate
 </div>
 </div>
 </div>
-<div id="0079d95a-7c11-43f2-865e-6097570e283f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('96e350cc-25f2-4840-b6f5-a8588868d9ee','0079d95a-7c11-43f2-865e-6097570e283f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('96e350cc-25f2-4840-b6f5-a8588868d9ee','0079d95a-7c11-43f2-865e-6097570e283f')">Open In Tab</button></div><div id="da20267b-8037-49a9-a4ed-bae0bbe35d85" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="eb60f269-8f3f-4df8-9476-169b5e90e0e0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fc755871-57bd-4902-b998-aba04d9c8e54','eb60f269-8f3f-4df8-9476-169b5e90e0e0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fc755871-57bd-4902-b998-aba04d9c8e54','eb60f269-8f3f-4df8-9476-169b5e90e0e0')">Open In Tab</button></div><div id="8180cee2-3a82-452f-904a-2417ba4ff275" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="flat-iteration">
-<h3>Flat iteration<a class="headerlink" href="#flat-iteration" title="Permalink to this heading">#</a></h3>
+<h3>Flat iteration<a class="headerlink" href="#flat-iteration" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndarray.flat.html#numpy.ndarray.flat" title="numpy.ndarray.flat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.flat</span></code></a></p></td>
@@ -1214,8 +1183,8 @@ algorithms. To loop over the entire array requires <span class="math notranslate
 <p>As mentioned previously, the flat attribute of ndarray objects returns
 an iterator that will cycle over the entire array in C-style
 contiguous order.</p>
-<div class="try_examples_outer_container docutils container" id="24795a47-fedf-4d38-8f5b-ba237be71341">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('24795a47-fedf-4d38-8f5b-ba237be71341','cf18af6b-2eba-4d05-a405-f8d0a813593a','9580ac70-d665-4dbe-814a-ade47af6f8ff','../lite/tree/../notebooks/index.html?path=b1b21c24_c3fb_49e5_a7d0_21995047d989.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="adee2e65-a023-4eef-a248-3a68fef855fb">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('adee2e65-a023-4eef-a248-3a68fef855fb','4427d7b1-08cb-4774-a6d0-e25b2d290a06','55358d7a-b786-45c9-a059-30e24de74871','../lite/tree/../notebooks/index.html?path=67d0b147_ac11_45eb_abcd_abf9efd24f8d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
@@ -1228,11 +1197,11 @@ contiguous order.</p>
 </div>
 </div>
 </div>
-<div id="9580ac70-d665-4dbe-814a-ade47af6f8ff" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('24795a47-fedf-4d38-8f5b-ba237be71341','9580ac70-d665-4dbe-814a-ade47af6f8ff')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('24795a47-fedf-4d38-8f5b-ba237be71341','9580ac70-d665-4dbe-814a-ade47af6f8ff')">Open In Tab</button></div><div id="cf18af6b-2eba-4d05-a405-f8d0a813593a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Here, I’ve used the built-in enumerate iterator to return the iterator
+<div id="55358d7a-b786-45c9-a059-30e24de74871" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('adee2e65-a023-4eef-a248-3a68fef855fb','55358d7a-b786-45c9-a059-30e24de74871')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('adee2e65-a023-4eef-a248-3a68fef855fb','55358d7a-b786-45c9-a059-30e24de74871')">Open In Tab</button></div><div id="4427d7b1-08cb-4774-a6d0-e25b2d290a06" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Here, I’ve used the built-in enumerate iterator to return the iterator
 index as well as the value.</p>
 </section>
 <section id="n-dimensional-enumeration">
-<h3>N-dimensional enumeration<a class="headerlink" href="#n-dimensional-enumeration" title="Permalink to this heading">#</a></h3>
+<h3>N-dimensional enumeration<a class="headerlink" href="#n-dimensional-enumeration" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndenumerate.html#numpy.ndenumerate" title="numpy.ndenumerate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndenumerate</span></code></a>(arr)</p></td>
@@ -1243,8 +1212,8 @@ index as well as the value.</p>
 </div>
 <p>Sometimes it may be useful to get the N-dimensional index while
 iterating. The ndenumerate iterator can achieve this.</p>
-<div class="try_examples_outer_container docutils container" id="bb7d4bf9-e259-4f42-b23b-4e2dd934956f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('bb7d4bf9-e259-4f42-b23b-4e2dd934956f','062aaa88-cab3-4154-9195-5b42a3cdfc7c','5ec6480f-e6d7-4532-831c-8dc373204525','../lite/tree/../notebooks/index.html?path=c4578fe3_35ad_4dee_8fa9_3495d4d6c4fe.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="f31aa283-521f-47f9-a889-4cc1c129a625">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f31aa283-521f-47f9-a889-4cc1c129a625','d70dfc5e-0d3c-4af0-a9b5-c75f8530b89b','86c93360-bbeb-4e91-b75d-d0726aeb8e8c','../lite/tree/../notebooks/index.html?path=a6b0905a_392c_4e4a_bfad_ddfd44440c83.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndenumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -1257,9 +1226,9 @@ iterating. The ndenumerate iterator can achieve this.</p>
 </div>
 </div>
 </div>
-<div id="5ec6480f-e6d7-4532-831c-8dc373204525" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('bb7d4bf9-e259-4f42-b23b-4e2dd934956f','5ec6480f-e6d7-4532-831c-8dc373204525')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('bb7d4bf9-e259-4f42-b23b-4e2dd934956f','5ec6480f-e6d7-4532-831c-8dc373204525')">Open In Tab</button></div><div id="062aaa88-cab3-4154-9195-5b42a3cdfc7c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="86c93360-bbeb-4e91-b75d-d0726aeb8e8c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f31aa283-521f-47f9-a889-4cc1c129a625','86c93360-bbeb-4e91-b75d-d0726aeb8e8c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f31aa283-521f-47f9-a889-4cc1c129a625','86c93360-bbeb-4e91-b75d-d0726aeb8e8c')">Open In Tab</button></div><div id="d70dfc5e-0d3c-4af0-a9b5-c75f8530b89b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="iterator-for-broadcasting">
-<h3>Iterator for broadcasting<a class="headerlink" href="#iterator-for-broadcasting" title="Permalink to this heading">#</a></h3>
+<h3>Iterator for broadcasting<a class="headerlink" href="#iterator-for-broadcasting" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.broadcast.html#numpy.broadcast" title="numpy.broadcast"><code class="xref py py-obj docutils literal notranslate"><span class="pre">broadcast</span></code></a></p></td>
@@ -1273,8 +1242,8 @@ using the <a class="reference internal" href="generated/numpy.broadcast.html#num
 objects as inputs and returns an iterator that returns tuples
 providing each of the input sequence elements in the broadcasted
 result.</p>
-<div class="try_examples_outer_container docutils container" id="edb46156-354a-45ef-ad4c-b3979f8e32fb">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('edb46156-354a-45ef-ad4c-b3979f8e32fb','55e52f1e-00bf-4b62-8a76-1e2253772bed','3421c321-5057-48f8-a206-4d93e0b1dd46','../lite/tree/../notebooks/index.html?path=64f0efe7_facb_4c7e_9dd5_d05d90d5f527.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="ec37ffc9-e627-422a-804c-95d273b3558f">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ec37ffc9-e627-422a-804c-95d273b3558f','36624f6f-1f62-4a83-8bad-0170126ff972','5a028260-0e55-467a-9628-c29a226fb35b','../lite/tree/../notebooks/index.html?path=61b806ba_dfea_4d0a_877d_7e4a1b96095b.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">broadcast</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
@@ -1286,7 +1255,7 @@ result.</p>
 </div>
 </div>
 </div>
-<div id="3421c321-5057-48f8-a206-4d93e0b1dd46" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('edb46156-354a-45ef-ad4c-b3979f8e32fb','3421c321-5057-48f8-a206-4d93e0b1dd46')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('edb46156-354a-45ef-ad4c-b3979f8e32fb','3421c321-5057-48f8-a206-4d93e0b1dd46')">Open In Tab</button></div><div id="55e52f1e-00bf-4b62-8a76-1e2253772bed" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="5a028260-0e55-467a-9628-c29a226fb35b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ec37ffc9-e627-422a-804c-95d273b3558f','5a028260-0e55-467a-9628-c29a226fb35b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ec37ffc9-e627-422a-804c-95d273b3558f','5a028260-0e55-467a-9628-c29a226fb35b')">Open In Tab</button></div><div id="36624f6f-1f62-4a83-8bad-0170126ff972" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 </section>
 </section>
 
@@ -1325,7 +1294,8 @@ result.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1376,8 +1346,8 @@ result.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1388,7 +1358,7 @@ result.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1397,7 +1367,7 @@ result.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1410,7 +1380,8 @@ result.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

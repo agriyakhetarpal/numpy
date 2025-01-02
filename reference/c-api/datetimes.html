@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Datetime API &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Datetime API &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=30646c52"></script>
+    <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/c-api/datetimes';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="NumPy core math library" href="coremath.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -462,7 +433,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">NumPy C-API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -484,7 +454,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -496,9 +467,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -516,8 +492,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -532,7 +506,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy C-API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Datetime API</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Datetime API</span></li>
   </ul>
 </nav>
 </div>
@@ -550,20 +524,20 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="datetime-api">
-<h1>Datetime API<a class="headerlink" href="#datetime-api" title="Permalink to this heading">#</a></h1>
+<h1>Datetime API<a class="headerlink" href="#datetime-api" title="Link to this heading">#</a></h1>
 <p>NumPy represents dates internally using an int64 counter and a unit metadata
 struct. Time differences are represented similarly using an int64 and a unit
 metadata struct. The functions described below are available to to facilitate
 converting between ISO 8601 date strings, NumPy datetimes, and Python datetime
 objects in C.</p>
 <section id="data-types">
-<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this heading">#</a></h2>
+<h2>Data types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h2>
 <p>In addition to the <a class="reference internal" href="dtype.html#c.npy_datetime" title="npy_datetime"><code class="xref c c-type docutils literal notranslate"><span class="pre">npy_datetime</span></code></a> and <a class="reference internal" href="dtype.html#c.npy_timedelta" title="npy_timedelta"><code class="xref c c-type docutils literal notranslate"><span class="pre">npy_timedelta</span></code></a> typedefs
 for <a class="reference internal" href="dtype.html#c.npy_int64" title="npy_int64"><code class="xref c c-type docutils literal notranslate"><span class="pre">npy_int64</span></code></a>, NumPy defines two additional structs that represent
 time unit metadata and an “exploded” view of a datetime.</p>
 <dl class="c type">
 <dt class="sig sig-object c" id="c.PyArray_DatetimeMetaData">
-<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyArray_DatetimeMetaData</span></span></span><a class="headerlink" href="#c.PyArray_DatetimeMetaData" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyArray_DatetimeMetaData</span></span></span><a class="headerlink" href="#c.PyArray_DatetimeMetaData" title="Link to this definition">#</a><br /></dt>
 <dd><p>Represents datetime unit metadata.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">NPY_DATETIMEUNIT</span><span class="w"> </span><span class="n">base</span><span class="p">;</span>
@@ -573,13 +547,13 @@ time unit metadata and an “exploded” view of a datetime.</p>
 </div>
 <dl class="c member">
 <dt class="sig sig-object c" id="c.PyArray_DatetimeMetaData.base">
-<a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">base</span></span></span><a class="headerlink" href="#c.PyArray_DatetimeMetaData.base" title="Permalink to this definition">#</a><br /></dt>
+<a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">base</span></span></span><a class="headerlink" href="#c.PyArray_DatetimeMetaData.base" title="Link to this definition">#</a><br /></dt>
 <dd><p>The unit of the datetime.</p>
 </dd></dl>
 
 <dl class="c member">
 <dt class="sig sig-object c" id="c.PyArray_DatetimeMetaData.num">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num</span></span></span><a class="headerlink" href="#c.PyArray_DatetimeMetaData.num" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num</span></span></span><a class="headerlink" href="#c.PyArray_DatetimeMetaData.num" title="Link to this definition">#</a><br /></dt>
 <dd><p>A multiplier for the unit.</p>
 </dd></dl>
 
@@ -587,7 +561,7 @@ time unit metadata and an “exploded” view of a datetime.</p>
 
 <dl class="c type">
 <dt class="sig sig-object c" id="c.npy_datetimestruct">
-<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">npy_datetimestruct</span></span></span><a class="headerlink" href="#c.npy_datetimestruct" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">npy_datetimestruct</span></span></span><a class="headerlink" href="#c.npy_datetimestruct" title="Link to this definition">#</a><br /></dt>
 <dd><p>An “exploded” view of a datetime value</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">npy_int64</span><span class="w"> </span><span class="n">year</span><span class="p">;</span>
@@ -599,96 +573,96 @@ time unit metadata and an “exploded” view of a datetime.</p>
 
 <dl class="c enum">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT">
-<span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT" title="Link to this definition">#</a><br /></dt>
 <dd><p>Time units supported by NumPy. The “FR” in the names of the enum variants
 is short for frequency.</p>
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_ERROR">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ERROR</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ERROR" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ERROR</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ERROR" title="Link to this definition">#</a><br /></dt>
 <dd><p>Error or undetermined units.</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_Y">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_Y</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_Y" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_Y</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_Y" title="Link to this definition">#</a><br /></dt>
 <dd><p>Years</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_M">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_M</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_M" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_M</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_M" title="Link to this definition">#</a><br /></dt>
 <dd><p>Months</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_W">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_W</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_W" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_W</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_W" title="Link to this definition">#</a><br /></dt>
 <dd><p>Weeks</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_D">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_D</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_D" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_D</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_D" title="Link to this definition">#</a><br /></dt>
 <dd><p>Days</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_h">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_h</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_h" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_h</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_h" title="Link to this definition">#</a><br /></dt>
 <dd><p>Hours</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_m">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_m</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_m" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_m</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_m" title="Link to this definition">#</a><br /></dt>
 <dd><p>Minutes</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_s">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_s</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_s" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_s</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_s" title="Link to this definition">#</a><br /></dt>
 <dd><p>Seconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_ms">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ms</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ms" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ms</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ms" title="Link to this definition">#</a><br /></dt>
 <dd><p>Milliseconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_us">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_us</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_us" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_us</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_us" title="Link to this definition">#</a><br /></dt>
 <dd><p>Microseconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_ns">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ns</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ns" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ns</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ns" title="Link to this definition">#</a><br /></dt>
 <dd><p>Nanoseconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_ps">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ps</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ps" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_ps</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_ps" title="Link to this definition">#</a><br /></dt>
 <dd><p>Picoseconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_fs">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_fs</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_fs" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_fs</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_fs" title="Link to this definition">#</a><br /></dt>
 <dd><p>Femtoseconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_as">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_as</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_as" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_as</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_as" title="Link to this definition">#</a><br /></dt>
 <dd><p>Attoseconds</p>
 </dd></dl>
 
 <dl class="c enumerator">
 <dt class="sig sig-object c" id="c.NPY_DATETIMEUNIT.NPY_FR_GENERIC">
-<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_GENERIC</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_GENERIC" title="Permalink to this definition">#</a><br /></dt>
+<span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NPY_FR_GENERIC</span></span></span><a class="headerlink" href="#c.NPY_DATETIMEUNIT.NPY_FR_GENERIC" title="Link to this definition">#</a><br /></dt>
 <dd><p>Unbound units, can convert to anything</p>
 </dd></dl>
 
@@ -696,10 +670,10 @@ is short for frequency.</p>
 
 </section>
 <section id="conversion-functions">
-<h2>Conversion functions<a class="headerlink" href="#conversion-functions" title="Permalink to this heading">#</a></h2>
+<h2>Conversion functions<a class="headerlink" href="#conversion-functions" title="Link to this heading">#</a></h2>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.NpyDatetime_ConvertDatetimeStructToDatetime64">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ConvertDatetimeStructToDatetime64</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyArray_DatetimeMetaData" title="PyArray_DatetimeMetaData"><span class="n"><span class="pre">PyArray_DatetimeMetaData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">meta</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">dts</span></span>, <a class="reference internal" href="dtype.html#c.npy_datetime" title="npy_datetime"><span class="n"><span class="pre">npy_datetime</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ConvertDatetimeStructToDatetime64" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ConvertDatetimeStructToDatetime64</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyArray_DatetimeMetaData" title="PyArray_DatetimeMetaData"><span class="n"><span class="pre">PyArray_DatetimeMetaData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">meta</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">dts</span></span>, <a class="reference internal" href="dtype.html#c.npy_datetime" title="npy_datetime"><span class="n"><span class="pre">npy_datetime</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ConvertDatetimeStructToDatetime64" title="Link to this definition">#</a><br /></dt>
 <dd><p>Converts a datetime from a datetimestruct to a datetime in the units
 specified by the unit metadata. The date is assumed to be valid.</p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">num</span></code> member of the metadata struct is large, there may
@@ -709,7 +683,7 @@ be integer overflow in this function.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.NpyDatetime_ConvertDatetime64ToDatetimeStruct">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ConvertDatetime64ToDatetimeStruct</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyArray_DatetimeMetaData" title="PyArray_DatetimeMetaData"><span class="n"><span class="pre">PyArray_DatetimeMetaData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">meta</span></span>, <a class="reference internal" href="dtype.html#c.npy_datetime" title="npy_datetime"><span class="n"><span class="pre">npy_datetime</span></span></a><span class="w"> </span><span class="n"><span class="pre">dt</span></span>, <a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ConvertDatetime64ToDatetimeStruct" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ConvertDatetime64ToDatetimeStruct</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyArray_DatetimeMetaData" title="PyArray_DatetimeMetaData"><span class="n"><span class="pre">PyArray_DatetimeMetaData</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">meta</span></span>, <a class="reference internal" href="dtype.html#c.npy_datetime" title="npy_datetime"><span class="n"><span class="pre">npy_datetime</span></span></a><span class="w"> </span><span class="n"><span class="pre">dt</span></span>, <a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ConvertDatetime64ToDatetimeStruct" title="Link to this definition">#</a><br /></dt>
 <dd><p>Converts a datetime with units specified by the unit metadata to an
 exploded datetime struct.</p>
 <p>Returns 0 on success and -1 on failure.</p>
@@ -717,7 +691,7 @@ exploded datetime struct.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.NpyDatetime_ConvertPyDateTimeToDatetimeStruct">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ConvertPyDateTimeToDatetimeStruct</span></span></span><span class="sig-paren">(</span><a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject" title="(in Python v3.12)"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span>, <a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out_bestunit</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">apply_tzinfo</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ConvertPyDateTimeToDatetimeStruct" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ConvertPyDateTimeToDatetimeStruct</span></span></span><span class="sig-paren">(</span><a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject" title="(in Python v3.13)"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">obj</span></span>, <a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out_bestunit</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">apply_tzinfo</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ConvertPyDateTimeToDatetimeStruct" title="Link to this definition">#</a><br /></dt>
 <dd><p>Tests for and converts a Python <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> or <code class="docutils literal notranslate"><span class="pre">datetime.date</span></code>
 object into a NumPy <code class="docutils literal notranslate"><span class="pre">npy_datetimestruct</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">out_bestunit</span></code> gives a suggested unit based on whether the object
@@ -730,7 +704,7 @@ if obj doesn’t have the needed date or datetime attributes.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.NpyDatetime_ParseISO8601Datetime">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ParseISO8601Datetime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">str</span></span>, <a class="reference external" href="https://docs.python.org/3/c-api/intro.html#c.Py_ssize_t" title="(in Python v3.12)"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">len</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="n"><span class="pre">unit</span></span>, <a class="reference internal" href="array.html#c.NPY_CASTING" title="NPY_CASTING"><span class="n"><span class="pre">NPY_CASTING</span></span></a><span class="w"> </span><span class="n"><span class="pre">casting</span></span>, <a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out_bestunit</span></span>, <a class="reference internal" href="dtype.html#c.npy_bool" title="npy_bool"><span class="n"><span class="pre">npy_bool</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out_special</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ParseISO8601Datetime" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_ParseISO8601Datetime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">str</span></span>, <a class="reference external" href="https://docs.python.org/3/c-api/intro.html#c.Py_ssize_t" title="(in Python v3.13)"><span class="n"><span class="pre">Py_ssize_t</span></span></a><span class="w"> </span><span class="n"><span class="pre">len</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="n"><span class="pre">unit</span></span>, <a class="reference internal" href="array.html#c.NPY_CASTING" title="NPY_CASTING"><span class="n"><span class="pre">NPY_CASTING</span></span></a><span class="w"> </span><span class="n"><span class="pre">casting</span></span>, <a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out_bestunit</span></span>, <a class="reference internal" href="dtype.html#c.npy_bool" title="npy_bool"><span class="n"><span class="pre">npy_bool</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">out_special</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_ParseISO8601Datetime" title="Link to this definition">#</a><br /></dt>
 <dd><p>Parses (almost) standard ISO 8601 date strings. The differences are:</p>
 <ul class="simple">
 <li><p>The date “20100312” is parsed as the year 20100312, not as
@@ -762,16 +736,16 @@ the unit recommended is ‘Y’.</p>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.NpyDatetime_GetDatetimeISO8601StrLen">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_GetDatetimeISO8601StrLen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">local</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="n"><span class="pre">base</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_GetDatetimeISO8601StrLen" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_GetDatetimeISO8601StrLen</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">local</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="n"><span class="pre">base</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_GetDatetimeISO8601StrLen" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the string length to use for converting datetime
 objects with the given local time and unit settings to strings.
-Use this when constructings strings to supply to
+Use this when constructing strings to supply to
 <code class="docutils literal notranslate"><span class="pre">NpyDatetime_MakeISO8601Datetime</span></code>.</p>
 </dd></dl>
 
 <dl class="c function">
 <dt class="sig sig-object c" id="c.NpyDatetime_MakeISO8601Datetime">
-<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_MakeISO8601Datetime</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">dts</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">outstr</span></span>, <a class="reference internal" href="dtype.html#c.npy_intp" title="npy_intp"><span class="n"><span class="pre">npy_intp</span></span></a><span class="w"> </span><span class="n"><span class="pre">outlen</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">local</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">utc</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="n"><span class="pre">base</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">tzoffset</span></span>, <a class="reference internal" href="array.html#c.NPY_CASTING" title="NPY_CASTING"><span class="n"><span class="pre">NPY_CASTING</span></span></a><span class="w"> </span><span class="n"><span class="pre">casting</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_MakeISO8601Datetime" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NpyDatetime_MakeISO8601Datetime</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.npy_datetimestruct" title="npy_datetimestruct"><span class="n"><span class="pre">npy_datetimestruct</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">dts</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">outstr</span></span>, <a class="reference internal" href="dtype.html#c.npy_intp" title="npy_intp"><span class="n"><span class="pre">npy_intp</span></span></a><span class="w"> </span><span class="n"><span class="pre">outlen</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">local</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">utc</span></span>, <a class="reference internal" href="#c.NPY_DATETIMEUNIT" title="NPY_DATETIMEUNIT"><span class="n"><span class="pre">NPY_DATETIMEUNIT</span></span></a><span class="w"> </span><span class="n"><span class="pre">base</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">tzoffset</span></span>, <a class="reference internal" href="array.html#c.NPY_CASTING" title="NPY_CASTING"><span class="n"><span class="pre">NPY_CASTING</span></span></a><span class="w"> </span><span class="n"><span class="pre">casting</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.NpyDatetime_MakeISO8601Datetime" title="Link to this definition">#</a><br /></dt>
 <dd><p>Converts an <code class="docutils literal notranslate"><span class="pre">npy_datetimestruct</span></code> to an (almost) ISO 8601
 NULL-terminated string. If the string fits in the space exactly,
 it leaves out the NULL terminator and returns success.</p>
@@ -832,7 +806,8 @@ string was too short).</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -861,8 +836,8 @@ string was too short).</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -873,7 +848,7 @@ string was too short).</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -882,7 +857,7 @@ string was too short).</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -895,7 +870,8 @@ string was too short).</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

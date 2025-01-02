@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ctypes foreign function interface (numpy.ctypeslib) &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>ctypes foreign function interface (numpy.ctypeslib) &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/routines.ctypeslib';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="Typing (numpy.typing)" href="typing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -465,7 +436,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="routines.rec.html">numpy.rec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.version.html">numpy.version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.char.html">numpy.char</a></li>
-<li class="toctree-l2"><a class="reference internal" href="distutils.html">numpy.distutils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../f2py/index.html">numpy.f2py</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.ma.html">numpy.ma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.matlib.html">numpy.matlib</a></li>
@@ -483,7 +453,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -491,7 +460,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -503,9 +473,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -523,8 +498,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -539,7 +512,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="module_structure.html" class="nav-link">NumPy’s module structure</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">ctypes...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">ctypes foreign function interface (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ctypeslib</span></code>)</span></li>
   </ul>
 </nav>
 </div>
@@ -556,27 +529,72 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <span class="target" id="module-numpy.ctypeslib"><span id="routines-ctypeslib"></span></span><section id="ctypes-foreign-function-interface-numpy-ctypeslib">
-<h1>ctypes foreign function interface (<a class="reference internal" href="#module-numpy.ctypeslib" title="numpy.ctypeslib"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ctypeslib</span></code></a>)<a class="headerlink" href="#ctypes-foreign-function-interface-numpy-ctypeslib" title="Permalink to this heading">#</a></h1>
+  <section id="ctypes-foreign-function-interface-numpy-ctypeslib">
+<span id="module-numpy.ctypeslib"></span><span id="routines-ctypeslib"></span><h1>ctypes foreign function interface (<a class="reference internal" href="#module-numpy.ctypeslib" title="numpy.ctypeslib"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ctypeslib</span></code></a>)<a class="headerlink" href="#ctypes-foreign-function-interface-numpy-ctypeslib" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.as_array">
-<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">as_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib.py#L522-L540"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.as_array" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">as_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib/_ctypeslib.py#L520-L559"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.as_array" title="Link to this definition">#</a></dt>
 <dd><p>Create a numpy array from a ctypes array or POINTER.</p>
 <p>The numpy array shares the memory with the ctypes object.</p>
 <p>The shape parameter must be given if converting from a ctypes POINTER.
 The shape parameter is ignored if converting from a ctypes array</p>
-</dd></dl>
+<p class="rubric">Examples</p>
+<div class="try_examples_outer_container docutils container" id="97f7b56d-92c8-4a18-90d6-018471c8bc65">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('97f7b56d-92c8-4a18-90d6-018471c8bc65','6335ff3e-30ed-4add-b2b5-c2284afe85dc','101e206b-e0a8-4fdb-8982-4d17aaac18af','../lite/tree/../notebooks/index.html?path=6759a160_023e_4198_a4b7_8ee211bd66fc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<p>Converting a ctypes integer array:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctypes_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">ctypes_array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span>
+<span class="go">array([0, 1, 2, 3, 4], dtype=int32)</span>
+</pre></div>
+</div>
+<p>Converting a ctypes POINTER:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">buffer</span> <span class="o">=</span> <span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointer</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">POINTER</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">pointer</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span>
+<span class="go">array([0, 1, 2, 3, 4], dtype=int32)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="101e206b-e0a8-4fdb-8982-4d17aaac18af" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('97f7b56d-92c8-4a18-90d6-018471c8bc65','101e206b-e0a8-4fdb-8982-4d17aaac18af')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('97f7b56d-92c8-4a18-90d6-018471c8bc65','101e206b-e0a8-4fdb-8982-4d17aaac18af')">Open In Tab</button></div><div id="6335ff3e-30ed-4add-b2b5-c2284afe85dc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.as_ctypes">
-<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">as_ctypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib.py#L543-L561"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.as_ctypes" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">as_ctypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib/_ctypeslib.py#L561-L603"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.as_ctypes" title="Link to this definition">#</a></dt>
 <dd><p>Create and return a ctypes object from a numpy array.  Actually
 anything that exposes the __array_interface__ is accepted.</p>
-</dd></dl>
+<p class="rubric">Examples</p>
+<div class="try_examples_outer_container docutils container" id="e3c704ba-0056-4a14-b4e4-89f647e88cbb">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e3c704ba-0056-4a14-b4e4-89f647e88cbb','ed77fdcd-d3cf-4cdf-a6fb-52675abeba23','134bc67b-dfdd-4de6-b50d-f6838423f25c','../lite/tree/../notebooks/index.html?path=12e9c8ab_6840_4e55_8ad7_cfdd33c8312d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<p>Create ctypes object from inferred int <code class="docutils literal notranslate"><span class="pre">np.array</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inferred_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_ctypes</span><span class="p">(</span><span class="n">inferred_int_array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">c_int_array</span><span class="p">)</span>
+<span class="go">&lt;class &#39;c_long_Array_3&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c_int_array</span><span class="p">[:]</span>
+<span class="go">[1, 2, 3]</span>
+</pre></div>
+</div>
+<p>Create ctypes object from explicit 8 bit unsigned int <code class="docutils literal notranslate"><span class="pre">np.array</span></code> :</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exp_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_ctypes</span><span class="p">(</span><span class="n">exp_int_array</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">c_int_array</span><span class="p">)</span>
+<span class="go">&lt;class &#39;c_ubyte_Array_3&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c_int_array</span><span class="p">[:]</span>
+<span class="go">[1, 2, 3]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div id="134bc67b-dfdd-4de6-b50d-f6838423f25c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e3c704ba-0056-4a14-b4e4-89f647e88cbb','134bc67b-dfdd-4de6-b50d-f6838423f25c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e3c704ba-0056-4a14-b4e4-89f647e88cbb','134bc67b-dfdd-4de6-b50d-f6838423f25c')">Open In Tab</button></div><div id="ed77fdcd-d3cf-4cdf-a6fb-52675abeba23" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.as_ctypes_type">
-<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">as_ctypes_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib.py#L465-L519"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.as_ctypes_type" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">as_ctypes_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib/_ctypeslib.py#L463-L518"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.as_ctypes_type" title="Link to this definition">#</a></dt>
 <dd><p>Convert a dtype into a ctypes type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -608,15 +626,15 @@ anything that exposes the __array_interface__ is accepted.</p>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">as_ctypes_type(np.dtype(ctype))</span></code> will:</p>
 <ul class="simple">
-<li><p>discard the class names of <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Structure" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Structure</span></code></a>s and
-<a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Union" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Union</span></code></a>s</p></li>
-<li><p>convert single-element <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Union" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Union</span></code></a>s into single-element
-<a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Structure" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Structure</span></code></a>s</p></li>
+<li><p>discard the class names of <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Structure" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Structure</span></code></a>s and
+<a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Union" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Union</span></code></a>s</p></li>
+<li><p>convert single-element <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Union" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Union</span></code></a>s into single-element
+<a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.Structure" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes.Structure</span></code></a>s</p></li>
 <li><p>insert padding fields</p></li>
 </ul>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="a436414e-cd70-4436-b33d-73ea397e296a">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a436414e-cd70-4436-b33d-73ea397e296a','829e9322-9745-4673-90e0-5467082e049a','cc8def3e-78bc-47cb-b541-1d9df2e1ee3a','../lite/tree/../notebooks/index.html?path=c6bf8f74_bf85_4ea7_86c2_75ce8c6c525e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="2b58ae4a-7870-4bee-9339-96d6402c8ef6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2b58ae4a-7870-4bee-9339-96d6402c8ef6','bee11e8f-455f-45b5-9d50-09c49b7a60a7','c1390f53-3242-4efa-8224-e69000ce5019','../lite/tree/../notebooks/index.html?path=3982338f_aed7_40fe_9d5f_1ee0835cecb6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Converting a simple dtype:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;int8&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_ctypes_type</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
@@ -633,11 +651,11 @@ anything that exposes the __array_interface__ is accepted.</p>
 </div>
 </div>
 </div>
-<div id="cc8def3e-78bc-47cb-b541-1d9df2e1ee3a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a436414e-cd70-4436-b33d-73ea397e296a','cc8def3e-78bc-47cb-b541-1d9df2e1ee3a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a436414e-cd70-4436-b33d-73ea397e296a','cc8def3e-78bc-47cb-b541-1d9df2e1ee3a')">Open In Tab</button></div><div id="829e9322-9745-4673-90e0-5467082e049a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="c1390f53-3242-4efa-8224-e69000ce5019" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2b58ae4a-7870-4bee-9339-96d6402c8ef6','c1390f53-3242-4efa-8224-e69000ce5019')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2b58ae4a-7870-4bee-9339-96d6402c8ef6','c1390f53-3242-4efa-8224-e69000ce5019')">Open In Tab</button></div><div id="bee11e8f-455f-45b5-9d50-09c49b7a60a7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.load_library">
-<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">load_library</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">libname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader_path</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib.py#L90-L161"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.load_library" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">load_library</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">libname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loader_path</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib/_ctypeslib.py#L92-L164"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.load_library" title="Link to this definition">#</a></dt>
 <dd><p>It is possible to load a library using</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lib</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">cdll</span><span class="p">[</span><span class="o">&lt;</span><span class="n">full_path_name</span><span class="o">&gt;</span><span class="p">]</span> 
 </pre></div>
@@ -647,7 +665,7 @@ plus the fact Windows will just load the first library it finds with that name.
 NumPy supplies the load_library function as a convenience.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">Changed in version 1.20.0: </span>Allow libname and loader_path to take any
-<a class="reference external" href="https://docs.python.org/3/glossary.html#term-path-like-object" title="(in Python v3.12)"><span>path-like object</span></a>.</p>
+<a class="reference external" href="https://docs.python.org/3/glossary.html#term-path-like-object" title="(in Python v3.13)"><span>path-like object</span></a>.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -677,7 +695,7 @@ library is defective and cannot be loaded.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.ndpointer">
-<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">ndpointer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib.py#L233-L347"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.ndpointer" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">ndpointer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ndim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ctypeslib/_ctypeslib.py#L238-L353"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ctypeslib.ndpointer" title="Link to this definition">#</a></dt>
 <dd><p>Array-checking restype/argtypes.</p>
 <p>An ndpointer instance is used to describe an ndarray in restypes
 and argtypes specifications.  This approach is more flexible than
@@ -722,8 +740,8 @@ dtype, ndim, shape and flags information.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="fccc38ca-d252-402b-b40f-84adc989b707">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fccc38ca-d252-402b-b40f-84adc989b707','af3ccb6a-7912-40e9-bc4c-b02ddf2c73b8','1f2479c8-82bf-4ace-8a30-fb652fa7138f','../lite/tree/../notebooks/index.html?path=c2f4c3fe_bba6_473f_8950_71515f676a42.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="42f233ee-8d19-4113-9276-e3571c803227">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('42f233ee-8d19-4113-9276-e3571c803227','672799c2-1902-4456-80cf-8da740c1a399','f2a430e2-20d2-493e-bcd1-84622227c1f9','../lite/tree/../notebooks/index.html?path=e508be27_8335_4197_a8d1_ffde8d6dc4c5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">clib</span><span class="o">.</span><span class="n">somefunc</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">ndpointer</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
 <span class="gp">... </span>                                                 <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="gp">... </span>                                                 <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;C_CONTIGUOUS&#39;</span><span class="p">)]</span>
@@ -734,14 +752,14 @@ dtype, ndim, shape and flags information.</p>
 </div>
 </div>
 </div>
-<div id="1f2479c8-82bf-4ace-8a30-fb652fa7138f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fccc38ca-d252-402b-b40f-84adc989b707','1f2479c8-82bf-4ace-8a30-fb652fa7138f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fccc38ca-d252-402b-b40f-84adc989b707','1f2479c8-82bf-4ace-8a30-fb652fa7138f')">Open In Tab</button></div><div id="af3ccb6a-7912-40e9-bc4c-b02ddf2c73b8" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="f2a430e2-20d2-493e-bcd1-84622227c1f9" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('42f233ee-8d19-4113-9276-e3571c803227','f2a430e2-20d2-493e-bcd1-84622227c1f9')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('42f233ee-8d19-4113-9276-e3571c803227','f2a430e2-20d2-493e-bcd1-84622227c1f9')">Open In Tab</button></div><div id="672799c2-1902-4456-80cf-8da740c1a399" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.ctypeslib.c_intp">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">c_intp</span></span><a class="headerlink" href="#numpy.ctypeslib.c_intp" title="Permalink to this definition">#</a></dt>
-<dd><p>A <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#module-ctypes" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes</span></code></a> signed integer type of the same size as <a class="reference internal" href="arrays.scalars.html#numpy.intp" title="numpy.intp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.intp</span></code></a>.</p>
-<p>Depending on the platform, it can be an alias for either <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_int" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_int</span></code></a>,
-<a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_long" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_long</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_longlong" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_longlong</span></code></a>.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.ctypeslib.</span></span><span class="sig-name descname"><span class="pre">c_intp</span></span><a class="headerlink" href="#numpy.ctypeslib.c_intp" title="Link to this definition">#</a></dt>
+<dd><p>A <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#module-ctypes" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ctypes</span></code></a> signed integer type of the same size as <a class="reference internal" href="arrays.scalars.html#numpy.intp" title="numpy.intp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.intp</span></code></a>.</p>
+<p>Depending on the platform, it can be an alias for either <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_int</span></code></a>,
+<a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_long" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_long</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/ctypes.html#ctypes.c_longlong" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_longlong</span></code></a>.</p>
 </dd></dl>
 
 </section>
@@ -781,7 +799,8 @@ dtype, ndim, shape and flags information.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -814,8 +833,8 @@ dtype, ndim, shape and flags information.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -826,7 +845,7 @@ dtype, ndim, shape and flags information.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -835,7 +854,7 @@ dtype, ndim, shape and flags information.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -848,7 +867,8 @@ dtype, ndim, shape and flags information.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

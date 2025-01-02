@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How to contribute to the NumPy documentation &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>How to contribute to the NumPy documentation &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dev/howto-docs';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -63,7 +66,8 @@
     <link rel="prev" title="NumPy project governance and decision-making" href="governance/governance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -79,19 +83,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -99,7 +92,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -107,8 +99,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -139,8 +131,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -197,7 +189,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -222,49 +216,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -303,7 +285,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -378,49 +361,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -466,9 +437,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -486,8 +462,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -499,7 +473,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">Contributing to NumPy</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">How to...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">How to contribute to the NumPy documentation</span></li>
   </ul>
 </nav>
 </div>
@@ -517,11 +491,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="how-to-contribute-to-the-numpy-documentation">
-<span id="howto-docs"></span><h1>How to contribute to the NumPy documentation<a class="headerlink" href="#how-to-contribute-to-the-numpy-documentation" title="Permalink to this heading">#</a></h1>
+<span id="howto-docs"></span><h1>How to contribute to the NumPy documentation<a class="headerlink" href="#how-to-contribute-to-the-numpy-documentation" title="Link to this heading">#</a></h1>
 <p>This guide will help you decide what to contribute and how to submit it to the
 official NumPy documentation.</p>
 <section id="documentation-team-meetings">
-<h2>Documentation team meetings<a class="headerlink" href="#documentation-team-meetings" title="Permalink to this heading">#</a></h2>
+<h2>Documentation team meetings<a class="headerlink" href="#documentation-team-meetings" title="Link to this heading">#</a></h2>
 <p>The NumPy community has set a firm goal of improving its documentation. We
 hold regular documentation meetings on Zoom (dates are announced on the
 <a class="reference external" href="https://mail.python.org/mailman/listinfo/numpy-discussion">numpy-discussion mailing list</a>), and everyone
@@ -531,7 +505,7 @@ Minutes are taken <a class="reference external" href="https://hackmd.io/oB_boakv
 and stored in the <a class="reference external" href="https://github.com/numpy/archive">NumPy Archive repository</a>.</p>
 </section>
 <section id="what-s-needed">
-<h2>What’s needed<a class="headerlink" href="#what-s-needed" title="Permalink to this heading">#</a></h2>
+<h2>What’s needed<a class="headerlink" href="#what-s-needed" title="Link to this heading">#</a></h2>
 <p>The <a class="reference internal" href="../index.html#numpy-docs-mainpage"><span class="std std-ref">NumPy Documentation</span></a> has the details covered.
 API reference documentation is generated directly from
 <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">docstrings</a> in the code when the
@@ -542,7 +516,7 @@ there is a lack of usage examples for some of them.</p>
 explanations. Reporting defects is another way to contribute. We discuss both.</p>
 </section>
 <section id="contributing-fixes">
-<h2>Contributing fixes<a class="headerlink" href="#contributing-fixes" title="Permalink to this heading">#</a></h2>
+<h2>Contributing fixes<a class="headerlink" href="#contributing-fixes" title="Link to this heading">#</a></h2>
 <p>We’re eager to hear about and fix doc defects. But to attack the biggest
 problems we end up having to defer or overlook some bug reports. Here are the
 best defects to go after.</p>
@@ -562,7 +536,7 @@ which raises the bar. Test the waters by first presenting the fix as an issue.</
 C-extension modules have their docstrings defined separately in <a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/_add_newdocs.py">_add_newdocs.py</a></p>
 </section>
 <section id="contributing-new-pages">
-<h2>Contributing new pages<a class="headerlink" href="#contributing-new-pages" title="Permalink to this heading">#</a></h2>
+<h2>Contributing new pages<a class="headerlink" href="#contributing-new-pages" title="Link to this heading">#</a></h2>
 <p>Your frustrations using our documents are our best guide to what needs fixing.</p>
 <p>If you write a missing doc you join the front line of open source, but it’s
 a meaningful contribution just to let us know what’s missing. If you want to
@@ -576,7 +550,7 @@ ideas and feedback. If you want to alert us to a gap,
 It identifies areas where our docs need help and lists several
 additions we’d like to see, including <a class="reference internal" href="#numpy-tutorials"><span class="std std-ref">Jupyter notebooks</span></a>.</p>
 <section id="documentation-framework">
-<span id="tutorials-howtos-explanations"></span><h3>Documentation framework<a class="headerlink" href="#documentation-framework" title="Permalink to this heading">#</a></h3>
+<span id="tutorials-howtos-explanations"></span><h3>Documentation framework<a class="headerlink" href="#documentation-framework" title="Link to this heading">#</a></h3>
 <p>There are formulas for writing useful documents, and four formulas
 cover nearly everything. There are four formulas because there are four
 categories of document – <code class="docutils literal notranslate"><span class="pre">tutorial</span></code>, <code class="docutils literal notranslate"><span class="pre">how-to</span> <span class="pre">guide</span></code>, <code class="docutils literal notranslate"><span class="pre">explanation</span></code>,
@@ -585,7 +559,7 @@ Daniele Procida and his <a class="reference external" href="https://diataxis.fr/
 begin a document or propose one, have in mind which of these types it will be.</p>
 </section>
 <section id="numpy-tutorials">
-<span id="id1"></span><h3>NumPy tutorials<a class="headerlink" href="#numpy-tutorials" title="Permalink to this heading">#</a></h3>
+<span id="id1"></span><h3>NumPy tutorials<a class="headerlink" href="#numpy-tutorials" title="Link to this heading">#</a></h3>
 <p>In addition to the documentation that is part of the NumPy source tree, you can
 submit content in Jupyter Notebook format to the
 <a class="reference external" href="https://numpy.org/numpy-tutorials">NumPy Tutorials</a> page. This
@@ -597,7 +571,7 @@ check out existing notebooks, open issues to suggest new topics or submit your
 own tutorials as pull requests.</p>
 </section>
 <section id="more-on-contributing">
-<span id="contributing"></span><h3>More on contributing<a class="headerlink" href="#more-on-contributing" title="Permalink to this heading">#</a></h3>
+<span id="contributing"></span><h3>More on contributing<a class="headerlink" href="#more-on-contributing" title="Link to this heading">#</a></h3>
 <p>Don’t worry if English is not your first language, or if you can only come up
 with a rough draft. Open source is a community effort. Do your best – we’ll
 help fix issues.</p>
@@ -618,7 +592,7 @@ rST, see the <a class="reference external" href="https://docutils.sourceforge.io
 </section>
 </section>
 <section id="contributing-indirectly">
-<h2>Contributing indirectly<a class="headerlink" href="#contributing-indirectly" title="Permalink to this heading">#</a></h2>
+<h2>Contributing indirectly<a class="headerlink" href="#contributing-indirectly" title="Link to this heading">#</a></h2>
 <p>If you run across outside material that would be a useful addition to the
 NumPy docs, let us know by <a class="reference external" href="https://github.com/numpy/numpy/issues">opening an issue</a>.</p>
 <p>You don’t have to contribute here to contribute to NumPy. You’ve contributed
@@ -626,9 +600,9 @@ if you write a tutorial on your blog, create a YouTube video, or answer question
 on Stack Overflow and other sites.</p>
 </section>
 <section id="documentation-style">
-<span id="howto-document"></span><h2>Documentation style<a class="headerlink" href="#documentation-style" title="Permalink to this heading">#</a></h2>
+<span id="howto-document"></span><h2>Documentation style<a class="headerlink" href="#documentation-style" title="Link to this heading">#</a></h2>
 <section id="user-documentation">
-<span id="userdoc-guide"></span><h3>User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this heading">#</a></h3>
+<span id="userdoc-guide"></span><h3>User documentation<a class="headerlink" href="#user-documentation" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>In general, we follow the
 <a class="reference external" href="https://developers.google.com/style">Google developer documentation style guide</a>
@@ -655,7 +629,7 @@ we should add to the NumPy style rules.</p></li>
 </ul>
 </section>
 <section id="docstring-intro">
-<span id="id2"></span><h3>Docstrings<a class="headerlink" href="#docstring-intro" title="Permalink to this heading">#</a></h3>
+<span id="id2"></span><h3>Docstrings<a class="headerlink" href="#docstring-intro" title="Link to this heading">#</a></h3>
 <p>When using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> in combination with the
 NumPy conventions, you should use the <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> extension so that your
 docstrings will be handled correctly. For example, Sphinx will extract the
@@ -671,16 +645,16 @@ find in docstrings.</p>
 </ul>
 <p>Note that for documentation within NumPy, it is not necessary to do
 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code> at the beginning of an example.</p>
-<p>Please use the <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#format" title="(in numpydoc v1.8.0rc3.dev0)"><span class="xref std std-ref">formatting standard</span></a> as
-shown in their <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/example.html#example" title="(in numpydoc v1.8.0rc3.dev0)"><span class="xref std std-ref">example</span></a>.</p>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#format" title="(in numpydoc v1.9.0rc0.dev0)"><span class="xref std std-ref">formatting standard</span></a> as
+shown in their <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/example.html#example" title="(in numpydoc v1.9.0rc0.dev0)"><span class="xref std std-ref">example</span></a>.</p>
 </section>
 <section id="documenting-c-c-code">
-<span id="doc-c-code"></span><h3>Documenting C/C++ code<a class="headerlink" href="#documenting-c-c-code" title="Permalink to this heading">#</a></h3>
+<span id="doc-c-code"></span><h3>Documenting C/C++ code<a class="headerlink" href="#documenting-c-c-code" title="Link to this heading">#</a></h3>
 <p>NumPy uses <a class="reference external" href="https://www.doxygen.nl/index.html">Doxygen</a> to parse specially-formatted C/C++ comment blocks. This generates
 XML files, which are  converted by <a class="reference external" href="https://breathe.readthedocs.io/en/latest/">Breathe</a> into RST, which is used by Sphinx.</p>
 <p><strong>It takes three steps to complete the documentation process</strong>:</p>
 <section id="writing-the-comment-blocks">
-<h4>1. Writing the comment blocks<a class="headerlink" href="#writing-the-comment-blocks" title="Permalink to this heading">#</a></h4>
+<h4>1. Writing the comment blocks<a class="headerlink" href="#writing-the-comment-blocks" title="Link to this heading">#</a></h4>
 <p>Although there is still no commenting style set to follow, the Javadoc
 is more preferable than the others due to the similarities with the current
 existing non-indexed comment blocks.</p>
@@ -705,7 +679,7 @@ existing non-indexed comment blocks.</p>
 <p><strong>And here is how it is rendered</strong>:</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv420doxy_javadoc_exampleiPKc">
-<span id="_CPPv320doxy_javadoc_exampleiPKc"></span><span id="_CPPv220doxy_javadoc_exampleiPKc"></span><span id="doxy_javadoc_example__i.cCP"></span><span class="target" id="doxy__func_8h_1a4d3bfb60ef84efac3a58233ab1211795"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">doxy_javadoc_example</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420doxy_javadoc_exampleiPKc" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv320doxy_javadoc_exampleiPKc"></span><span id="_CPPv220doxy_javadoc_exampleiPKc"></span><span id="doxy_javadoc_example__i.cCP"></span><span class="target" id="doxy__func_8h_1a4d3bfb60ef84efac3a58233ab1211795"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">doxy_javadoc_example</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420doxy_javadoc_exampleiPKc" title="Link to this definition">#</a><br /></dt>
 <dd><p>This a simple brief. </p>
 <p>And the details goes here. Multi lines are welcome.</p>
 <dl class="field-list simple">
@@ -748,7 +722,7 @@ existing non-indexed comment blocks.</p>
 <p><strong>And here is how it is rendered</strong>:</p>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I0_NSt6size_tEE9DoxyLimbo">
-<span id="_CPPv3I0_NSt6size_tEE9DoxyLimbo"></span><span id="_CPPv2I0_NSt6size_tEE9DoxyLimbo"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tp</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classDoxyLimbo"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DoxyLimbo</span></span></span><a class="headerlink" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0_NSt6size_tEE9DoxyLimbo"></span><span id="_CPPv2I0_NSt6size_tEE9DoxyLimbo"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Tp</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classDoxyLimbo"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DoxyLimbo</span></span></span><a class="headerlink" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="Link to this definition">#</a><br /></dt>
 <dd><p>Template to represent limbo numbers. </p>
 <p>Specializations for integer types that are part of nowhere. It doesn’t support with any real types.</p>
 <dl class="field-list simple">
@@ -763,19 +737,19 @@ existing non-indexed comment blocks.</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9DoxyLimbo9DoxyLimboEv">
-<span id="_CPPv3N9DoxyLimbo9DoxyLimboEv"></span><span id="_CPPv2N9DoxyLimbo9DoxyLimboEv"></span><span id="DoxyLimbo::DoxyLimbo"></span><span class="target" id="classDoxyLimbo_1a9b76dccbb1e8dbbbb46a2f0dbe8909e0"></span><span class="sig-name descname"><span class="n"><span class="pre">DoxyLimbo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9DoxyLimbo9DoxyLimboEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N9DoxyLimbo9DoxyLimboEv"></span><span id="_CPPv2N9DoxyLimbo9DoxyLimboEv"></span><span id="DoxyLimbo::DoxyLimbo"></span><span class="target" id="classDoxyLimbo_1a9b76dccbb1e8dbbbb46a2f0dbe8909e0"></span><span class="sig-name descname"><span class="n"><span class="pre">DoxyLimbo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9DoxyLimbo9DoxyLimboEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Default constructor. Initialize nothing. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE">
-<span id="_CPPv3N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE"></span><span id="_CPPv2N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE"></span><span id="DoxyLimbo::DoxyLimbo__DoxyLimbo:Tp.N:CR"></span><span class="target" id="classDoxyLimbo_1ae0090b4f0dda7e97c44a4d2a5fac7786"></span><span class="sig-name descname"><span class="n"><span class="pre">DoxyLimbo</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE" title="DoxyLimbo::DoxyLimbo"><span class="n"><span class="pre">DoxyLimbo</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::Tp"><span class="n"><span class="pre">Tp</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">l</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE"></span><span id="_CPPv2N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE"></span><span id="DoxyLimbo::DoxyLimbo__DoxyLimbo:Tp.N:CR"></span><span class="target" id="classDoxyLimbo_1ae0090b4f0dda7e97c44a4d2a5fac7786"></span><span class="sig-name descname"><span class="n"><span class="pre">DoxyLimbo</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE" title="DoxyLimbo::DoxyLimbo"><span class="n"><span class="pre">DoxyLimbo</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::Tp"><span class="n"><span class="pre">Tp</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">l</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Set Default behavior for copy the limbo. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9DoxyLimbo4dataEv">
-<span id="_CPPv3N9DoxyLimbo4dataEv"></span><span id="_CPPv2N9DoxyLimbo4dataEv"></span><span id="DoxyLimbo::data"></span><span class="target" id="classDoxyLimbo_1a7a413dc51bfa468b1958762d17615c81"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::Tp"><span class="n"><span class="pre">Tp</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9DoxyLimbo4dataEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N9DoxyLimbo4dataEv"></span><span id="_CPPv2N9DoxyLimbo4dataEv"></span><span id="DoxyLimbo::data"></span><span class="target" id="classDoxyLimbo_1a7a413dc51bfa468b1958762d17615c81"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::Tp"><span class="n"><span class="pre">Tp</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9DoxyLimbo4dataEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Returns the raw data for the limbo. </p>
 </dd></dl>
 
@@ -784,7 +758,7 @@ existing non-indexed comment blocks.</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9DoxyLimbo6p_dataE">
-<span id="_CPPv3N9DoxyLimbo6p_dataE"></span><span id="_CPPv2N9DoxyLimbo6p_dataE"></span><span id="DoxyLimbo::p_data__TpA"></span><span class="target" id="classDoxyLimbo_1a097c2d3d62ef8696ca0f4f9af875be48"></span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::Tp"><span class="n"><span class="pre">Tp</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_data</span></span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N9DoxyLimbo6p_dataE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N9DoxyLimbo6p_dataE"></span><span id="_CPPv2N9DoxyLimbo6p_dataE"></span><span id="DoxyLimbo::p_data__TpA"></span><span class="target" id="classDoxyLimbo_1a097c2d3d62ef8696ca0f4f9af875be48"></span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::Tp"><span class="n"><span class="pre">Tp</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">p_data</span></span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo" title="DoxyLimbo::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N9DoxyLimbo6p_dataE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Example for inline comment. </p>
 </dd></dl>
 
@@ -792,7 +766,7 @@ existing non-indexed comment blocks.</p>
 </dd></dl>
 
 <section id="common-doxygen-tags">
-<h5>Common Doxygen Tags:<a class="headerlink" href="#common-doxygen-tags" title="Permalink to this heading">#</a></h5>
+<h5>Common Doxygen Tags:<a class="headerlink" href="#common-doxygen-tags" title="Link to this heading">#</a></h5>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For more tags/commands, please take a look at <a class="reference external" href="https://www.doxygen.nl/manual/commands.html">https://www.doxygen.nl/manual/commands.html</a></p>
@@ -821,7 +795,7 @@ It is interpreted as source code.</p>
 <p>Starts/Ends a block of reST markup.</p>
 </section>
 <section id="example">
-<h5>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h5>
+<h5>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h5>
 <p><strong>Take a look at the following example</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/**</span>
  <span class="o">*</span> <span class="n">A</span> <span class="n">comment</span> <span class="n">block</span> <span class="n">contains</span> <span class="n">reST</span> <span class="n">markup</span><span class="o">.</span>
@@ -843,7 +817,7 @@ It is interpreted as source code.</p>
 <p><strong>And here is how it is rendered</strong>:</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv417doxy_reST_examplev">
-<span id="_CPPv317doxy_reST_examplev"></span><span id="_CPPv217doxy_reST_examplev"></span><span id="doxy_reST_example__void"></span><span class="target" id="doxy__rst_8h_1a233bf6c1f71e836f3e5b8bd078ca12ec"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">doxy_reST_example</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417doxy_reST_examplev" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv317doxy_reST_examplev"></span><span id="_CPPv217doxy_reST_examplev"></span><span id="doxy_reST_example__void"></span><span class="target" id="doxy__rst_8h_1a233bf6c1f71e836f3e5b8bd078ca12ec"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">doxy_reST_example</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417doxy_reST_examplev" title="Link to this definition">#</a><br /></dt>
 <dd><p>A comment block contains reST markup. </p>
 <p><p>Some code example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">example</span><span class="p">(</span><span class="nb">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
@@ -861,7 +835,7 @@ It is interpreted as source code.</p>
 </section>
 </section>
 <section id="feeding-doxygen">
-<h4>2. Feeding Doxygen<a class="headerlink" href="#feeding-doxygen" title="Permalink to this heading">#</a></h4>
+<h4>2. Feeding Doxygen<a class="headerlink" href="#feeding-doxygen" title="Link to this heading">#</a></h4>
 <p>Not all headers files are collected automatically. You have to add the desired
 C/C++ header paths within the sub-config files of Doxygen.</p>
 <p>Sub-config files have the unique name <code class="docutils literal notranslate"><span class="pre">.doxyfile</span></code>, which you can usually find near
@@ -889,7 +863,7 @@ dir path of the sub-config file.</p>
 </div>
 </section>
 <section id="inclusion-directives">
-<h4>3. Inclusion directives<a class="headerlink" href="#inclusion-directives" title="Permalink to this heading">#</a></h4>
+<h4>3. Inclusion directives<a class="headerlink" href="#inclusion-directives" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://breathe.readthedocs.io/en/latest/">Breathe</a> provides a wide range of custom directives to allow
 converting the documents generated by <a class="reference external" href="https://www.doxygen.nl/index.html">Doxygen</a> into reST files.</p>
 <div class="admonition note">
@@ -897,7 +871,7 @@ converting the documents generated by <a class="reference external" href="https:
 <p>For more information, please check out “<a class="reference external" href="https://breathe.readthedocs.io/en/latest/directives.html">Directives &amp; Config Variables</a>”</p>
 </div>
 <section id="common-directives">
-<h5>Common directives:<a class="headerlink" href="#common-directives" title="Permalink to this heading">#</a></h5>
+<h5>Common directives:<a class="headerlink" href="#common-directives" title="Link to this heading">#</a></h5>
 <p><code class="docutils literal notranslate"><span class="pre">doxygenfunction</span></code></p>
 <p>This directive generates the appropriate output for a single function.
 The function name is required to be unique in the project.</p>
@@ -967,7 +941,7 @@ for more details and to see it in action.</p>
 </section>
 </section>
 <section id="legacy-directive">
-<h3>Legacy directive<a class="headerlink" href="#legacy-directive" title="Permalink to this heading">#</a></h3>
+<h3>Legacy directive<a class="headerlink" href="#legacy-directive" title="Link to this heading">#</a></h3>
 <p>If a function, module or API is in <em>legacy</em> mode, meaning that it is kept around
 for backwards compatibility reasons, but is not recommended to use in new code,
 you can use the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">legacy::</span></code> directive.</p>
@@ -1003,7 +977,7 @@ instead of a <em>submodule</em>, you can use an optional argument:</p>
 </section>
 </section>
 <section id="documentation-reading">
-<h2>Documentation reading<a class="headerlink" href="#documentation-reading" title="Permalink to this heading">#</a></h2>
+<h2>Documentation reading<a class="headerlink" href="#documentation-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The leading organization of technical writers,
 <a class="reference external" href="https://www.writethedocs.org/">Write the Docs</a>,
@@ -1045,7 +1019,8 @@ website explains how to present ideas effectively.</p></li>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1071,8 +1046,19 @@ website explains how to present ideas effectively.</p></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#docstring-intro">Docstrings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documenting-c-c-code">Documenting C/C++ code</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-the-comment-blocks">1. Writing the comment blocks</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv420doxy_javadoc_exampleiPKc"><code class="docutils literal notranslate"><span class="pre">doxy_javadoc_example</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0_NSt6size_tEE9DoxyLimbo"><code class="docutils literal notranslate"><span class="pre">DoxyLimbo</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N9DoxyLimbo9DoxyLimboEv"><code class="docutils literal notranslate"><span class="pre">DoxyLimbo::DoxyLimbo</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N9DoxyLimbo9DoxyLimboERK9DoxyLimboI2Tp1NE"><code class="docutils literal notranslate"><span class="pre">DoxyLimbo::DoxyLimbo</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N9DoxyLimbo4dataEv"><code class="docutils literal notranslate"><span class="pre">DoxyLimbo::data</span></code></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N9DoxyLimbo6p_dataE"><code class="docutils literal notranslate"><span class="pre">DoxyLimbo::p_data</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#common-doxygen-tags">Common Doxygen Tags:</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv417doxy_reST_examplev"><code class="docutils literal notranslate"><span class="pre">doxy_reST_example</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feeding-doxygen">2. Feeding Doxygen</a></li>
@@ -1102,8 +1088,8 @@ website explains how to present ideas effectively.</p></li>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1114,7 +1100,7 @@ website explains how to present ideas effectively.</p></li>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1123,7 +1109,7 @@ website explains how to present ideas effectively.</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1136,7 +1122,8 @@ website explains how to present ideas effectively.</p></li>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

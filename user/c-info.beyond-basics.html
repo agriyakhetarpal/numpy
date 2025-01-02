@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Beyond the basics &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Beyond the basics &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user/c-info.beyond-basics';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="Writing your own ufunc" href="c-info.ufunc-tutorial.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -491,9 +462,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -511,8 +487,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -527,7 +501,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="c-info.html" class="nav-link">Using NumPy C-API</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Beyond the basics</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Beyond the basics</span></li>
   </ul>
 </nav>
 </div>
@@ -545,7 +519,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="beyond-the-basics">
-<h1>Beyond the basics<a class="headerlink" href="#beyond-the-basics" title="Permalink to this heading">#</a></h1>
+<h1>Beyond the basics<a class="headerlink" href="#beyond-the-basics" title="Link to this heading">#</a></h1>
 <div class="line-block">
 <div class="line">The voyage of discovery is not in seeking new landscapes but in having</div>
 <div class="line">new eyes.</div>
@@ -557,9 +531,9 @@ document.write(`
 <div class="line">— <em>Albert Szent-Gyorgi</em></div>
 </div>
 <section id="iterating-over-elements-in-the-array">
-<h2>Iterating over elements in the array<a class="headerlink" href="#iterating-over-elements-in-the-array" title="Permalink to this heading">#</a></h2>
+<h2>Iterating over elements in the array<a class="headerlink" href="#iterating-over-elements-in-the-array" title="Link to this heading">#</a></h2>
 <section id="basic-iteration">
-<span id="sec-array-iterator"></span><h3>Basic iteration<a class="headerlink" href="#basic-iteration" title="Permalink to this heading">#</a></h3>
+<span id="sec-array-iterator"></span><h3>Basic iteration<a class="headerlink" href="#basic-iteration" title="Link to this heading">#</a></h3>
 <p>One common algorithmic requirement is to be able to walk over all
 elements in a multidimensional array. The array iterator object makes
 this easy to do in a generic way that works for arrays of any
@@ -628,7 +602,7 @@ faster for you in the contiguous case (assuming doubles).</p>
 </div>
 </section>
 <section id="iterating-over-all-but-one-axis">
-<h3>Iterating over all but one axis<a class="headerlink" href="#iterating-over-all-but-one-axis" title="Permalink to this heading">#</a></h3>
+<h3>Iterating over all but one axis<a class="headerlink" href="#iterating-over-all-but-one-axis" title="Link to this heading">#</a></h3>
 <p>A common algorithm is to loop over all elements of an array and
 perform some function with each element by issuing a function call. As
 function calls can be time consuming, one way to speed up this kind of
@@ -655,7 +629,7 @@ array[…,0,…] where 0 is placed on the
 the dimension with the largest axis is found and used.</p>
 </section>
 <section id="iterating-over-multiple-arrays">
-<h3>Iterating over multiple arrays<a class="headerlink" href="#iterating-over-multiple-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Iterating over multiple arrays<a class="headerlink" href="#iterating-over-multiple-arrays" title="Link to this heading">#</a></h3>
 <p>Very often, it is desirable to iterate over several arrays at the
 same time. The universal functions are an example of this kind of
 behavior. If all you want to do is iterate over arrays with the same
@@ -679,7 +653,7 @@ at least as many total elements as does obj2):</p>
 </div>
 </section>
 <section id="broadcasting-over-multiple-arrays">
-<h3>Broadcasting over multiple arrays<a class="headerlink" href="#broadcasting-over-multiple-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Broadcasting over multiple arrays<a class="headerlink" href="#broadcasting-over-multiple-arrays" title="Link to this heading">#</a></h3>
 <p id="index-1">When multiple arrays are involved in an operation, you may want to use the
 same broadcasting rules that the math operations (<em>i.e.</em> the ufuncs) use.
 This can be done easily using the <a class="reference internal" href="../reference/c-api/types-and-structures.html#c.PyArrayMultiIterObject" title="PyArrayMultiIterObject"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyArrayMultiIterObject</span></code></a>.  This is
@@ -694,7 +668,7 @@ each array is for PyArray_ITER_NEXT to be called for each of the inputs. This
 incrementing is automatically performed by
 <a class="reference internal" href="../reference/c-api/array.html#c.PyArray_MultiIter_NEXT" title="PyArray_MultiIter_NEXT"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArray_MultiIter_NEXT</span></code></a> ( <code class="docutils literal notranslate"><span class="pre">obj</span></code> ) macro (which can handle a
 multiterator <code class="docutils literal notranslate"><span class="pre">obj</span></code> as either a <span class="c-expr sig sig-inline c"><a class="reference internal" href="../reference/c-api/types-and-structures.html#c.PyArrayMultiIterObject" title="PyArrayMultiIterObject"><span class="n">PyArrayMultiIterObject</span></a><span class="p">*</span></span> or a
-<span class="c-expr sig sig-inline c"><a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject" title="(in Python v3.12)"><span class="n">PyObject</span></a><span class="p">*</span></span>). The data from input number <code class="docutils literal notranslate"><span class="pre">i</span></code> is available using
+<span class="c-expr sig sig-inline c"><a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject" title="(in Python v3.13)"><span class="n">PyObject</span></a><span class="p">*</span></span>). The data from input number <code class="docutils literal notranslate"><span class="pre">i</span></code> is available using
 <a class="reference internal" href="../reference/c-api/array.html#c.PyArray_MultiIter_DATA" title="PyArray_MultiIter_DATA"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArray_MultiIter_DATA</span></code></a> ( <code class="docutils literal notranslate"><span class="pre">obj</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code> ). An example of using this
 feature follows.</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">mobj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PyArray_MultiIterNew</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">obj1</span><span class="p">,</span><span class="w"> </span><span class="n">obj2</span><span class="p">);</span>
@@ -720,7 +694,7 @@ write. Browse the source for more examples.</p>
 </section>
 </section>
 <section id="user-defined-data-types">
-<span id="user-user-defined-data-types"></span><h2>User-defined data-types<a class="headerlink" href="#user-defined-data-types" title="Permalink to this heading">#</a></h2>
+<span id="user-user-defined-data-types"></span><h2>User-defined data-types<a class="headerlink" href="#user-defined-data-types" title="Link to this heading">#</a></h2>
 <p>NumPy comes with 24 builtin data-types. While this covers a large
 majority of possible use cases, it is conceivable that a user may have
 a need for an additional data-type. There is some support for adding
@@ -736,7 +710,7 @@ directory  <code class="docutils literal notranslate"><span class="pre">numpy/_c
 a data-type that represents a rational number as the ratio of two 32 bit
 integers.</p>
 <section id="adding-the-new-data-type">
-<span id="index-3"></span><h3>Adding the new data-type<a class="headerlink" href="#adding-the-new-data-type" title="Permalink to this heading">#</a></h3>
+<span id="index-3"></span><h3>Adding the new data-type<a class="headerlink" href="#adding-the-new-data-type" title="Link to this heading">#</a></h3>
 <p>To begin to make use of the new data-type, you need to first define a
 new Python type to hold the scalars of your new data-type. It should
 be acceptable to inherit from one of the array scalars if your new
@@ -770,9 +744,11 @@ call is an integer providing you with a unique type_number that
 specifies your data-type. This type number should be stored and made
 available by your module so that other modules can use it to recognize
 your data-type.</p>
+<p>Note that this API is inherently thread-unsafe. See <em class="xref py py-obj">thread_safety</em> for more
+details about thread safety in NumPy.</p>
 </section>
 <section id="registering-a-casting-function">
-<h3>Registering a casting function<a class="headerlink" href="#registering-a-casting-function" title="Permalink to this heading">#</a></h3>
+<h3>Registering a casting function<a class="headerlink" href="#registering-a-casting-function" title="Link to this heading">#</a></h3>
 <p>You may want to allow builtin (and other user-defined) data-types to
 be cast automatically to your data-type. In order to make this
 possible, you must register a casting function with the data-type you
@@ -782,7 +758,7 @@ these functions with the data-type descriptor. A low-level casting
 function has the signature.</p>
 <dl class="c function">
 <dt class="sig sig-object c" id="c.castfunc">
-<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">castfunc</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">from</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">to</span></span>, <a class="reference internal" href="../reference/c-api/dtype.html#c.npy_intp" title="npy_intp"><span class="n"><span class="pre">npy_intp</span></span></a><span class="w"> </span><span class="n"><span class="pre">n</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fromarr</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">toarr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.castfunc" title="Permalink to this definition">#</a><br /></dt>
+<span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">castfunc</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">from</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">to</span></span>, <a class="reference internal" href="../reference/c-api/dtype.html#c.npy_intp" title="npy_intp"><span class="n"><span class="pre">npy_intp</span></span></a><span class="w"> </span><span class="n"><span class="pre">n</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">fromarr</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">toarr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.castfunc" title="Link to this definition">#</a><br /></dt>
 <dd><p>Cast <code class="docutils literal notranslate"><span class="pre">n</span></code> elements <code class="docutils literal notranslate"><span class="pre">from</span></code> one type <code class="docutils literal notranslate"><span class="pre">to</span></code> another. The data to
 cast from is in a contiguous, correctly-swapped and aligned chunk
 of memory pointed to by from. The buffer to cast to is also
@@ -811,7 +787,7 @@ code:</p>
 </div>
 </section>
 <section id="registering-coercion-rules">
-<h3>Registering coercion rules<a class="headerlink" href="#registering-coercion-rules" title="Permalink to this heading">#</a></h3>
+<h3>Registering coercion rules<a class="headerlink" href="#registering-coercion-rules" title="Link to this heading">#</a></h3>
 <p>By default, all user-defined data-types are not presumed to be safely
 castable to any builtin data-types. In addition builtin data-types are
 not presumed to be safely castable to user-defined data-types. This
@@ -835,7 +811,7 @@ coercion handling, then all of your user-defined data-types will be
 seen as <a class="reference internal" href="../reference/c-api/array.html#c.NPY_SCALARKIND.NPY_NOSCALAR" title="NPY_NOSCALAR"><code class="xref c c-enumerator docutils literal notranslate"><span class="pre">NPY_NOSCALAR</span></code></a>.</p>
 </section>
 <section id="registering-a-ufunc-loop">
-<h3>Registering a ufunc loop<a class="headerlink" href="#registering-a-ufunc-loop" title="Permalink to this heading">#</a></h3>
+<h3>Registering a ufunc loop<a class="headerlink" href="#registering-a-ufunc-loop" title="Link to this heading">#</a></h3>
 <p>You may also want to register low-level ufunc loops for your data-type
 so that an ndarray of your data-type can have math applied to it
 seamlessly. Registering a new loop with exactly the same arg_types
@@ -849,7 +825,7 @@ an error condition set if it was not successful.</p>
 </section>
 </section>
 <section id="subtyping-the-ndarray-in-c">
-<span id="index-4"></span><h2>Subtyping the ndarray in C<a class="headerlink" href="#subtyping-the-ndarray-in-c" title="Permalink to this heading">#</a></h2>
+<span id="index-4"></span><h2>Subtyping the ndarray in C<a class="headerlink" href="#subtyping-the-ndarray-in-c" title="Link to this heading">#</a></h2>
 <p>One of the lesser-used features that has been lurking in Python since
 2.2 is the ability to sub-class types in C. This facility is one of
 the important reasons for basing NumPy off of the Numeric code-base
@@ -863,7 +839,7 @@ a restriction on Python sub-types is that they have a binary
 compatible memory layout. Perhaps for this reason, it is somewhat
 easier to sub-type from a single parent type.</p>
 <p id="index-5">All C-structures corresponding to Python objects must begin with
-<a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject_HEAD" title="(in Python v3.12)"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_HEAD</span></code></a> (or <a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject_VAR_HEAD" title="(in Python v3.12)"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_VAR_HEAD</span></code></a>). In the same
+<a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject_HEAD" title="(in Python v3.13)"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_HEAD</span></code></a> (or <a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject_VAR_HEAD" title="(in Python v3.13)"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_VAR_HEAD</span></code></a>). In the same
 way, any sub-type must have a C-structure that begins with exactly the
 same memory layout as the parent type (or all of the parent types in
 the case of multiple-inheritance). The reason for this is that Python
@@ -873,7 +849,7 @@ pointer to the parent structure and then dereference one of it’s
 members). If the memory layouts are not compatible, then this attempt
 will cause unpredictable behavior (eventually leading to a memory
 violation and program crash).</p>
-<p>One of the elements in <a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject_HEAD" title="(in Python v3.12)"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_HEAD</span></code></a> is a pointer to a
+<p>One of the elements in <a class="reference external" href="https://docs.python.org/3/c-api/structures.html#c.PyObject_HEAD" title="(in Python v3.13)"><code class="xref c c-macro docutils literal notranslate"><span class="pre">PyObject_HEAD</span></code></a> is a pointer to a
 type-object structure. A new Python type is created by creating a new
 type-object structure and populating it with functions and pointers to
 describe the desired behavior of the type. Typically, a new
@@ -883,14 +859,14 @@ information needed for each object of the type as well. For example,
 while a <span class="c-expr sig sig-inline c"><a class="reference internal" href="../reference/c-api/types-and-structures.html#c.PyArrayObject" title="PyArrayObject"><span class="n">PyArrayObject</span></a><span class="p">*</span></span> variable is a pointer to a particular instance
 of an ndarray (one of the members of the ndarray structure is, in
 turn, a pointer to the type- object table <a class="reference internal" href="../reference/c-api/types-and-structures.html#c.PyArray_Type" title="PyArray_Type"><code class="xref c c-data docutils literal notranslate"><span class="pre">&amp;PyArray_Type</span></code></a>). Finally
-<a class="reference external" href="https://docs.python.org/3/c-api/type.html#c.PyType_Ready" title="(in Python v3.12)"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready</span></code></a> (&lt;pointer_to_type_object&gt;) must be called for
+<a class="reference external" href="https://docs.python.org/3/c-api/type.html#c.PyType_Ready" title="(in Python v3.13)"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready</span></code></a> (&lt;pointer_to_type_object&gt;) must be called for
 every new Python type.</p>
 <section id="creating-sub-types">
-<h3>Creating sub-types<a class="headerlink" href="#creating-sub-types" title="Permalink to this heading">#</a></h3>
+<h3>Creating sub-types<a class="headerlink" href="#creating-sub-types" title="Link to this heading">#</a></h3>
 <p>To create a sub-type, a similar procedure must be followed except
 only behaviors that are different require new entries in the type-
 object structure. All other entries can be NULL and will be filled in
-by <a class="reference external" href="https://docs.python.org/3/c-api/type.html#c.PyType_Ready" title="(in Python v3.12)"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready</span></code></a> with appropriate functions from the parent
+by <a class="reference external" href="https://docs.python.org/3/c-api/type.html#c.PyType_Ready" title="(in Python v3.13)"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready</span></code></a> with appropriate functions from the parent
 type(s). In particular, to create a sub-type in C follow these steps:</p>
 <ol class="arabic">
 <li><p>If needed create a new C-structure to handle each instance of your
@@ -915,7 +891,7 @@ also fill in the tp_bases member with a tuple containing all of the
 parent objects in the order they should be used to define inheritance.
 Remember, all parent-types must have the same C-structure for multiple
 inheritance to work properly.</p></li>
-<li><p>Call <a class="reference external" href="https://docs.python.org/3/c-api/type.html#c.PyType_Ready" title="(in Python v3.12)"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready</span></code></a> (&lt;pointer_to_new_type&gt;). If this function
+<li><p>Call <a class="reference external" href="https://docs.python.org/3/c-api/type.html#c.PyType_Ready" title="(in Python v3.13)"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyType_Ready</span></code></a> (&lt;pointer_to_new_type&gt;). If this function
 returns a negative number, a failure occurred and the type is not
 initialized. Otherwise, the type is ready to be used. It is
 generally important to place a reference to the new type into the
@@ -925,14 +901,14 @@ module dictionary so it can be accessed from Python.</p></li>
 PEP 253 (available at <a class="reference external" href="https://www.python.org/dev/peps/pep-0253">https://www.python.org/dev/peps/pep-0253</a>).</p>
 </section>
 <section id="specific-features-of-ndarray-sub-typing">
-<span id="specific-array-subtyping"></span><h3>Specific features of ndarray sub-typing<a class="headerlink" href="#specific-features-of-ndarray-sub-typing" title="Permalink to this heading">#</a></h3>
+<span id="specific-array-subtyping"></span><h3>Specific features of ndarray sub-typing<a class="headerlink" href="#specific-features-of-ndarray-sub-typing" title="Link to this heading">#</a></h3>
 <p>Some special methods and attributes are used by arrays in order to
 facilitate the interoperation of sub-types with the base ndarray type.</p>
 <section id="the-array-finalize-method">
-<h4>The __array_finalize__ method<a class="headerlink" href="#the-array-finalize-method" title="Permalink to this heading">#</a></h4>
+<h4>The __array_finalize__ method<a class="headerlink" href="#the-array-finalize-method" title="Link to this heading">#</a></h4>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ndarray.__array_finalize__">
-<span class="sig-prename descclassname"><span class="pre">ndarray.</span></span><span class="sig-name descname"><span class="pre">__array_finalize__</span></span><a class="headerlink" href="#ndarray.__array_finalize__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ndarray.</span></span><span class="sig-name descname"><span class="pre">__array_finalize__</span></span><a class="headerlink" href="#ndarray.__array_finalize__" title="Link to this definition">#</a></dt>
 <dd><p>Several array-creation functions of the ndarray allow
 specification of a particular sub-type to be created. This allows
 sub-types to be handled seamlessly in many routines. When a
@@ -941,11 +917,11 @@ __new__ method nor the __init__ method gets called. Instead, the
 sub-type is allocated and the appropriate instance-structure
 members are filled in. Finally, the <a class="reference internal" href="../reference/arrays.classes.html#numpy.class.__array_finalize__" title="numpy.class.__array_finalize__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__array_finalize__</span></code></a>
 attribute is looked-up in the object dictionary. If it is present and not
-None, then it can be either a <a class="reference external" href="https://docs.python.org/3/c-api/capsule.html#c.PyCapsule" title="(in Python v3.12)"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a> containing a pointer to a
+None, then it can be either a <a class="reference external" href="https://docs.python.org/3/c-api/capsule.html#c.PyCapsule" title="(in Python v3.13)"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a> containing a pointer to a
 <a class="reference internal" href="../reference/c-api/array.html#c.PyArray_FinalizeFunc" title="PyArray_FinalizeFunc"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyArray_FinalizeFunc</span></code></a> or it can be a method taking a single argument
 (which could be None)</p>
 <p>If the <a class="reference internal" href="../reference/arrays.classes.html#numpy.class.__array_finalize__" title="numpy.class.__array_finalize__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__array_finalize__</span></code></a> attribute is a
-<a class="reference external" href="https://docs.python.org/3/c-api/capsule.html#c.PyCapsule" title="(in Python v3.12)"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a>, then the pointer must be a pointer to a function with
+<a class="reference external" href="https://docs.python.org/3/c-api/capsule.html#c.PyCapsule" title="(in Python v3.13)"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a>, then the pointer must be a pointer to a function with
 the signature:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">PyArrayObject</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="p">)</span>
 </pre></div>
@@ -956,17 +932,17 @@ slicing or some other operation where a clearly-distinguishable parent
 is present). This routine can do anything it wants to. It should
 return a -1 on error and 0 otherwise.</p>
 <p>If the <a class="reference internal" href="../reference/arrays.classes.html#numpy.class.__array_finalize__" title="numpy.class.__array_finalize__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__array_finalize__</span></code></a> attribute is not None nor a
-<a class="reference external" href="https://docs.python.org/3/c-api/capsule.html#c.PyCapsule" title="(in Python v3.12)"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a>, then it must be a Python method that takes the parent
+<a class="reference external" href="https://docs.python.org/3/c-api/capsule.html#c.PyCapsule" title="(in Python v3.13)"><code class="xref c c-type docutils literal notranslate"><span class="pre">PyCapsule</span></code></a>, then it must be a Python method that takes the parent
 array as an argument (which could be None if there is no parent), and returns
 nothing. Errors in this method will be caught and handled.</p>
 </dd></dl>
 
 </section>
 <section id="the-array-priority-attribute">
-<h4>The __array_priority__ attribute<a class="headerlink" href="#the-array-priority-attribute" title="Permalink to this heading">#</a></h4>
+<h4>The __array_priority__ attribute<a class="headerlink" href="#the-array-priority-attribute" title="Link to this heading">#</a></h4>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ndarray.__array_priority__">
-<span class="sig-prename descclassname"><span class="pre">ndarray.</span></span><span class="sig-name descname"><span class="pre">__array_priority__</span></span><a class="headerlink" href="#ndarray.__array_priority__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ndarray.</span></span><span class="sig-name descname"><span class="pre">__array_priority__</span></span><a class="headerlink" href="#ndarray.__array_priority__" title="Link to this definition">#</a></dt>
 <dd><p>This attribute allows simple but flexible determination of which sub-
 type should be considered “primary” when an operation involving two or
 more sub-types arises. In operations where different sub-types are
@@ -983,10 +959,10 @@ the return output.</p>
 
 </section>
 <section id="the-array-wrap-method">
-<h4>The __array_wrap__ method<a class="headerlink" href="#the-array-wrap-method" title="Permalink to this heading">#</a></h4>
+<h4>The __array_wrap__ method<a class="headerlink" href="#the-array-wrap-method" title="Link to this heading">#</a></h4>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ndarray.__array_wrap__">
-<span class="sig-prename descclassname"><span class="pre">ndarray.</span></span><span class="sig-name descname"><span class="pre">__array_wrap__</span></span><a class="headerlink" href="#ndarray.__array_wrap__" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ndarray.</span></span><span class="sig-name descname"><span class="pre">__array_wrap__</span></span><a class="headerlink" href="#ndarray.__array_wrap__" title="Link to this definition">#</a></dt>
 <dd><p>Any class or type can define this method which should take an ndarray
 argument and return an instance of the type. It can be seen as the
 opposite of the <a class="reference internal" href="../reference/arrays.classes.html#numpy.class.__array__" title="numpy.class.__array__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__array__</span></code></a> method. This method is used by the
@@ -1036,7 +1012,8 @@ works with any type with <a class="reference internal" href="../reference/arrays
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1096,8 +1073,8 @@ works with any type with <a class="reference internal" href="../reference/arrays
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1108,7 +1085,7 @@ works with any type with <a class="reference internal" href="../reference/arrays
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1117,7 +1094,7 @@ works with any type with <a class="reference internal" href="../reference/arrays
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1130,7 +1107,8 @@ works with any type with <a class="reference internal" href="../reference/arrays
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

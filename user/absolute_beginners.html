@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy: the absolute basics for beginners &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>NumPy: the absolute basics for beginners &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user/absolute_beginners';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="NumPy quickstart" href="quickstart.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -485,9 +456,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -505,8 +481,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -518,7 +492,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy user guide</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">NumPy: the...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NumPy: the absolute basics for beginners</span></li>
   </ul>
 </nav>
 </div>
@@ -536,7 +510,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="numpy-the-absolute-basics-for-beginners">
-<h1>NumPy: the absolute basics for beginners<a class="headerlink" href="#numpy-the-absolute-basics-for-beginners" title="Permalink to this heading">#</a></h1>
+<h1>NumPy: the absolute basics for beginners<a class="headerlink" href="#numpy-the-absolute-basics-for-beginners" title="Link to this heading">#</a></h1>
 <p>Welcome to the absolute beginner’s guide to NumPy!</p>
 <p>NumPy (<strong>Num</strong>erical <strong>Py</strong>thon) is an open source Python library that’s
 widely used in science and engineering. The NumPy library contains
@@ -546,7 +520,7 @@ data structures. Learn more about NumPy at <a class="reference internal" href="w
 and if you have comments or suggestions, please
 <a class="reference external" href="https://numpy.org/community/">reach out</a>!</p>
 <section id="how-to-import-numpy">
-<h2>How to import NumPy<a class="headerlink" href="#how-to-import-numpy" title="Permalink to this heading">#</a></h2>
+<h2>How to import NumPy<a class="headerlink" href="#how-to-import-numpy" title="Link to this heading">#</a></h2>
 <p>After <a class="reference external" href="https://numpy.org/install/">installing NumPy</a>, it may be imported
 into Python code like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -557,7 +531,7 @@ recognizable prefix (<code class="docutils literal notranslate"><span class="pre
 that have the same name.</p>
 </section>
 <section id="reading-the-example-code">
-<h2>Reading the example code<a class="headerlink" href="#reading-the-example-code" title="Permalink to this heading">#</a></h2>
+<h2>Reading the example code<a class="headerlink" href="#reading-the-example-code" title="Link to this heading">#</a></h2>
 <p>Throughout the NumPy documentation, you will find blocks that look like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
 <span class="gp">... </span>              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
@@ -574,7 +548,7 @@ REPL, or use the experimental interactive examples in the browser provided in va
 locations in the documentation.</p>
 </section>
 <section id="why-use-numpy">
-<h2>Why use NumPy?<a class="headerlink" href="#why-use-numpy" title="Permalink to this heading">#</a></h2>
+<h2>Why use NumPy?<a class="headerlink" href="#why-use-numpy" title="Link to this heading">#</a></h2>
 <p>Python lists are excellent, general-purpose containers. They can be
 “heterogeneous”, meaning that they can contain elements of a variety of types,
 and they are quite fast when used to perform individual operations on a handful
@@ -587,7 +561,7 @@ NumPy shines when there are large quantities of “homogeneous” (same-type) da
 to be processed on the CPU.</p>
 </section>
 <section id="what-is-an-array">
-<h2>What is an “array”?<a class="headerlink" href="#what-is-an-array" title="Permalink to this heading">#</a></h2>
+<h2>What is an “array”?<a class="headerlink" href="#what-is-an-array" title="Link to this heading">#</a></h2>
 <p>In computer programming, an array is a structure for storing and retrieving
 data. We often talk about an array as if it were a grid in space, with each
 cell storing one element of the data. For instance, if each element of the
@@ -629,7 +603,7 @@ less restrictive data structures.</p>
 an instance of <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>.</p>
 </section>
 <section id="array-fundamentals">
-<h2>Array fundamentals<a class="headerlink" href="#array-fundamentals" title="Permalink to this heading">#</a></h2>
+<h2>Array fundamentals<a class="headerlink" href="#array-fundamentals" title="Link to this heading">#</a></h2>
 <p>One way to initialize an array is using a Python sequence, such as a list.
 For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
@@ -717,7 +691,7 @@ names (e.g. the fundamental data structure of PyTorch is the “tensor”).</p>
 </div>
 </section>
 <section id="array-attributes">
-<h2>Array attributes<a class="headerlink" href="#array-attributes" title="Permalink to this heading">#</a></h2>
+<h2>Array attributes<a class="headerlink" href="#array-attributes" title="Link to this heading">#</a></h2>
 <p><em>This section covers the</em> <code class="docutils literal notranslate"><span class="pre">ndim</span></code>, <code class="docutils literal notranslate"><span class="pre">shape</span></code>, <code class="docutils literal notranslate"><span class="pre">size</span></code>, <em>and</em> <code class="docutils literal notranslate"><span class="pre">dtype</span></code>
 <em>attributes of an array</em>.</p>
 <hr class="docutils" />
@@ -753,7 +727,7 @@ only one “data type”. The data type is recorded in the <code class="docutils
 <a class="reference internal" href="../reference/arrays.html#arrays"><span class="std std-ref">array objects here</span></a>.</p>
 </section>
 <section id="how-to-create-a-basic-array">
-<h2>How to create a basic array<a class="headerlink" href="#how-to-create-a-basic-array" title="Permalink to this heading">#</a></h2>
+<h2>How to create a basic array<a class="headerlink" href="#how-to-create-a-basic-array" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">np.zeros()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.ones()</span></code>,
 <code class="docutils literal notranslate"><span class="pre">np.empty()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.arange()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code></p>
 <hr class="docutils" />
@@ -805,7 +779,7 @@ specify which data type you want using the <code class="docutils literal notrans
 <p><a class="reference internal" href="quickstart.html#quickstart-array-creation"><span class="std std-ref">Learn more about creating arrays here</span></a></p>
 </section>
 <section id="adding-removing-and-sorting-elements">
-<h2>Adding, removing, and sorting elements<a class="headerlink" href="#adding-removing-and-sorting-elements" title="Permalink to this heading">#</a></h2>
+<h2>Adding, removing, and sorting elements<a class="headerlink" href="#adding-removing-and-sorting-elements" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">np.sort()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.concatenate()</span></code></p>
 <hr class="docutils" />
 <p>Sorting an array is simple with <code class="docutils literal notranslate"><span class="pre">np.sort()</span></code>. You can specify the axis, kind,
@@ -854,7 +828,7 @@ the elements that you want to keep.</p>
 <p>To read more about concatenate, see: <a class="reference internal" href="../reference/generated/numpy.concatenate.html#numpy.concatenate" title="numpy.concatenate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">concatenate</span></code></a>.</p>
 </section>
 <section id="how-do-you-know-the-shape-and-size-of-an-array">
-<h2>How do you know the shape and size of an array?<a class="headerlink" href="#how-do-you-know-the-shape-and-size-of-an-array" title="Permalink to this heading">#</a></h2>
+<h2>How do you know the shape and size of an array?<a class="headerlink" href="#how-do-you-know-the-shape-and-size-of-an-array" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">ndarray.ndim</span></code>, <code class="docutils literal notranslate"><span class="pre">ndarray.size</span></code>, <code class="docutils literal notranslate"><span class="pre">ndarray.shape</span></code></p>
 <hr class="docutils" />
 <p><code class="docutils literal notranslate"><span class="pre">ndarray.ndim</span></code> will tell you the number of axes, or dimensions, of the array.</p>
@@ -891,7 +865,7 @@ elements stored along each dimension of the array. If, for example, you have a
 </div>
 </section>
 <section id="can-you-reshape-an-array">
-<h2>Can you reshape an array?<a class="headerlink" href="#can-you-reshape-an-array" title="Permalink to this heading">#</a></h2>
+<h2>Can you reshape an array?<a class="headerlink" href="#can-you-reshape-an-array" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">arr.reshape()</span></code></p>
 <hr class="docutils" />
 <p><strong>Yes!</strong></p>
@@ -921,7 +895,7 @@ this array to an array with three rows and two columns:</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">a</span></code> is the array to be reshaped.</p>
-<p><code class="docutils literal notranslate"><span class="pre">newshape</span></code> is the new shape you want. You can specify an integer or a tuple of
+<p><code class="docutils literal notranslate"><span class="pre">shape</span></code> is the new shape you want. You can specify an integer or a tuple of
 integers. If you specify an integer, the result will be an array of that length.
 The shape should be compatible with the original shape.</p>
 <p><code class="docutils literal notranslate"><span class="pre">order:</span></code> <code class="docutils literal notranslate"><span class="pre">C</span></code> means to read/write the elements using C-like index order,
@@ -944,7 +918,7 @@ to preserve the indexing convention or not reorder the data.</p>
 <p><a class="reference internal" href="quickstart.html#quickstart-shape-manipulation"><span class="std std-ref">Learn more about shape manipulation here</span></a>.</p>
 </section>
 <section id="how-to-convert-a-1d-array-into-a-2d-array-how-to-add-a-new-axis-to-an-array">
-<h2>How to convert a 1D array into a 2D array (how to add a new axis to an array)<a class="headerlink" href="#how-to-convert-a-1d-array-into-a-2d-array-how-to-add-a-new-axis-to-an-array" title="Permalink to this heading">#</a></h2>
+<h2>How to convert a 1D array into a 2D array (how to add a new axis to an array)<a class="headerlink" href="#how-to-convert-a-1d-array-into-a-2d-array-how-to-add-a-new-axis-to-an-array" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">np.newaxis</span></code>, <code class="docutils literal notranslate"><span class="pre">np.expand_dims</span></code></p>
 <hr class="docutils" />
 <p>You can use <code class="docutils literal notranslate"><span class="pre">np.newaxis</span></code> and <code class="docutils literal notranslate"><span class="pre">np.expand_dims</span></code> to increase the dimensions of
@@ -1002,7 +976,7 @@ with <code class="docutils literal notranslate"><span class="pre">np.expand_dims
 <code class="docutils literal notranslate"><span class="pre">expand_dims</span></code> at <a class="reference internal" href="../reference/generated/numpy.expand_dims.html#numpy.expand_dims" title="numpy.expand_dims"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expand_dims</span></code></a>.</p>
 </section>
 <section id="indexing-and-slicing">
-<h2>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Permalink to this heading">#</a></h2>
+<h2>Indexing and slicing<a class="headerlink" href="#indexing-and-slicing" title="Link to this heading">#</a></h2>
 <p>You can index and slice NumPy arrays in the same ways you can slice Python
 lists.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -1110,7 +1084,7 @@ and <a class="reference internal" href="basics.indexing.html#basics-indexing"><s
 <p>Read more about using the nonzero function at: <a class="reference internal" href="../reference/generated/numpy.nonzero.html#numpy.nonzero" title="numpy.nonzero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero</span></code></a>.</p>
 </section>
 <section id="how-to-create-an-array-from-existing-data">
-<h2>How to create an array from existing data<a class="headerlink" href="#how-to-create-an-array-from-existing-data" title="Permalink to this heading">#</a></h2>
+<h2>How to create an array from existing data<a class="headerlink" href="#how-to-create-an-array-from-existing-data" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">slicing</span> <span class="pre">and</span> <span class="pre">indexing</span></code>, <code class="docutils literal notranslate"><span class="pre">np.vstack()</span></code>, <code class="docutils literal notranslate"><span class="pre">np.hstack()</span></code>,
 <code class="docutils literal notranslate"><span class="pre">np.hsplit()</span></code>, <code class="docutils literal notranslate"><span class="pre">.view()</span></code>, <code class="docutils literal notranslate"><span class="pre">copy()</span></code></p>
 <hr class="docutils" />
@@ -1127,7 +1101,9 @@ where you want to slice your array.</p>
 </pre></div>
 </div>
 <p>Here, you grabbed a section of your array from index position 3 through index
-position 8.</p>
+position 8 but not including position 8 itself.</p>
+<p><em>Reminder: Array indexes begin at 0. This means the first element of the array is at index 0,
+the second element is at index 1, and so on.</em></p>
 <p>You can also stack two existing arrays, both vertically and horizontally. Let’s
 say you have two arrays, <code class="docutils literal notranslate"><span class="pre">a1</span></code> and <code class="docutils literal notranslate"><span class="pre">a2</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -1212,7 +1188,7 @@ original array!</p>
 <p><a class="reference internal" href="quickstart.html#quickstart-copies-and-views"><span class="std std-ref">Learn more about copies and views here</span></a>.</p>
 </section>
 <section id="basic-array-operations">
-<h2>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Permalink to this heading">#</a></h2>
+<h2>Basic array operations<a class="headerlink" href="#basic-array-operations" title="Link to this heading">#</a></h2>
 <p><em>This section covers addition, subtraction, multiplication, division, and more</em></p>
 <hr class="docutils" />
 <p>Once you’ve created your arrays, you can start to work with them.  Let’s say,
@@ -1264,7 +1240,7 @@ and arrays in higher dimensions.</p>
 <p><a class="reference internal" href="quickstart.html#quickstart-basic-operations"><span class="std std-ref">Learn more about basic operations here</span></a>.</p>
 </section>
 <section id="broadcasting">
-<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this heading">#</a></h2>
+<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Link to this heading">#</a></h2>
 <p>There are times when you might want to carry out an operation between an array
 and a single number (also called <em>an operation between a vector and a scalar</em>)
 or between arrays of two different sizes. For example, your array (we’ll call it
@@ -1285,7 +1261,7 @@ will get a <code class="docutils literal notranslate"><span class="pre">ValueErr
 <p><a class="reference internal" href="basics.broadcasting.html#basics-broadcasting"><span class="std std-ref">Learn more about broadcasting here</span></a>.</p>
 </section>
 <section id="more-useful-array-operations">
-<h2>More useful array operations<a class="headerlink" href="#more-useful-array-operations" title="Permalink to this heading">#</a></h2>
+<h2>More useful array operations<a class="headerlink" href="#more-useful-array-operations" title="Link to this heading">#</a></h2>
 <p><em>This section covers maximum, minimum, sum, mean, product, standard deviation, and more</em></p>
 <hr class="docutils" />
 <p>NumPy also performs aggregation functions. In addition to <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, and
@@ -1331,7 +1307,7 @@ With a four-column array, you will get four values as your result.</p>
 <p>Read more about <a class="reference internal" href="../reference/arrays.ndarray.html#array-ndarray-methods"><span class="std std-ref">array methods here</span></a>.</p>
 </section>
 <section id="creating-matrices">
-<h2>Creating matrices<a class="headerlink" href="#creating-matrices" title="Permalink to this heading">#</a></h2>
+<h2>Creating matrices<a class="headerlink" href="#creating-matrices" title="Link to this heading">#</a></h2>
 <p>You can pass Python lists of lists to create a 2-D array (or “matrix”) to
 represent them in NumPy.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
@@ -1455,7 +1431,7 @@ a 2D array if you give them a tuple describing the dimensions of the matrix:</p>
 uninitialized, at <a class="reference internal" href="../reference/routines.array-creation.html#routines-array-creation"><span class="std std-ref">array creation routines</span></a>.</p>
 </section>
 <section id="generating-random-numbers">
-<h2>Generating random numbers<a class="headerlink" href="#generating-random-numbers" title="Permalink to this heading">#</a></h2>
+<h2>Generating random numbers<a class="headerlink" href="#generating-random-numbers" title="Link to this heading">#</a></h2>
 <p>The use of random number generation is an important part of the configuration
 and evaluation of many numerical and machine learning algorithms. Whether you
 need to randomly initialize weights in an artificial neural network, split data
@@ -1473,7 +1449,7 @@ that this is inclusive with NumPy) to high (exclusive). You can set
 <p><a class="reference internal" href="../reference/random/index.html#numpyrandom"><span class="std std-ref">Read more about random number generation here</span></a>.</p>
 </section>
 <section id="how-to-get-unique-items-and-counts">
-<h2>How to get unique items and counts<a class="headerlink" href="#how-to-get-unique-items-and-counts" title="Permalink to this heading">#</a></h2>
+<h2>How to get unique items and counts<a class="headerlink" href="#how-to-get-unique-items-and-counts" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">np.unique()</span></code></p>
 <hr class="docutils" />
 <p>You can find the unique elements in an array easily with <code class="docutils literal notranslate"><span class="pre">np.unique</span></code>.</p>
@@ -1540,7 +1516,7 @@ argument. To find the unique rows, specify <code class="docutils literal notrans
 <p>To learn more about finding the unique elements in an array, see <a class="reference internal" href="../reference/generated/numpy.unique.html#numpy.unique" title="numpy.unique"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unique</span></code></a>.</p>
 </section>
 <section id="transposing-and-reshaping-a-matrix">
-<h2>Transposing and reshaping a matrix<a class="headerlink" href="#transposing-and-reshaping-a-matrix" title="Permalink to this heading">#</a></h2>
+<h2>Transposing and reshaping a matrix<a class="headerlink" href="#transposing-and-reshaping-a-matrix" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">arr.reshape()</span></code>, <code class="docutils literal notranslate"><span class="pre">arr.transpose()</span></code>, <code class="docutils literal notranslate"><span class="pre">arr.T</span></code></p>
 <hr class="docutils" />
 <p>It’s common to need to transpose your matrices. NumPy arrays have the property
@@ -1587,7 +1563,7 @@ according to the values you specify.</p>
 <a class="reference internal" href="../reference/generated/numpy.reshape.html#numpy.reshape" title="numpy.reshape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reshape</span></code></a>.</p>
 </section>
 <section id="how-to-reverse-an-array">
-<h2>How to reverse an array<a class="headerlink" href="#how-to-reverse-an-array" title="Permalink to this heading">#</a></h2>
+<h2>How to reverse an array<a class="headerlink" href="#how-to-reverse-an-array" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">np.flip()</span></code></p>
 <hr class="docutils" />
 <p>NumPy’s <code class="docutils literal notranslate"><span class="pre">np.flip()</span></code> function allows you to flip, or reverse, the contents of
@@ -1658,7 +1634,7 @@ can reverse the contents of the row at index position 1 (the second row):</p>
 <p>Read more about reversing arrays at <a class="reference internal" href="../reference/generated/numpy.flip.html#numpy.flip" title="numpy.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a>.</p>
 </section>
 <section id="reshaping-and-flattening-multidimensional-arrays">
-<h2>Reshaping and flattening multidimensional arrays<a class="headerlink" href="#reshaping-and-flattening-multidimensional-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Reshaping and flattening multidimensional arrays<a class="headerlink" href="#reshaping-and-flattening-multidimensional-arrays" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">.flatten()</span></code>, <code class="docutils literal notranslate"><span class="pre">ravel()</span></code></p>
 <hr class="docutils" />
 <p>There are two popular ways to flatten an array: <code class="docutils literal notranslate"><span class="pre">.flatten()</span></code> and <code class="docutils literal notranslate"><span class="pre">.ravel()</span></code>.
@@ -1704,7 +1680,7 @@ the parent array.</p>
 <p>Read more about <code class="docutils literal notranslate"><span class="pre">flatten</span></code> at <a class="reference internal" href="../reference/generated/numpy.ndarray.flatten.html#numpy.ndarray.flatten" title="numpy.ndarray.flatten"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.flatten</span></code></a> and <code class="docutils literal notranslate"><span class="pre">ravel</span></code> at <a class="reference internal" href="../reference/generated/numpy.ravel.html#numpy.ravel" title="numpy.ravel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ravel</span></code></a>.</p>
 </section>
 <section id="how-to-access-the-docstring-for-more-information">
-<h2>How to access the docstring for more information<a class="headerlink" href="#how-to-access-the-docstring-for-more-information" title="Permalink to this heading">#</a></h2>
+<h2>How to access the docstring for more information<a class="headerlink" href="#how-to-access-the-docstring-for-more-information" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">help()</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">??</span></code></p>
 <hr class="docutils" />
 <p>When it comes to the data science ecosystem, Python and NumPy are built with the
@@ -1836,7 +1812,7 @@ built-in objects and types, for example:</p>
 than Python.</p>
 </section>
 <section id="working-with-mathematical-formulas">
-<h2>Working with mathematical formulas<a class="headerlink" href="#working-with-mathematical-formulas" title="Permalink to this heading">#</a></h2>
+<h2>Working with mathematical formulas<a class="headerlink" href="#working-with-mathematical-formulas" title="Link to this heading">#</a></h2>
 <p>The ease of implementing mathematical formulas that work on arrays is one of
 the things that make NumPy so widely used in the scientific Python community.</p>
 <p>For example, this is the mean square error formula (a central formula used in
@@ -1856,7 +1832,7 @@ error value for that prediction and a score for the quality of the model.</p>
 <img alt="../_images/np_MSE_explanation2.png" src="../_images/np_MSE_explanation2.png" />
 </section>
 <section id="how-to-save-and-load-numpy-objects">
-<h2>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Permalink to this heading">#</a></h2>
+<h2>How to save and load NumPy objects<a class="headerlink" href="#how-to-save-and-load-numpy-objects" title="Link to this heading">#</a></h2>
 <p><em>This section covers</em> <code class="docutils literal notranslate"><span class="pre">np.save</span></code>, <code class="docutils literal notranslate"><span class="pre">np.savez</span></code>, <code class="docutils literal notranslate"><span class="pre">np.savetxt</span></code>,
 <code class="docutils literal notranslate"><span class="pre">np.load</span></code>, <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code></p>
 <hr class="docutils" />
@@ -1919,7 +1895,7 @@ function.</p>
 <p>Learn more about <a class="reference internal" href="../reference/routines.io.html#routines-io"><span class="std std-ref">input and output routines here</span></a>.</p>
 </section>
 <section id="importing-and-exporting-a-csv">
-<h2>Importing and exporting a CSV<a class="headerlink" href="#importing-and-exporting-a-csv" title="Permalink to this heading">#</a></h2>
+<h2>Importing and exporting a CSV<a class="headerlink" href="#importing-and-exporting-a-csv" title="Link to this heading">#</a></h2>
 <p>It’s simple to read in a CSV that contains existing information. The best and
 easiest way to do this is to use
 <a class="reference external" href="https://pandas.pydata.org">Pandas</a>.</p>
@@ -1993,7 +1969,7 @@ Learn how to install Pandas with the
 <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/install.html">official Pandas installation information</a>.</p>
 </section>
 <section id="plotting-arrays-with-matplotlib">
-<h2>Plotting arrays with Matplotlib<a class="headerlink" href="#plotting-arrays-with-matplotlib" title="Permalink to this heading">#</a></h2>
+<h2>Plotting arrays with Matplotlib<a class="headerlink" href="#plotting-arrays-with-matplotlib" title="Link to this heading">#</a></h2>
 <p>If you need to generate a plot for your values, it’s very simple with
 <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>.</p>
 <p>For example, you may have an array like this one:</p>
@@ -2088,7 +2064,8 @@ For directions regarding installing Matplotlib, see the official
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -2142,8 +2119,8 @@ For directions regarding installing Matplotlib, see the official
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2154,7 +2131,7 @@ For directions regarding installing Matplotlib, see the official
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -2163,7 +2140,7 @@ For directions regarding installing Matplotlib, see the official
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -2176,7 +2153,8 @@ For directions regarding installing Matplotlib, see the official
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

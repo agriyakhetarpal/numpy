@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CPU build options &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>CPU build options &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/jupyterlite_sphinx.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=30646c52"></script>
+    <script src="../../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/simd/build-options';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="CPU/SIMD optimizations" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -462,7 +433,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../c-api/index.html">NumPy C-API</a></li>
@@ -474,7 +444,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="how-it-works.html">How does the CPU dispatcher work?</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -486,9 +457,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -506,8 +482,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -522,7 +496,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">CPU/SIMD optimizations</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">CPU build options</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">CPU build options</span></li>
   </ul>
 </nav>
 </div>
@@ -540,9 +514,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="cpu-build-options">
-<h1>CPU build options<a class="headerlink" href="#cpu-build-options" title="Permalink to this heading">#</a></h1>
+<h1>CPU build options<a class="headerlink" href="#cpu-build-options" title="Link to this heading">#</a></h1>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
 <p>The following options are mainly used to change the default behavior of optimizations
 that target certain CPU features:</p>
 <ul>
@@ -581,7 +555,7 @@ perform a series of procedures.</p>
 </div>
 </section>
 <section id="quick-start">
-<h2>Quick start<a class="headerlink" href="#quick-start" title="Permalink to this heading">#</a></h2>
+<h2>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h2>
 <p>In general, the default settings tend to not impose certain CPU features that
 may not be available on some older processors. Raising the ceiling of the
 baseline features will often improve performance and may also reduce
@@ -589,7 +563,7 @@ binary size.</p>
 <p>The following are the most common scenarios that may require changing
 the default settings:</p>
 <section id="i-am-building-numpy-for-my-local-use">
-<h3>I am building NumPy for my local use<a class="headerlink" href="#i-am-building-numpy-for-my-local-use" title="Permalink to this heading">#</a></h3>
+<h3>I am building NumPy for my local use<a class="headerlink" href="#i-am-building-numpy-for-my-local-use" title="Link to this heading">#</a></h3>
 <p>And I do not intend to export the build to other users or target a
 different CPU than what the host has.</p>
 <p>Set <code class="docutils literal notranslate"><span class="pre">native</span></code> for baseline, or manually specify the CPU features in case of option
@@ -609,7 +583,7 @@ since all supported features are already defined within the baseline features:</
 </div>
 </section>
 <section id="i-do-not-want-to-support-the-old-processors-of-the-x86-architecture">
-<h3>I do not want to support the old processors of the x86 architecture<a class="headerlink" href="#i-do-not-want-to-support-the-old-processors-of-the-x86-architecture" title="Permalink to this heading">#</a></h3>
+<h3>I do not want to support the old processors of the x86 architecture<a class="headerlink" href="#i-do-not-want-to-support-the-old-processors-of-the-x86-architecture" title="Link to this heading">#</a></h3>
 <p>Since most of the CPUs nowadays support at least <code class="docutils literal notranslate"><span class="pre">AVX</span></code>, <code class="docutils literal notranslate"><span class="pre">F16C</span></code> features, you can use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span> <span class="o">--</span><span class="n">wheel</span> <span class="o">-</span><span class="n">Csetup</span><span class="o">-</span><span class="n">args</span><span class="o">=-</span><span class="n">Dcpu</span><span class="o">-</span><span class="n">baseline</span><span class="o">=</span><span class="s2">&quot;avx f16c&quot;</span>
 </pre></div>
@@ -621,14 +595,14 @@ to add SSE features.</p>
 </div>
 </section>
 <section id="i-m-facing-the-same-case-above-but-with-ppc64-architecture">
-<h3>I’m facing the same case above but with ppc64 architecture<a class="headerlink" href="#i-m-facing-the-same-case-above-but-with-ppc64-architecture" title="Permalink to this heading">#</a></h3>
+<h3>I’m facing the same case above but with ppc64 architecture<a class="headerlink" href="#i-m-facing-the-same-case-above-but-with-ppc64-architecture" title="Link to this heading">#</a></h3>
 <p>Then raise the ceiling of the baseline features to Power8:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span> <span class="o">--</span><span class="n">wheel</span> <span class="o">-</span><span class="n">Csetup</span><span class="o">-</span><span class="n">args</span><span class="o">=-</span><span class="n">Dcpu</span><span class="o">-</span><span class="n">baseline</span><span class="o">=</span><span class="s2">&quot;vsx2&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="having-issues-with-avx512-features">
-<h3>Having issues with AVX512 features?<a class="headerlink" href="#having-issues-with-avx512-features" title="Permalink to this heading">#</a></h3>
+<h3>Having issues with AVX512 features?<a class="headerlink" href="#having-issues-with-avx512-features" title="Link to this heading">#</a></h3>
 <p>You may have some reservations about including of <code class="docutils literal notranslate"><span class="pre">AVX512</span></code> or
 any other CPU feature and you want to exclude from the dispatched features:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span> <span class="o">--</span><span class="n">wheel</span> <span class="o">-</span><span class="n">Csetup</span><span class="o">-</span><span class="n">args</span><span class="o">=-</span><span class="n">Dcpu</span><span class="o">-</span><span class="n">dispatch</span><span class="o">=</span><span class="s2">&quot;max -avx512f -avx512cd </span><span class="se">\</span>
@@ -638,7 +612,7 @@ any other CPU feature and you want to exclude from the dispatched features:</p>
 </section>
 </section>
 <section id="supported-features">
-<span id="opt-supported-features"></span><h2>Supported features<a class="headerlink" href="#supported-features" title="Permalink to this heading">#</a></h2>
+<span id="opt-supported-features"></span><h2>Supported features<a class="headerlink" href="#supported-features" title="Link to this heading">#</a></h2>
 <p>The names of the features can express one feature or a group of features,
 as shown in the following tables supported depend on the lowest interest:</p>
 <div class="admonition note">
@@ -649,7 +623,7 @@ when it comes to features like <code class="docutils literal notranslate"><span 
 See <a class="reference internal" href="#opt-platform-differences"><span class="std std-ref">Platform differences</span></a> for more details.</p>
 </div>
 <section id="on-x86">
-<h3>On x86<a class="headerlink" href="#on-x86" title="Permalink to this heading">#</a></h3>
+<h3>On x86<a class="headerlink" href="#on-x86" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -751,7 +725,7 @@ See <a class="reference internal" href="#opt-platform-differences"><span class="
 </div>
 </section>
 <section id="on-ibm-power-big-endian">
-<h3>On IBM/POWER big-endian<a class="headerlink" href="#on-ibm-power-big-endian" title="Permalink to this heading">#</a></h3>
+<h3>On IBM/POWER big-endian<a class="headerlink" href="#on-ibm-power-big-endian" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -776,7 +750,7 @@ See <a class="reference internal" href="#opt-platform-differences"><span class="
 </div>
 </section>
 <section id="on-ibm-power-little-endian">
-<h3>On IBM/POWER little-endian<a class="headerlink" href="#on-ibm-power-little-endian" title="Permalink to this heading">#</a></h3>
+<h3>On IBM/POWER little-endian<a class="headerlink" href="#on-ibm-power-little-endian" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -801,7 +775,7 @@ See <a class="reference internal" href="#opt-platform-differences"><span class="
 </div>
 </section>
 <section id="on-armv7-a32">
-<h3>On ARMv7/A32<a class="headerlink" href="#on-armv7-a32" title="Permalink to this heading">#</a></h3>
+<h3>On ARMv7/A32<a class="headerlink" href="#on-armv7-a32" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -835,7 +809,7 @@ See <a class="reference internal" href="#opt-platform-differences"><span class="
 </div>
 </section>
 <section id="on-armv8-a64">
-<h3>On ARMv8/A64<a class="headerlink" href="#on-armv8-a64" title="Permalink to this heading">#</a></h3>
+<h3>On ARMv8/A64<a class="headerlink" href="#on-armv8-a64" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -869,7 +843,7 @@ See <a class="reference internal" href="#opt-platform-differences"><span class="
 </div>
 </section>
 <section id="on-ibm-zsystem-s390x">
-<h3>On IBM/ZSYSTEM(S390X)<a class="headerlink" href="#on-ibm-zsystem-s390x" title="Permalink to this heading">#</a></h3>
+<h3>On IBM/ZSYSTEM(S390X)<a class="headerlink" href="#on-ibm-zsystem-s390x" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -892,7 +866,7 @@ See <a class="reference internal" href="#opt-platform-differences"><span class="
 </section>
 </section>
 <section id="special-options">
-<span id="opt-special-options"></span><h2>Special options<a class="headerlink" href="#special-options" title="Permalink to this heading">#</a></h2>
+<span id="opt-special-options"></span><h2>Special options<a class="headerlink" href="#special-options" title="Link to this heading">#</a></h2>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">NONE</span></code>: enable no features.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">NATIVE</span></code>: Enables all CPU features that supported by the host CPU,
@@ -936,7 +910,7 @@ this operation is based on the compiler flags (<code class="docutils literal not
 </ul>
 </section>
 <section id="behaviors">
-<h2>Behaviors<a class="headerlink" href="#behaviors" title="Permalink to this heading">#</a></h2>
+<h2>Behaviors<a class="headerlink" href="#behaviors" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>CPU features and other options are case-insensitive, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span> <span class="o">--</span><span class="n">wheel</span> <span class="o">-</span><span class="n">Csetup</span><span class="o">-</span><span class="n">args</span><span class="o">=-</span><span class="n">Dcpu</span><span class="o">-</span><span class="n">dispatch</span><span class="o">=</span><span class="s2">&quot;SSE41 avx2 FMA3&quot;</span>
@@ -994,7 +968,7 @@ For example:</p>
 </div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cpu-dispatch</span></code> does not combain any of implied CPU features,
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu-dispatch</span></code> does not combine any of implied CPU features,
 so you must add them unless you want to disable one or all of them:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Only dispatches AVX2 and FMA3</span>
 <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span> <span class="o">--</span><span class="n">wheel</span> <span class="o">-</span><span class="n">Csetup</span><span class="o">-</span><span class="n">args</span><span class="o">=-</span><span class="n">Dcpu</span><span class="o">-</span><span class="n">dispatch</span><span class="o">=</span><span class="n">avx2</span><span class="p">,</span><span class="n">fma3</span>
@@ -1011,7 +985,7 @@ fatal errors.</p></li>
 to verify the enabled features. See <a class="reference internal" href="#opt-build-report"><span class="std std-ref">Build report</span></a> for more details.</p>
 </section>
 <section id="platform-differences">
-<span id="opt-platform-differences"></span><h2>Platform differences<a class="headerlink" href="#platform-differences" title="Permalink to this heading">#</a></h2>
+<span id="opt-platform-differences"></span><h2>Platform differences<a class="headerlink" href="#platform-differences" title="Link to this heading">#</a></h2>
 <p>Some exceptional conditions force us to link some features together when it come to
 certain compilers or architectures, resulting in the impossibility of building them separately.</p>
 <p>These conditions can be divided into two parts, as follows:</p>
@@ -1059,7 +1033,7 @@ general context that been shown in the <a class="reference internal" href="#opt-
     .enabled-feature {color:green; font-weight:bold;}
     .disabled-feature {color:red; text-decoration: line-through;}
 </style><section id="on-x86-intel-compiler">
-<h3>On x86::Intel Compiler<a class="headerlink" href="#on-x86-intel-compiler" title="Permalink to this heading">#</a></h3>
+<h3>On x86::Intel Compiler<a class="headerlink" href="#on-x86-intel-compiler" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -1097,7 +1071,7 @@ general context that been shown in the <a class="reference internal" href="#opt-
 </div>
 </section>
 <section id="on-x86-microsoft-visual-c-c">
-<h3>On x86::Microsoft Visual C/C++<a class="headerlink" href="#on-x86-microsoft-visual-c-c" title="Permalink to this heading">#</a></h3>
+<h3>On x86::Microsoft Visual C/C++<a class="headerlink" href="#on-x86-microsoft-visual-c-c" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -1140,7 +1114,7 @@ general context that been shown in the <a class="reference internal" href="#opt-
 </section>
 </section>
 <section id="build-report">
-<span id="opt-build-report"></span><h2>Build report<a class="headerlink" href="#build-report" title="Permalink to this heading">#</a></h2>
+<span id="opt-build-report"></span><h2>Build report<a class="headerlink" href="#build-report" title="Link to this heading">#</a></h2>
 <p>In most cases, the CPU build options do not produce any fatal errors that lead to hanging the build.
 Most of the errors that may appear in the build log serve as heavy warnings due to the lack of some
 expected CPU features by the compiler.</p>
@@ -1269,7 +1243,7 @@ represent the paths of c/c++ sources that define the generated optimizations.</p
 </ul>
 </section>
 <section id="runtime-dispatch">
-<span id="runtime-simd-dispatch"></span><h2>Runtime dispatch<a class="headerlink" href="#runtime-dispatch" title="Permalink to this heading">#</a></h2>
+<span id="runtime-simd-dispatch"></span><h2>Runtime dispatch<a class="headerlink" href="#runtime-dispatch" title="Link to this heading">#</a></h2>
 <p>Importing NumPy triggers a scan of the available CPU features from the set
 of dispatchable features. This can be further restricted by setting the
 environment variable <code class="docutils literal notranslate"><span class="pre">NPY_DISABLE_CPU_FEATURES</span></code> to a comma-, tab-, or
@@ -1282,7 +1256,7 @@ this will disable <code class="docutils literal notranslate"><span class="pre">A
 <p>If the feature is not available, a warning will be emitted.</p>
 </section>
 <section id="tracking-dispatched-functions">
-<h2>Tracking dispatched functions<a class="headerlink" href="#tracking-dispatched-functions" title="Permalink to this heading">#</a></h2>
+<h2>Tracking dispatched functions<a class="headerlink" href="#tracking-dispatched-functions" title="Link to this heading">#</a></h2>
 <p>Discovering which CPU targets are enabled for different optimized functions is achievable
 through the Python function <code class="docutils literal notranslate"><span class="pre">numpy.lib.introspect.opt_func_info</span></code>.
 This function offers the flexibility of applying filters using two optional arguments:
@@ -1356,7 +1330,8 @@ one for refining function names and the other for specifying data types in the s
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1410,8 +1385,8 @@ one for refining function names and the other for specifying data types in the s
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1422,7 +1397,7 @@ one for refining function names and the other for specifying data types in the s
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1431,7 +1406,7 @@ one for refining function names and the other for specifying data types in the s
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1444,7 +1419,8 @@ one for refining function names and the other for specifying data types in the s
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

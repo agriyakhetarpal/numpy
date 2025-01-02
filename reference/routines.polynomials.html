@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Polynomials &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Polynomials &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/routines.polynomials';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="numpy.info" href="generated/numpy.info.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -469,12 +440,12 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="routines.dtype.html">Data type routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.emath.html">Mathematical functions with automatic domain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.err.html">Floating point error handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.exceptions.html">Exceptions and Warnings (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.exceptions</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.fft</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.exceptions.html">Exceptions and Warnings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.functional.html">Functional programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.io.html">Input and output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.indexing.html">Indexing routines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.linalg.html">Linear algebra (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.linalg</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.linalg.html">Linear algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.logic.html">Logic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.ma.html">Masked array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.math.html">Mathematical functions</a></li>
@@ -491,18 +462,17 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="routines.polynomials.poly1d.html">Poly1d</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.set.html">Set routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.sort.html">Sorting, searching, and counting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.statistics.html">Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.testing.html">Test support (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.testing</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.testing.html">Test support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.window.html">Window functions</a></li>
 </ul>
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -510,7 +480,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -522,9 +493,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -542,8 +518,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -558,7 +532,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="routines.html" class="nav-link">Routines and objects by topic</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Polynomials</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Polynomials</span></li>
   </ul>
 </nav>
 </div>
@@ -576,7 +550,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="polynomials">
-<span id="routines-polynomial"></span><h1>Polynomials<a class="headerlink" href="#polynomials" title="Permalink to this heading">#</a></h1>
+<span id="routines-polynomial"></span><h1>Polynomials<a class="headerlink" href="#polynomials" title="Link to this heading">#</a></h1>
 <p>Polynomials in NumPy can be <em>created</em>, <em>manipulated</em>, and even <em>fitted</em> using
 the <a class="reference internal" href="routines.polynomials.classes.html"><span class="doc">convenience classes</span></a>
 of the <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.polynomial</span></code></a> package, introduced in NumPy 1.4.</p>
@@ -600,7 +574,7 @@ different kinds of polynomials (<a class="reference internal" href="generated/nu
 <a class="reference internal" href="generated/numpy.polynomial.chebyshev.Chebyshev.html#numpy.polynomial.chebyshev.Chebyshev" title="numpy.polynomial.chebyshev.Chebyshev"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chebyshev</span></code></a>, etc.).</p>
 </div>
 <section id="transitioning-from-numpy-poly1d-to-numpy-polynomial">
-<h2>Transitioning from <a class="reference internal" href="generated/numpy.poly1d.html#numpy.poly1d" title="numpy.poly1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.poly1d</span></code></a> to <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.polynomial</span></code></a><a class="headerlink" href="#transitioning-from-numpy-poly1d-to-numpy-polynomial" title="Permalink to this heading">#</a></h2>
+<h2>Transitioning from <a class="reference internal" href="generated/numpy.poly1d.html#numpy.poly1d" title="numpy.poly1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.poly1d</span></code></a> to <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.polynomial</span></code></a><a class="headerlink" href="#transitioning-from-numpy-poly1d-to-numpy-polynomial" title="Link to this heading">#</a></h2>
 <p>As noted above, the <a class="reference internal" href="generated/numpy.poly1d.html#numpy.poly1d" title="numpy.poly1d"><code class="xref py py-class docutils literal notranslate"><span class="pre">poly1d</span> <span class="pre">class</span></code></a> and associated
 functions defined in <code class="docutils literal notranslate"><span class="pre">numpy.lib.polynomial</span></code>, such as <a class="reference internal" href="generated/numpy.polyfit.html#numpy.polyfit" title="numpy.polyfit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.polyfit</span></code></a>
 and <a class="reference internal" href="generated/numpy.poly.html#numpy.poly" title="numpy.poly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.poly</span></code></a>, are considered legacy and should <strong>not</strong> be used in new
@@ -608,7 +582,7 @@ code.
 Since NumPy version 1.4, the <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.polynomial</span></code></a> package is preferred for
 working with polynomials.</p>
 <section id="quick-reference">
-<h3>Quick Reference<a class="headerlink" href="#quick-reference" title="Permalink to this heading">#</a></h3>
+<h3>Quick Reference<a class="headerlink" href="#quick-reference" title="Link to this heading">#</a></h3>
 <p>The following table highlights some of the main differences between the
 legacy polynomial module and the polynomial package for common tasks.
 The <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.html#numpy.polynomial.polynomial.Polynomial" title="numpy.polynomial.polynomial.Polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polynomial</span></code></a> class is imported for brevity:</p>
@@ -642,14 +616,14 @@ degree <code class="docutils literal notranslate"><span class="pre">deg</span></
 </table>
 </div>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id2" role="note">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
 <p>Note the reversed ordering of the coefficients</p>
 </aside>
 </aside>
 </section>
 <section id="transition-guide">
-<h3>Transition Guide<a class="headerlink" href="#transition-guide" title="Permalink to this heading">#</a></h3>
+<h3>Transition Guide<a class="headerlink" href="#transition-guide" title="Link to this heading">#</a></h3>
 <p>There are significant differences between <code class="docutils literal notranslate"><span class="pre">numpy.lib.polynomial</span></code> and
 <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.polynomial</span></code></a>.
 The most significant difference is the ordering of the coefficients for the
@@ -666,8 +640,8 @@ For example, the following demonstrates how you would convert a <a class="refere
 instance representing the expression <span class="math notranslate nohighlight">\(x^{2} + 2x + 3\)</span> to a
 <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.html#numpy.polynomial.polynomial.Polynomial" title="numpy.polynomial.polynomial.Polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polynomial</span></code></a> instance representing the same
 expression:</p>
-<div class="try_examples_outer_container docutils container" id="284b5b7c-5b47-4345-ba68-d65a47027206">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('284b5b7c-5b47-4345-ba68-d65a47027206','7cde75dd-508c-4bbe-a237-ae27e1d7a197','64b1eb8d-e5d4-4d6c-ad00-fe261bd5b2d7','../lite/tree/../notebooks/index.html?path=59ce1725_2d95_44d4_a131_7838f0c97faa.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="86157951-a930-42be-9caf-bc7faf36fddd">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('86157951-a930-42be-9caf-bc7faf36fddd','1409642e-8e25-4a99-8eb7-4e5c4d2d950f','6bd79394-1630-4b51-bd9d-1577d279cb62','../lite/tree/../notebooks/index.html?path=90ece967_1e2c_4d68_9fcf_22acff69b0a0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -695,7 +669,7 @@ can’t be mixed in arithmetic:</p>
 </div>
 </div>
 </div>
-<div id="64b1eb8d-e5d4-4d6c-ad00-fe261bd5b2d7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('284b5b7c-5b47-4345-ba68-d65a47027206','64b1eb8d-e5d4-4d6c-ad00-fe261bd5b2d7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('284b5b7c-5b47-4345-ba68-d65a47027206','64b1eb8d-e5d4-4d6c-ad00-fe261bd5b2d7')">Open In Tab</button></div><div id="7cde75dd-508c-4bbe-a237-ae27e1d7a197" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>See the documentation for the
+<div id="6bd79394-1630-4b51-bd9d-1577d279cb62" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('86157951-a930-42be-9caf-bc7faf36fddd','6bd79394-1630-4b51-bd9d-1577d279cb62')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('86157951-a930-42be-9caf-bc7faf36fddd','6bd79394-1630-4b51-bd9d-1577d279cb62')">Open In Tab</button></div><div id="1409642e-8e25-4a99-8eb7-4e5c4d2d950f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>See the documentation for the
 <a class="reference external" href="routines.polynomials.classes">convenience classes</a> for further details on
 the <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">window</span></code> attributes.</p>
 <p>Another major difference between the legacy polynomial module and the
@@ -713,7 +687,7 @@ example, consider a simple linear fit to the following data:</p>
 <p>With the legacy polynomial module, a linear fit (i.e. polynomial of degree 1)
 could be applied to these data with <a class="reference internal" href="generated/numpy.polyfit.html#numpy.polyfit" title="numpy.polyfit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfit</span></code></a>:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="gh">Out[4]: </span><span class="go">array([ 1.10411015, -0.57729323])</span>
+<span class="gh">Out[4]: </span><span class="go">array([ 1.05005228, -1.06851103])</span>
 </pre></div>
 </div>
 <p>With the new polynomial API, the <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.fit.html#numpy.polynomial.polynomial.Polynomial.fit" title="numpy.polynomial.polynomial.Polynomial.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>
@@ -721,7 +695,7 @@ class method is preferred:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">p_fitted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">Polynomial</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="gp">In [6]: </span><span class="n">p_fitted</span>
-<span class="gh">Out[6]: </span><span class="go">Polynomial([4.39120246, 4.96849568], domain=[0., 9.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
+<span class="gh">Out[6]: </span><span class="go">Polynomial([3.65672423, 4.72523526], domain=[0., 9.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
 </pre></div>
 </div>
 <p>Note that the coefficients are given <em>in the scaled domain</em> defined by the
@@ -729,13 +703,13 @@ linear mapping between the <code class="docutils literal notranslate"><span clas
 <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.convert.html#numpy.polynomial.polynomial.Polynomial.convert" title="numpy.polynomial.polynomial.Polynomial.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a> can be used to get the
 coefficients in the unscaled data domain.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">p_fitted</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
-<span class="gh">Out[7]: </span><span class="go">Polynomial([-0.57729323,  1.10411015], domain=[-1.,  1.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
+<span class="gh">Out[7]: </span><span class="go">Polynomial([-1.06851103,  1.05005228], domain=[-1.,  1.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="documentation-for-the-polynomial-package">
-<h2>Documentation for the <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polynomial</span></code></a> package<a class="headerlink" href="#documentation-for-the-polynomial-package" title="Permalink to this heading">#</a></h2>
+<h2>Documentation for the <a class="reference internal" href="routines.polynomials-package.html#module-numpy.polynomial" title="numpy.polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polynomial</span></code></a> package<a class="headerlink" href="#documentation-for-the-polynomial-package" title="Link to this heading">#</a></h2>
 <p>In addition to standard power series polynomials, the polynomial package
 provides several additional kinds of polynomials including Chebyshev,
 Hermite (two subtypes), Laguerre, and Legendre polynomials.
@@ -763,7 +737,7 @@ polynomial individually can be found in the corresponding module documentation:<
 </div>
 </section>
 <section id="documentation-for-legacy-polynomials">
-<h2>Documentation for legacy polynomials<a class="headerlink" href="#documentation-for-legacy-polynomials" title="Permalink to this heading">#</a></h2>
+<h2>Documentation for legacy polynomials<a class="headerlink" href="#documentation-for-legacy-polynomials" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="routines.polynomials.poly1d.html">Poly1d</a><ul>
@@ -813,7 +787,8 @@ polynomial individually can be found in the corresponding module documentation:<
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -849,8 +824,8 @@ polynomial individually can be found in the corresponding module documentation:<
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -861,7 +836,7 @@ polynomial individually can be found in the corresponding module documentation:<
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -870,7 +845,7 @@ polynomial individually can be found in the corresponding module documentation:<
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -883,7 +858,8 @@ polynomial individually can be found in the corresponding module documentation:<
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

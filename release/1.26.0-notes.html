@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy 1.26.0 Release Notes &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>NumPy 1.26.0 Release Notes &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'release/1.26.0-notes';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="NumPy 1.26.1 Release Notes" href="1.26.1-notes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -475,7 +446,14 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../release.html">Release notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.3.0-notes.html">2.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.1-notes.html">2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.0-notes.html">2.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.3-notes.html">2.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.2-notes.html">2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.1-notes.html">2.1.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.1.0-notes.html">2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.0.2-notes.html">2.0.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.0.1-notes.html">2.0.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.0.0-notes.html">2.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.26.4-notes.html">1.26.4</a></li>
@@ -591,9 +569,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -611,8 +594,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -627,7 +608,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../release.html" class="nav-link">Release notes</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">NumPy...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NumPy 1.26.0 Release Notes</span></li>
   </ul>
 </nav>
 </div>
@@ -645,7 +626,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="numpy-1-26-0-release-notes">
-<h1>NumPy 1.26.0 Release Notes<a class="headerlink" href="#numpy-1-26-0-release-notes" title="Permalink to this heading">#</a></h1>
+<h1>NumPy 1.26.0 Release Notes<a class="headerlink" href="#numpy-1-26-0-release-notes" title="Link to this heading">#</a></h1>
 <p>The NumPy 1.26.0 release is a continuation of the 1.25.x release cycle with the
 addition of Python 3.12.0 support. Python 3.12 dropped distutils, consequently
 supporting it required finding a replacement for the setup.py/distutils based
@@ -667,9 +648,9 @@ Walt, and Matti Picus who did much of the work in the main development branch.</
 </ul>
 <p>The Python versions supported in this release are 3.9-3.12.</p>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">#</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Link to this heading">#</a></h2>
 <section id="array-api-v2022-12-support-in-numpy-array-api">
-<h3>Array API v2022.12 support in <code class="docutils literal notranslate"><span class="pre">numpy.array_api</span></code><a class="headerlink" href="#array-api-v2022-12-support-in-numpy-array-api" title="Permalink to this heading">#</a></h3>
+<h3>Array API v2022.12 support in <code class="docutils literal notranslate"><span class="pre">numpy.array_api</span></code><a class="headerlink" href="#array-api-v2022-12-support-in-numpy-array-api" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy.array_api</span></code> now full supports the <a class="reference external" href="https://data-apis.org/array-api/2022.12">v2022.12 version</a> of the array API standard. Note
 that this does not yet include the optional <code class="docutils literal notranslate"><span class="pre">fft</span></code> extension in the
@@ -678,7 +659,7 @@ standard.</p></li>
 <p>(<a class="reference external" href="https://github.com/numpy/numpy/pull/23789">gh-23789</a>)</p>
 </section>
 <section id="support-for-the-updated-accelerate-blas-lapack-library">
-<h3>Support for the updated Accelerate BLAS/LAPACK library<a class="headerlink" href="#support-for-the-updated-accelerate-blas-lapack-library" title="Permalink to this heading">#</a></h3>
+<h3>Support for the updated Accelerate BLAS/LAPACK library<a class="headerlink" href="#support-for-the-updated-accelerate-blas-lapack-library" title="Link to this heading">#</a></h3>
 <p>Support for the updated Accelerate BLAS/LAPACK library, including ILP64 (64-bit
 integer) support, in macOS 13.3 has been added. This brings arm64 support, and
 significant performance improvements of up to 10x for commonly used linear
@@ -687,7 +668,7 @@ version will automatically be used if available.</p>
 <p>(<a class="reference external" href="https://github.com/numpy/numpy/pull/24053">gh-24053</a>)</p>
 </section>
 <section id="meson-backend-for-f2py">
-<h3><code class="docutils literal notranslate"><span class="pre">meson</span></code> backend for <code class="docutils literal notranslate"><span class="pre">f2py</span></code><a class="headerlink" href="#meson-backend-for-f2py" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">meson</span></code> backend for <code class="docutils literal notranslate"><span class="pre">f2py</span></code><a class="headerlink" href="#meson-backend-for-f2py" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">f2py</span></code> in compile mode (i.e. <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span></code>) now accepts the <code class="docutils literal notranslate"><span class="pre">--backend</span> <span class="pre">meson</span></code>
 option. This is the default option for Python <code class="docutils literal notranslate"><span class="pre">3.12</span></code> on-wards. Older versions
 will still default to <code class="docutils literal notranslate"><span class="pre">--backend</span> <span class="pre">distutils</span></code>.</p>
@@ -699,7 +680,7 @@ without <code class="docutils literal notranslate"><span class="pre">-c</span></
 <p>(<a class="reference external" href="https://github.com/numpy/numpy/pull/24532">gh-24532</a>)</p>
 </section>
 <section id="bind-c-support-for-f2py">
-<h3><code class="docutils literal notranslate"><span class="pre">bind(c)</span></code> support for <code class="docutils literal notranslate"><span class="pre">f2py</span></code><a class="headerlink" href="#bind-c-support-for-f2py" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">bind(c)</span></code> support for <code class="docutils literal notranslate"><span class="pre">f2py</span></code><a class="headerlink" href="#bind-c-support-for-f2py" title="Link to this heading">#</a></h3>
 <p>Both functions and subroutines can be annotated with <code class="docutils literal notranslate"><span class="pre">bind(c)</span></code>. <code class="docutils literal notranslate"><span class="pre">f2py</span></code> will
 handle both the correct type mapping, and preserve the unique label for other
 <code class="docutils literal notranslate"><span class="pre">C</span></code> interfaces.</p>
@@ -711,9 +692,9 @@ is meant to guarantee only the same name in <code class="docutils literal notran
 </section>
 </section>
 <section id="improvements">
-<h2>Improvements<a class="headerlink" href="#improvements" title="Permalink to this heading">#</a></h2>
+<h2>Improvements<a class="headerlink" href="#improvements" title="Link to this heading">#</a></h2>
 <section id="iso-c-binding-support-for-f2py">
-<h3><code class="docutils literal notranslate"><span class="pre">iso_c_binding</span></code> support for <code class="docutils literal notranslate"><span class="pre">f2py</span></code><a class="headerlink" href="#iso-c-binding-support-for-f2py" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">iso_c_binding</span></code> support for <code class="docutils literal notranslate"><span class="pre">f2py</span></code><a class="headerlink" href="#iso-c-binding-support-for-f2py" title="Link to this heading">#</a></h3>
 <p>Previously, users would have to define their own custom <code class="docutils literal notranslate"><span class="pre">f2cmap</span></code> file to use
 type mappings defined by the Fortran2003 <code class="docutils literal notranslate"><span class="pre">iso_c_binding</span></code> intrinsic module.
 These type maps are now natively supported by <code class="docutils literal notranslate"><span class="pre">f2py</span></code></p>
@@ -721,7 +702,7 @@ These type maps are now natively supported by <code class="docutils literal notr
 </section>
 </section>
 <section id="build-system-changes">
-<h2>Build system changes<a class="headerlink" href="#build-system-changes" title="Permalink to this heading">#</a></h2>
+<h2>Build system changes<a class="headerlink" href="#build-system-changes" title="Link to this heading">#</a></h2>
 <p>In this release, NumPy has switched to Meson as the build system and
 meson-python as the build backend. Installing NumPy or building a wheel can be
 done with standard tools like <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">pypa/build</span></code>. The following are
@@ -737,7 +718,7 @@ supported:</p>
 <p>All the regular <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">pypa/build</span></code> flags (e.g.,
 <code class="docutils literal notranslate"><span class="pre">--no-build-isolation</span></code>) should work as expected.</p>
 <section id="numpy-specific-build-customization">
-<h3>NumPy-specific build customization<a class="headerlink" href="#numpy-specific-build-customization" title="Permalink to this heading">#</a></h3>
+<h3>NumPy-specific build customization<a class="headerlink" href="#numpy-specific-build-customization" title="Link to this heading">#</a></h3>
 <p>Many of the NumPy-specific ways of customizing builds have changed.
 The <code class="docutils literal notranslate"><span class="pre">NPY_*</span></code> environment variables which control BLAS/LAPACK, SIMD, threading,
 and other such options are no longer supported, nor is a <code class="docutils literal notranslate"><span class="pre">site.cfg</span></code> file to
@@ -749,14 +730,14 @@ please see <a class="reference external" href="http://scipy.github.io/devdocs/bu
 customization works in an almost identical way in SciPy as it does in NumPy.</p>
 </section>
 <section id="build-dependencies">
-<h3>Build dependencies<a class="headerlink" href="#build-dependencies" title="Permalink to this heading">#</a></h3>
+<h3>Build dependencies<a class="headerlink" href="#build-dependencies" title="Link to this heading">#</a></h3>
 <p>While the runtime dependencies of NumPy have not changed, the build
 dependencies have. Because we temporarily vendor Meson and meson-python,
 there are several new dependencies - please see the <code class="docutils literal notranslate"><span class="pre">[build-system]</span></code> section
 of <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> for details.</p>
 </section>
 <section id="troubleshooting">
-<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h3>
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h3>
 <p>This build system change is quite large. In case of unexpected issues, it is
 still possible to use a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>-based build as a temporary workaround (on
 Python 3.9-3.11, not 3.12), by copying <code class="docutils literal notranslate"><span class="pre">pyproject.toml.setuppy</span></code> to
@@ -767,7 +748,7 @@ therefore would like to see all potential blockers surfaced early on in the
 </section>
 </section>
 <section id="contributors">
-<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this heading">#</a></h2>
+<h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">#</a></h2>
 <p>A total of 20 people contributed to this release.  People with a “+” by their
 names contributed a patch for the first time.</p>
 <ul class="simple">
@@ -794,7 +775,7 @@ names contributed a patch for the first time.</p>
 </ul>
 </section>
 <section id="pull-requests-merged">
-<h2>Pull requests merged<a class="headerlink" href="#pull-requests-merged" title="Permalink to this heading">#</a></h2>
+<h2>Pull requests merged<a class="headerlink" href="#pull-requests-merged" title="Link to this heading">#</a></h2>
 <p>A total of 59 pull requests were merged for this release.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24305">#24305</a>: MAINT: Prepare 1.26.x branch for development</p></li>
@@ -844,7 +825,7 @@ names contributed a patch for the first time.</p>
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24622">#24622</a>: BUG, ENH: Fix <code class="docutils literal notranslate"><span class="pre">iso_c_binding</span></code> type maps and fix <code class="docutils literal notranslate"><span class="pre">bind(c)</span></code>…</p></li>
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24629">#24629</a>: TYP: Allow <code class="docutils literal notranslate"><span class="pre">binary_repr</span></code> to accept any object implementing…</p></li>
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24630">#24630</a>: TYP: Explicitly declare <code class="docutils literal notranslate"><span class="pre">dtype</span></code> and <code class="docutils literal notranslate"><span class="pre">generic</span></code> hashable</p></li>
-<li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24637">#24637</a>: ENH: Refactor the typing “reveal” tests using <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.assert_type" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typing.assert_type</span></code></a></p></li>
+<li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24637">#24637</a>: ENH: Refactor the typing “reveal” tests using <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.assert_type" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">typing.assert_type</span></code></a></p></li>
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24638">#24638</a>: MAINT: Bump actions/checkout from 3.6.0 to 4.0.0</p></li>
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24647">#24647</a>: ENH: <code class="docutils literal notranslate"><span class="pre">meson</span></code> backend for <code class="docutils literal notranslate"><span class="pre">f2py</span></code></p></li>
 <li><p><a class="reference external" href="https://github.com/numpy/numpy/pull/24648">#24648</a>: MAINT: Refactor partial load Workaround for Clang</p></li>
@@ -895,7 +876,8 @@ names contributed a patch for the first time.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -941,8 +923,8 @@ names contributed a patch for the first time.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -953,7 +935,7 @@ names contributed a patch for the first time.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -962,7 +944,7 @@ names contributed a patch for the first time.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -975,7 +957,8 @@ names contributed a patch for the first time.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

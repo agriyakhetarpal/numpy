@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy quickstart &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>NumPy quickstart &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user/quickstart';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="What is NumPy?" href="whatisnumpy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -485,9 +456,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -505,8 +481,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -518,7 +492,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy user guide</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">NumPy quickstart</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NumPy quickstart</span></li>
   </ul>
 </nav>
 </div>
@@ -536,9 +510,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="numpy-quickstart">
-<h1>NumPy quickstart<a class="headerlink" href="#numpy-quickstart" title="Permalink to this heading">#</a></h1>
+<h1>NumPy quickstart<a class="headerlink" href="#numpy-quickstart" title="Link to this heading">#</a></h1>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <p>You’ll need to know a bit of Python. For a refresher, see the <a class="reference external" href="https://docs.python.org/tutorial/">Python
 tutorial</a>.</p>
 <p>To work the examples, you’ll need <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> installed
@@ -560,7 +534,7 @@ arrays without using for-loops;</p></li>
 </ul>
 </section>
 <section id="the-basics">
-<span id="quickstart-the-basics"></span><h2>The basics<a class="headerlink" href="#the-basics" title="Permalink to this heading">#</a></h2>
+<span id="quickstart-the-basics"></span><h2>The basics<a class="headerlink" href="#the-basics" title="Link to this heading">#</a></h2>
 <p>NumPy’s main object is the homogeneous multidimensional array. It is a
 table of elements (usually numbers), all of the same type, indexed by a
 tuple of non-negative integers. In NumPy dimensions are called <em>axes</em>.</p>
@@ -605,7 +579,7 @@ in an array using indexing facilities.</p>
 </dd>
 </dl>
 <section id="an-example">
-<h3>An example<a class="headerlink" href="#an-example" title="Permalink to this heading">#</a></h3>
+<h3>An example<a class="headerlink" href="#an-example" title="Link to this heading">#</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
@@ -633,7 +607,7 @@ in an array using indexing facilities.</p>
 </div>
 </section>
 <section id="array-creation">
-<span id="quickstart-array-creation"></span><h3>Array creation<a class="headerlink" href="#array-creation" title="Permalink to this heading">#</a></h3>
+<span id="quickstart-array-creation"></span><h3>Array creation<a class="headerlink" href="#array-creation" title="Link to this heading">#</a></h3>
 <p>There are several ways to create arrays.</p>
 <p>For example, you can create an array from a regular Python list or tuple
 using the <code class="docutils literal notranslate"><span class="pre">array</span></code> function. The type of the resulting array is deduced
@@ -739,7 +713,7 @@ of elements that we want, instead of the step:</p>
 </div>
 </section>
 <section id="printing-arrays">
-<h3>Printing arrays<a class="headerlink" href="#printing-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Printing arrays<a class="headerlink" href="#printing-arrays" title="Link to this heading">#</a></h3>
 <p>When you print an array, NumPy displays it in a similar way to nested
 lists, but with the following layout:</p>
 <ul class="simple">
@@ -796,7 +770,7 @@ can change the printing options using <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="basic-operations">
-<span id="quickstart-basic-operations"></span><h3>Basic operations<a class="headerlink" href="#basic-operations" title="Permalink to this heading">#</a></h3>
+<span id="quickstart-basic-operations"></span><h3>Basic operations<a class="headerlink" href="#basic-operations" title="Link to this heading">#</a></h3>
 <p>Arithmetic operators on arrays apply <em>elementwise</em>. A new array is
 created and filled with the result.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">])</span>
@@ -909,7 +883,7 @@ array:</p>
 </div>
 </section>
 <section id="universal-functions">
-<h3>Universal functions<a class="headerlink" href="#universal-functions" title="Permalink to this heading">#</a></h3>
+<h3>Universal functions<a class="headerlink" href="#universal-functions" title="Link to this heading">#</a></h3>
 <p>NumPy provides familiar mathematical functions such as sin, cos, and
 exp. In NumPy, these are called “universal
 functions” (<code class="docutils literal notranslate"><span class="pre">ufunc</span></code>). Within NumPy, these functions
@@ -959,7 +933,7 @@ operate elementwise on an array, producing an array as output.</p>
 <a class="reference internal" href="../reference/generated/numpy.nonzero.html#numpy.nonzero" title="numpy.nonzero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero</span></code></a>,
 <a class="reference internal" href="../reference/generated/numpy.outer.html#numpy.outer" title="numpy.outer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outer</span></code></a>,
 <a class="reference internal" href="../reference/generated/numpy.prod.html#numpy.prod" title="numpy.prod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prod</span></code></a>,
-<a class="reference external" href="https://docs.python.org/3/library/re.html#module-re" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">re</span></code></a>,
+<a class="reference external" href="https://docs.python.org/3/library/re.html#module-re" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">re</span></code></a>,
 <a class="reference internal" href="../reference/generated/numpy.round.html#numpy.round" title="numpy.round"><code class="xref py py-obj docutils literal notranslate"><span class="pre">round</span></code></a>,
 <a class="reference internal" href="../reference/generated/numpy.sort.html#numpy.sort" title="numpy.sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sort</span></code></a>,
 <a class="reference internal" href="../reference/generated/numpy.std.html#numpy.std" title="numpy.std"><code class="xref py py-obj docutils literal notranslate"><span class="pre">std</span></code></a>,
@@ -973,7 +947,7 @@ operate elementwise on an array, producing an array as output.</p>
 </div>
 </section>
 <section id="indexing-slicing-and-iterating">
-<span id="quickstart-indexing-slicing-and-iterating"></span><h3>Indexing, slicing and iterating<a class="headerlink" href="#indexing-slicing-and-iterating" title="Permalink to this heading">#</a></h3>
+<span id="quickstart-indexing-slicing-and-iterating"></span><h3>Indexing, slicing and iterating<a class="headerlink" href="#indexing-slicing-and-iterating" title="Link to this heading">#</a></h3>
 <p><strong>One-dimensional</strong> arrays can be indexed, sliced and iterated over,
 much like
 <a class="reference external" href="https://docs.python.org/tutorial/introduction.html#lists">lists</a>
@@ -1114,9 +1088,9 @@ over all the elements of the array:</p>
 </section>
 </section>
 <section id="shape-manipulation">
-<span id="quickstart-shape-manipulation"></span><h2>Shape manipulation<a class="headerlink" href="#shape-manipulation" title="Permalink to this heading">#</a></h2>
+<span id="quickstart-shape-manipulation"></span><h2>Shape manipulation<a class="headerlink" href="#shape-manipulation" title="Link to this heading">#</a></h2>
 <section id="changing-the-shape-of-an-array">
-<h3>Changing the shape of an array<a class="headerlink" href="#changing-the-shape-of-an-array" title="Permalink to this heading">#</a></h3>
+<h3>Changing the shape of an array<a class="headerlink" href="#changing-the-shape-of-an-array" title="Link to this heading">#</a></h3>
 <p>An array has a shape given by the number of elements along each axis:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">rg</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
@@ -1191,7 +1165,7 @@ dimensions are automatically calculated:</p>
 </div>
 </section>
 <section id="stacking-together-different-arrays">
-<span id="quickstart-stacking-arrays"></span><h3>Stacking together different arrays<a class="headerlink" href="#stacking-together-different-arrays" title="Permalink to this heading">#</a></h3>
+<span id="quickstart-stacking-arrays"></span><h3>Stacking together different arrays<a class="headerlink" href="#stacking-together-different-arrays" title="Link to this heading">#</a></h3>
 <p>Several arrays can be stacked together along different axes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="n">rg</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
@@ -1266,7 +1240,7 @@ which to concatenate.</p>
 </div>
 </section>
 <section id="splitting-one-array-into-several-smaller-ones">
-<h3>Splitting one array into several smaller ones<a class="headerlink" href="#splitting-one-array-into-several-smaller-ones" title="Permalink to this heading">#</a></h3>
+<h3>Splitting one array into several smaller ones<a class="headerlink" href="#splitting-one-array-into-several-smaller-ones" title="Link to this heading">#</a></h3>
 <p>Using <a class="reference internal" href="../reference/generated/numpy.hsplit.html#numpy.hsplit" title="numpy.hsplit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hsplit</span></code></a>, you can split an
 array along its horizontal axis, either by specifying the number of
 equally shaped arrays to return, or by specifying the columns after
@@ -1295,12 +1269,12 @@ one to specify along which axis to split.</p>
 </section>
 </section>
 <section id="copies-and-views">
-<span id="quickstart-copies-and-views"></span><h2>Copies and views<a class="headerlink" href="#copies-and-views" title="Permalink to this heading">#</a></h2>
+<span id="quickstart-copies-and-views"></span><h2>Copies and views<a class="headerlink" href="#copies-and-views" title="Link to this heading">#</a></h2>
 <p>When operating and manipulating arrays, their data is sometimes copied
 into a new array and sometimes not. This is often a source of confusion
 for beginners. There are three cases:</p>
 <section id="no-copy-at-all">
-<h3>No copy at all<a class="headerlink" href="#no-copy-at-all" title="Permalink to this heading">#</a></h3>
+<h3>No copy at all<a class="headerlink" href="#no-copy-at-all" title="Link to this heading">#</a></h3>
 <p>Simple assignments make no copy of objects or their data.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
 <span class="gp">... </span>              <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">],</span>
@@ -1323,7 +1297,7 @@ copy.</p>
 </div>
 </section>
 <section id="view-or-shallow-copy">
-<h3>View or shallow copy<a class="headerlink" href="#view-or-shallow-copy" title="Permalink to this heading">#</a></h3>
+<h3>View or shallow copy<a class="headerlink" href="#view-or-shallow-copy" title="Link to this heading">#</a></h3>
 <p>Different array objects can share the same data. The <code class="docutils literal notranslate"><span class="pre">view</span></code> method
 creates a new array object that looks at the same data.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
@@ -1334,7 +1308,7 @@ creates a new array object that looks at the same data.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">flags</span><span class="o">.</span><span class="n">owndata</span>
 <span class="go">False</span>
 <span class="gp">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># a&#39;s shape doesn&#39;t change</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>  <span class="c1"># a&#39;s shape doesn&#39;t change, reassigned c is still a view of a</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">shape</span>
 <span class="go">(3, 4)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1234</span>         <span class="c1"># a&#39;s data changes</span>
@@ -1355,7 +1329,7 @@ creates a new array object that looks at the same data.</p>
 </div>
 </section>
 <section id="deep-copy">
-<h3>Deep copy<a class="headerlink" href="#deep-copy" title="Permalink to this heading">#</a></h3>
+<h3>Deep copy<a class="headerlink" href="#deep-copy" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">copy</span></code> method makes a complete copy of the array and its data.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># a new array object with new data is created</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="ow">is</span> <span class="n">a</span>
@@ -1379,9 +1353,10 @@ a small fraction of <code class="docutils literal notranslate"><span class="pre"
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">a[:100]</span></code> is used instead, <code class="docutils literal notranslate"><span class="pre">a</span></code> is referenced by <code class="docutils literal notranslate"><span class="pre">b</span></code> and will persist in memory
 even if <code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">a</span></code> is executed.</p>
+<p>See also <a class="reference internal" href="basics.copies.html#basics-copies-and-views"><span class="std std-ref">Copies and views</span></a>.</p>
 </section>
 <section id="functions-and-methods-overview">
-<h3>Functions and methods overview<a class="headerlink" href="#functions-and-methods-overview" title="Permalink to this heading">#</a></h3>
+<h3>Functions and methods overview<a class="headerlink" href="#functions-and-methods-overview" title="Link to this heading">#</a></h3>
 <p>Here is a list of some useful NumPy functions and methods names
 ordered in categories. See <a class="reference internal" href="../reference/routines.html#routines"><span class="std std-ref">Routines and objects by topic</span></a> for the full list.</p>
 <dl class="simple">
@@ -1473,9 +1448,9 @@ ordered in categories. See <a class="reference internal" href="../reference/rout
 </section>
 </section>
 <section id="less-basic">
-<h2>Less basic<a class="headerlink" href="#less-basic" title="Permalink to this heading">#</a></h2>
+<h2>Less basic<a class="headerlink" href="#less-basic" title="Link to this heading">#</a></h2>
 <section id="broadcasting-rules">
-<span id="id1"></span><h3>Broadcasting rules<a class="headerlink" href="#broadcasting-rules" title="Permalink to this heading">#</a></h3>
+<span id="id1"></span><h3>Broadcasting rules<a class="headerlink" href="#broadcasting-rules" title="Link to this heading">#</a></h3>
 <p>Broadcasting allows universal functions to deal in a meaningful way with
 inputs that do not have exactly the same shape.</p>
 <p>The first rule of broadcasting is that if all input arrays do not have
@@ -1492,12 +1467,12 @@ must match. More details can be found in <a class="reference internal" href="bas
 </section>
 </section>
 <section id="advanced-indexing-and-index-tricks">
-<h2>Advanced indexing and index tricks<a class="headerlink" href="#advanced-indexing-and-index-tricks" title="Permalink to this heading">#</a></h2>
+<h2>Advanced indexing and index tricks<a class="headerlink" href="#advanced-indexing-and-index-tricks" title="Link to this heading">#</a></h2>
 <p>NumPy offers more indexing facilities than regular Python sequences. In
 addition to indexing by integers and slices, as we saw before, arrays
 can be indexed by arrays of integers and arrays of booleans.</p>
 <section id="indexing-with-arrays-of-indices">
-<h3>Indexing with arrays of indices<a class="headerlink" href="#indexing-with-arrays-of-indices" title="Permalink to this heading">#</a></h3>
+<h3>Indexing with arrays of indices<a class="headerlink" href="#indexing-with-arrays-of-indices" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># the first 12 square numbers</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>  <span class="c1"># an array of indices</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># the elements of `a` at the positions `i`</span>
@@ -1645,7 +1620,7 @@ only incremented once. This is because Python requires <code class="docutils lit
 equivalent to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">1</span></code>.</p>
 </section>
 <section id="indexing-with-boolean-arrays">
-<h3>Indexing with boolean arrays<a class="headerlink" href="#indexing-with-boolean-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Indexing with boolean arrays<a class="headerlink" href="#indexing-with-boolean-arrays" title="Link to this heading">#</a></h3>
 <p>When we index arrays with arrays of (integer) indices we are providing
 the list of indices to pick. With boolean indices the approach is
 different; we explicitly choose which items in the array we want and
@@ -1731,7 +1706,7 @@ example, <code class="docutils literal notranslate"><span class="pre">b1</span><
 <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 </section>
 <section id="the-ix-function">
-<h3>The ix_() function<a class="headerlink" href="#the-ix-function" title="Permalink to this heading">#</a></h3>
+<h3>The ix_() function<a class="headerlink" href="#the-ix-function" title="Link to this heading">#</a></h3>
 <p>The <a class="reference internal" href="../reference/generated/numpy.ix_.html#numpy.ix_" title="numpy.ix_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ix_</span></code></a> function can be used to combine different vectors so as to
 obtain the result for each n-uplet. For example, if you want to compute
 all the a+b*c for all the triplets taken from each of the vectors a, b
@@ -1814,15 +1789,15 @@ in order to avoid creating an argument array the size of the output
 times the number of vectors.</p>
 </section>
 <section id="indexing-with-strings">
-<h3>Indexing with strings<a class="headerlink" href="#indexing-with-strings" title="Permalink to this heading">#</a></h3>
+<h3>Indexing with strings<a class="headerlink" href="#indexing-with-strings" title="Link to this heading">#</a></h3>
 <p>See <a class="reference internal" href="basics.rec.html#structured-arrays"><span class="std std-ref">Structured arrays</span></a>.</p>
 </section>
 </section>
 <section id="tricks-and-tips">
-<h2>Tricks and tips<a class="headerlink" href="#tricks-and-tips" title="Permalink to this heading">#</a></h2>
+<h2>Tricks and tips<a class="headerlink" href="#tricks-and-tips" title="Link to this heading">#</a></h2>
 <p>Here we give a list of short and useful tips.</p>
 <section id="automatic-reshaping">
-<h3>“Automatic” reshaping<a class="headerlink" href="#automatic-reshaping" title="Permalink to this heading">#</a></h3>
+<h3>“Automatic” reshaping<a class="headerlink" href="#automatic-reshaping" title="Link to this heading">#</a></h3>
 <p>To change the dimensions of an array, you can omit one of the sizes
 which will then be deduced automatically:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
@@ -1845,7 +1820,7 @@ which will then be deduced automatically:</p>
 </div>
 </section>
 <section id="vector-stacking">
-<h3>Vector stacking<a class="headerlink" href="#vector-stacking" title="Permalink to this heading">#</a></h3>
+<h3>Vector stacking<a class="headerlink" href="#vector-stacking" title="Link to this heading">#</a></h3>
 <p>How do we construct a 2D array from a list of equally-sized row vectors?
 In MATLAB this is quite easy: if <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are two vectors of the
 same length you only need do <code class="docutils literal notranslate"><span class="pre">m=[x;y]</span></code>. In NumPy this works via the
@@ -1871,7 +1846,7 @@ strange.</p>
 </div>
 </section>
 <section id="histograms">
-<h3>Histograms<a class="headerlink" href="#histograms" title="Permalink to this heading">#</a></h3>
+<h3>Histograms<a class="headerlink" href="#histograms" title="Link to this heading">#</a></h3>
 <p>The NumPy <code class="docutils literal notranslate"><span class="pre">histogram</span></code> function applied to an array returns a pair of
 vectors: the histogram of the array and a vector of the bin edges. Beware:
 <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> also has a function to build histograms (called <code class="docutils literal notranslate"><span class="pre">hist</span></code>,
@@ -1899,7 +1874,7 @@ that <code class="docutils literal notranslate"><span class="pre">pylab.hist</sp
 </section>
 </section>
 <section id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://docs.python.org/tutorial/">Python tutorial</a></p></li>
 <li><p><a class="reference internal" href="../reference/index.html#reference"><span class="std std-ref">NumPy reference</span></a></p></li>
@@ -1946,7 +1921,8 @@ that <code class="docutils literal notranslate"><span class="pre">pylab.hist</sp
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -2014,8 +1990,8 @@ that <code class="docutils literal notranslate"><span class="pre">pylab.hist</sp
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2026,7 +2002,7 @@ that <code class="docutils literal notranslate"><span class="pre">pylab.hist</sp
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -2035,7 +2011,7 @@ that <code class="docutils literal notranslate"><span class="pre">pylab.hist</sp
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -2048,7 +2024,8 @@ that <code class="docutils literal notranslate"><span class="pre">pylab.hist</sp
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

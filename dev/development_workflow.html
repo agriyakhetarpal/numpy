@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Development workflow &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Development workflow &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'dev/development_workflow';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="Building the NumPy API and reference docs" href="howto_build_docs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -467,9 +438,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -487,8 +463,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -500,7 +474,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">Contributing to NumPy</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Development workflow</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Development workflow</span></li>
   </ul>
 </nav>
 </div>
@@ -518,13 +492,13 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="development-workflow">
-<span id="id1"></span><h1>Development workflow<a class="headerlink" href="#development-workflow" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Development workflow<a class="headerlink" href="#development-workflow" title="Link to this heading">#</a></h1>
 <p>You already have your own forked copy of the NumPy repository, have configured
 Git, and have linked the upstream repository as explained in
-<a class="reference external" href="https://scikit-image.org/docs/stable/gitwash/set_up_fork.html#linking-to-upstream" title="(in skimage v0.24.0)"><span>Linking your repository to the upstream repo</span></a>. What is described below is a recommended workflow
+<a class="reference external" href="https://scikit-image.org/docs/stable/gitwash/set_up_fork.html#linking-to-upstream" title="(in skimage v0.25.0)"><span>Linking your repository to the upstream repo</span></a>. What is described below is a recommended workflow
 with Git.</p>
 <section id="basic-workflow">
-<h2>Basic workflow<a class="headerlink" href="#basic-workflow" title="Permalink to this heading">#</a></h2>
+<h2>Basic workflow<a class="headerlink" href="#basic-workflow" title="Link to this heading">#</a></h2>
 <p>In short:</p>
 <ol class="arabic simple">
 <li><p>Start a new <em>feature branch</em> for each set of edits that you do.
@@ -542,7 +516,7 @@ further review, see the notes <a class="reference internal" href="#pushing-to-ma
 <p>This way of working helps to keep work well organized and the history
 as clear as possible.</p>
 <section id="making-a-new-feature-branch">
-<span id="id2"></span><h3>Making a new feature branch<a class="headerlink" href="#making-a-new-feature-branch" title="Permalink to this heading">#</a></h3>
+<span id="id2"></span><h3>Making a new feature branch<a class="headerlink" href="#making-a-new-feature-branch" title="Link to this heading">#</a></h3>
 <p>First, fetch new commits from the <code class="docutils literal notranslate"><span class="pre">upstream</span></code> repository:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
 </pre></div>
@@ -554,9 +528,9 @@ repository:</p>
 </div>
 </section>
 <section id="the-editing-workflow">
-<span id="editing-workflow"></span><h3>The editing workflow<a class="headerlink" href="#the-editing-workflow" title="Permalink to this heading">#</a></h3>
+<span id="editing-workflow"></span><h3>The editing workflow<a class="headerlink" href="#the-editing-workflow" title="Link to this heading">#</a></h3>
 <section id="overview">
-<h4>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h4>
+<h4>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># hack hack</span>
 <span class="n">git</span> <span class="n">status</span> <span class="c1"># Optional</span>
 <span class="n">git</span> <span class="n">diff</span> <span class="c1"># Optional</span>
@@ -568,7 +542,7 @@ repository:</p>
 </div>
 </section>
 <section id="in-more-detail">
-<h4>In more detail<a class="headerlink" href="#in-more-detail" title="Permalink to this heading">#</a></h4>
+<h4>In more detail<a class="headerlink" href="#in-more-detail" title="Link to this heading">#</a></h4>
 <ol class="arabic">
 <li><p>Make some changes. When you feel that you’ve made a complete, working set
 of related changes, move on to the next steps.</p></li>
@@ -640,7 +614,7 @@ been added to <code class="docutils literal notranslate"><span class="pre">upstr
 your branch.</p>
 </section>
 <section id="writing-the-commit-message">
-<span id="id3"></span><h4>Writing the commit message<a class="headerlink" href="#writing-the-commit-message" title="Permalink to this heading">#</a></h4>
+<span id="id3"></span><h4>Writing the commit message<a class="headerlink" href="#writing-the-commit-message" title="Link to this heading">#</a></h4>
 <p>Commit messages should be clear and follow a few basic rules.  Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ENH</span><span class="p">:</span> <span class="n">add</span> <span class="n">functionality</span> <span class="n">X</span> <span class="n">to</span> <span class="n">numpy</span><span class="o">.&lt;</span><span class="n">submodule</span><span class="o">&gt;.</span>
 
@@ -678,7 +652,7 @@ what not to do; the reader has to go look for context elsewhere.</p>
 </pre></div>
 </div>
 <section id="commands-to-skip-continuous-integration">
-<h5>Commands to skip continuous integration<a class="headerlink" href="#commands-to-skip-continuous-integration" title="Permalink to this heading">#</a></h5>
+<h5>Commands to skip continuous integration<a class="headerlink" href="#commands-to-skip-continuous-integration" title="Link to this heading">#</a></h5>
 <p>By default a lot of continuous integration (CI) jobs are run for every PR,
 from running the test suite on different operating systems and hardware
 platforms to building the docs. In some cases you already know that CI isn’t
@@ -720,7 +694,7 @@ uploads.
 </ul>
 </section>
 <section id="test-building-wheels">
-<h5>Test building wheels<a class="headerlink" href="#test-building-wheels" title="Permalink to this heading">#</a></h5>
+<h5>Test building wheels<a class="headerlink" href="#test-building-wheels" title="Link to this heading">#</a></h5>
 <p>Numpy currently uses <a class="reference external" href="https://https://cibuildwheel.readthedocs.io/en/stable/">cibuildwheel</a>
 in order to build wheels through continuous integration services. To save resources, the
 cibuildwheel wheel builders are not run by default on every single PR or commit to main.</p>
@@ -745,14 +719,14 @@ if the build was triggered by a tag to the repo that begins with <code class="do
 </section>
 </section>
 <section id="get-the-mailing-list-s-opinion">
-<span id="workflow-mailing-list"></span><h3>Get the mailing list’s opinion<a class="headerlink" href="#get-the-mailing-list-s-opinion" title="Permalink to this heading">#</a></h3>
+<span id="workflow-mailing-list"></span><h3>Get the mailing list’s opinion<a class="headerlink" href="#get-the-mailing-list-s-opinion" title="Link to this heading">#</a></h3>
 <p>If you plan a new feature or API change, it’s wisest to first email the
 NumPy <a class="reference external" href="https://mail.python.org/mailman/listinfo/numpy-discussion">mailing list</a>
 asking for comment. If you haven’t heard back in a week, it’s
 OK to ping the list again.</p>
 </section>
 <section id="asking-for-your-changes-to-be-merged-with-the-main-repo">
-<span id="asking-for-merging"></span><h3>Asking for your changes to be merged with the main repo<a class="headerlink" href="#asking-for-your-changes-to-be-merged-with-the-main-repo" title="Permalink to this heading">#</a></h3>
+<span id="asking-for-merging"></span><h3>Asking for your changes to be merged with the main repo<a class="headerlink" href="#asking-for-your-changes-to-be-merged-with-the-main-repo" title="Link to this heading">#</a></h3>
 <p>When you feel your work is finished, you can create a pull request (PR).
 If your changes involve modifications to the API or addition/modification of a
 function, add a release note to the <code class="docutils literal notranslate"><span class="pre">doc/release/upcoming_changes/</span></code>
@@ -760,7 +734,7 @@ directory, following the instructions and format in the
 <code class="docutils literal notranslate"><span class="pre">doc/release/upcoming_changes/README.rst</span></code> file.</p>
 </section>
 <section id="getting-your-pr-reviewed">
-<span id="workflow-pr-timeline"></span><h3>Getting your PR reviewed<a class="headerlink" href="#getting-your-pr-reviewed" title="Permalink to this heading">#</a></h3>
+<span id="workflow-pr-timeline"></span><h3>Getting your PR reviewed<a class="headerlink" href="#getting-your-pr-reviewed" title="Link to this heading">#</a></h3>
 <p>We review pull requests as soon as we can, typically within a week. If you get
 no review comments within two weeks, feel free to ask for feedback by
 adding a comment on your PR (this will notify maintainers).</p>
@@ -768,7 +742,7 @@ adding a comment on your PR (this will notify maintainers).</p>
 mailing list may also be useful.</p>
 </section>
 <section id="rebasing-on-main">
-<span id="id4"></span><h3>Rebasing on main<a class="headerlink" href="#rebasing-on-main" title="Permalink to this heading">#</a></h3>
+<span id="id4"></span><h3>Rebasing on main<a class="headerlink" href="#rebasing-on-main" title="Link to this heading">#</a></h3>
 <p>This updates your feature branch with changes from the upstream NumPy
 GitHub repo. If you do not absolutely need to do this, try to avoid doing
 it, except perhaps when you are finished. The first step will be to update
@@ -800,7 +774,7 @@ working on feature branches.</p>
 </div>
 </section>
 <section id="recovering-from-mess-ups">
-<span id="recovering-from-mess-up"></span><h3>Recovering from mess-ups<a class="headerlink" href="#recovering-from-mess-ups" title="Permalink to this heading">#</a></h3>
+<span id="recovering-from-mess-up"></span><h3>Recovering from mess-ups<a class="headerlink" href="#recovering-from-mess-ups" title="Link to this heading">#</a></h3>
 <p>Sometimes, you mess up merges or rebases. Luckily, in Git it is
 relatively straightforward to recover from such mistakes.</p>
 <p>If you mess up during a rebase:</p>
@@ -830,9 +804,9 @@ resolve those.</p>
 </section>
 </section>
 <section id="additional-things-you-might-want-to-do">
-<h2>Additional things you might want to do<a class="headerlink" href="#additional-things-you-might-want-to-do" title="Permalink to this heading">#</a></h2>
+<h2>Additional things you might want to do<a class="headerlink" href="#additional-things-you-might-want-to-do" title="Link to this heading">#</a></h2>
 <section id="rewriting-commit-history">
-<span id="id5"></span><h3>Rewriting commit history<a class="headerlink" href="#rewriting-commit-history" title="Permalink to this heading">#</a></h3>
+<span id="id5"></span><h3>Rewriting commit history<a class="headerlink" href="#rewriting-commit-history" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do this only for your own feature branches.</p>
@@ -912,7 +886,7 @@ message. After revising it, we get the output:</p>
 <p>If it went wrong, recovery is again possible as explained <a class="reference internal" href="#recovering-from-mess-up"><span class="std std-ref">above</span></a>.</p>
 </section>
 <section id="deleting-a-branch-on-github">
-<h3>Deleting a branch on GitHub<a class="headerlink" href="#deleting-a-branch-on-github" title="Permalink to this heading">#</a></h3>
+<h3>Deleting a branch on GitHub<a class="headerlink" href="#deleting-a-branch-on-github" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
 <span class="c1"># delete branch locally</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">D</span> <span class="n">my</span><span class="o">-</span><span class="n">unwanted</span><span class="o">-</span><span class="n">branch</span>
@@ -924,11 +898,11 @@ message. After revising it, we get the output:</p>
 <a class="reference external" href="https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely">https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely</a></p>
 </section>
 <section id="several-people-sharing-a-single-repository">
-<h3>Several people sharing a single repository<a class="headerlink" href="#several-people-sharing-a-single-repository" title="Permalink to this heading">#</a></h3>
+<h3>Several people sharing a single repository<a class="headerlink" href="#several-people-sharing-a-single-repository" title="Link to this heading">#</a></h3>
 <p>If you want to work on some stuff with other people, where you are all
 committing into the same repository, or even the same branch, then just
 share it via GitHub.</p>
-<p>First fork NumPy into your account, as from <a class="reference external" href="https://scikit-image.org/docs/stable/gitwash/forking_hell.html#forking" title="(in skimage v0.24.0)"><span>Making your own copy (fork) of scikit-image</span></a>.</p>
+<p>First fork NumPy into your account, as from <a class="reference external" href="https://scikit-image.org/docs/stable/gitwash/forking_hell.html#forking" title="(in skimage v0.25.0)"><span>Making your own copy (fork) of scikit-image</span></a>.</p>
 <p>Then, go to your forked repository github page, say
 <code class="docutils literal notranslate"><span class="pre">https://github.com/your-user-name/numpy</span></code></p>
 <p>Click on the ‘Admin’ button, and add anyone else to the repo as a
@@ -948,11 +922,11 @@ usual:</p>
 </div>
 </section>
 <section id="checkout-changes-from-an-existing-pull-request">
-<h3>Checkout changes from an existing pull request<a class="headerlink" href="#checkout-changes-from-an-existing-pull-request" title="Permalink to this heading">#</a></h3>
+<h3>Checkout changes from an existing pull request<a class="headerlink" href="#checkout-changes-from-an-existing-pull-request" title="Link to this heading">#</a></h3>
 <p>If you want to test the changes in a pull request or continue the work in a
 new pull request, the commits are to be cloned into a local branch in your
 forked repository</p>
-<p>First ensure your upstream points to the main repo, as from <a class="reference external" href="https://scikit-image.org/docs/stable/gitwash/set_up_fork.html#linking-to-upstream" title="(in skimage v0.24.0)"><span>Linking your repository to the upstream repo</span></a></p>
+<p>First ensure your upstream points to the main repo, as from <a class="reference external" href="https://scikit-image.org/docs/stable/gitwash/set_up_fork.html#linking-to-upstream" title="(in skimage v0.25.0)"><span>Linking your repository to the upstream repo</span></a></p>
 <p>Then, fetch the changes and create a local branch. Assuming <code class="docutils literal notranslate"><span class="pre">$ID</span></code> is the pull request number
 and <code class="docutils literal notranslate"><span class="pre">$BRANCHNAME</span></code> is the name of the <em>new local</em> branch you wish to create:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git fetch upstream pull/$ID/head:$BRANCHNAME
@@ -965,7 +939,7 @@ and <code class="docutils literal notranslate"><span class="pre">$BRANCHNAME</sp
 <p>You now have the changes in the pull request.</p>
 </section>
 <section id="exploring-your-repository">
-<h3>Exploring your repository<a class="headerlink" href="#exploring-your-repository" title="Permalink to this heading">#</a></h3>
+<h3>Exploring your repository<a class="headerlink" href="#exploring-your-repository" title="Link to this heading">#</a></h3>
 <p>To see a graphical representation of the repository branches and
 commits:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gitk</span> <span class="o">--</span><span class="nb">all</span>
@@ -977,7 +951,7 @@ commits:</p>
 </div>
 </section>
 <section id="backporting">
-<h3>Backporting<a class="headerlink" href="#backporting" title="Permalink to this heading">#</a></h3>
+<h3>Backporting<a class="headerlink" href="#backporting" title="Link to this heading">#</a></h3>
 <p>Backporting is the process of copying new feature/fixes committed in NumPy’s
 <code class="docutils literal notranslate"><span class="pre">main</span></code> branch back to stable release branches. To do this you make a branch
 off the branch you are backporting to, cherry pick the commits you want from
@@ -1023,7 +997,7 @@ make the pull request against main.</p></li>
 </ol>
 </section>
 <section id="pushing-changes-to-the-main-repo">
-<span id="pushing-to-main"></span><h3>Pushing changes to the main repo<a class="headerlink" href="#pushing-changes-to-the-main-repo" title="Permalink to this heading">#</a></h3>
+<span id="pushing-to-main"></span><h3>Pushing changes to the main repo<a class="headerlink" href="#pushing-changes-to-the-main-repo" title="Link to this heading">#</a></h3>
 <p><em>Requires commit rights to the main NumPy repo.</em></p>
 <p>When you have a set of “ready” changes in a feature branch ready for
 NumPy’s <code class="docutils literal notranslate"><span class="pre">main</span></code> or <code class="docutils literal notranslate"><span class="pre">maintenance</span></code> branches, you can push
@@ -1103,7 +1077,8 @@ want.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1159,8 +1134,8 @@ want.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1171,7 +1146,7 @@ want.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1180,7 +1155,7 @@ want.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1193,7 +1168,8 @@ want.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

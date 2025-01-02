@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Constants of the numpy.ma module &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Constants of the numpy.ma module &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/maskedarray.baseclass';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +68,8 @@
     <link rel="prev" title="The numpy.ma module" href="maskedarray.generic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -456,6 +428,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="arrays.ndarray.html">The N-dimensional array (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.scalars.html">Scalars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.dtypes.html">Data type objects (<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.promotion.html">Data type promotion in NumPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.nditer.html">Iterating over arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.classes.html">Standard array subclasses</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="maskedarray.html">Masked arrays</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -481,7 +454,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -489,7 +461,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -501,9 +474,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -521,10 +499,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -537,12 +511,12 @@ document.write(`
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy reference</a></li>
     
     
-    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    <li class="breadcrumb-item"><a href="arrays.html" class="nav-link">Array objects</a></li>
     
     
     <li class="breadcrumb-item"><a href="maskedarray.html" class="nav-link">Masked arrays</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Constants...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Constants of the <code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code> module</span></li>
   </ul>
 </nav>
 </div>
@@ -560,12 +534,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="constants-of-the-numpy-ma-module">
-<span id="numpy-ma-constants"></span><h1>Constants of the <a class="reference internal" href="maskedarray.generic.html#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module<a class="headerlink" href="#constants-of-the-numpy-ma-module" title="Permalink to this heading">#</a></h1>
+<span id="numpy-ma-constants"></span><h1>Constants of the <a class="reference internal" href="maskedarray.generic.html#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module<a class="headerlink" href="#constants-of-the-numpy-ma-module" title="Link to this heading">#</a></h1>
 <p>In addition to the <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a> class, the <a class="reference internal" href="maskedarray.generic.html#module-numpy.ma" title="numpy.ma"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.ma</span></code></a> module
 defines several constants.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="numpy.ma.masked">
-<span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">masked</span></span><a class="headerlink" href="#numpy.ma.masked" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">masked</span></span><a class="headerlink" href="#numpy.ma.masked" title="Link to this definition">#</a></dt>
 <dd><p>The <a class="reference internal" href="#numpy.ma.masked" title="numpy.ma.masked"><code class="xref py py-attr docutils literal notranslate"><span class="pre">masked</span></code></a> constant is a special case of <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a>,
 with a float datatype and a null shape. It is used to test whether a
 specific entry of a masked array is masked, or to mask one or several
@@ -590,7 +564,7 @@ entries of a masked array:</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="numpy.ma.nomask">
-<span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">nomask</span></span><a class="headerlink" href="#numpy.ma.nomask" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">nomask</span></span><a class="headerlink" href="#numpy.ma.nomask" title="Link to this definition">#</a></dt>
 <dd><p>Value indicating that a masked array has no invalid entry.
 <a class="reference internal" href="#numpy.ma.nomask" title="numpy.ma.nomask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">nomask</span></code></a> is used internally to speed up computations when the mask
 is not needed. It is represented internally as <code class="docutils literal notranslate"><span class="pre">np.False_</span></code>.</p>
@@ -598,7 +572,7 @@ is not needed. It is represented internally as <code class="docutils literal not
 
 <dl class="py data">
 <dt class="sig sig-object py" id="numpy.ma.masked_print_option">
-<span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">masked_print_option</span></span><a class="headerlink" href="#numpy.ma.masked_print_option" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">masked_print_option</span></span><a class="headerlink" href="#numpy.ma.masked_print_option" title="Link to this definition">#</a></dt>
 <dd><p>String used in lieu of missing data when a masked array is printed.
 By default, this string is <code class="docutils literal notranslate"><span class="pre">'--'</span></code>.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">set_display()</span></code> to change the default string.
@@ -608,10 +582,10 @@ replaces missing data with <code class="docutils literal notranslate"><span clas
 
 </section>
 <section id="the-maskedarray-class">
-<span id="maskedarray-baseclass"></span><h1>The <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a> class<a class="headerlink" href="#the-maskedarray-class" title="Permalink to this heading">#</a></h1>
+<span id="maskedarray-baseclass"></span><h1>The <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a> class<a class="headerlink" href="#the-maskedarray-class" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">MaskedArray</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ma/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ma.MaskedArray" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.ma.</span></span><span class="sig-name descname"><span class="pre">MaskedArray</span></span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/ma/__init__.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.ma.MaskedArray" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p>A subclass of <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> designed to manipulate numerical arrays with missing data.</p>
@@ -623,14 +597,14 @@ The special value <a class="reference internal" href="#numpy.ma.nomask" title="n
 <li><p>A <a class="reference internal" href="#numpy.ma.MaskedArray.fill_value" title="numpy.ma.MaskedArray.fill_value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">fill_value</span></code></a>, a value that may be used to replace the invalid entries in order to return a standard <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>.</p></li>
 </ul>
 <section id="attributes-and-properties-of-masked-arrays">
-<span id="ma-attributes"></span><h2>Attributes and properties of masked arrays<a class="headerlink" href="#attributes-and-properties-of-masked-arrays" title="Permalink to this heading">#</a></h2>
+<span id="ma-attributes"></span><h2>Attributes and properties of masked arrays<a class="headerlink" href="#attributes-and-properties-of-masked-arrays" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="arrays.ndarray.html#arrays-ndarray-attributes"><span class="std std-ref">Array Attributes</span></a></p>
 </div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.data">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.data" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.data" title="Link to this definition">#</a></dt>
 <dd><p>Returns the underlying data, as a view of the masked array.</p>
 <p>If the underlying data is a subclass of <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, it is
 returned as such.</p>
@@ -646,13 +620,13 @@ attribute.</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.mask">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.mask" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.mask" title="Link to this definition">#</a></dt>
 <dd><p>Current mask.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.recordmask">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">recordmask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.recordmask" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">recordmask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.recordmask" title="Link to this definition">#</a></dt>
 <dd><p>Get or set the mask of the array if it has no named fields. For
 structured arrays, returns a ndarray of booleans where entries are
 <code class="docutils literal notranslate"><span class="pre">True</span></code> if <strong>all</strong> the fields are masked, <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise:</p>
@@ -667,12 +641,12 @@ structured arrays, returns a ndarray of booleans where entries are
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.fill_value">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">fill_value</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.fill_value" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">fill_value</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.fill_value" title="Link to this definition">#</a></dt>
 <dd><p>The filling value of the masked array is a scalar. When setting, None
 will set to a default based on the data type.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="b10aaae1-bff0-48c3-abd1-eabae1b53b36">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b10aaae1-bff0-48c3-abd1-eabae1b53b36','af7bcd25-4a64-4000-a947-0e6f014b699e','a265317f-af2c-4d61-bbc5-e7ee1374ec92','../lite/tree/../notebooks/index.html?path=c3851ed9_a7cd_447a_ba00_481f54f1a5fa.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="e26f7815-fa7a-49d4-a869-9f2e2494be8a">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e26f7815-fa7a-49d4-a869-9f2e2494be8a','f00ca595-6a3d-461d-8df8-0b8042b792b9','25ffceba-8efa-4200-aca5-46d3dc4fecef','../lite/tree/../notebooks/index.html?path=339c9974_c348_4171_9e8b_3d9304752b03.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">dt</span> <span class="ow">in</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">complex128</span><span class="p">]:</span>
 <span class="gp">... </span>    <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">get_fill_value</span><span class="p">()</span>
@@ -699,23 +673,23 @@ will set to a default based on the data type.</p>
 </div>
 </div>
 </div>
-<div id="a265317f-af2c-4d61-bbc5-e7ee1374ec92" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b10aaae1-bff0-48c3-abd1-eabae1b53b36','a265317f-af2c-4d61-bbc5-e7ee1374ec92')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b10aaae1-bff0-48c3-abd1-eabae1b53b36','a265317f-af2c-4d61-bbc5-e7ee1374ec92')">Open In Tab</button></div><div id="af7bcd25-4a64-4000-a947-0e6f014b699e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="25ffceba-8efa-4200-aca5-46d3dc4fecef" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e26f7815-fa7a-49d4-a869-9f2e2494be8a','25ffceba-8efa-4200-aca5-46d3dc4fecef')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e26f7815-fa7a-49d4-a869-9f2e2494be8a','25ffceba-8efa-4200-aca5-46d3dc4fecef')">Open In Tab</button></div><div id="f00ca595-6a3d-461d-8df8-0b8042b792b9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.baseclass">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">baseclass</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.baseclass" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">baseclass</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.baseclass" title="Link to this definition">#</a></dt>
 <dd><p>Class of the underlying data (read-only).</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.sharedmask">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">sharedmask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.sharedmask" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">sharedmask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.sharedmask" title="Link to this definition">#</a></dt>
 <dd><p>Share status of the mask (read-only).</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="numpy.ma.MaskedArray.hardmask">
-<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">hardmask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.hardmask" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">ma.MaskedArray.</span></span><span class="sig-name descname"><span class="pre">hardmask</span></span><a class="headerlink" href="#numpy.ma.MaskedArray.hardmask" title="Link to this definition">#</a></dt>
 <dd><p>Specifies whether values can be unmasked through assignments.</p>
 <p>By default, assigning definite values to masked array entries will
 unmask them.  When <a class="reference internal" href="#numpy.ma.MaskedArray.hardmask" title="numpy.ma.MaskedArray.hardmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hardmask</span></code></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the mask will not change
@@ -728,8 +702,8 @@ through assignments.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="73eeee26-114f-476e-9ec3-6d7baefc7849">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('73eeee26-114f-476e-9ec3-6d7baefc7849','f253241f-8a3d-486f-af79-762a0bb333bc','ba9171e5-9b26-4841-800e-b8b5f799dcb9','../lite/tree/../notebooks/index.html?path=2f34cd99_a923_4e6c_a777_e7d823950fbb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="8f925cc0-623e-4db9-befb-29e9ad0070a6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8f925cc0-623e-4db9-befb-29e9ad0070a6','f812adc9-3f95-4e78-951d-340866838296','37758562-099a-4cd2-a65b-45c094d52114','../lite/tree/../notebooks/index.html?path=a434878f_a653_4b93_a3a1_87d705446c15.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span>
@@ -759,7 +733,7 @@ element:</p>
 </div>
 </div>
 </div>
-<div id="ba9171e5-9b26-4841-800e-b8b5f799dcb9" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('73eeee26-114f-476e-9ec3-6d7baefc7849','ba9171e5-9b26-4841-800e-b8b5f799dcb9')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('73eeee26-114f-476e-9ec3-6d7baefc7849','ba9171e5-9b26-4841-800e-b8b5f799dcb9')">Open In Tab</button></div><div id="f253241f-8a3d-486f-af79-762a0bb333bc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="37758562-099a-4cd2-a65b-45c094d52114" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8f925cc0-623e-4db9-befb-29e9ad0070a6','37758562-099a-4cd2-a65b-45c094d52114')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8f925cc0-623e-4db9-befb-29e9ad0070a6','37758562-099a-4cd2-a65b-45c094d52114')">Open In Tab</button></div><div id="f812adc9-3f95-4e78-951d-340866838296" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <p>As <a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a> is a subclass of <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>, a masked array also inherits all the attributes and properties of a  <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> instance.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -812,13 +786,13 @@ element:</p>
 </section>
 </section>
 <section id="maskedarray-methods">
-<h1><a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a> methods<a class="headerlink" href="#maskedarray-methods" title="Permalink to this heading">#</a></h1>
+<h1><a class="reference internal" href="#numpy.ma.MaskedArray" title="numpy.ma.MaskedArray"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaskedArray</span></code></a> methods<a class="headerlink" href="#maskedarray-methods" title="Link to this heading">#</a></h1>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="arrays.ndarray.html#array-ndarray-methods"><span class="std std-ref">Array methods</span></a></p>
 </div>
 <section id="conversion">
-<h2>Conversion<a class="headerlink" href="#conversion" title="Permalink to this heading">#</a></h2>
+<h2>Conversion<a class="headerlink" href="#conversion" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__float__.html#numpy.ma.MaskedArray.__float__" title="numpy.ma.MaskedArray.__float__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__float__</span></code></a>()</p></td>
@@ -865,7 +839,7 @@ element:</p>
 </div>
 </section>
 <section id="shape-manipulation">
-<h2>Shape manipulation<a class="headerlink" href="#shape-manipulation" title="Permalink to this heading">#</a></h2>
+<h2>Shape manipulation<a class="headerlink" href="#shape-manipulation" title="Link to this heading">#</a></h2>
 <p>For reshape, resize, and transpose, the single tuple argument may be
 replaced with <code class="docutils literal notranslate"><span class="pre">n</span></code> integers which will be interpreted as an n-tuple.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -899,7 +873,7 @@ replaced with <code class="docutils literal notranslate"><span class="pre">n</sp
 </div>
 </section>
 <section id="item-selection-and-manipulation">
-<h2>Item selection and manipulation<a class="headerlink" href="#item-selection-and-manipulation" title="Permalink to this heading">#</a></h2>
+<h2>Item selection and manipulation<a class="headerlink" href="#item-selection-and-manipulation" title="Link to this heading">#</a></h2>
 <p>For array methods that take an <code class="docutils literal notranslate"><span class="pre">axis</span></code> keyword, it defaults to None.
 If axis is None, then the array is treated as a 1-D array.
 Any other value for <code class="docutils literal notranslate"><span class="pre">axis</span></code> represents the dimension along which
@@ -946,14 +920,14 @@ the operation should proceed.</p>
 <td><p>Sort the array, in-place</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.take.html#numpy.ma.MaskedArray.take" title="numpy.ma.MaskedArray.take"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.take</span></code></a>(indices[, axis, out, mode])</p></td>
-<td><p></p></td>
+<td><p>Take elements from a masked array along an axis.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="pickling-and-copy">
-<h2>Pickling and copy<a class="headerlink" href="#pickling-and-copy" title="Permalink to this heading">#</a></h2>
+<h2>Pickling and copy<a class="headerlink" href="#pickling-and-copy" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.copy.html#numpy.ma.MaskedArray.copy" title="numpy.ma.MaskedArray.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.copy</span></code></a>([order])</p></td>
@@ -970,7 +944,7 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="calculations">
-<h2>Calculations<a class="headerlink" href="#calculations" title="Permalink to this heading">#</a></h2>
+<h2>Calculations<a class="headerlink" href="#calculations" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.all.html#numpy.ma.MaskedArray.all" title="numpy.ma.MaskedArray.all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.all</span></code></a>([axis, out, keepdims])</p></td>
@@ -1013,7 +987,7 @@ the operation should proceed.</p>
 <td><p>Return the product of the array elements over the given axis.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.ptp.html#numpy.ma.MaskedArray.ptp" title="numpy.ma.MaskedArray.ptp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.ptp</span></code></a>([axis, out, fill_value, ...])</p></td>
-<td><p>Return (maximum - minimum) along the given dimension (i.e.</p></td>
+<td><p>Return (maximum - minimum) along the given dimension (i.e. peak-to-peak value).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.round.html#numpy.ma.MaskedArray.round" title="numpy.ma.MaskedArray.round"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.round</span></code></a>([decimals, out])</p></td>
 <td><p>Return each element rounded to the given number of decimals.</p></td>
@@ -1035,9 +1009,9 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="arithmetic-and-comparison-operations">
-<h2>Arithmetic and comparison operations<a class="headerlink" href="#arithmetic-and-comparison-operations" title="Permalink to this heading">#</a></h2>
+<h2>Arithmetic and comparison operations<a class="headerlink" href="#arithmetic-and-comparison-operations" title="Link to this heading">#</a></h2>
 <section id="comparison-operators">
-<span id="index-0"></span><h3>Comparison operators:<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h3>
+<span id="index-0"></span><h3>Comparison operators:<a class="headerlink" href="#comparison-operators" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__lt__.html#numpy.ma.MaskedArray.__lt__" title="numpy.ma.MaskedArray.__lt__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__lt__</span></code></a>(other)</p></td>
@@ -1063,7 +1037,7 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="truth-value-of-an-array-bool">
-<h3>Truth value of an array (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool()</span></code></a>):<a class="headerlink" href="#truth-value-of-an-array-bool" title="Permalink to this heading">#</a></h3>
+<h3>Truth value of an array (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool()</span></code></a>):<a class="headerlink" href="#truth-value-of-an-array-bool" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__bool__.html#numpy.ma.MaskedArray.__bool__" title="numpy.ma.MaskedArray.__bool__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__bool__</span></code></a>(/)</p></td>
@@ -1074,7 +1048,7 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="arithmetic">
-<h3>Arithmetic:<a class="headerlink" href="#arithmetic" title="Permalink to this heading">#</a></h3>
+<h3>Arithmetic:<a class="headerlink" href="#arithmetic" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__abs__.html#numpy.ma.MaskedArray.__abs__" title="numpy.ma.MaskedArray.__abs__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__abs__</span></code></a>(self)</p></td>
@@ -1166,7 +1140,7 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="arithmetic-in-place">
-<h3>Arithmetic, in-place:<a class="headerlink" href="#arithmetic-in-place" title="Permalink to this heading">#</a></h3>
+<h3>Arithmetic, in-place:<a class="headerlink" href="#arithmetic-in-place" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__iadd__.html#numpy.ma.MaskedArray.__iadd__" title="numpy.ma.MaskedArray.__iadd__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__iadd__</span></code></a>(other)</p></td>
@@ -1214,7 +1188,7 @@ the operation should proceed.</p>
 </section>
 </section>
 <section id="representation">
-<h2>Representation<a class="headerlink" href="#representation" title="Permalink to this heading">#</a></h2>
+<h2>Representation<a class="headerlink" href="#representation" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__repr__.html#numpy.ma.MaskedArray.__repr__" title="numpy.ma.MaskedArray.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__repr__</span></code></a>()</p></td>
@@ -1234,15 +1208,15 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="special-methods">
-<h2>Special methods<a class="headerlink" href="#special-methods" title="Permalink to this heading">#</a></h2>
+<h2>Special methods<a class="headerlink" href="#special-methods" title="Link to this heading">#</a></h2>
 <p>For standard library functions:</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__copy__.html#numpy.ma.MaskedArray.__copy__" title="numpy.ma.MaskedArray.__copy__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__copy__</span></code></a>()</p></td>
-<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.copy" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.copy</span></code></a> is called on an array.</p></td>
+<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.copy" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.copy</span></code></a> is called on an array.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__deepcopy__.html#numpy.ma.MaskedArray.__deepcopy__" title="numpy.ma.MaskedArray.__deepcopy__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__deepcopy__</span></code></a>(memo, /)</p></td>
-<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.deepcopy" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.deepcopy</span></code></a> is called on an array.</p></td>
+<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.deepcopy" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.deepcopy</span></code></a> is called on an array.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__getstate__.html#numpy.ma.MaskedArray.__getstate__" title="numpy.ma.MaskedArray.__getstate__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__getstate__</span></code></a>()</p></td>
 <td><p>Return the internal state of the masked array, for pickling purposes.</p></td>
@@ -1287,16 +1261,16 @@ the operation should proceed.</p>
 <td><p>Delete self[key].</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.__contains__.html#numpy.ma.MaskedArray.__contains__" title="numpy.ma.MaskedArray.__contains__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.__contains__</span></code></a>(key, /)</p></td>
-<td><p>Return key in self.</p></td>
+<td><p>Return bool(key in self).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="specific-methods">
-<h2>Specific methods<a class="headerlink" href="#specific-methods" title="Permalink to this heading">#</a></h2>
+<h2>Specific methods<a class="headerlink" href="#specific-methods" title="Link to this heading">#</a></h2>
 <section id="handling-the-mask">
-<h3>Handling the mask<a class="headerlink" href="#handling-the-mask" title="Permalink to this heading">#</a></h3>
+<h3>Handling the mask<a class="headerlink" href="#handling-the-mask" title="Link to this heading">#</a></h3>
 <p>The following methods can be used to access information about the mask or to
 manipulate the mask.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -1321,7 +1295,7 @@ manipulate the mask.</p>
 </div>
 </section>
 <section id="handling-the-fill-value">
-<h3>Handling the <em class="xref py py-obj">fill_value</em><a class="headerlink" href="#handling-the-fill-value" title="Permalink to this heading">#</a></h3>
+<h3>Handling the <em class="xref py py-obj">fill_value</em><a class="headerlink" href="#handling-the-fill-value" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.get_fill_value.html#numpy.ma.MaskedArray.get_fill_value" title="numpy.ma.MaskedArray.get_fill_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.get_fill_value</span></code></a>()</p></td>
@@ -1335,7 +1309,7 @@ manipulate the mask.</p>
 </div>
 </section>
 <section id="counting-the-missing-elements">
-<h3>Counting the missing elements<a class="headerlink" href="#counting-the-missing-elements" title="Permalink to this heading">#</a></h3>
+<h3>Counting the missing elements<a class="headerlink" href="#counting-the-missing-elements" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.count.html#numpy.ma.MaskedArray.count" title="numpy.ma.MaskedArray.count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaskedArray.count</span></code></a>([axis, keepdims])</p></td>
@@ -1383,7 +1357,8 @@ manipulate the mask.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1456,8 +1431,8 @@ manipulate the mask.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1468,7 +1443,7 @@ manipulate the mask.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1477,7 +1452,7 @@ manipulate the mask.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1490,7 +1465,8 @@ manipulate the mask.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "JupyterLite",
     "appUrl": "./lab",
-    "appVersion": "0.3.0",
+    "appVersion": "0.4.5",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
@@ -10,8 +10,14 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.7af44f20e4662309de92.js",
+        "load": "static/remoteEntry.e5cda2cdb8a320dc66be.js",
         "name": "@jupyterlite/pyodide-kernel-extension"
+      },
+      {
+        "extension": "./extension",
+        "liteExtension": false,
+        "load": "static/remoteEntry.49b65ce7341bdee5c2d7.js",
+        "name": "jupyterlab-jupytext"
       },
       {
         "extension": "./extension",
@@ -300,7 +306,7 @@
     "litePluginSettings": {
       "@jupyterlite/pyodide-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=1b78ca78aa8231a4d8f2e338cd5fdc79dd29c8557e213c38e69a745747e19d81"
+          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=952179a484fad344a3a22fa8617b47985fab2c71dea8084f0d0f6a2a35a45c45"
         ]
       }
     }

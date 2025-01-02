@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>The N-dimensional array (ndarray) &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>The N-dimensional array (ndarray) &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/arrays.ndarray';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="Array objects" href="arrays.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -579,6 +550,7 @@ document.write(`
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.scalars.html">Scalars</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.dtypes.html">Data type objects (<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arrays.promotion.html">Data type promotion in NumPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.nditer.html">Iterating over arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arrays.classes.html">Standard array subclasses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maskedarray.html">Masked arrays</a></li>
@@ -595,7 +567,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -603,7 +574,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -615,9 +587,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -635,8 +612,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -651,7 +626,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="arrays.html" class="nav-link">Array objects</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">The...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">The N-dimensional array (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>)</span></li>
   </ul>
 </nav>
 </div>
@@ -669,11 +644,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="the-n-dimensional-array-ndarray">
-<span id="arrays-ndarray"></span><h1>The N-dimensional array (<a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>)<a class="headerlink" href="#the-n-dimensional-array-ndarray" title="Permalink to this heading">#</a></h1>
+<span id="arrays-ndarray"></span><h1>The N-dimensional array (<a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>)<a class="headerlink" href="#the-n-dimensional-array-ndarray" title="Link to this heading">#</a></h1>
 <p>An <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> is a (usually fixed-size) multidimensional
 container of items of the same type and size. The number of dimensions
 and items in an array is defined by its <a class="reference internal" href="generated/numpy.ndarray.shape.html#numpy.ndarray.shape" title="numpy.ndarray.shape"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shape</span></code></a>,
-which is a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of <em>N</em> non-negative integers that specify the
+which is a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of <em>N</em> non-negative integers that specify the
 sizes of each dimension. The type of items in the array is specified by
 a separate <a class="reference internal" href="arrays.dtypes.html#arrays-dtypes"><span class="std std-ref">data-type object (dtype)</span></a>, one of which
 is associated with each ndarray.</p>
@@ -685,12 +660,12 @@ and via the methods and attributes of the <a class="reference internal" href="ge
 changes made in one <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> may be visible in another. That
 is, an ndarray can be a <em>“view”</em> to another ndarray, and the data it
 is referring to is taken care of by the <em>“base”</em> ndarray. ndarrays can
-also be views to memory owned by Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">strings</span></code></a> or
-objects implementing the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#memoryview" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> or <a class="reference internal" href="arrays.interface.html#arrays-interface"><span class="std std-ref">array</span></a> interfaces.</p>
+also be views to memory owned by Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">strings</span></code></a> or
+objects implementing the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#memoryview" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">memoryview</span></code></a> or <a class="reference internal" href="arrays.interface.html#arrays-interface"><span class="std std-ref">array</span></a> interfaces.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="try_examples_outer_container docutils container" id="96158fbb-2953-4bea-b9fd-7d091cad8687">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('96158fbb-2953-4bea-b9fd-7d091cad8687','0c88f4a4-5eac-4c25-9b4d-87e3e086dc6e','7c4eb37a-98bc-4df4-b6d4-1712d7a08d69','../lite/tree/../notebooks/index.html?path=ef078146_db8e_4715_8d12_8219af1aacfc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="ee37e067-fddc-414f-8c3e-24bae0838c7e">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ee37e067-fddc-414f-8c3e-24bae0838c7e','6998902c-9f36-4a8d-86fb-a83c3c6d440e','14b28ad8-30f9-4c84-b209-269cc90a6d02','../lite/tree/../notebooks/index.html?path=fef78c66_d94a_4059_966d_eaab95077ce3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>A 2-dimensional array of size 2 x 3, composed of 4-byte integer
 elements:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -726,9 +701,9 @@ the array:</p>
 </div>
 </div>
 </div>
-<div id="7c4eb37a-98bc-4df4-b6d4-1712d7a08d69" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('96158fbb-2953-4bea-b9fd-7d091cad8687','7c4eb37a-98bc-4df4-b6d4-1712d7a08d69')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('96158fbb-2953-4bea-b9fd-7d091cad8687','7c4eb37a-98bc-4df4-b6d4-1712d7a08d69')">Open In Tab</button></div><div id="0c88f4a4-5eac-4c25-9b4d-87e3e086dc6e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="14b28ad8-30f9-4c84-b209-269cc90a6d02" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ee37e067-fddc-414f-8c3e-24bae0838c7e','14b28ad8-30f9-4c84-b209-269cc90a6d02')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ee37e067-fddc-414f-8c3e-24bae0838c7e','14b28ad8-30f9-4c84-b209-269cc90a6d02')">Open In Tab</button></div><div id="6998902c-9f36-4a8d-86fb-a83c3c6d440e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <section id="constructing-arrays">
-<h2>Constructing arrays<a class="headerlink" href="#constructing-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Constructing arrays<a class="headerlink" href="#constructing-arrays" title="Link to this heading">#</a></h2>
 <p>New arrays can be constructed using the routines detailed in
 <a class="reference internal" href="routines.array-creation.html#routines-array-creation"><span class="std std-ref">Array creation routines</span></a>, and also by using the low-level
 <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> constructor:</p>
@@ -742,7 +717,7 @@ the array:</p>
 </div>
 </section>
 <section id="indexing-arrays">
-<span id="arrays-ndarray-indexing"></span><h2>Indexing arrays<a class="headerlink" href="#indexing-arrays" title="Permalink to this heading">#</a></h2>
+<span id="arrays-ndarray-indexing"></span><h2>Indexing arrays<a class="headerlink" href="#indexing-arrays" title="Link to this heading">#</a></h2>
 <p>Arrays can be indexed using an extended Python slicing syntax,
 <code class="docutils literal notranslate"><span class="pre">array[selection]</span></code>.  Similar syntax is also used for accessing
 fields in a <a class="reference internal" href="../glossary.html#term-structured-data-type"><span class="xref std std-term">structured data type</span></a>.</p>
@@ -752,7 +727,7 @@ fields in a <a class="reference internal" href="../glossary.html#term-structured
 </div>
 </section>
 <section id="internal-memory-layout-of-an-ndarray">
-<span id="memory-layout"></span><h2>Internal memory layout of an ndarray<a class="headerlink" href="#internal-memory-layout-of-an-ndarray" title="Permalink to this heading">#</a></h2>
+<span id="memory-layout"></span><h2>Internal memory layout of an ndarray<a class="headerlink" href="#internal-memory-layout-of-an-ndarray" title="Link to this heading">#</a></h2>
 <p>An instance of class <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> consists of a contiguous
 one-dimensional segment of computer memory (owned by the array, or by
 some other object), combined with an indexing scheme that maps <em>N</em>
@@ -822,7 +797,7 @@ is automatically made.</p>
 </div>
 </section>
 <section id="array-attributes">
-<span id="arrays-ndarray-attributes"></span><h2>Array attributes<a class="headerlink" href="#array-attributes" title="Permalink to this heading">#</a></h2>
+<span id="arrays-ndarray-attributes"></span><h2>Array attributes<a class="headerlink" href="#array-attributes" title="Link to this heading">#</a></h2>
 <p>Array attributes reflect information that is intrinsic to the array
 itself. Generally, accessing an array through its attributes allows
 you to get and sometimes set intrinsic properties of the array without
@@ -830,7 +805,7 @@ creating a new array. The exposed attributes are the core parts of an
 array and only some of them can be reset meaningfully without creating
 a new array. Information on each attribute is given below.</p>
 <section id="id1">
-<h3>Memory layout<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Memory layout<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>The following attributes contain information about the memory layout
 of the array:</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -867,7 +842,7 @@ of the array:</p>
 </div>
 </section>
 <section id="data-type">
-<h3>Data type<a class="headerlink" href="#data-type" title="Permalink to this heading">#</a></h3>
+<h3>Data type<a class="headerlink" href="#data-type" title="Link to this heading">#</a></h3>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="arrays.dtypes.html#arrays-dtypes"><span class="std std-ref">Data type objects</span></a></p>
@@ -884,7 +859,7 @@ of the array:</p>
 </div>
 </section>
 <section id="other-attributes">
-<h3>Other attributes<a class="headerlink" href="#other-attributes" title="Permalink to this heading">#</a></h3>
+<h3>Other attributes<a class="headerlink" href="#other-attributes" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndarray.T.html#numpy.ndarray.T" title="numpy.ndarray.T"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.T</span></code></a></p></td>
@@ -904,7 +879,7 @@ of the array:</p>
 </div>
 </section>
 <section id="array-interface">
-<span id="arrays-ndarray-array-interface"></span><h3>Array interface<a class="headerlink" href="#array-interface" title="Permalink to this heading">#</a></h3>
+<span id="arrays-ndarray-array-interface"></span><h3>Array interface<a class="headerlink" href="#array-interface" title="Link to this heading">#</a></h3>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="arrays.interface.html#arrays-interface"><span class="std std-ref">The array interface protocol</span></a>.</p>
@@ -922,7 +897,7 @@ of the array:</p>
 </div>
 </section>
 <section id="ctypes-foreign-function-interface">
-<h3><a class="reference external" href="https://docs.python.org/3/library/ctypes.html#module-ctypes" title="(in Python v3.12)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> foreign function interface<a class="headerlink" href="#ctypes-foreign-function-interface" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="https://docs.python.org/3/library/ctypes.html#module-ctypes" title="(in Python v3.13)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctypes</span></code></a> foreign function interface<a class="headerlink" href="#ctypes-foreign-function-interface" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndarray.ctypes.html#numpy.ndarray.ctypes" title="numpy.ndarray.ctypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.ctypes</span></code></a></p></td>
@@ -934,7 +909,7 @@ of the array:</p>
 </section>
 </section>
 <section id="array-methods">
-<span id="array-ndarray-methods"></span><h2>Array methods<a class="headerlink" href="#array-methods" title="Permalink to this heading">#</a></h2>
+<span id="array-ndarray-methods"></span><h2>Array methods<a class="headerlink" href="#array-methods" title="Link to this heading">#</a></h2>
 <p>An <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> object has many methods which operate on or with
 the array in some fashion, typically returning an array result. These
 methods are briefly explained below. (Each method’s docstring has a
@@ -951,7 +926,7 @@ more complete description.)</p>
 <a class="reference internal" href="generated/numpy.sum.html#numpy.sum" title="numpy.sum"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum</span></code></a>, <a class="reference internal" href="generated/numpy.swapaxes.html#numpy.swapaxes" title="numpy.swapaxes"><code class="xref py py-func docutils literal notranslate"><span class="pre">swapaxes</span></code></a>, <a class="reference internal" href="generated/numpy.take.html#numpy.take" title="numpy.take"><code class="xref py py-func docutils literal notranslate"><span class="pre">take</span></code></a>, <a class="reference internal" href="generated/numpy.trace.html#numpy.trace" title="numpy.trace"><code class="xref py py-func docutils literal notranslate"><span class="pre">trace</span></code></a>,
 <a class="reference internal" href="generated/numpy.transpose.html#numpy.transpose" title="numpy.transpose"><code class="xref py py-func docutils literal notranslate"><span class="pre">transpose</span></code></a>, <a class="reference internal" href="generated/numpy.var.html#numpy.var" title="numpy.var"><code class="xref py py-func docutils literal notranslate"><span class="pre">var</span></code></a>.</p>
 <section id="array-conversion">
-<h3>Array conversion<a class="headerlink" href="#array-conversion" title="Permalink to this heading">#</a></h3>
+<h3>Array conversion<a class="headerlink" href="#array-conversion" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndarray.item.html#numpy.ndarray.item" title="numpy.ndarray.item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.item</span></code></a>(*args)</p></td>
@@ -1001,7 +976,7 @@ more complete description.)</p>
 </div>
 </section>
 <section id="shape-manipulation">
-<h3>Shape manipulation<a class="headerlink" href="#shape-manipulation" title="Permalink to this heading">#</a></h3>
+<h3>Shape manipulation<a class="headerlink" href="#shape-manipulation" title="Link to this heading">#</a></h3>
 <p>For reshape, resize, and transpose, the single tuple argument may be
 replaced with <code class="docutils literal notranslate"><span class="pre">n</span></code> integers which will be interpreted as an n-tuple.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -1032,7 +1007,7 @@ replaced with <code class="docutils literal notranslate"><span class="pre">n</sp
 </div>
 </section>
 <section id="item-selection-and-manipulation">
-<h3>Item selection and manipulation<a class="headerlink" href="#item-selection-and-manipulation" title="Permalink to this heading">#</a></h3>
+<h3>Item selection and manipulation<a class="headerlink" href="#item-selection-and-manipulation" title="Link to this heading">#</a></h3>
 <p>For array methods that take an <em>axis</em> keyword, it defaults to
 <em>None</em>. If axis is <em>None</em>, then the array is treated as a 1-D
 array. Any other value for <em>axis</em> represents the dimension along which
@@ -1080,7 +1055,7 @@ the operation should proceed.</p>
 </div>
 </section>
 <section id="calculation">
-<h3>Calculation<a class="headerlink" href="#calculation" title="Permalink to this heading">#</a></h3>
+<h3>Calculation<a class="headerlink" href="#calculation" title="Link to this heading">#</a></h3>
 <p id="index-4">Many of these methods take an argument named <em>axis</em>. In such cases,</p>
 <ul class="simple">
 <li><p>If <em>axis</em> is <em>None</em> (the default), the array is treated as a 1-D
@@ -1094,8 +1069,8 @@ axis (for each 1-D subarray that can be created along the given axis).</p></li>
 </ul>
 <div class="admonition-example-of-the-axis-argument admonition">
 <p class="admonition-title">Example of the <em>axis</em> argument</p>
-<div class="try_examples_outer_container docutils container" id="ed5fff2f-b536-4860-8533-af6e5bcfbc9b">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ed5fff2f-b536-4860-8533-af6e5bcfbc9b','7267089d-04c2-4998-9966-c2de59e31811','994bf2ba-d9e9-47e1-b4ad-5ebc1e11b7d5','../lite/tree/../notebooks/index.html?path=dc5a66b3_7f61_498c_8cb9_79a72d709508.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="25ce7356-927e-41d5-827b-677ab1ab6e1d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('25ce7356-927e-41d5-827b-677ab1ab6e1d','0bdbb25d-7973-46cf-a4fa-80f14d13fc78','eed9645b-9a0d-4d01-bcb4-bddbaea5faf5','../lite/tree/../notebooks/index.html?path=9f0d14cc_a4e7_4df2_9278_9f8197ff69de.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>A 3-dimensional array of size 3 x 3 x 3, summed over each of its
 three axes:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1132,7 +1107,7 @@ three axes:</p>
 </div>
 </div>
 </div>
-<div id="994bf2ba-d9e9-47e1-b4ad-5ebc1e11b7d5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ed5fff2f-b536-4860-8533-af6e5bcfbc9b','994bf2ba-d9e9-47e1-b4ad-5ebc1e11b7d5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ed5fff2f-b536-4860-8533-af6e5bcfbc9b','994bf2ba-d9e9-47e1-b4ad-5ebc1e11b7d5')">Open In Tab</button></div><div id="7267089d-04c2-4998-9966-c2de59e31811" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
+<div id="eed9645b-9a0d-4d01-bcb4-bddbaea5faf5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('25ce7356-927e-41d5-827b-677ab1ab6e1d','eed9645b-9a0d-4d01-bcb4-bddbaea5faf5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('25ce7356-927e-41d5-827b-677ab1ab6e1d','eed9645b-9a0d-4d01-bcb4-bddbaea5faf5')">Open In Tab</button></div><div id="0bdbb25d-7973-46cf-a4fa-80f14d13fc78" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></div>
 <p>The parameter <em>dtype</em> specifies the data type over which a reduction
 operation (like summing) should take place. The default reduce data
 type is the same as the data type of <em>self</em>. To avoid overflow, it can
@@ -1201,7 +1176,7 @@ be performed.</p>
 </section>
 </section>
 <section id="arithmetic-matrix-multiplication-and-comparison-operations">
-<h2>Arithmetic, matrix multiplication, and comparison operations<a class="headerlink" href="#arithmetic-matrix-multiplication-and-comparison-operations" title="Permalink to this heading">#</a></h2>
+<h2>Arithmetic, matrix multiplication, and comparison operations<a class="headerlink" href="#arithmetic-matrix-multiplication-and-comparison-operations" title="Link to this heading">#</a></h2>
 <p id="index-5">Arithmetic and comparison operations on <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarrays</span></code></a>
 are defined as element-wise operations, and generally yield
 <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a> objects as results.</p>
@@ -1248,11 +1223,11 @@ more information, see the section on <a class="reference internal" href="ufuncs.
 <p class="admonition-title">Note</p>
 <p>Truth-value testing of an array invokes
 <a class="reference internal" href="generated/numpy.ndarray.__bool__.html#numpy.ndarray.__bool__" title="numpy.ndarray.__bool__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ndarray.__bool__</span></code></a>, which raises an error if the number of
-elements in the array is larger than 1, because the truth value
+elements in the array is not 1, because the truth value
 of such arrays is ambiguous. Use <a class="reference internal" href="generated/numpy.ndarray.any.html#numpy.ndarray.any" title="numpy.ndarray.any"><code class="xref py py-meth docutils literal notranslate"><span class="pre">.any()</span></code></a> and
 <a class="reference internal" href="generated/numpy.ndarray.all.html#numpy.ndarray.all" title="numpy.ndarray.all"><code class="xref py py-meth docutils literal notranslate"><span class="pre">.all()</span></code></a> instead to be clear about what is meant
-in such cases. (If the number of elements is 0, the array evaluates
-to <code class="docutils literal notranslate"><span class="pre">False</span></code>.)</p>
+in such cases. (If you wish to check for whether an array is empty,
+use for example <code class="docutils literal notranslate"><span class="pre">.size</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>.)</p>
 </div>
 <p>Unary operations:</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -1399,15 +1374,15 @@ following <span class="target" id="index-6"></span><a class="pep reference exter
 </div>
 </section>
 <section id="special-methods">
-<h2>Special methods<a class="headerlink" href="#special-methods" title="Permalink to this heading">#</a></h2>
+<h2>Special methods<a class="headerlink" href="#special-methods" title="Link to this heading">#</a></h2>
 <p>For standard library functions:</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndarray.__copy__.html#numpy.ndarray.__copy__" title="numpy.ndarray.__copy__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.__copy__</span></code></a>()</p></td>
-<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.copy" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.copy</span></code></a> is called on an array.</p></td>
+<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.copy" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.copy</span></code></a> is called on an array.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.ndarray.__deepcopy__.html#numpy.ndarray.__deepcopy__" title="numpy.ndarray.__deepcopy__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.__deepcopy__</span></code></a>(memo, /)</p></td>
-<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.deepcopy" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.deepcopy</span></code></a> is called on an array.</p></td>
+<td><p>Used if <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.deepcopy" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">copy.deepcopy</span></code></a> is called on an array.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ndarray.__reduce__.html#numpy.ndarray.__reduce__" title="numpy.ndarray.__reduce__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.__reduce__</span></code></a>()</p></td>
 <td><p>For pickling.</p></td>
@@ -1446,13 +1421,13 @@ following <span class="target" id="index-6"></span><a class="pep reference exter
 <td><p>Set self[key] to value.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.ndarray.__contains__.html#numpy.ndarray.__contains__" title="numpy.ndarray.__contains__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray.__contains__</span></code></a>(key, /)</p></td>
-<td><p>Return key in self.</p></td>
+<td><p>Return bool(key in self).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Conversion; the operations <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int()</span></code></a>,
-<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float()</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex()</span></code></a>.
+<p>Conversion; the operations <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int()</span></code></a>,
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float()</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/functions.html#complex" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex()</span></code></a>.
 They work only on arrays that have one element in them
 and return the appropriate scalar.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -1528,7 +1503,8 @@ and return the appropriate scalar.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1579,8 +1555,8 @@ and return the appropriate scalar.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1591,7 +1567,7 @@ and return the appropriate scalar.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1600,7 +1576,7 @@ and return the appropriate scalar.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1613,7 +1589,8 @@ and return the appropriate scalar.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

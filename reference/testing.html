@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Testing guidelines &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Testing guidelines &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/testing';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="numpy.testing.overrides.get_overridable_numpy_array_functions" href="generated/numpy.testing.overrides.get_overridable_numpy_array_functions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -468,22 +439,22 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="routines.dtype.html">Data type routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.emath.html">Mathematical functions with automatic domain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.err.html">Floating point error handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.exceptions.html">Exceptions and Warnings (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.exceptions</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.fft</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.exceptions.html">Exceptions and Warnings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.functional.html">Functional programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.io.html">Input and output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.indexing.html">Indexing routines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.linalg.html">Linear algebra (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.linalg</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.linalg.html">Linear algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.logic.html">Logic functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.ma.html">Masked array operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.math.html">Mathematical functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.other.html">Miscellaneous routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.polynomials.html">Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.set.html">Set routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.sort.html">Sorting, searching, and counting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.statistics.html">Statistics</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="routines.testing.html">Test support (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.testing</span></code>)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="routines.testing.html">Test support</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.testing.assert_allclose.html">numpy.testing.assert_allclose</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.testing.assert_array_almost_equal_nulp.html">numpy.testing.assert_array_almost_equal_nulp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.testing.assert_array_max_ulp.html">numpy.testing.assert_array_max_ulp</a></li>
@@ -519,7 +490,6 @@ document.write(`
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -527,7 +497,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -539,9 +510,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -559,10 +535,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -575,12 +547,12 @@ document.write(`
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy reference</a></li>
     
     
-    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    <li class="breadcrumb-item"><a href="module_structure.html" class="nav-link">NumPy’s module structure</a></li>
     
     
-    <li class="breadcrumb-item"><a href="routines.testing.html" class="nav-link">Test support (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.testing</span></code>)</a></li>
+    <li class="breadcrumb-item"><a href="routines.testing.html" class="nav-link">Test support</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Testing guidelines</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Testing guidelines</span></li>
   </ul>
 </nav>
 </div>
@@ -598,9 +570,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="testing-guidelines">
-<span id="id1"></span><h1>Testing guidelines<a class="headerlink" href="#testing-guidelines" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Testing guidelines<a class="headerlink" href="#testing-guidelines" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Until the 1.15 release, NumPy used the <a class="reference external" href="https://nose.readthedocs.io/en/latest/">nose</a> testing framework, it now uses
 the <a class="reference external" href="https://pytest.readthedocs.io">pytest</a> framework. The older framework is still maintained in order to
 support downstream projects that use the old numpy framework, but all tests
@@ -621,10 +593,10 @@ so all of the NumPy examples shown below are also applicable to SciPy</p>
 </div>
 </section>
 <section id="testing-numpy">
-<h2>Testing NumPy<a class="headerlink" href="#testing-numpy" title="Permalink to this heading">#</a></h2>
+<h2>Testing NumPy<a class="headerlink" href="#testing-numpy" title="Link to this heading">#</a></h2>
 <p>NumPy can be tested in a number of ways, choose any way you feel comfortable.</p>
 <section id="running-tests-from-inside-python">
-<h3>Running tests from inside Python<a class="headerlink" href="#running-tests-from-inside-python" title="Permalink to this heading">#</a></h3>
+<h3>Running tests from inside Python<a class="headerlink" href="#running-tests-from-inside-python" title="Link to this heading">#</a></h3>
 <p>You can test an installed NumPy by <a class="reference internal" href="#numpy.test" title="numpy.test"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.test</span></code></a>, for example,
 To run NumPy’s full test suite, use the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
@@ -652,7 +624,7 @@ example, the <code class="docutils literal notranslate"><span class="pre">_core<
 </div>
 </section>
 <section id="running-tests-from-the-command-line">
-<h3>Running tests from the command line<a class="headerlink" href="#running-tests-from-the-command-line" title="Permalink to this heading">#</a></h3>
+<h3>Running tests from the command line<a class="headerlink" href="#running-tests-from-the-command-line" title="Link to this heading">#</a></h3>
 <p>If you want to build NumPy in order to work on NumPy itself, use the <code class="docutils literal notranslate"><span class="pre">spin</span></code>
 utility. To run NumPy’s full test suite:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ spin test -m full
@@ -665,7 +637,7 @@ utility. To run NumPy’s full test suite:</p>
 <p>For detailed info on testing, see <a class="reference internal" href="../dev/development_environment.html#testing-builds"><span class="std std-ref">Testing builds</span></a></p>
 </section>
 <section id="running-doctests">
-<h3>Running doctests<a class="headerlink" href="#running-doctests" title="Permalink to this heading">#</a></h3>
+<h3>Running doctests<a class="headerlink" href="#running-doctests" title="Link to this heading">#</a></h3>
 <p>NumPy documentation contains code examples, “doctests”. To check that the examples
 are correct, install the <code class="docutils literal notranslate"><span class="pre">scipy-doctest</span></code> package:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install scipy-doctest
@@ -680,12 +652,12 @@ $ spin check-docs -- -k &#39;det and not slogdet&#39;
 <p>Note that the doctests are not run when you use <code class="docutils literal notranslate"><span class="pre">spin</span> <span class="pre">test</span></code>.</p>
 </section>
 <section id="other-methods-of-running-tests">
-<h3>Other methods of running tests<a class="headerlink" href="#other-methods-of-running-tests" title="Permalink to this heading">#</a></h3>
+<h3>Other methods of running tests<a class="headerlink" href="#other-methods-of-running-tests" title="Link to this heading">#</a></h3>
 <p>Run tests using your favourite IDE such as <a class="reference external" href="https://code.visualstudio.com/docs/python/testing#_enable-a-test-framework">vscode</a> or <a class="reference external" href="https://www.jetbrains.com/help/pycharm/testing-your-first-python-application.html">pycharm</a></p>
 </section>
 </section>
 <section id="writing-your-own-tests">
-<h2>Writing your own tests<a class="headerlink" href="#writing-your-own-tests" title="Permalink to this heading">#</a></h2>
+<h2>Writing your own tests<a class="headerlink" href="#writing-your-own-tests" title="Link to this heading">#</a></h2>
 <p>If you are writing code that you’d like to become part of NumPy,
 please write the tests as you develop your code.
 Every Python module, extension module, or subpackage in the NumPy
@@ -738,7 +710,7 @@ output when it fails, so it should be preferred over the legacy variant
 <code class="docutils literal notranslate"><span class="pre">numpy.testing.assert_</span></code>. Whereas plain <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements are ignored
 when running Python in optimized mode with <code class="docutils literal notranslate"><span class="pre">-O</span></code>, this is not an issue when
 running tests with pytest.</p>
-<p>Similarly, the pytest functions <a class="reference external" href="https://docs.pytest.org/en/stable/reference/reference.html#pytest.raises" title="(in pytest v8.3.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pytest.raises</span></code></a> and <a class="reference external" href="https://docs.pytest.org/en/stable/reference/reference.html#pytest.warns" title="(in pytest v8.3.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pytest.warns</span></code></a>
+<p>Similarly, the pytest functions <a class="reference external" href="https://docs.pytest.org/en/stable/reference/reference.html#pytest.raises" title="(in pytest v8.3.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pytest.raises</span></code></a> and <a class="reference external" href="https://docs.pytest.org/en/stable/reference/reference.html#pytest.warns" title="(in pytest v8.3.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">pytest.warns</span></code></a>
 should be preferred over their legacy counterparts
 <a class="reference internal" href="generated/numpy.testing.assert_raises.html#numpy.testing.assert_raises" title="numpy.testing.assert_raises"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.testing.assert_raises</span></code></a> and <a class="reference internal" href="generated/numpy.testing.assert_warns.html#numpy.testing.assert_warns" title="numpy.testing.assert_warns"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.testing.assert_warns</span></code></a>,
 which are more broadly used. These versions also accept a <code class="docutils literal notranslate"><span class="pre">match</span></code>
@@ -754,7 +726,7 @@ originally written without unit tests, there are still several modules
 that don’t have tests yet. Please feel free to choose one of these
 modules and develop tests for it.</p>
 <section id="using-c-code-in-tests">
-<h3>Using C code in tests<a class="headerlink" href="#using-c-code-in-tests" title="Permalink to this heading">#</a></h3>
+<h3>Using C code in tests<a class="headerlink" href="#using-c-code-in-tests" title="Link to this heading">#</a></h3>
 <p>NumPy exposes a rich <a class="reference internal" href="c-api/index.html#c-api"><span class="std std-ref">C-API</span></a> . These are tested using c-extension
 modules written “as-if” they know nothing about the internals of NumPy, rather
 using the official C-API interfaces only. Examples of such modules are tests
@@ -764,7 +736,7 @@ Starting from version 1.21, you can also write snippets of C code in tests that
 will be compiled locally into c-extension modules and loaded into python.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.testing.extbuild.build_and_import_extension">
-<span class="sig-prename descclassname"><span class="pre">numpy.testing.extbuild.</span></span><span class="sig-name descname"><span class="pre">build_and_import_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">functions</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prologue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_dirs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">more_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.testing.extbuild.build_and_import_extension" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.testing.extbuild.</span></span><span class="sig-name descname"><span class="pre">build_and_import_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">functions</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prologue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_dirs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">more_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.testing.extbuild.build_and_import_extension" title="Link to this definition">#</a></dt>
 <dd><p>Build and imports a c-extension module <em class="xref py py-obj">modname</em> from a list of function
 fragments <em class="xref py py-obj">functions</em>.</p>
 <dl class="field-list simple">
@@ -791,8 +763,8 @@ macros.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="8123b81c-834e-4962-a75c-f9717d02270d">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8123b81c-834e-4962-a75c-f9717d02270d','01550f8d-9443-4e58-86a0-f76cfcd22293','5c02f327-be5d-4f85-8a06-19334d3e8894','../lite/tree/../notebooks/index.html?path=d7ef944d_954d_471b_b330_8a541ee54cf2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="a3000b81-4612-4b09-a113-2ffc1b0188aa">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a3000b81-4612-4b09-a113-2ffc1b0188aa','76aa96e6-f735-4f1b-8c2f-c64f11b5b7e9','3fd3a0a6-2ea5-46a6-be65-cb224de90508','../lite/tree/../notebooks/index.html?path=09d572b6_c3ae_438b_80ea_fb17fbe0ee01.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">functions</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;test_bytes&quot;</span><span class="p">,</span> <span class="s2">&quot;METH_O&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="go">    if ( !PyBytesCheck(args)) {</span>
 <span class="go">        Py_RETURN_FALSE;</span>
@@ -806,11 +778,11 @@ macros.</p>
 </div>
 </div>
 </div>
-<div id="5c02f327-be5d-4f85-8a06-19334d3e8894" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8123b81c-834e-4962-a75c-f9717d02270d','5c02f327-be5d-4f85-8a06-19334d3e8894')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8123b81c-834e-4962-a75c-f9717d02270d','5c02f327-be5d-4f85-8a06-19334d3e8894')">Open In Tab</button></div><div id="01550f8d-9443-4e58-86a0-f76cfcd22293" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="3fd3a0a6-2ea5-46a6-be65-cb224de90508" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a3000b81-4612-4b09-a113-2ffc1b0188aa','3fd3a0a6-2ea5-46a6-be65-cb224de90508')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a3000b81-4612-4b09-a113-2ffc1b0188aa','3fd3a0a6-2ea5-46a6-be65-cb224de90508')">Open In Tab</button></div><div id="76aa96e6-f735-4f1b-8c2f-c64f11b5b7e9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 </section>
 <section id="labeling-tests">
-<h3>Labeling tests<a class="headerlink" href="#labeling-tests" title="Permalink to this heading">#</a></h3>
+<h3>Labeling tests<a class="headerlink" href="#labeling-tests" title="Link to this heading">#</a></h3>
 <p>Unlabeled tests like the ones above are run in the default
 <code class="docutils literal notranslate"><span class="pre">numpy.test()</span></code> run.  If you want to label your test as slow - and
 therefore reserved for a full <code class="docutils literal notranslate"><span class="pre">numpy.test(label='full')</span></code> run, you
@@ -831,7 +803,7 @@ can label it with <code class="docutils literal notranslate"><span class="pre">p
 </div>
 </section>
 <section id="easier-setup-and-teardown-functions-methods">
-<h3>Easier setup and teardown functions / methods<a class="headerlink" href="#easier-setup-and-teardown-functions-methods" title="Permalink to this heading">#</a></h3>
+<h3>Easier setup and teardown functions / methods<a class="headerlink" href="#easier-setup-and-teardown-functions-methods" title="Link to this heading">#</a></h3>
 <p>Testing looks for module-level or class method-level setup and teardown
 functions by name; thus:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup_module</span><span class="p">():</span>
@@ -860,7 +832,7 @@ automatically via special arguments.  For example,  the special argument name
 <code class="docutils literal notranslate"><span class="pre">tmpdir</span></code> is used in test to create a temporary directory.</p>
 </section>
 <section id="parametric-tests">
-<h3>Parametric tests<a class="headerlink" href="#parametric-tests" title="Permalink to this heading">#</a></h3>
+<h3>Parametric tests<a class="headerlink" href="#parametric-tests" title="Link to this heading">#</a></h3>
 <p>One very nice feature of <code class="docutils literal notranslate"><span class="pre">pytest</span></code> is the ease of testing across a range
 of parameter values using the <code class="docutils literal notranslate"><span class="pre">pytest.mark.parametrize</span></code> decorator. For example,
 suppose you wish to test <code class="docutils literal notranslate"><span class="pre">linalg.solve</span></code> for all combinations of three
@@ -879,7 +851,7 @@ array sizes and two data types:</p>
 </div>
 </section>
 <section id="doctests">
-<h3>Doctests<a class="headerlink" href="#doctests" title="Permalink to this heading">#</a></h3>
+<h3>Doctests<a class="headerlink" href="#doctests" title="Link to this heading">#</a></h3>
 <p>Doctests are a convenient way of documenting the behavior of a function
 and allowing that behavior to be tested at the same time.  The output
 of an interactive Python session can be included in the docstring of a
@@ -899,7 +871,7 @@ in <code class="docutils literal notranslate"><span class="pre">numpy/linalg/tes
 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">numpy</span> <span class="pre">import</span> <span class="pre">linalg</span></code> has already executed.</p>
 </section>
 <section id="tests">
-<h3><code class="docutils literal notranslate"><span class="pre">tests/</span></code><a class="headerlink" href="#tests" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">tests/</span></code><a class="headerlink" href="#tests" title="Link to this heading">#</a></h3>
 <p>Rather than keeping the code and the tests in the same directory, we
 put all the tests for a given subpackage in a <code class="docutils literal notranslate"><span class="pre">tests/</span></code>
 subdirectory. For our example, if it doesn’t already exist you will
@@ -918,7 +890,7 @@ the tests interactively in the interpreter like this:</p>
 </div>
 </section>
 <section id="init-py-and-setup-py">
-<h3><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code><a class="headerlink" href="#init-py-and-setup-py" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code><a class="headerlink" href="#init-py-and-setup-py" title="Link to this heading">#</a></h3>
 <p>Usually, however, adding the <code class="docutils literal notranslate"><span class="pre">tests/</span></code> directory to the python path
 isn’t desirable. Instead it would better to invoke the test straight
 from the module <code class="docutils literal notranslate"><span class="pre">xxx</span></code>. To this end, simply place the following lines
@@ -954,9 +926,9 @@ found and run:</p>
 </section>
 </section>
 <section id="tips-tricks">
-<h2>Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permalink to this heading">#</a></h2>
+<h2>Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Link to this heading">#</a></h2>
 <section id="known-failures-skipping-tests">
-<h3>Known failures &amp; skipping tests<a class="headerlink" href="#known-failures-skipping-tests" title="Permalink to this heading">#</a></h3>
+<h3>Known failures &amp; skipping tests<a class="headerlink" href="#known-failures-skipping-tests" title="Link to this heading">#</a></h3>
 <p>Sometimes you might want to skip a test or mark it as a known failure,
 such as when the test suite is being written before the code it’s
 meant to test, or if a test only fails on a particular architecture.</p>
@@ -988,7 +960,7 @@ failing tests are marked as <code class="docutils literal notranslate"><span cla
 <span class="pre">1</span></code>).</p>
 </section>
 <section id="tests-on-random-data">
-<h3>Tests on random data<a class="headerlink" href="#tests-on-random-data" title="Permalink to this heading">#</a></h3>
+<h3>Tests on random data<a class="headerlink" href="#tests-on-random-data" title="Link to this heading">#</a></h3>
 <p>Tests on random data are good, but since test failures are meant to expose
 new bugs or regressions, a test that passes most of the time but fails
 occasionally with no code changes is not helpful. Make the random data
@@ -1004,10 +976,10 @@ failures without requiring a fixed seed, reporting <em>minimal</em> examples for
 each failure, and better-than-naive-random techniques for triggering bugs.</p>
 </section>
 <section id="documentation-for-numpy-test">
-<h3>Documentation for <code class="docutils literal notranslate"><span class="pre">numpy.test</span></code><a class="headerlink" href="#documentation-for-numpy-test" title="Permalink to this heading">#</a></h3>
+<h3>Documentation for <code class="docutils literal notranslate"><span class="pre">numpy.test</span></code><a class="headerlink" href="#documentation-for-numpy-test" title="Link to this heading">#</a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.test">
-<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fast'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_argv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doctests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">durations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.test" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fast'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_argv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doctests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">durations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.test" title="Link to this definition">#</a></dt>
 <dd><p>Pytest test runner.</p>
 <p>A test function is typically added to a package’s __init__.py like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy._pytesttester</span> <span class="kn">import</span> <span class="n">PytestTester</span>
@@ -1078,7 +1050,8 @@ suppression.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1135,8 +1108,8 @@ suppression.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1147,7 +1120,7 @@ suppression.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1156,7 +1129,7 @@ suppression.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1169,7 +1142,8 @@ suppression.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

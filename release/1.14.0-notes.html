@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy 1.14.0 Release Notes &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>NumPy 1.14.0 Release Notes &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'release/1.14.0-notes';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="NumPy 1.14.1 Release Notes" href="1.14.1-notes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -475,7 +446,14 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../release.html">Release notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2.3.0-notes.html">2.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.1-notes.html">2.2.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.0-notes.html">2.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.3-notes.html">2.1.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.2-notes.html">2.1.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.1-notes.html">2.1.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.1.0-notes.html">2.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.0.2-notes.html">2.0.2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.0.1-notes.html">2.0.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.0.0-notes.html">2.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.26.4-notes.html">1.26.4</a></li>
@@ -591,9 +569,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -611,8 +594,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -627,7 +608,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../release.html" class="nav-link">Release notes</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">NumPy...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NumPy 1.14.0 Release Notes</span></li>
   </ul>
 </nav>
 </div>
@@ -645,7 +626,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="numpy-1-14-0-release-notes">
-<h1>NumPy 1.14.0 Release Notes<a class="headerlink" href="#numpy-1-14-0-release-notes" title="Permalink to this heading">#</a></h1>
+<h1>NumPy 1.14.0 Release Notes<a class="headerlink" href="#numpy-1-14-0-release-notes" title="Link to this heading">#</a></h1>
 <p>Numpy 1.14.0 is the result of seven months of work and contains a large number
 of bug fixes and new features, along with several changes with potential
 compatibility issues. The major change that users will notice are the
@@ -660,7 +641,7 @@ designated a long term release with support for bug fixes extending through
 can be found in <a class="reference external" href="http://www.numpy.org/neps/nep-0014-dropping-python2.7-proposal.html">NEP 12</a>.</p>
 <p>This release supports Python 2.7 and 3.4 - 3.6.</p>
 <section id="highlights">
-<h2>Highlights<a class="headerlink" href="#highlights" title="Permalink to this heading">#</a></h2>
+<h2>Highlights<a class="headerlink" href="#highlights" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The <em class="xref py py-obj">np.einsum</em> function uses BLAS when possible</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">genfromtxt</span></code>, <code class="docutils literal notranslate"><span class="pre">loadtxt</span></code>, <code class="docutils literal notranslate"><span class="pre">fromregex</span></code> and <code class="docutils literal notranslate"><span class="pre">savetxt</span></code> can now handle
@@ -669,7 +650,7 @@ files with arbitrary Python supported encoding.</p></li>
 </ul>
 </section>
 <section id="new-functions">
-<h2>New functions<a class="headerlink" href="#new-functions" title="Permalink to this heading">#</a></h2>
+<h2>New functions<a class="headerlink" href="#new-functions" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">parametrize</span></code>: decorator added to numpy.testing</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chebinterpolate</span></code>: Interpolate function at Chebyshev points.</p></li>
@@ -680,7 +661,7 @@ new C-API functions useful in achieving PyPy compatibility.</p></li>
 </ul>
 </section>
 <section id="deprecations">
-<h2>Deprecations<a class="headerlink" href="#deprecations" title="Permalink to this heading">#</a></h2>
+<h2>Deprecations<a class="headerlink" href="#deprecations" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Using <code class="docutils literal notranslate"><span class="pre">np.bool_</span></code> objects in place of integers is deprecated.  Previously
 <code class="docutils literal notranslate"><span class="pre">operator.index(np.bool_)</span></code> was legal and allowed constructs such as
@@ -706,7 +687,7 @@ not compatible with PyPy.</p></li>
 </ul>
 </section>
 <section id="future-changes">
-<h2>Future Changes<a class="headerlink" href="#future-changes" title="Permalink to this heading">#</a></h2>
+<h2>Future Changes<a class="headerlink" href="#future-changes" title="Link to this heading">#</a></h2>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">np.issubdtype</span></code> will stop downcasting dtype-like arguments.
 It might be expected that <code class="docutils literal notranslate"><span class="pre">issubdtype(np.float32,</span> <span class="pre">'float64')</span></code> and
@@ -734,9 +715,9 @@ return value was mutable, which will no longer be the case. A
 </ul>
 </section>
 <section id="compatibility-notes">
-<h2>Compatibility notes<a class="headerlink" href="#compatibility-notes" title="Permalink to this heading">#</a></h2>
+<h2>Compatibility notes<a class="headerlink" href="#compatibility-notes" title="Link to this heading">#</a></h2>
 <section id="the-mask-of-a-masked-array-view-is-also-a-view-rather-than-a-copy">
-<h3>The mask of a masked array view is also a view rather than a copy<a class="headerlink" href="#the-mask-of-a-masked-array-view-is-also-a-view-rather-than-a-copy" title="Permalink to this heading">#</a></h3>
+<h3>The mask of a masked array view is also a view rather than a copy<a class="headerlink" href="#the-mask-of-a-masked-array-view-is-also-a-view-rather-than-a-copy" title="Link to this heading">#</a></h3>
 <p>There was a FutureWarning about this change in NumPy 1.11.x. In short, it is
 now the case that, when changing a view of a masked array, changes to the mask
 are propagated to the original. That was not previously the case. This change
@@ -746,7 +727,7 @@ See gh-5580 for an extended discussion. The original behavior of having a copy
 of the mask can be obtained by calling the <code class="docutils literal notranslate"><span class="pre">unshare_mask</span></code> method of the view.</p>
 </section>
 <section id="np-ma-masked-is-no-longer-writeable">
-<h3><code class="docutils literal notranslate"><span class="pre">np.ma.masked</span></code> is no longer writeable<a class="headerlink" href="#np-ma-masked-is-no-longer-writeable" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.ma.masked</span></code> is no longer writeable<a class="headerlink" href="#np-ma-masked-is-no-longer-writeable" title="Link to this heading">#</a></h3>
 <p>Attempts to mutate the <code class="docutils literal notranslate"><span class="pre">masked</span></code> constant now error, as the underlying arrays
 are marked readonly. In the past, it was possible to get away with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># emulating a function that sometimes returns np.ma.masked</span>
@@ -757,7 +738,7 @@ are marked readonly. In the past, it was possible to get away with:</p>
 </div>
 </section>
 <section id="np-ma-functions-producing-fill-value-s-have-changed">
-<h3><code class="docutils literal notranslate"><span class="pre">np.ma</span></code> functions producing <code class="docutils literal notranslate"><span class="pre">fill_value</span></code> s have changed<a class="headerlink" href="#np-ma-functions-producing-fill-value-s-have-changed" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.ma</span></code> functions producing <code class="docutils literal notranslate"><span class="pre">fill_value</span></code> s have changed<a class="headerlink" href="#np-ma-functions-producing-fill-value-s-have-changed" title="Link to this heading">#</a></h3>
 <p>Previously, <code class="docutils literal notranslate"><span class="pre">np.ma.default_fill_value</span></code> would return a 0d array, but
 <code class="docutils literal notranslate"><span class="pre">np.ma.minimum_fill_value</span></code> and <code class="docutils literal notranslate"><span class="pre">np.ma.maximum_fill_value</span></code> would return a
 tuple of the fields. Instead, all three methods return a structured <code class="docutils literal notranslate"><span class="pre">np.void</span></code>
@@ -768,7 +749,7 @@ passing a python scalar <code class="docutils literal notranslate"><span class="
 violated this assumption.</p>
 </section>
 <section id="a-flat-array-returns-non-writeable-arrays-when-a-is-non-contiguous">
-<h3><code class="docutils literal notranslate"><span class="pre">a.flat.__array__()</span></code> returns non-writeable arrays when <code class="docutils literal notranslate"><span class="pre">a</span></code> is non-contiguous<a class="headerlink" href="#a-flat-array-returns-non-writeable-arrays-when-a-is-non-contiguous" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">a.flat.__array__()</span></code> returns non-writeable arrays when <code class="docutils literal notranslate"><span class="pre">a</span></code> is non-contiguous<a class="headerlink" href="#a-flat-array-returns-non-writeable-arrays-when-a-is-non-contiguous" title="Link to this heading">#</a></h3>
 <p>The intent is that the UPDATEIFCOPY array previously returned when <code class="docutils literal notranslate"><span class="pre">a</span></code> was
 non-contiguous will be replaced by a writeable copy in the future. This
 temporary measure is aimed to notify folks who expect the underlying array be
@@ -778,25 +759,25 @@ likely places for this to be noticed is when expressions of the form
 parameter to a ufunc.</p>
 </section>
 <section id="np-tensordot-now-returns-zero-array-when-contracting-over-0-length-dimension">
-<h3><code class="docutils literal notranslate"><span class="pre">np.tensordot</span></code> now returns zero array when contracting over 0-length dimension<a class="headerlink" href="#np-tensordot-now-returns-zero-array-when-contracting-over-0-length-dimension" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.tensordot</span></code> now returns zero array when contracting over 0-length dimension<a class="headerlink" href="#np-tensordot-now-returns-zero-array-when-contracting-over-0-length-dimension" title="Link to this heading">#</a></h3>
 <p>Previously <code class="docutils literal notranslate"><span class="pre">np.tensordot</span></code> raised a ValueError when contracting over 0-length
 dimension. Now it returns a zero array, which is consistent with the behaviour
 of <code class="docutils literal notranslate"><span class="pre">np.dot</span></code> and <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code>.</p>
 </section>
 <section id="numpy-testing-reorganized">
-<h3><code class="docutils literal notranslate"><span class="pre">numpy.testing</span></code> reorganized<a class="headerlink" href="#numpy-testing-reorganized" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">numpy.testing</span></code> reorganized<a class="headerlink" href="#numpy-testing-reorganized" title="Link to this heading">#</a></h3>
 <p>This is not expected to cause problems, but possibly something has been left
 out. If you experience an unexpected import problem using <code class="docutils literal notranslate"><span class="pre">numpy.testing</span></code>
 let us know.</p>
 </section>
 <section id="np-asfarray-no-longer-accepts-non-dtypes-through-the-dtype-argument">
-<h3><code class="docutils literal notranslate"><span class="pre">np.asfarray</span></code> no longer accepts non-dtypes through the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> argument<a class="headerlink" href="#np-asfarray-no-longer-accepts-non-dtypes-through-the-dtype-argument" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.asfarray</span></code> no longer accepts non-dtypes through the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> argument<a class="headerlink" href="#np-asfarray-no-longer-accepts-non-dtypes-through-the-dtype-argument" title="Link to this heading">#</a></h3>
 <p>This previously would accept <code class="docutils literal notranslate"><span class="pre">dtype=some_array</span></code>, with the implied semantics
 of <code class="docutils literal notranslate"><span class="pre">dtype=some_array.dtype</span></code>. This was undocumented, unique across the numpy
 functions, and if used would likely correspond to a typo.</p>
 </section>
 <section id="d-np-linalg-norm-preserves-float-input-types-even-for-arbitrary-orders">
-<h3>1D <code class="docutils literal notranslate"><span class="pre">np.linalg.norm</span></code> preserves float input types, even for arbitrary orders<a class="headerlink" href="#d-np-linalg-norm-preserves-float-input-types-even-for-arbitrary-orders" title="Permalink to this heading">#</a></h3>
+<h3>1D <code class="docutils literal notranslate"><span class="pre">np.linalg.norm</span></code> preserves float input types, even for arbitrary orders<a class="headerlink" href="#d-np-linalg-norm-preserves-float-input-types-even-for-arbitrary-orders" title="Link to this heading">#</a></h3>
 <p>Previously, this would promote to <code class="docutils literal notranslate"><span class="pre">float64</span></code> when arbitrary orders were
 passed, despite not doing so under the simple cases:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f32</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
@@ -810,20 +791,20 @@ passed, despite not doing so under the simple cases:</p>
 <p>This change affects only <code class="docutils literal notranslate"><span class="pre">float32</span></code> and <code class="docutils literal notranslate"><span class="pre">float16</span></code> arrays.</p>
 </section>
 <section id="count-nonzero-arr-axis-now-counts-over-no-axes-not-all-axes">
-<h3><code class="docutils literal notranslate"><span class="pre">count_nonzero(arr,</span> <span class="pre">axis=())</span></code> now counts over no axes, not all axes<a class="headerlink" href="#count-nonzero-arr-axis-now-counts-over-no-axes-not-all-axes" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">count_nonzero(arr,</span> <span class="pre">axis=())</span></code> now counts over no axes, not all axes<a class="headerlink" href="#count-nonzero-arr-axis-now-counts-over-no-axes-not-all-axes" title="Link to this heading">#</a></h3>
 <p>Elsewhere, <code class="docutils literal notranslate"><span class="pre">axis==()</span></code> is always understood as “no axes”, but
 <em class="xref py py-obj">count_nonzero</em> had a special case to treat this as “all axes”. This was
 inconsistent and surprising. The correct way to count over all axes has always
 been to pass <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">==</span> <span class="pre">None</span></code>.</p>
 </section>
 <section id="init-py-files-added-to-test-directories">
-<h3><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files added to test directories<a class="headerlink" href="#init-py-files-added-to-test-directories" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> files added to test directories<a class="headerlink" href="#init-py-files-added-to-test-directories" title="Link to this heading">#</a></h3>
 <p>This is for pytest compatibility in the case of duplicate test file names in
 the different directories. As a result, <code class="docutils literal notranslate"><span class="pre">run_module_suite</span></code> no longer works,
 i.e., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">&lt;path-to-test-file&gt;</span></code> results in an error.</p>
 </section>
 <section id="astype-bool-on-unstructured-void-arrays-now-calls-bool-on-each-element">
-<h3><code class="docutils literal notranslate"><span class="pre">.astype(bool)</span></code> on unstructured void arrays now calls <code class="docutils literal notranslate"><span class="pre">bool</span></code> on each element<a class="headerlink" href="#astype-bool-on-unstructured-void-arrays-now-calls-bool-on-each-element" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">.astype(bool)</span></code> on unstructured void arrays now calls <code class="docutils literal notranslate"><span class="pre">bool</span></code> on each element<a class="headerlink" href="#astype-bool-on-unstructured-void-arrays-now-calls-bool-on-each-element" title="Link to this heading">#</a></h3>
 <p>On Python 2, <code class="docutils literal notranslate"><span class="pre">void_array.astype(bool)</span></code> would always return an array of
 <code class="docutils literal notranslate"><span class="pre">True</span></code>, unless the dtype is <code class="docutils literal notranslate"><span class="pre">V0</span></code>. On Python 3, this operation would usually
 crash. Going forwards, <em class="xref py py-obj">astype</em> matches the behavior of <code class="docutils literal notranslate"><span class="pre">bool(np.void)</span></code>,
@@ -831,7 +812,7 @@ considering a buffer of all zeros as false, and anything else as true.
 Checks for <code class="docutils literal notranslate"><span class="pre">V0</span></code> can still be done with <code class="docutils literal notranslate"><span class="pre">arr.dtype.itemsize</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p>
 </section>
 <section id="maskedarray-squeeze-never-returns-np-ma-masked">
-<h3><code class="docutils literal notranslate"><span class="pre">MaskedArray.squeeze</span></code> never returns <code class="docutils literal notranslate"><span class="pre">np.ma.masked</span></code><a class="headerlink" href="#maskedarray-squeeze-never-returns-np-ma-masked" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">MaskedArray.squeeze</span></code> never returns <code class="docutils literal notranslate"><span class="pre">np.ma.masked</span></code><a class="headerlink" href="#maskedarray-squeeze-never-returns-np-ma-masked" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.squeeze</span></code> is documented as returning a view, but the masked variant would
 sometimes return <code class="docutils literal notranslate"><span class="pre">masked</span></code>, which is not a view. This has been fixed, so that
 the result is always a view on the original masked array.
@@ -839,30 +820,30 @@ This breaks any code that used <code class="docutils literal notranslate"><span 
 fixes code that writes to the result of <em class="xref py py-obj">squeeze()</em>.</p>
 </section>
 <section id="renamed-first-parameter-of-can-cast-from-from-to-from">
-<h3>Renamed first parameter of <code class="docutils literal notranslate"><span class="pre">can_cast</span></code> from <code class="docutils literal notranslate"><span class="pre">from</span></code> to <code class="docutils literal notranslate"><span class="pre">from_</span></code><a class="headerlink" href="#renamed-first-parameter-of-can-cast-from-from-to-from" title="Permalink to this heading">#</a></h3>
+<h3>Renamed first parameter of <code class="docutils literal notranslate"><span class="pre">can_cast</span></code> from <code class="docutils literal notranslate"><span class="pre">from</span></code> to <code class="docutils literal notranslate"><span class="pre">from_</span></code><a class="headerlink" href="#renamed-first-parameter-of-can-cast-from-from-to-from" title="Link to this heading">#</a></h3>
 <p>The previous parameter name <code class="docutils literal notranslate"><span class="pre">from</span></code> is a reserved keyword in Python, which made
 it difficult to pass the argument by name. This has been fixed by renaming
 the parameter to <code class="docutils literal notranslate"><span class="pre">from_</span></code>.</p>
 </section>
 <section id="isnat-raises-typeerror-when-passed-wrong-type">
-<h3><code class="docutils literal notranslate"><span class="pre">isnat</span></code> raises <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> when passed wrong type<a class="headerlink" href="#isnat-raises-typeerror-when-passed-wrong-type" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">isnat</span></code> raises <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> when passed wrong type<a class="headerlink" href="#isnat-raises-typeerror-when-passed-wrong-type" title="Link to this heading">#</a></h3>
 <p>The ufunc <code class="docutils literal notranslate"><span class="pre">isnat</span></code> used to raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> when it was not passed
 variables of type <code class="docutils literal notranslate"><span class="pre">datetime</span></code> or <code class="docutils literal notranslate"><span class="pre">timedelta</span></code>. This has been changed to
 raising a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
 </section>
 <section id="dtype-getitem-raises-typeerror-when-passed-wrong-type">
-<h3><code class="docutils literal notranslate"><span class="pre">dtype.__getitem__</span></code> raises <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> when passed wrong type<a class="headerlink" href="#dtype-getitem-raises-typeerror-when-passed-wrong-type" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">dtype.__getitem__</span></code> raises <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> when passed wrong type<a class="headerlink" href="#dtype-getitem-raises-typeerror-when-passed-wrong-type" title="Link to this heading">#</a></h3>
 <p>When indexed with a float, the dtype object used to raise <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
 </section>
 <section id="user-defined-types-now-need-to-implement-str-and-repr">
-<h3>User-defined types now need to implement <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#user-defined-types-now-need-to-implement-str-and-repr" title="Permalink to this heading">#</a></h3>
+<h3>User-defined types now need to implement <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code><a class="headerlink" href="#user-defined-types-now-need-to-implement-str-and-repr" title="Link to this heading">#</a></h3>
 <p>Previously, user-defined types could fall back to a default implementation of
 <code class="docutils literal notranslate"><span class="pre">__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> implemented in numpy, but this has now been
 removed. Now user-defined types will fall back to the python default
 <code class="docutils literal notranslate"><span class="pre">object.__str__</span></code> and <code class="docutils literal notranslate"><span class="pre">object.__repr__</span></code>.</p>
 </section>
 <section id="many-changes-to-array-printing-disableable-with-the-new-legacy-printing-mode">
-<h3>Many changes to array printing, disableable with the new “legacy” printing mode<a class="headerlink" href="#many-changes-to-array-printing-disableable-with-the-new-legacy-printing-mode" title="Permalink to this heading">#</a></h3>
+<h3>Many changes to array printing, disableable with the new “legacy” printing mode<a class="headerlink" href="#many-changes-to-array-printing-disableable-with-the-new-legacy-printing-mode" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">repr</span></code> of ndarrays and numpy scalars have been changed in
 a variety of ways. These changes are likely to break downstream user’s
 doctests.</p>
@@ -943,9 +924,9 @@ something like:</p>
 </section>
 </section>
 <section id="c-api-changes">
-<h2>C API changes<a class="headerlink" href="#c-api-changes" title="Permalink to this heading">#</a></h2>
+<h2>C API changes<a class="headerlink" href="#c-api-changes" title="Link to this heading">#</a></h2>
 <section id="pypy-compatible-alternative-to-updateifcopy-arrays">
-<h3>PyPy compatible alternative to <code class="docutils literal notranslate"><span class="pre">UPDATEIFCOPY</span></code> arrays<a class="headerlink" href="#pypy-compatible-alternative-to-updateifcopy-arrays" title="Permalink to this heading">#</a></h3>
+<h3>PyPy compatible alternative to <code class="docutils literal notranslate"><span class="pre">UPDATEIFCOPY</span></code> arrays<a class="headerlink" href="#pypy-compatible-alternative-to-updateifcopy-arrays" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">UPDATEIFCOPY</span></code> arrays are contiguous copies of existing arrays, possibly with
 different dimensions, whose contents are copied back to the original array when
 their refcount goes to zero and they are deallocated. Because PyPy does not use
@@ -969,9 +950,9 @@ in the <a class="reference external" href="https://github.com/numpy/numpy/blob/m
 </section>
 </section>
 <section id="new-features">
-<h2>New Features<a class="headerlink" href="#new-features" title="Permalink to this heading">#</a></h2>
+<h2>New Features<a class="headerlink" href="#new-features" title="Link to this heading">#</a></h2>
 <section id="encoding-argument-for-text-io-functions">
-<h3>Encoding argument for text IO functions<a class="headerlink" href="#encoding-argument-for-text-io-functions" title="Permalink to this heading">#</a></h3>
+<h3>Encoding argument for text IO functions<a class="headerlink" href="#encoding-argument-for-text-io-functions" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">genfromtxt</span></code>, <code class="docutils literal notranslate"><span class="pre">loadtxt</span></code>, <code class="docutils literal notranslate"><span class="pre">fromregex</span></code> and <code class="docutils literal notranslate"><span class="pre">savetxt</span></code> can now handle files
 with arbitrary encoding supported by Python via the encoding argument.
 For backward compatibility the argument defaults to the special <code class="docutils literal notranslate"><span class="pre">bytes</span></code> value
@@ -982,7 +963,7 @@ functions to real text IO so one receives unicode strings instead of bytes in
 the resulting arrays.</p>
 </section>
 <section id="external-nose-plugins-are-usable-by-numpy-testing-tester">
-<h3>External <code class="docutils literal notranslate"><span class="pre">nose</span></code> plugins are usable by <code class="docutils literal notranslate"><span class="pre">numpy.testing.Tester</span></code><a class="headerlink" href="#external-nose-plugins-are-usable-by-numpy-testing-tester" title="Permalink to this heading">#</a></h3>
+<h3>External <code class="docutils literal notranslate"><span class="pre">nose</span></code> plugins are usable by <code class="docutils literal notranslate"><span class="pre">numpy.testing.Tester</span></code><a class="headerlink" href="#external-nose-plugins-are-usable-by-numpy-testing-tester" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">numpy.testing.Tester</span></code> is now aware of <code class="docutils literal notranslate"><span class="pre">nose</span></code> plugins that are outside the
 <code class="docutils literal notranslate"><span class="pre">nose</span></code> built-in ones.  This allows using, for example, <code class="docutils literal notranslate"><span class="pre">nose-timer</span></code> like
 so:  <code class="docutils literal notranslate"><span class="pre">np.test(extra_argv=['--with-timer',</span> <span class="pre">'--timer-top-n',</span> <span class="pre">'20'])</span></code> to
@@ -991,7 +972,7 @@ also added to <code class="docutils literal notranslate"><span class="pre">Teste
 slowest tests.</p>
 </section>
 <section id="parametrize-decorator-added-to-numpy-testing">
-<h3><code class="docutils literal notranslate"><span class="pre">parametrize</span></code> decorator added to <code class="docutils literal notranslate"><span class="pre">numpy.testing</span></code><a class="headerlink" href="#parametrize-decorator-added-to-numpy-testing" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">parametrize</span></code> decorator added to <code class="docutils literal notranslate"><span class="pre">numpy.testing</span></code><a class="headerlink" href="#parametrize-decorator-added-to-numpy-testing" title="Link to this heading">#</a></h3>
 <p>A basic <code class="docutils literal notranslate"><span class="pre">parametrize</span></code> decorator is now available in <code class="docutils literal notranslate"><span class="pre">numpy.testing</span></code>. It is
 intended to allow rewriting yield based tests that have been deprecated in
 pytest so as to facilitate the transition to pytest in the future. The nose
@@ -1003,19 +984,19 @@ not substitute variable names. Even so, it should be adequate to rewrite the
 NumPy tests.</p>
 </section>
 <section id="chebinterpolate-function-added-to-numpy-polynomial-chebyshev">
-<h3><code class="docutils literal notranslate"><span class="pre">chebinterpolate</span></code> function added to <code class="docutils literal notranslate"><span class="pre">numpy.polynomial.chebyshev</span></code><a class="headerlink" href="#chebinterpolate-function-added-to-numpy-polynomial-chebyshev" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">chebinterpolate</span></code> function added to <code class="docutils literal notranslate"><span class="pre">numpy.polynomial.chebyshev</span></code><a class="headerlink" href="#chebinterpolate-function-added-to-numpy-polynomial-chebyshev" title="Link to this heading">#</a></h3>
 <p>The new <code class="docutils literal notranslate"><span class="pre">chebinterpolate</span></code> function interpolates a given function at the
 Chebyshev points of the first kind. A new <code class="docutils literal notranslate"><span class="pre">Chebyshev.interpolate</span></code> class
 method adds support for interpolation over arbitrary intervals using the scaled
 and shifted Chebyshev points of the first kind.</p>
 </section>
 <section id="support-for-reading-lzma-compressed-text-files-in-python-3">
-<h3>Support for reading lzma compressed text files in Python 3<a class="headerlink" href="#support-for-reading-lzma-compressed-text-files-in-python-3" title="Permalink to this heading">#</a></h3>
+<h3>Support for reading lzma compressed text files in Python 3<a class="headerlink" href="#support-for-reading-lzma-compressed-text-files-in-python-3" title="Link to this heading">#</a></h3>
 <p>With Python versions containing the <code class="docutils literal notranslate"><span class="pre">lzma</span></code> module the text IO functions can
 now transparently read from files with <code class="docutils literal notranslate"><span class="pre">xz</span></code> or <code class="docutils literal notranslate"><span class="pre">lzma</span></code> extension.</p>
 </section>
 <section id="sign-option-added-to-np-setprintoptions-and-np-array2string">
-<h3><code class="docutils literal notranslate"><span class="pre">sign</span></code> option added to <code class="docutils literal notranslate"><span class="pre">np.setprintoptions</span></code> and <code class="docutils literal notranslate"><span class="pre">np.array2string</span></code><a class="headerlink" href="#sign-option-added-to-np-setprintoptions-and-np-array2string" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">sign</span></code> option added to <code class="docutils literal notranslate"><span class="pre">np.setprintoptions</span></code> and <code class="docutils literal notranslate"><span class="pre">np.array2string</span></code><a class="headerlink" href="#sign-option-added-to-np-setprintoptions-and-np-array2string" title="Link to this heading">#</a></h3>
 <p>This option controls printing of the sign of floating-point types, and may be
 one of the characters ‘-’, ‘+’ or ‘ ‘. With ‘+’ numpy always prints the sign of
 positive values, with ‘ ‘ it always prints a space (whitespace character) in
@@ -1026,23 +1007,23 @@ behavior can be obtained in 1.13 “legacy” printing mode, see compatibility
 notes above.</p>
 </section>
 <section id="hermitian-option-added-to-np-linalg-matrix-rank">
-<h3><code class="docutils literal notranslate"><span class="pre">hermitian</span></code> option added to``np.linalg.matrix_rank``<a class="headerlink" href="#hermitian-option-added-to-np-linalg-matrix-rank" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">hermitian</span></code> option added to``np.linalg.matrix_rank``<a class="headerlink" href="#hermitian-option-added-to-np-linalg-matrix-rank" title="Link to this heading">#</a></h3>
 <p>The new <code class="docutils literal notranslate"><span class="pre">hermitian</span></code> option allows choosing between standard SVD based matrix
 rank calculation and the more efficient eigenvalue based method for
 symmetric/hermitian matrices.</p>
 </section>
 <section id="threshold-and-edgeitems-options-added-to-np-array2string">
-<h3><code class="docutils literal notranslate"><span class="pre">threshold</span></code> and <code class="docutils literal notranslate"><span class="pre">edgeitems</span></code> options added to <code class="docutils literal notranslate"><span class="pre">np.array2string</span></code><a class="headerlink" href="#threshold-and-edgeitems-options-added-to-np-array2string" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">threshold</span></code> and <code class="docutils literal notranslate"><span class="pre">edgeitems</span></code> options added to <code class="docutils literal notranslate"><span class="pre">np.array2string</span></code><a class="headerlink" href="#threshold-and-edgeitems-options-added-to-np-array2string" title="Link to this heading">#</a></h3>
 <p>These options could previously be controlled using <code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code>, but
 now can be changed on a per-call basis as arguments to <code class="docutils literal notranslate"><span class="pre">np.array2string</span></code>.</p>
 </section>
 <section id="concatenate-and-stack-gained-an-out-argument">
-<h3><code class="docutils literal notranslate"><span class="pre">concatenate</span></code> and <code class="docutils literal notranslate"><span class="pre">stack</span></code> gained an <code class="docutils literal notranslate"><span class="pre">out</span></code> argument<a class="headerlink" href="#concatenate-and-stack-gained-an-out-argument" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">concatenate</span></code> and <code class="docutils literal notranslate"><span class="pre">stack</span></code> gained an <code class="docutils literal notranslate"><span class="pre">out</span></code> argument<a class="headerlink" href="#concatenate-and-stack-gained-an-out-argument" title="Link to this heading">#</a></h3>
 <p>A preallocated buffer of the desired dtype can now be used for the output of
 these functions.</p>
 </section>
 <section id="support-for-pgi-flang-compiler-on-windows">
-<h3>Support for PGI flang compiler on Windows<a class="headerlink" href="#support-for-pgi-flang-compiler-on-windows" title="Permalink to this heading">#</a></h3>
+<h3>Support for PGI flang compiler on Windows<a class="headerlink" href="#support-for-pgi-flang-compiler-on-windows" title="Link to this heading">#</a></h3>
 <p>The PGI flang compiler is a Fortran front end for LLVM released by NVIDIA under
 the Apache 2 license. It can be invoked by</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span> <span class="o">--</span><span class="n">compiler</span><span class="o">=</span><span class="n">clang</span> <span class="o">--</span><span class="n">fcompiler</span><span class="o">=</span><span class="n">flang</span> <span class="n">install</span>
@@ -1053,32 +1034,32 @@ using it will be appreciated.</p>
 </section>
 </section>
 <section id="improvements">
-<h2>Improvements<a class="headerlink" href="#improvements" title="Permalink to this heading">#</a></h2>
+<h2>Improvements<a class="headerlink" href="#improvements" title="Link to this heading">#</a></h2>
 <section id="numerator-degrees-of-freedom-in-random-noncentral-f-need-only-be-positive">
-<h3>Numerator degrees of freedom in <code class="docutils literal notranslate"><span class="pre">random.noncentral_f</span></code> need only be positive.<a class="headerlink" href="#numerator-degrees-of-freedom-in-random-noncentral-f-need-only-be-positive" title="Permalink to this heading">#</a></h3>
+<h3>Numerator degrees of freedom in <code class="docutils literal notranslate"><span class="pre">random.noncentral_f</span></code> need only be positive.<a class="headerlink" href="#numerator-degrees-of-freedom-in-random-noncentral-f-need-only-be-positive" title="Link to this heading">#</a></h3>
 <p>Prior to NumPy 1.14.0, the numerator degrees of freedom needed to be &gt; 1, but
 the distribution is valid for values &gt; 0, which is the new requirement.</p>
 </section>
 <section id="the-gil-is-released-for-all-np-einsum-variations">
-<h3>The GIL is released for all <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code> variations<a class="headerlink" href="#the-gil-is-released-for-all-np-einsum-variations" title="Permalink to this heading">#</a></h3>
+<h3>The GIL is released for all <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code> variations<a class="headerlink" href="#the-gil-is-released-for-all-np-einsum-variations" title="Link to this heading">#</a></h3>
 <p>Some specific loop structures which have an accelerated loop version
 did not release the GIL prior to NumPy 1.14.0.  This oversight has been
 fixed.</p>
 </section>
 <section id="the-np-einsum-function-will-use-blas-when-possible-and-optimize-by-default">
-<h3>The <em class="xref py py-obj">np.einsum</em> function will use BLAS when possible and optimize by default<a class="headerlink" href="#the-np-einsum-function-will-use-blas-when-possible-and-optimize-by-default" title="Permalink to this heading">#</a></h3>
+<h3>The <em class="xref py py-obj">np.einsum</em> function will use BLAS when possible and optimize by default<a class="headerlink" href="#the-np-einsum-function-will-use-blas-when-possible-and-optimize-by-default" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code> function will now call <code class="docutils literal notranslate"><span class="pre">np.tensordot</span></code> when appropriate.
 Because <code class="docutils literal notranslate"><span class="pre">np.tensordot</span></code> uses BLAS when possible, that will speed up execution.
 By default, <code class="docutils literal notranslate"><span class="pre">np.einsum</span></code> will also attempt optimization as the overhead is
 small relative to the potential improvement in speed.</p>
 </section>
 <section id="f2py-now-handles-arrays-of-dimension-0">
-<h3><code class="docutils literal notranslate"><span class="pre">f2py</span></code> now handles arrays of dimension 0<a class="headerlink" href="#f2py-now-handles-arrays-of-dimension-0" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">f2py</span></code> now handles arrays of dimension 0<a class="headerlink" href="#f2py-now-handles-arrays-of-dimension-0" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">f2py</span></code> now allows for the allocation of arrays of dimension 0. This allows
 for more consistent handling of corner cases downstream.</p>
 </section>
 <section id="numpy-distutils-supports-using-msvc-and-mingw64-gfortran-together">
-<h3><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> supports using MSVC and mingw64-gfortran together<a class="headerlink" href="#numpy-distutils-supports-using-msvc-and-mingw64-gfortran-together" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> supports using MSVC and mingw64-gfortran together<a class="headerlink" href="#numpy-distutils-supports-using-msvc-and-mingw64-gfortran-together" title="Link to this heading">#</a></h3>
 <p>Numpy distutils now supports using Mingw64 gfortran and MSVC compilers
 together. This enables the production of Python extension modules on Windows
 containing Fortran code while retaining compatibility with the
@@ -1091,11 +1072,11 @@ supported; by default a gfortran compatible static archive
 <code class="docutils literal notranslate"><span class="pre">openblas.a</span></code> is looked for.</p>
 </section>
 <section id="np-linalg-pinv-now-works-on-stacked-matrices">
-<h3><code class="docutils literal notranslate"><span class="pre">np.linalg.pinv</span></code> now works on stacked matrices<a class="headerlink" href="#np-linalg-pinv-now-works-on-stacked-matrices" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.linalg.pinv</span></code> now works on stacked matrices<a class="headerlink" href="#np-linalg-pinv-now-works-on-stacked-matrices" title="Link to this heading">#</a></h3>
 <p>Previously it was limited to a single 2d array.</p>
 </section>
 <section id="numpy-save-aligns-data-to-64-bytes-instead-of-16">
-<h3><code class="docutils literal notranslate"><span class="pre">numpy.save</span></code> aligns data to 64 bytes instead of 16<a class="headerlink" href="#numpy-save-aligns-data-to-64-bytes-instead-of-16" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">numpy.save</span></code> aligns data to 64 bytes instead of 16<a class="headerlink" href="#numpy-save-aligns-data-to-64-bytes-instead-of-16" title="Link to this heading">#</a></h3>
 <p>Saving NumPy arrays in the <code class="docutils literal notranslate"><span class="pre">npy</span></code> format with <code class="docutils literal notranslate"><span class="pre">numpy.save</span></code> inserts
 padding before the array data to align it at 64 bytes.  Previously
 this was only 16 bytes (and sometimes less due to a bug in the code
@@ -1106,12 +1087,12 @@ programs which open them with <code class="docutils literal notranslate"><span c
 <code class="docutils literal notranslate"><span class="pre">mmap</span></code> offset must be a multiple of the page size.</p>
 </section>
 <section id="npz-files-now-can-be-written-without-using-temporary-files">
-<h3>NPZ files now can be written without using temporary files<a class="headerlink" href="#npz-files-now-can-be-written-without-using-temporary-files" title="Permalink to this heading">#</a></h3>
+<h3>NPZ files now can be written without using temporary files<a class="headerlink" href="#npz-files-now-can-be-written-without-using-temporary-files" title="Link to this heading">#</a></h3>
 <p>In Python 3.6+ <code class="docutils literal notranslate"><span class="pre">numpy.savez</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy.savez_compressed</span></code> now write
 directly to a ZIP file, without creating intermediate temporary files.</p>
 </section>
 <section id="better-support-for-empty-structured-and-string-types">
-<h3>Better support for empty structured and string types<a class="headerlink" href="#better-support-for-empty-structured-and-string-types" title="Permalink to this heading">#</a></h3>
+<h3>Better support for empty structured and string types<a class="headerlink" href="#better-support-for-empty-structured-and-string-types" title="Link to this heading">#</a></h3>
 <p>Structured types can contain zero fields, and string dtypes can contain zero
 characters. Zero-length strings still cannot be created directly, and must be
 constructed through structured dtypes:</p>
@@ -1131,12 +1112,12 @@ now supported for these arrays:</p>
 </div></blockquote>
 </section>
 <section id="support-for-decimal-decimal-in-np-lib-financial">
-<h3>Support for <code class="docutils literal notranslate"><span class="pre">decimal.Decimal</span></code> in <code class="docutils literal notranslate"><span class="pre">np.lib.financial</span></code><a class="headerlink" href="#support-for-decimal-decimal-in-np-lib-financial" title="Permalink to this heading">#</a></h3>
+<h3>Support for <code class="docutils literal notranslate"><span class="pre">decimal.Decimal</span></code> in <code class="docutils literal notranslate"><span class="pre">np.lib.financial</span></code><a class="headerlink" href="#support-for-decimal-decimal-in-np-lib-financial" title="Link to this heading">#</a></h3>
 <p>Unless otherwise stated all functions within the <code class="docutils literal notranslate"><span class="pre">financial</span></code> package now
 support using the <code class="docutils literal notranslate"><span class="pre">decimal.Decimal</span></code> built-in type.</p>
 </section>
 <section id="float-printing-now-uses-dragon4-algorithm-for-shortest-decimal-representation">
-<h3>Float printing now uses “dragon4” algorithm for shortest decimal representation<a class="headerlink" href="#float-printing-now-uses-dragon4-algorithm-for-shortest-decimal-representation" title="Permalink to this heading">#</a></h3>
+<h3>Float printing now uses “dragon4” algorithm for shortest decimal representation<a class="headerlink" href="#float-printing-now-uses-dragon4-algorithm-for-shortest-decimal-representation" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">repr</span></code> of floating-point values (16, 32, 64 and 128 bit) are
 now printed to give the shortest decimal representation which uniquely
 identifies the value from others of the same type. Previously this was only
@@ -1164,28 +1145,28 @@ both be replaced by <code class="docutils literal notranslate"><span class="pre"
 <code class="docutils literal notranslate"><span class="pre">LongComplexFormat</span></code> should be replaced by <code class="docutils literal notranslate"><span class="pre">ComplexFloatingFormat</span></code>.</p>
 </section>
 <section id="void-datatype-elements-are-now-printed-in-hex-notation">
-<h3><code class="docutils literal notranslate"><span class="pre">void</span></code> datatype elements are now printed in hex notation<a class="headerlink" href="#void-datatype-elements-are-now-printed-in-hex-notation" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">void</span></code> datatype elements are now printed in hex notation<a class="headerlink" href="#void-datatype-elements-are-now-printed-in-hex-notation" title="Link to this heading">#</a></h3>
 <p>A hex representation compatible with the python <code class="docutils literal notranslate"><span class="pre">bytes</span></code> type is now printed
 for unstructured <code class="docutils literal notranslate"><span class="pre">np.void</span></code> elements, e.g., <code class="docutils literal notranslate"><span class="pre">V4</span></code> datatype. Previously, in
 python2 the raw void data of the element was printed to stdout, or in python3
 the integer byte values were shown.</p>
 </section>
 <section id="printing-style-for-void-datatypes-is-now-independently-customizable">
-<h3>printing style for <code class="docutils literal notranslate"><span class="pre">void</span></code> datatypes is now independently customizable<a class="headerlink" href="#printing-style-for-void-datatypes-is-now-independently-customizable" title="Permalink to this heading">#</a></h3>
+<h3>printing style for <code class="docutils literal notranslate"><span class="pre">void</span></code> datatypes is now independently customizable<a class="headerlink" href="#printing-style-for-void-datatypes-is-now-independently-customizable" title="Link to this heading">#</a></h3>
 <p>The printing style of <code class="docutils literal notranslate"><span class="pre">np.void</span></code> arrays is now independently customizable
 using the <code class="docutils literal notranslate"><span class="pre">formatter</span></code> argument to <code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code>, using the
 <code class="docutils literal notranslate"><span class="pre">'void'</span></code> key, instead of the catch-all <code class="docutils literal notranslate"><span class="pre">numpystr</span></code> key as before.</p>
 </section>
 <section id="reduced-memory-usage-of-np-loadtxt">
-<h3>Reduced memory usage of <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code><a class="headerlink" href="#reduced-memory-usage-of-np-loadtxt" title="Permalink to this heading">#</a></h3>
+<h3>Reduced memory usage of <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code><a class="headerlink" href="#reduced-memory-usage-of-np-loadtxt" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code> now reads files in chunks instead of all at once which decreases
 its memory usage significantly for large files.</p>
 </section>
 </section>
 <section id="changes">
-<h2>Changes<a class="headerlink" href="#changes" title="Permalink to this heading">#</a></h2>
+<h2>Changes<a class="headerlink" href="#changes" title="Link to this heading">#</a></h2>
 <section id="multiple-field-indexing-assignment-of-structured-arrays">
-<h3>Multiple-field indexing/assignment of structured arrays<a class="headerlink" href="#multiple-field-indexing-assignment-of-structured-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Multiple-field indexing/assignment of structured arrays<a class="headerlink" href="#multiple-field-indexing-assignment-of-structured-arrays" title="Link to this heading">#</a></h3>
 <p>The indexing and assignment of structured arrays with multiple fields has
 changed in a number of ways, as warned about in previous releases.</p>
 <p>First, indexing a structured array with multiple fields, e.g.,
@@ -1220,13 +1201,13 @@ repeating a field name in a multiple-field index.</p>
 significantly updated to reflect these changes.</p>
 </section>
 <section id="integer-and-void-scalars-are-now-unaffected-by-np-set-string-function">
-<h3>Integer and Void scalars are now unaffected by <code class="docutils literal notranslate"><span class="pre">np.set_string_function</span></code><a class="headerlink" href="#integer-and-void-scalars-are-now-unaffected-by-np-set-string-function" title="Permalink to this heading">#</a></h3>
+<h3>Integer and Void scalars are now unaffected by <code class="docutils literal notranslate"><span class="pre">np.set_string_function</span></code><a class="headerlink" href="#integer-and-void-scalars-are-now-unaffected-by-np-set-string-function" title="Link to this heading">#</a></h3>
 <p>Previously, unlike most other numpy scalars, the <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">repr</span></code> of
 integer and void scalars could be controlled by <code class="docutils literal notranslate"><span class="pre">np.set_string_function</span></code>.
 This is no longer possible.</p>
 </section>
 <section id="d-array-printing-changed-style-arg-of-array2string-deprecated">
-<h3>0d array printing changed, <code class="docutils literal notranslate"><span class="pre">style</span></code> arg of array2string deprecated<a class="headerlink" href="#d-array-printing-changed-style-arg-of-array2string-deprecated" title="Permalink to this heading">#</a></h3>
+<h3>0d array printing changed, <code class="docutils literal notranslate"><span class="pre">style</span></code> arg of array2string deprecated<a class="headerlink" href="#d-array-printing-changed-style-arg-of-array2string-deprecated" title="Link to this heading">#</a></h3>
 <p>Previously the <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">repr</span></code> of 0d arrays had idiosyncratic
 implementations which returned <code class="docutils literal notranslate"><span class="pre">str(a.item())</span></code> and <code class="docutils literal notranslate"><span class="pre">'array('</span> <span class="pre">+</span>
 <span class="pre">repr(a.item())</span> <span class="pre">+</span> <span class="pre">')'</span></code> respectively for 0d array <code class="docutils literal notranslate"><span class="pre">a</span></code>, unlike both numpy
@@ -1239,20 +1220,20 @@ where  <code class="docutils literal notranslate"><span class="pre">formatter</s
 notes above.</p>
 </section>
 <section id="seeding-randomstate-using-an-array-requires-a-1-d-array">
-<h3>Seeding <code class="docutils literal notranslate"><span class="pre">RandomState</span></code> using an array requires a 1-d array<a class="headerlink" href="#seeding-randomstate-using-an-array-requires-a-1-d-array" title="Permalink to this heading">#</a></h3>
+<h3>Seeding <code class="docutils literal notranslate"><span class="pre">RandomState</span></code> using an array requires a 1-d array<a class="headerlink" href="#seeding-randomstate-using-an-array-requires-a-1-d-array" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">RandomState</span></code> previously would accept empty arrays or arrays with 2 or more
 dimensions, which resulted in either a failure to seed (empty arrays) or for
 some of the passed values to be ignored when setting the seed.</p>
 </section>
 <section id="maskedarray-objects-show-a-more-useful-repr">
-<h3><code class="docutils literal notranslate"><span class="pre">MaskedArray</span></code> objects show a more useful <code class="docutils literal notranslate"><span class="pre">repr</span></code><a class="headerlink" href="#maskedarray-objects-show-a-more-useful-repr" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">MaskedArray</span></code> objects show a more useful <code class="docutils literal notranslate"><span class="pre">repr</span></code><a class="headerlink" href="#maskedarray-objects-show-a-more-useful-repr" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">repr</span></code> of a <code class="docutils literal notranslate"><span class="pre">MaskedArray</span></code> is now closer to the python code that would
 produce it, with arrays now being shown with commas and dtypes. Like the other
 formatting changes, this can be disabled with the 1.13 legacy printing mode in
 order to help transition doctests.</p>
 </section>
 <section id="the-repr-of-np-polynomial-classes-is-more-explicit">
-<h3>The <code class="docutils literal notranslate"><span class="pre">repr</span></code> of <code class="docutils literal notranslate"><span class="pre">np.polynomial</span></code> classes is more explicit<a class="headerlink" href="#the-repr-of-np-polynomial-classes-is-more-explicit" title="Permalink to this heading">#</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">repr</span></code> of <code class="docutils literal notranslate"><span class="pre">np.polynomial</span></code> classes is more explicit<a class="headerlink" href="#the-repr-of-np-polynomial-classes-is-more-explicit" title="Link to this heading">#</a></h3>
 <p>It now shows the domain and window parameters as keyword arguments to make
 them more clear:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">Polynomial</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
@@ -1298,7 +1279,8 @@ them more clear:</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1392,8 +1374,8 @@ them more clear:</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1404,7 +1386,7 @@ them more clear:</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1413,7 +1395,7 @@ them more clear:</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1426,7 +1408,8 @@ them more clear:</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

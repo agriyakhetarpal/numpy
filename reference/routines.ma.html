@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Masked array operations &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Masked array operations &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,54 +16,60 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reference/routines.ma';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="numpy.ma.MaskType" href="generated/numpy.ma.MaskType.html" />
-    <link rel="prev" title="numpy.distutils.system_info.get_standard_file" href="generated/numpy.distutils.system_info.get_standard_file.html" />
+    <link rel="prev" title="numpy.char.chararray.zfill" href="generated/numpy.char.chararray.zfill.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -468,12 +440,12 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="routines.dtype.html">Data type routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.emath.html">Mathematical functions with automatic domain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.err.html">Floating point error handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.exceptions.html">Exceptions and Warnings (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.exceptions</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.fft</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.exceptions.html">Exceptions and Warnings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.fft.html">Discrete Fourier Transform</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.functional.html">Functional programming</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.io.html">Input and output</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.indexing.html">Indexing routines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.linalg.html">Linear algebra (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.linalg</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.linalg.html">Linear algebra</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.logic.html">Logic functions</a></li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Masked array operations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.ma.MaskType.html">numpy.ma.MaskType</a></li>
@@ -694,18 +666,17 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="routines.math.html">Mathematical functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.other.html">Miscellaneous routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.polynomials.html">Polynomials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.random</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="random/index.html">Random sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.set.html">Set routines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.sort.html">Sorting, searching, and counting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.statistics.html">Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routines.testing.html">Test support (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.testing</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routines.testing.html">Test support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="routines.window.html">Window functions</a></li>
 </ul>
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="typing.html">Typing (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.typing</span></code>)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="distutils.html">Packaging (<code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.distutils</span></code>)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="c-api/index.html">NumPy C-API</a></li>
@@ -713,7 +684,8 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="array_api.html">Array API standard compatibility</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simd/index.html">CPU/SIMD optimizations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global state</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thread_safety.html">Thread Safety</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global_state.html">Global Configuration Options</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security.html">NumPy security</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_status_migration.html">Status of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> and migration advice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="distutils_guide.html"><code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code> user guide</a></li>
@@ -725,9 +697,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -745,8 +722,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -761,7 +736,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="module_structure.html" class="nav-link">NumPy’s module structure</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Masked...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Masked array operations</span></li>
   </ul>
 </nav>
 </div>
@@ -779,9 +754,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="masked-array-operations">
-<span id="routines-ma"></span><h1>Masked array operations<a class="headerlink" href="#masked-array-operations" title="Permalink to this heading">#</a></h1>
+<span id="routines-ma"></span><h1>Masked array operations<a class="headerlink" href="#masked-array-operations" title="Link to this heading">#</a></h1>
 <section id="constants">
-<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this heading">#</a></h2>
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskType.html#numpy.ma.MaskType" title="numpy.ma.MaskType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.MaskType</span></code></a></p></td>
@@ -792,9 +767,9 @@ document.write(`
 </div>
 </section>
 <section id="creation">
-<h2>Creation<a class="headerlink" href="#creation" title="Permalink to this heading">#</a></h2>
+<h2>Creation<a class="headerlink" href="#creation" title="Link to this heading">#</a></h2>
 <section id="from-existing-data">
-<h3>From existing data<a class="headerlink" href="#from-existing-data" title="Permalink to this heading">#</a></h3>
+<h3>From existing data<a class="headerlink" href="#from-existing-data" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.masked_array.html#numpy.ma.masked_array" title="numpy.ma.masked_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.masked_array</span></code></a></p></td>
@@ -823,7 +798,7 @@ document.write(`
 </div>
 </section>
 <section id="ones-and-zeros">
-<h3>Ones and zeros<a class="headerlink" href="#ones-and-zeros" title="Permalink to this heading">#</a></h3>
+<h3>Ones and zeros<a class="headerlink" href="#ones-and-zeros" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.empty.html#numpy.ma.empty" title="numpy.ma.empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.empty</span></code></a>(shape[, dtype, order, device, like])</p></td>
@@ -857,7 +832,7 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="inspecting-the-array">
-<h2>Inspecting the array<a class="headerlink" href="#inspecting-the-array" title="Permalink to this heading">#</a></h2>
+<h2>Inspecting the array<a class="headerlink" href="#inspecting-the-array" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.all.html#numpy.ma.all" title="numpy.ma.all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.all</span></code></a>(self[, axis, out, keepdims])</p></td>
@@ -952,9 +927,9 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="manipulating-a-maskedarray">
-<h2>Manipulating a MaskedArray<a class="headerlink" href="#manipulating-a-maskedarray" title="Permalink to this heading">#</a></h2>
+<h2>Manipulating a MaskedArray<a class="headerlink" href="#manipulating-a-maskedarray" title="Link to this heading">#</a></h2>
 <section id="changing-the-shape">
-<h3>Changing the shape<a class="headerlink" href="#changing-the-shape" title="Permalink to this heading">#</a></h3>
+<h3>Changing the shape<a class="headerlink" href="#changing-the-shape" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.ravel.html#numpy.ma.ravel" title="numpy.ma.ravel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.ravel</span></code></a>(self[, order])</p></td>
@@ -983,7 +958,7 @@ document.write(`
 </div>
 </section>
 <section id="modifying-axes">
-<h3>Modifying axes<a class="headerlink" href="#modifying-axes" title="Permalink to this heading">#</a></h3>
+<h3>Modifying axes<a class="headerlink" href="#modifying-axes" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.swapaxes.html#numpy.ma.swapaxes" title="numpy.ma.swapaxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.swapaxes</span></code></a>(self, *args, ...)</p></td>
@@ -1003,7 +978,7 @@ document.write(`
 </div>
 </section>
 <section id="changing-the-number-of-dimensions">
-<h3>Changing the number of dimensions<a class="headerlink" href="#changing-the-number-of-dimensions" title="Permalink to this heading">#</a></h3>
+<h3>Changing the number of dimensions<a class="headerlink" href="#changing-the-number-of-dimensions" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.atleast_1d.html#numpy.ma.atleast_1d" title="numpy.ma.atleast_1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.atleast_1d</span></code></a></p></td>
@@ -1053,7 +1028,7 @@ document.write(`
 </div>
 </section>
 <section id="joining-arrays">
-<h3>Joining arrays<a class="headerlink" href="#joining-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Joining arrays<a class="headerlink" href="#joining-arrays" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.concatenate.html#numpy.ma.concatenate" title="numpy.ma.concatenate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.concatenate</span></code></a>(arrays[, axis])</p></td>
@@ -1084,9 +1059,9 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="operations-on-masks">
-<h2>Operations on masks<a class="headerlink" href="#operations-on-masks" title="Permalink to this heading">#</a></h2>
+<h2>Operations on masks<a class="headerlink" href="#operations-on-masks" title="Link to this heading">#</a></h2>
 <section id="creating-a-mask">
-<h3>Creating a mask<a class="headerlink" href="#creating-a-mask" title="Permalink to this heading">#</a></h3>
+<h3>Creating a mask<a class="headerlink" href="#creating-a-mask" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.make_mask.html#numpy.ma.make_mask" title="numpy.ma.make_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.make_mask</span></code></a>(m[, copy, shrink, dtype])</p></td>
@@ -1106,7 +1081,7 @@ document.write(`
 </div>
 </section>
 <section id="accessing-a-mask">
-<h3>Accessing a mask<a class="headerlink" href="#accessing-a-mask" title="Permalink to this heading">#</a></h3>
+<h3>Accessing a mask<a class="headerlink" href="#accessing-a-mask" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.getmask.html#numpy.ma.getmask" title="numpy.ma.getmask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.getmask</span></code></a>(a)</p></td>
@@ -1123,7 +1098,7 @@ document.write(`
 </div>
 </section>
 <section id="finding-masked-data">
-<h3>Finding masked data<a class="headerlink" href="#finding-masked-data" title="Permalink to this heading">#</a></h3>
+<h3>Finding masked data<a class="headerlink" href="#finding-masked-data" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.ndenumerate.html#numpy.ma.ndenumerate" title="numpy.ma.ndenumerate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.ndenumerate</span></code></a>(a[, compressed])</p></td>
@@ -1152,7 +1127,7 @@ document.write(`
 </div>
 </section>
 <section id="modifying-a-mask">
-<h3>Modifying a mask<a class="headerlink" href="#modifying-a-mask" title="Permalink to this heading">#</a></h3>
+<h3>Modifying a mask<a class="headerlink" href="#modifying-a-mask" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.mask_cols.html#numpy.ma.mask_cols" title="numpy.ma.mask_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.mask_cols</span></code></a>(a[, axis])</p></td>
@@ -1192,9 +1167,9 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="conversion-operations">
-<h2>Conversion operations<a class="headerlink" href="#conversion-operations" title="Permalink to this heading">#</a></h2>
+<h2>Conversion operations<a class="headerlink" href="#conversion-operations" title="Link to this heading">#</a></h2>
 <section id="to-a-masked-array">
-<h3>&gt; to a masked array<a class="headerlink" href="#to-a-masked-array" title="Permalink to this heading">#</a></h3>
+<h3>&gt; to a masked array<a class="headerlink" href="#to-a-masked-array" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.asarray.html#numpy.ma.asarray" title="numpy.ma.asarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.asarray</span></code></a>(a[, dtype, order])</p></td>
@@ -1247,7 +1222,7 @@ document.write(`
 </div>
 </section>
 <section id="to-a-ndarray">
-<h3>&gt; to a ndarray<a class="headerlink" href="#to-a-ndarray" title="Permalink to this heading">#</a></h3>
+<h3>&gt; to a ndarray<a class="headerlink" href="#to-a-ndarray" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.compress_cols.html#numpy.ma.compress_cols" title="numpy.ma.compress_cols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.compress_cols</span></code></a>(a)</p></td>
@@ -1276,7 +1251,7 @@ document.write(`
 </div>
 </section>
 <section id="to-another-object">
-<h3>&gt; to another object<a class="headerlink" href="#to-another-object" title="Permalink to this heading">#</a></h3>
+<h3>&gt; to another object<a class="headerlink" href="#to-another-object" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.tofile.html#numpy.ma.MaskedArray.tofile" title="numpy.ma.MaskedArray.tofile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.MaskedArray.tofile</span></code></a>(fid[, sep, format])</p></td>
@@ -1296,7 +1271,7 @@ document.write(`
 </div>
 </section>
 <section id="filling-a-masked-array">
-<h3>Filling a masked array<a class="headerlink" href="#filling-a-masked-array" title="Permalink to this heading">#</a></h3>
+<h3>Filling a masked array<a class="headerlink" href="#filling-a-masked-array" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.common_fill_value.html#numpy.ma.common_fill_value" title="numpy.ma.common_fill_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.common_fill_value</span></code></a>(a, b)</p></td>
@@ -1335,9 +1310,9 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="masked-arrays-arithmetic">
-<h2>Masked arrays arithmetic<a class="headerlink" href="#masked-arrays-arithmetic" title="Permalink to this heading">#</a></h2>
+<h2>Masked arrays arithmetic<a class="headerlink" href="#masked-arrays-arithmetic" title="Link to this heading">#</a></h2>
 <section id="arithmetic">
-<h3>Arithmetic<a class="headerlink" href="#arithmetic" title="Permalink to this heading">#</a></h3>
+<h3>Arithmetic<a class="headerlink" href="#arithmetic" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.anom.html#numpy.ma.anom" title="numpy.ma.anom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.anom</span></code></a>(self[, axis, dtype])</p></td>
@@ -1414,7 +1389,7 @@ document.write(`
 </div>
 </section>
 <section id="minimum-maximum">
-<h3>Minimum/maximum<a class="headerlink" href="#minimum-maximum" title="Permalink to this heading">#</a></h3>
+<h3>Minimum/maximum<a class="headerlink" href="#minimum-maximum" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.argmax.html#numpy.ma.argmax" title="numpy.ma.argmax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.argmax</span></code></a>(self[, axis, fill_value, out])</p></td>
@@ -1430,7 +1405,7 @@ document.write(`
 <td><p>Return the minimum along a given axis.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.ptp.html#numpy.ma.ptp" title="numpy.ma.ptp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.ptp</span></code></a>(obj[, axis, out, fill_value, keepdims])</p></td>
-<td><p>Return (maximum - minimum) along the given dimension (i.e.</p></td>
+<td><p>Return (maximum - minimum) along the given dimension (i.e. peak-to-peak value).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.ma.diff.html#numpy.ma.diff" title="numpy.ma.diff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.diff</span></code></a>(a, /[, n, axis, prepend, append])</p></td>
 <td><p>Calculate the n-th discrete difference along the given axis.</p></td>
@@ -1448,14 +1423,14 @@ document.write(`
 <td><p>Return the minimum along a given axis.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.MaskedArray.ptp.html#numpy.ma.MaskedArray.ptp" title="numpy.ma.MaskedArray.ptp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.MaskedArray.ptp</span></code></a>([axis, out, fill_value, ...])</p></td>
-<td><p>Return (maximum - minimum) along the given dimension (i.e.</p></td>
+<td><p>Return (maximum - minimum) along the given dimension (i.e. peak-to-peak value).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="sorting">
-<h3>Sorting<a class="headerlink" href="#sorting" title="Permalink to this heading">#</a></h3>
+<h3>Sorting<a class="headerlink" href="#sorting" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.argsort.html#numpy.ma.argsort" title="numpy.ma.argsort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.argsort</span></code></a>(a[, axis, kind, order, endwith, ...])</p></td>
@@ -1475,7 +1450,7 @@ document.write(`
 </div>
 </section>
 <section id="algebra">
-<h3>Algebra<a class="headerlink" href="#algebra" title="Permalink to this heading">#</a></h3>
+<h3>Algebra<a class="headerlink" href="#algebra" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.diag.html#numpy.ma.diag" title="numpy.ma.diag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.diag</span></code></a>(v[, k])</p></td>
@@ -1516,7 +1491,7 @@ document.write(`
 </div>
 </section>
 <section id="polynomial-fit">
-<h3>Polynomial fit<a class="headerlink" href="#polynomial-fit" title="Permalink to this heading">#</a></h3>
+<h3>Polynomial fit<a class="headerlink" href="#polynomial-fit" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.vander.html#numpy.ma.vander" title="numpy.ma.vander"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.vander</span></code></a>(x[, n])</p></td>
@@ -1530,7 +1505,7 @@ document.write(`
 </div>
 </section>
 <section id="clipping-and-rounding">
-<h3>Clipping and rounding<a class="headerlink" href="#clipping-and-rounding" title="Permalink to this heading">#</a></h3>
+<h3>Clipping and rounding<a class="headerlink" href="#clipping-and-rounding" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.around.html#numpy.ma.around" title="numpy.ma.around"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.around</span></code></a></p></td>
@@ -1553,7 +1528,7 @@ document.write(`
 </div>
 </section>
 <section id="set-operations">
-<h3>Set operations<a class="headerlink" href="#set-operations" title="Permalink to this heading">#</a></h3>
+<h3>Set operations<a class="headerlink" href="#set-operations" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.intersect1d.html#numpy.ma.intersect1d" title="numpy.ma.intersect1d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.intersect1d</span></code></a>(ar1, ar2[, assume_unique])</p></td>
@@ -1573,7 +1548,7 @@ document.write(`
 </div>
 </section>
 <section id="miscellanea">
-<h3>Miscellanea<a class="headerlink" href="#miscellanea" title="Permalink to this heading">#</a></h3>
+<h3>Miscellanea<a class="headerlink" href="#miscellanea" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.ma.allequal.html#numpy.ma.allequal" title="numpy.ma.allequal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ma.allequal</span></code></a>(a, b[, fill_value])</p></td>
@@ -1666,12 +1641,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="generated/numpy.distutils.system_info.get_standard_file.html"
+       href="generated/numpy.char.chararray.zfill.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">numpy.distutils.system_info.get_standard_file</p>
+        <p class="prev-next-title">numpy.char.chararray.zfill</p>
       </div>
     </a>
     <a class="right-next"
@@ -1690,7 +1665,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1756,8 +1732,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1768,7 +1744,7 @@ document.write(`
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1777,7 +1753,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1790,7 +1766,8 @@ document.write(`
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

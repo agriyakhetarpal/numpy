@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NumPy for MATLAB users &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>NumPy for MATLAB users &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,46 +16,50 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="../_static/scipy-mathjax/MathJax.js?config=scipy-mathjax"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user/numpy-for-matlab-users';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -65,7 +68,8 @@
     <link rel="prev" title="Universal functions (ufunc) basics" href="basics.ufuncs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -81,19 +85,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -101,7 +94,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -109,8 +101,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -141,8 +133,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -199,7 +191,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -224,49 +218,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -305,7 +287,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,49 +363,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -485,9 +456,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -505,8 +481,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -518,7 +492,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">NumPy user guide</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">NumPy for...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NumPy for MATLAB users</span></li>
   </ul>
 </nav>
 </div>
@@ -536,9 +510,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="numpy-for-matlab-users">
-<span id="id1"></span><h1>NumPy for MATLAB users<a class="headerlink" href="#numpy-for-matlab-users" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>NumPy for MATLAB users<a class="headerlink" href="#numpy-for-matlab-users" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>MATLAB® and NumPy have a lot in common, but NumPy was created to work with
 Python, not to be a MATLAB clone.  This guide will help MATLAB users get started
 with NumPy.</p>
@@ -546,7 +520,7 @@ with NumPy.</p>
 table.docutils td { border: solid 1px #ccc; }
 </style></section>
 <section id="some-key-differences">
-<h2>Some key differences<a class="headerlink" href="#some-key-differences" title="Permalink to this heading">#</a></h2>
+<h2>Some key differences<a class="headerlink" href="#some-key-differences" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="docutils table">
 <tbody>
 <tr class="row-odd"><td><p>In MATLAB, the basic type, even for scalars, is a
@@ -592,7 +566,7 @@ the arguments. Slicing operations are views into an array.</p></td>
 </div>
 </section>
 <section id="rough-equivalents">
-<h2>Rough equivalents<a class="headerlink" href="#rough-equivalents" title="Permalink to this heading">#</a></h2>
+<h2>Rough equivalents<a class="headerlink" href="#rough-equivalents" title="Link to this heading">#</a></h2>
 <p>The table below gives rough equivalents for some common MATLAB
 expressions. These are similar expressions, not equivalents. For
 details, see the <a class="reference internal" href="../reference/index.html#reference"><span class="std std-ref">documentation</span></a>.</p>
@@ -606,7 +580,7 @@ commands in Python:</p>
 <p>Also assume below that if the Notes talk about “matrix” that the
 arguments are two-dimensional entities.</p>
 <section id="general-purpose-equivalents">
-<h3>General purpose equivalents<a class="headerlink" href="#general-purpose-equivalents" title="Permalink to this heading">#</a></h3>
+<h3>General purpose equivalents<a class="headerlink" href="#general-purpose-equivalents" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>MATLAB</p></th>
@@ -642,16 +616,16 @@ arguments are two-dimensional entities.</p>
 </pre></div>
 </div>
 </td>
-<td><p>use a for-loop to print the numbers 1, 2, and 3 using <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#range" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code></a></p></td>
+<td><p>use a for-loop to print the numbers 1, 2, and 3 using <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#range" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">range</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&amp;&amp;</span> <span class="pre">b</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code></p></td>
-<td><p>short-circuiting logical AND operator (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#boolean" title="(in Python v3.12)"><span class="xref std std-ref">Python native operator</span></a>);
+<td><p>short-circuiting logical AND operator (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#boolean" title="(in Python v3.13)"><span class="xref std std-ref">Python native operator</span></a>);
 scalar arguments only</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">||</span> <span class="pre">b</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code></p></td>
-<td><p>short-circuiting logical OR operator (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#boolean" title="(in Python v3.12)"><span class="xref std std-ref">Python native operator</span></a>);
+<td><p>short-circuiting logical OR operator (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#boolean" title="(in Python v3.13)"><span class="xref std std-ref">Python native operator</span></a>);
 scalar arguments only</p></td>
 </tr>
 <tr class="row-odd"><td><div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">4</span>
@@ -668,7 +642,7 @@ scalar arguments only</p></td>
 </pre></div>
 </div>
 </td>
-<td><p>The <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">boolean objects</span></a>
+<td><p>The <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">boolean objects</span></a>
 in Python are <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>, as opposed to MATLAB
 logical types of <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></td>
 </tr>
@@ -703,7 +677,7 @@ precision</p></td>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">load</span> <span class="pre">data.mat</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">io.loadmat('data.mat')</span></code></p></td>
 <td><p>Load MATLAB variables saved to the file <code class="docutils literal notranslate"><span class="pre">data.mat</span></code>. (Note: When saving arrays to
-<code class="docutils literal notranslate"><span class="pre">data.mat</span></code> in MATLAB/Octave, use a recent binary format. <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html#scipy.io.loadmat" title="(in SciPy v1.14.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.io.loadmat</span></code></a>
+<code class="docutils literal notranslate"><span class="pre">data.mat</span></code> in MATLAB/Octave, use a recent binary format. <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html#scipy.io.loadmat" title="(in SciPy v1.14.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.io.loadmat</span></code></a>
 will create a dictionary with the saved arrays and further information.)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ode45</span></code></p></td>
@@ -719,7 +693,7 @@ will create a dictionary with the saved arrays and further information.)</p></td
 </div>
 </section>
 <section id="linear-algebra-equivalents">
-<h3>Linear algebra equivalents<a class="headerlink" href="#linear-algebra-equivalents" title="Permalink to this heading">#</a></h3>
+<h3>Linear algebra equivalents<a class="headerlink" href="#linear-algebra-equivalents" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>MATLAB</p></th>
@@ -1093,12 +1067,12 @@ higher</p></td>
 </section>
 </section>
 <section id="notes">
-<span id="numpy-for-matlab-users-notes"></span><h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h2>
+<span id="numpy-for-matlab-users-notes"></span><h2>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
 <p><strong>Submatrix</strong>: Assignment to a submatrix can be done with lists of
 indices using the <code class="docutils literal notranslate"><span class="pre">ix_</span></code> command. E.g., for 2D array <code class="docutils literal notranslate"><span class="pre">a</span></code>, one might
 do: <code class="docutils literal notranslate"><span class="pre">ind=[1,</span> <span class="pre">3]; a[np.ix_(ind,</span> <span class="pre">ind)]</span> <span class="pre">+=</span> <span class="pre">100</span></code>.</p>
 <p><strong>HELP</strong>: There is no direct equivalent of MATLAB’s <code class="docutils literal notranslate"><span class="pre">which</span></code> command,
-but the commands <a class="reference external" href="https://docs.python.org/3/library/functions.html#help" title="(in Python v3.12)"><code class="xref py py-func docutils literal notranslate"><span class="pre">help</span></code></a> will usually list the filename
+but the commands <a class="reference external" href="https://docs.python.org/3/library/functions.html#help" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">help</span></code></a> will usually list the filename
 where the function is located. Python also has an <code class="docutils literal notranslate"><span class="pre">inspect</span></code> module (do
 <code class="docutils literal notranslate"><span class="pre">import inspect</span></code>) which provides a <code class="docutils literal notranslate"><span class="pre">getfile</span></code> that often works.</p>
 <p><strong>INDEXING</strong>: MATLAB uses one based indexing, so the initial element
@@ -1153,13 +1127,13 @@ code which relies on the scan order, then this MATLAB code: <code class="docutil
 NumPy.</p>
 </section>
 <section id="array-or-matrix-which-should-i-use">
-<h2>‘array’ or ‘matrix’? Which should I use?<a class="headerlink" href="#array-or-matrix-which-should-i-use" title="Permalink to this heading">#</a></h2>
+<h2>‘array’ or ‘matrix’? Which should I use?<a class="headerlink" href="#array-or-matrix-which-should-i-use" title="Link to this heading">#</a></h2>
 <p>Historically, NumPy has provided a special matrix type, <em class="xref py py-obj">np.matrix</em>, which
 is a subclass of ndarray which makes binary operations linear algebra
 operations. You may see it used in some existing code instead of <em class="xref py py-obj">np.array</em>.
 So, which one to use?</p>
 <section id="short-answer">
-<h3>Short answer<a class="headerlink" href="#short-answer" title="Permalink to this heading">#</a></h3>
+<h3>Short answer<a class="headerlink" href="#short-answer" title="Link to this heading">#</a></h3>
 <p><strong>Use arrays</strong>.</p>
 <ul class="simple">
 <li><p>They support multidimensional array algebra that is supported in MATLAB</p></li>
@@ -1176,7 +1150,7 @@ can use the matrix multiplication <code class="docutils literal notranslate"><sp
 <p>Given the above, we intend to deprecate <code class="docutils literal notranslate"><span class="pre">matrix</span></code> eventually.</p>
 </section>
 <section id="long-answer">
-<h3>Long answer<a class="headerlink" href="#long-answer" title="Permalink to this heading">#</a></h3>
+<h3>Long answer<a class="headerlink" href="#long-answer" title="Link to this heading">#</a></h3>
 <p>NumPy contains both an <code class="docutils literal notranslate"><span class="pre">array</span></code> class and a <code class="docutils literal notranslate"><span class="pre">matrix</span></code> class. The
 <code class="docutils literal notranslate"><span class="pre">array</span></code> class is intended to be a general-purpose n-dimensional array
 for many kinds of numerical computing, while <code class="docutils literal notranslate"><span class="pre">matrix</span></code> is intended to
@@ -1279,7 +1253,7 @@ deprecate <code class="docutils literal notranslate"><span class="pre">matrix</s
 </section>
 </section>
 <section id="customizing-your-environment">
-<h2>Customizing your environment<a class="headerlink" href="#customizing-your-environment" title="Permalink to this heading">#</a></h2>
+<h2>Customizing your environment<a class="headerlink" href="#customizing-your-environment" title="Link to this heading">#</a></h2>
 <p>In MATLAB the main tool available to you for customizing the
 environment is to modify the search path with the locations of your
 favorite functions. You can put such customizations into a startup
@@ -1321,7 +1295,7 @@ this is just an example, not a statement of “best practices”):</p>
 </div>
 </section>
 <section id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this heading">#</a></h2>
+<h2>Links<a class="headerlink" href="#links" title="Link to this heading">#</a></h2>
 <p>Another somewhat outdated MATLAB/NumPy cross-reference can be found at
 <a class="reference external" href="http://mathesaurus.sf.net/">http://mathesaurus.sf.net/</a></p>
 <p>An extensive list of tools for scientific work with Python can be
@@ -1368,7 +1342,8 @@ for a list of software that use Python as a scripting language</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1410,8 +1385,8 @@ for a list of software that use Python as a scripting language</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1422,7 +1397,7 @@ for a list of software that use Python as a scripting language</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -1431,7 +1406,7 @@ for a list of software that use Python as a scripting language</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1444,7 +1419,8 @@ for a list of software that use Python as a scripting language</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

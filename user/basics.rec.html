@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Structured arrays &#8212; NumPy v2.1.dev0 Manual</title>
+    <title>Structured arrays &#8212; NumPy v2.3.dev0 Manual</title>
   
   
   
@@ -17,45 +16,49 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vibur" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/numpy.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/jupyterlite_sphinx.css?v=e3ca86de" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/numpy.css?v=715221f9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/jupyterlite_sphinx.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
+    <script src="../_static/jupyterlite_sphinx.js?v=d6bdf5f8"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user/basics.rec';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://numpy.org/doc/_static/versions.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'devdocs';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = true;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
         </script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -64,7 +67,8 @@
     <link rel="prev" title="Working with Arrays of Strings And Bytes" href="basics.strings.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Jul 24, 2024"/>
+  <meta name="docsearch:version" content="2.3.dev0" />
+    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
   </head>
   
   
@@ -80,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -100,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -108,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -140,8 +132,8 @@
     
     
     
-    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.1.dev0 Manual - Home"/>
-    <script>document.write(`<img src="../_static/numpylogo_dark.svg" class="logo__image only-dark" alt="NumPy v2.1.dev0 Manual - Home"/>`);</script>
+    <img src="../_static/numpylogo.svg" class="logo__image only-light" alt="NumPy v2.3.dev0 Manual - Home"/>
+    <img src="../_static/numpylogo_dark.svg" class="logo__image only-dark pst-js-only" alt="NumPy v2.3.dev0 Manual - Home"/>
   
   
 </a></div>
@@ -198,7 +190,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -223,49 +217,37 @@
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -304,7 +286,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,49 +362,37 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script></div>
+</button></div>
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -495,9 +466,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -515,8 +491,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -531,7 +505,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="basics.html" class="nav-link">NumPy fundamentals</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Structured arrays</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Structured arrays</span></li>
   </ul>
 </nav>
 </div>
@@ -549,9 +523,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="structured-arrays">
-<span id="id1"></span><h1>Structured arrays<a class="headerlink" href="#structured-arrays" title="Permalink to this heading">#</a></h1>
+<span id="id1"></span><h1>Structured arrays<a class="headerlink" href="#structured-arrays" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Structured arrays are ndarrays whose datatype is a composition of simpler
 datatypes organized as a sequence of named <a class="reference internal" href="../glossary.html#term-field"><span class="xref std std-term">fields</span></a>. For example,</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="s1">&#39;Rex&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">81.0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Fido&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">27.0</span><span class="p">)],</span>
@@ -592,7 +566,7 @@ optimized for that use. For instance, the C-struct-like memory layout of
 structured arrays in numpy can lead to poor cache behavior in comparison.</p>
 </section>
 <section id="structured-datatypes">
-<span id="defining-structured-types"></span><h2>Structured datatypes<a class="headerlink" href="#structured-datatypes" title="Permalink to this heading">#</a></h2>
+<span id="defining-structured-types"></span><h2>Structured datatypes<a class="headerlink" href="#structured-datatypes" title="Link to this heading">#</a></h2>
 <p>A structured datatype can be thought of as a sequence of bytes of a certain
 length (the structure’s <a class="reference internal" href="../glossary.html#term-itemsize"><span class="xref std std-term">itemsize</span></a>) which is interpreted as a collection
 of fields. Each field has a name, a datatype, and a byte offset within the
@@ -602,7 +576,7 @@ behaves like an ndarray of a specified shape. The offsets of the fields are
 arbitrary, and fields may even overlap. These offsets are usually determined
 automatically by numpy, but can also be specified.</p>
 <section id="structured-datatype-creation">
-<h3>Structured datatype creation<a class="headerlink" href="#structured-datatype-creation" title="Permalink to this heading">#</a></h3>
+<h3>Structured datatype creation<a class="headerlink" href="#structured-datatype-creation" title="Link to this heading">#</a></h3>
 <p>Structured datatypes may be created using the function <a class="reference internal" href="../reference/generated/numpy.dtype.html#numpy.dtype" title="numpy.dtype"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a>.
 There are 4 alternative forms of specification which vary in flexibility and
 conciseness. These are further documented in the
@@ -688,7 +662,7 @@ specified by using a 3-tuple, see below.</p>
 </ol>
 </section>
 <section id="manipulating-and-displaying-structured-datatypes">
-<h3>Manipulating and displaying structured datatypes<a class="headerlink" href="#manipulating-and-displaying-structured-datatypes" title="Permalink to this heading">#</a></h3>
+<h3>Manipulating and displaying structured datatypes<a class="headerlink" href="#manipulating-and-displaying-structured-datatypes" title="Link to this heading">#</a></h3>
 <p>The list of field names of a structured datatype can be found in the <code class="docutils literal notranslate"><span class="pre">names</span></code>
 attribute of the dtype object:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;i8&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">)])</span>
@@ -719,7 +693,7 @@ tuples” form if possible, otherwise numpy falls back to using the more general
 dictionary form.</p>
 </section>
 <section id="automatic-byte-offsets-and-alignment">
-<span id="offsets-and-alignment"></span><h3>Automatic byte offsets and alignment<a class="headerlink" href="#automatic-byte-offsets-and-alignment" title="Permalink to this heading">#</a></h3>
+<span id="offsets-and-alignment"></span><h3>Automatic byte offsets and alignment<a class="headerlink" href="#automatic-byte-offsets-and-alignment" title="Link to this heading">#</a></h3>
 <p>Numpy uses one of two methods to automatically determine the field byte offsets
 and the overall itemsize of a structured datatype, depending on whether
 <code class="docutils literal notranslate"><span class="pre">align=True</span></code> was specified as a keyword argument to <a class="reference internal" href="../reference/generated/numpy.dtype.html#numpy.dtype" title="numpy.dtype"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.dtype</span></code></a>.</p>
@@ -764,7 +738,7 @@ or structured ndarray as an argument, and returns a copy with fields re-packed,
 with or without padding bytes.</p>
 </section>
 <section id="field-titles">
-<span id="titles"></span><h3>Field titles<a class="headerlink" href="#field-titles" title="Permalink to this heading">#</a></h3>
+<span id="titles"></span><h3>Field titles<a class="headerlink" href="#field-titles" title="Link to this heading">#</a></h3>
 <p>In addition to field names, fields may also have an associated <a class="reference internal" href="../glossary.html#term-title"><span class="xref std std-term">title</span></a>,
 an alternate name, which is sometimes used as an additional description or
 alias for the field. The title may be used to index an array, just like a
@@ -802,7 +776,7 @@ in:</p>
 </div>
 </section>
 <section id="union-types">
-<h3>Union types<a class="headerlink" href="#union-types" title="Permalink to this heading">#</a></h3>
+<h3>Union types<a class="headerlink" href="#union-types" title="Link to this heading">#</a></h3>
 <p>Structured datatypes are implemented in numpy to have base type
 <a class="reference internal" href="../reference/arrays.scalars.html#numpy.void" title="numpy.void"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.void</span></code></a> by default, but it is possible to interpret other numpy
 types as structured types using the <code class="docutils literal notranslate"><span class="pre">(base_dtype,</span> <span class="pre">dtype)</span></code> form of dtype
@@ -813,13 +787,13 @@ the desired underlying dtype, and fields and flags will be copied from
 </section>
 </section>
 <section id="indexing-and-assignment-to-structured-arrays">
-<h2>Indexing and assignment to structured arrays<a class="headerlink" href="#indexing-and-assignment-to-structured-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Indexing and assignment to structured arrays<a class="headerlink" href="#indexing-and-assignment-to-structured-arrays" title="Link to this heading">#</a></h2>
 <section id="assigning-data-to-a-structured-array">
-<h3>Assigning data to a structured array<a class="headerlink" href="#assigning-data-to-a-structured-array" title="Permalink to this heading">#</a></h3>
+<h3>Assigning data to a structured array<a class="headerlink" href="#assigning-data-to-a-structured-array" title="Link to this heading">#</a></h3>
 <p>There are a number of ways to assign values to a structured array: Using python
 tuples, using scalar values, or using other structured arrays.</p>
 <section id="assignment-from-python-native-types-tuples">
-<h4>Assignment from Python Native Types (Tuples)<a class="headerlink" href="#assignment-from-python-native-types-tuples" title="Permalink to this heading">#</a></h4>
+<h4>Assignment from Python Native Types (Tuples)<a class="headerlink" href="#assignment-from-python-native-types-tuples" title="Link to this heading">#</a></h4>
 <p>The simplest way to assign values to a structured array is using python tuples.
 Each assigned value should be a tuple of length equal to the number of fields
 in the array, and not a list or array as these will trigger numpy’s
@@ -834,7 +808,7 @@ of the array, from left to right:</p>
 </div>
 </section>
 <section id="assignment-from-scalars">
-<h4>Assignment from Scalars<a class="headerlink" href="#assignment-from-scalars" title="Permalink to this heading">#</a></h4>
+<h4>Assignment from Scalars<a class="headerlink" href="#assignment-from-scalars" title="Link to this heading">#</a></h4>
 <p>A scalar assigned to a structured element will be assigned to all fields. This
 happens when a scalar is assigned to a structured array, or when an
 unstructured array is assigned to a structured array:</p>
@@ -862,7 +836,7 @@ structured datatype has just a single field:</p>
 </div>
 </section>
 <section id="assignment-from-other-structured-arrays">
-<h4>Assignment from other Structured Arrays<a class="headerlink" href="#assignment-from-other-structured-arrays" title="Permalink to this heading">#</a></h4>
+<h4>Assignment from other Structured Arrays<a class="headerlink" href="#assignment-from-other-structured-arrays" title="Link to this heading">#</a></h4>
 <p>Assignment between two structured arrays occurs as if the source elements had
 been converted to tuples and then assigned to the destination elements. That
 is, the first field of the source array is assigned to the first field of the
@@ -880,15 +854,15 @@ included in any of the fields are unaffected.</p>
 </div>
 </section>
 <section id="assignment-involving-subarrays">
-<h4>Assignment involving subarrays<a class="headerlink" href="#assignment-involving-subarrays" title="Permalink to this heading">#</a></h4>
+<h4>Assignment involving subarrays<a class="headerlink" href="#assignment-involving-subarrays" title="Link to this heading">#</a></h4>
 <p>When assigning to fields which are subarrays, the assigned value will first be
 broadcast to the shape of the subarray.</p>
 </section>
 </section>
 <section id="indexing-structured-arrays">
-<h3>Indexing structured arrays<a class="headerlink" href="#indexing-structured-arrays" title="Permalink to this heading">#</a></h3>
+<h3>Indexing structured arrays<a class="headerlink" href="#indexing-structured-arrays" title="Link to this heading">#</a></h3>
 <section id="accessing-individual-fields">
-<h4>Accessing Individual Fields<a class="headerlink" href="#accessing-individual-fields" title="Permalink to this heading">#</a></h4>
+<h4>Accessing Individual Fields<a class="headerlink" href="#accessing-individual-fields" title="Link to this heading">#</a></h4>
 <p>Individual fields of a structured array may be accessed and modified by indexing
 the array with the field name.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;i8&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">)])</span>
@@ -926,7 +900,7 @@ are appended to the shape of the result:</p>
 </div>
 </section>
 <section id="accessing-multiple-fields">
-<h4>Accessing Multiple Fields<a class="headerlink" href="#accessing-multiple-fields" title="Permalink to this heading">#</a></h4>
+<h4>Accessing Multiple Fields<a class="headerlink" href="#accessing-multiple-fields" title="Link to this heading">#</a></h4>
 <p>One can index and assign to a structured array with a multi-field index, where
 the index is a list of field names.</p>
 <div class="admonition warning">
@@ -1016,7 +990,7 @@ multi-field indexes:</p>
 </div>
 </section>
 <section id="indexing-with-an-integer-to-get-a-structured-scalar">
-<h4>Indexing with an Integer to get a Structured Scalar<a class="headerlink" href="#indexing-with-an-integer-to-get-a-structured-scalar" title="Permalink to this heading">#</a></h4>
+<h4>Indexing with an Integer to get a Structured Scalar<a class="headerlink" href="#indexing-with-an-integer-to-get-a-structured-scalar" title="Link to this heading">#</a></h4>
 <p>Indexing a single element of a structured array (with an integer index) returns
 a structured scalar:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i, f, f&#39;</span><span class="p">)</span>
@@ -1042,7 +1016,7 @@ name:</p>
 <p>Similarly to tuples, structured scalars can also be indexed with an integer:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">scalar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i, f, f&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scalar</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="go">1</span>
+<span class="go">np.int32(1)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scalar</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
 </pre></div>
 </div>
@@ -1057,13 +1031,13 @@ calling <a class="reference internal" href="../reference/generated/numpy.ndarray
 </section>
 </section>
 <section id="viewing-structured-arrays-containing-objects">
-<h3>Viewing structured arrays containing objects<a class="headerlink" href="#viewing-structured-arrays-containing-objects" title="Permalink to this heading">#</a></h3>
+<h3>Viewing structured arrays containing objects<a class="headerlink" href="#viewing-structured-arrays-containing-objects" title="Link to this heading">#</a></h3>
 <p>In order to prevent clobbering object pointers in fields of
-<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a> type, numpy currently does not allow views of structured
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a> type, numpy currently does not allow views of structured
 arrays containing objects.</p>
 </section>
 <section id="structure-comparison-and-promotion">
-<span id="structured-dtype-comparison-and-promotion"></span><h3>Structure comparison and promotion<a class="headerlink" href="#structure-comparison-and-promotion" title="Permalink to this heading">#</a></h3>
+<span id="structured-dtype-comparison-and-promotion"></span><h3>Structure comparison and promotion<a class="headerlink" href="#structure-comparison-and-promotion" title="Link to this heading">#</a></h3>
 <p>If the dtypes of two void structured arrays are equal, testing the equality of
 the arrays will result in a boolean array with the dimensions of the original
 arrays, with elements set to <code class="docutils literal notranslate"><span class="pre">True</span></code> where all fields of the corresponding
@@ -1100,7 +1074,7 @@ that all fields are ordered contiguously and any unnecessary padding is
 removed:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s2">&quot;i1,V3,i4,V1&quot;</span><span class="p">)[[</span><span class="s2">&quot;f0&quot;</span><span class="p">,</span> <span class="s2">&quot;f2&quot;</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span>
-<span class="go">dtype({&#39;names&#39;:[&#39;f0&#39;,&#39;f2&#39;], &#39;formats&#39;:[&#39;i1&#39;,&#39;&lt;i4&#39;], &#39;offsets&#39;:[0,4], &#39;itemsize&#39;:9})</span>
+<span class="go">dtype({&#39;names&#39;: [&#39;f0&#39;, &#39;f2&#39;], &#39;formats&#39;: [&#39;i1&#39;, &#39;&lt;i4&#39;], &#39;offsets&#39;: [0, 4], &#39;itemsize&#39;: 9})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 <span class="go">dtype([(&#39;f0&#39;, &#39;i1&#39;), (&#39;f2&#39;, &#39;&lt;i4&#39;)])</span>
 </pre></div>
@@ -1111,7 +1085,8 @@ If a structured dtype is created with <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">dtype.isalignedstruct</span></code> is true, this property is preserved:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s2">&quot;i1,V3,i4,V1&quot;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="kc">True</span><span class="p">)[[</span><span class="s2">&quot;f0&quot;</span><span class="p">,</span> <span class="s2">&quot;f2&quot;</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span>
-<span class="go">dtype({&#39;names&#39;:[&#39;f0&#39;,&#39;f2&#39;], &#39;formats&#39;:[&#39;i1&#39;,&#39;&lt;i4&#39;], &#39;offsets&#39;:[0,4], &#39;itemsize&#39;:12}, align=True)</span>
+<span class="go">dtype({&#39;names&#39;: [&#39;f0&#39;, &#39;f2&#39;], &#39;formats&#39;: [&#39;i1&#39;, &#39;&lt;i4&#39;], &#39;offsets&#39;: [0, 4], &#39;itemsize&#39;: 12}, align=True)</span>
+
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 <span class="go">dtype([(&#39;f0&#39;, &#39;i1&#39;), (&#39;f2&#39;, &#39;&lt;i4&#39;)], align=True)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">isalignedstruct</span>
@@ -1134,7 +1109,7 @@ float/integer comparison example above.</p>
 </section>
 </section>
 <section id="record-arrays">
-<h2>Record arrays<a class="headerlink" href="#record-arrays" title="Permalink to this heading">#</a></h2>
+<h2>Record arrays<a class="headerlink" href="#record-arrays" title="Link to this heading">#</a></h2>
 <p>As an optional convenience numpy provides an ndarray subclass,
 <a class="reference internal" href="../reference/generated/numpy.recarray.html#numpy.recarray" title="numpy.recarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.recarray</span></code></a> that allows access to fields of structured arrays
 by attribute instead of only by index.
@@ -1206,13 +1181,13 @@ array if the field has a structured type but as a plain ndarray otherwise.</p>
 attribute takes precedence. Such fields will be inaccessible by attribute but
 will still be accessible by index.</p>
 <section id="module-numpy.lib.recfunctions">
-<span id="recarray-helper-functions"></span><h3>Recarray helper functions<a class="headerlink" href="#module-numpy.lib.recfunctions" title="Permalink to this heading">#</a></h3>
+<span id="recarray-helper-functions"></span><h3>Recarray helper functions<a class="headerlink" href="#module-numpy.lib.recfunctions" title="Link to this heading">#</a></h3>
 <p>Collection of utilities to manipulate structured arrays.</p>
 <p>Most of these functions were initially implemented by John Hunter for
 matplotlib.  They have been rewritten and extended for convenience.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.append_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">append_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L663-L731"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.append_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">append_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L655-L723"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.append_fields" title="Link to this definition">#</a></dt>
 <dd><p>Add new fields to an existing array.</p>
 <p>The names of the fields are given with the <em class="xref py py-obj">names</em> arguments,
 the corresponding values with the <em class="xref py py-obj">data</em> arguments.
@@ -1244,7 +1219,7 @@ If None, the datatypes are estimated from the <em class="xref py py-obj">data</e
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.apply_along_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">apply_along_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1194-L1236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.apply_along_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">apply_along_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1186-L1228"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.apply_along_fields" title="Link to this definition">#</a></dt>
 <dd><p>Apply function ‘func’ as a reduction across fields of a structured array.</p>
 <p>This is similar to <a class="reference internal" href="../reference/generated/numpy.apply_along_axis.html#numpy.apply_along_axis" title="numpy.apply_along_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.apply_along_axis</span></code></a>, but treats the fields of a
 structured array as an extra axis. The fields are all first cast to a
@@ -1262,14 +1237,14 @@ support an <em class="xref py py-obj">axis</em> argument, like <a class="referen
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Result of the recution operation</p>
+<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Result of the reduction operation</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="57c4b168-e99c-4af0-97fc-cb646395cf14">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('57c4b168-e99c-4af0-97fc-cb646395cf14','666a4818-ee09-490d-b46c-60c4523434f4','ebdb6cd1-a9cf-4071-bb54-239c99790b53','../lite/tree/../notebooks/index.html?path=62e6a0ad_dd68_4e95_aead_e65ff2901351.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="013d77f3-a41b-4f2d-a707-4d6abc25e522">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('013d77f3-a41b-4f2d-a707-4d6abc25e522','1f74f4a2-409f-4688-8b66-e1fd3584224c','2c29daaa-528d-4115-861d-a9ff59ba77ec','../lite/tree/../notebooks/index.html?path=aa22be74_cb9f_4cd3_b8c3_6ec019fa10b1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1284,11 +1259,11 @@ support an <em class="xref py py-obj">axis</em> argument, like <a class="referen
 </div>
 </div>
 </div>
-<div id="ebdb6cd1-a9cf-4071-bb54-239c99790b53" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('57c4b168-e99c-4af0-97fc-cb646395cf14','ebdb6cd1-a9cf-4071-bb54-239c99790b53')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('57c4b168-e99c-4af0-97fc-cb646395cf14','ebdb6cd1-a9cf-4071-bb54-239c99790b53')">Open In Tab</button></div><div id="666a4818-ee09-490d-b46c-60c4523434f4" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="2c29daaa-528d-4115-861d-a9ff59ba77ec" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('013d77f3-a41b-4f2d-a707-4d6abc25e522','2c29daaa-528d-4115-861d-a9ff59ba77ec')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('013d77f3-a41b-4f2d-a707-4d6abc25e522','2c29daaa-528d-4115-861d-a9ff59ba77ec')">Open In Tab</button></div><div id="1f74f4a2-409f-4688-8b66-e1fd3584224c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.assign_fields_by_name">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">assign_fields_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_unassigned</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1241-L1277"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.assign_fields_by_name" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">assign_fields_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_unassigned</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1233-L1269"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.assign_fields_by_name" title="Link to this definition">#</a></dt>
 <dd><p>Assigns values from one structured array to another by field name.</p>
 <p>Normally in numpy &gt;= 1.14, assignment of one structured array to another
 copies fields “by position”, meaning that the first field from the src is
@@ -1315,13 +1290,9 @@ are not modified.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.drop_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">drop_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L509-L572"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.drop_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">drop_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L505-L564"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.drop_fields" title="Link to this definition">#</a></dt>
 <dd><p>Return a new array with fields in <em class="xref py py-obj">drop_names</em> dropped.</p>
 <p>Nested fields are supported.</p>
-<div class="versionchanged">
-<p><span class="versionmodified changed">Changed in version 1.18.0: </span><a class="reference internal" href="#numpy.lib.recfunctions.drop_fields" title="numpy.lib.recfunctions.drop_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drop_fields</span></code></a> returns an array with 0 fields if all fields are dropped,
-rather than returning <code class="docutils literal notranslate"><span class="pre">None</span></code> as it did previously.</p>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -1340,8 +1311,8 @@ is False.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="cb3d0251-d4de-460b-a74f-7ee7bb548030">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('cb3d0251-d4de-460b-a74f-7ee7bb548030','3b6a2d4e-a89a-4dc1-9018-76049b983100','50b322b7-cc5b-489d-bd84-b8adeebfcb2c','../lite/tree/../notebooks/index.html?path=f30fc62e_4707_4060_b1ef_4acf0e35efc6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="5be7c6a7-d04e-4879-a612-306697165904">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5be7c6a7-d04e-4879-a612-306697165904','1fc1212c-f764-43b5-b229-bbb50c5b457d','eaad2de0-5625-4255-8f56-455492da4a49','../lite/tree/../notebooks/index.html?path=dab3c552_f582_40af_9519_b420d4cacf5f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">)),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">))],</span>
@@ -1357,11 +1328,11 @@ is False.</p>
 </div>
 </div>
 </div>
-<div id="50b322b7-cc5b-489d-bd84-b8adeebfcb2c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('cb3d0251-d4de-460b-a74f-7ee7bb548030','50b322b7-cc5b-489d-bd84-b8adeebfcb2c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('cb3d0251-d4de-460b-a74f-7ee7bb548030','50b322b7-cc5b-489d-bd84-b8adeebfcb2c')">Open In Tab</button></div><div id="3b6a2d4e-a89a-4dc1-9018-76049b983100" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="eaad2de0-5625-4255-8f56-455492da4a49" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5be7c6a7-d04e-4879-a612-306697165904','eaad2de0-5625-4255-8f56-455492da4a49')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5be7c6a7-d04e-4879-a612-306697165904','eaad2de0-5625-4255-8f56-455492da4a49')">Open In Tab</button></div><div id="1fc1212c-f764-43b5-b229-bbb50c5b457d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.find_duplicates">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">find_duplicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoremask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1426-L1482"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.find_duplicates" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">find_duplicates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoremask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1418-L1474"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.find_duplicates" title="Link to this definition">#</a></dt>
 <dd><p>Find the duplicates in a structured array along a given key</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1379,8 +1350,8 @@ If None, the search is performed by records</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="2bdfc1e3-c435-4a89-a68b-1599e2c4eff6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2bdfc1e3-c435-4a89-a68b-1599e2c4eff6','68865b66-6372-4725-9f6a-6879076dac91','b59bcfbd-cea4-43f6-93b7-00365acc5c54','../lite/tree/../notebooks/index.html?path=26f2aead_acef_453b_b5e4_9e99a2fed6ac.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="9080a9e4-51f9-4a26-92d0-f7b26d944c79">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9080a9e4-51f9-4a26-92d0-f7b26d944c79','700b7309-1b33-402a-a539-2c8516ade536','1e34b67e-a48d-4f2f-b2ff-796f5505a118','../lite/tree/../notebooks/index.html?path=bf226d21_20c8_4644_8200_aa31a4c04cf5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ndtype</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)]</span>
@@ -1395,15 +1366,15 @@ If None, the search is performed by records</p>
 </div>
 </div>
 </div>
-<div id="b59bcfbd-cea4-43f6-93b7-00365acc5c54" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2bdfc1e3-c435-4a89-a68b-1599e2c4eff6','b59bcfbd-cea4-43f6-93b7-00365acc5c54')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2bdfc1e3-c435-4a89-a68b-1599e2c4eff6','b59bcfbd-cea4-43f6-93b7-00365acc5c54')">Open In Tab</button></div><div id="68865b66-6372-4725-9f6a-6879076dac91" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="1e34b67e-a48d-4f2f-b2ff-796f5505a118" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9080a9e4-51f9-4a26-92d0-f7b26d944c79','1e34b67e-a48d-4f2f-b2ff-796f5505a118')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9080a9e4-51f9-4a26-92d0-f7b26d944c79','1e34b67e-a48d-4f2f-b2ff-796f5505a118')">Open In Tab</button></div><div id="700b7309-1b33-402a-a539-2c8516ade536" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.flatten_descr">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">flatten_descr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L174-L198"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.flatten_descr" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">flatten_descr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ndtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L170-L194"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.flatten_descr" title="Link to this definition">#</a></dt>
 <dd><p>Flatten a structured data-type description.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="353a0f1c-d4b8-45c7-88e5-7a0b3c3ccf7f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('353a0f1c-d4b8-45c7-88e5-7a0b3c3ccf7f','6f5919fe-5577-42c9-8e42-2bc4df693fda','6608ae38-b444-4fe6-b3e0-fa3eb33d92f3','../lite/tree/../notebooks/index.html?path=50b3fd39_47ec_4e17_a16d_5d7ae1abc740.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c49cb980-0af6-4757-8a82-c66ace583414">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c49cb980-0af6-4757-8a82-c66ace583414','ac4fa137-8e88-4398-8bad-30be09a5cb80','5391a526-b632-4d8d-a7b8-05a9e934f111','../lite/tree/../notebooks/index.html?path=67424b13_e144_4ece_b20a_ca6f016b44d4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ndtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;ba&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f8&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">)])])</span>
@@ -1413,11 +1384,11 @@ If None, the search is performed by records</p>
 </div>
 </div>
 </div>
-<div id="6608ae38-b444-4fe6-b3e0-fa3eb33d92f3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('353a0f1c-d4b8-45c7-88e5-7a0b3c3ccf7f','6608ae38-b444-4fe6-b3e0-fa3eb33d92f3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('353a0f1c-d4b8-45c7-88e5-7a0b3c3ccf7f','6608ae38-b444-4fe6-b3e0-fa3eb33d92f3')">Open In Tab</button></div><div id="6f5919fe-5577-42c9-8e42-2bc4df693fda" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="5391a526-b632-4d8d-a7b8-05a9e934f111" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c49cb980-0af6-4757-8a82-c66ace583414','5391a526-b632-4d8d-a7b8-05a9e934f111')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c49cb980-0af6-4757-8a82-c66ace583414','5391a526-b632-4d8d-a7b8-05a9e934f111')">Open In Tab</button></div><div id="ac4fa137-8e88-4398-8bad-30be09a5cb80" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.get_fieldstructure">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">get_fieldstructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lastname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L231-L276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.get_fieldstructure" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">get_fieldstructure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lastname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L227-L272"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.get_fieldstructure" title="Link to this definition">#</a></dt>
 <dd><p>Returns a dictionary with fields indexing lists of their parent fields.</p>
 <p>This function is used to simplify access to fields nested in other fields.</p>
 <dl class="field-list simple">
@@ -1427,14 +1398,14 @@ If None, the search is performed by records</p>
 </dd>
 <dt><strong>lastname</strong><span class="classifier">optional</span></dt><dd><p>Last processed field name (used internally during recursion).</p>
 </dd>
-<dt><strong>parents</strong><span class="classifier">dictionary</span></dt><dd><p>Dictionary of parent fields (used interbally during recursion).</p>
+<dt><strong>parents</strong><span class="classifier">dictionary</span></dt><dd><p>Dictionary of parent fields (used internally during recursion).</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e36748be-a270-46a6-9faa-02af681eca9f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e36748be-a270-46a6-9faa-02af681eca9f','eabe70c4-98ae-481d-9876-58d2364ce05e','875a9632-41e6-4b87-a506-d98a931459a7','../lite/tree/../notebooks/index.html?path=6a6495cb_7b80_4aee_b9df_da8af0d464b3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="30e45f9e-6803-4524-9763-6cae9d00c1b1">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('30e45f9e-6803-4524-9763-6cae9d00c1b1','b440bd0d-6b17-4a24-a5a9-74b0e6d64f95','b0a68b94-bf20-4422-8338-d8086d59148b','../lite/tree/../notebooks/index.html?path=5348e299_ca77_48f6_bf5b_1594d2e09179.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ndtype</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span>
@@ -1447,11 +1418,11 @@ If None, the search is performed by records</p>
 </div>
 </div>
 </div>
-<div id="875a9632-41e6-4b87-a506-d98a931459a7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e36748be-a270-46a6-9faa-02af681eca9f','875a9632-41e6-4b87-a506-d98a931459a7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e36748be-a270-46a6-9faa-02af681eca9f','875a9632-41e6-4b87-a506-d98a931459a7')">Open In Tab</button></div><div id="eabe70c4-98ae-481d-9876-58d2364ce05e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="b0a68b94-bf20-4422-8338-d8086d59148b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('30e45f9e-6803-4524-9763-6cae9d00c1b1','b0a68b94-bf20-4422-8338-d8086d59148b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('30e45f9e-6803-4524-9763-6cae9d00c1b1','b0a68b94-bf20-4422-8338-d8086d59148b')">Open In Tab</button></div><div id="b440bd0d-6b17-4a24-a5a9-74b0e6d64f95" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.get_names">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">get_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L108-L138"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.get_names" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">get_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L104-L134"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.get_names" title="Link to this definition">#</a></dt>
 <dd><p>Returns the field names of the input datatype as a tuple. Input datatype
 must have fields otherwise error is raised.</p>
 <dl class="field-list simple">
@@ -1463,8 +1434,8 @@ must have fields otherwise error is raised.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="5c0f638e-4156-4302-a989-35d8970dde14">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5c0f638e-4156-4302-a989-35d8970dde14','cff517fc-3925-4ad8-9d3f-95762141b6ef','478e101b-d745-42b1-81e6-bcbb3ad1e4cb','../lite/tree/../notebooks/index.html?path=a1f00b63_1e27_4342_b287_83918efb3c88.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="7bebd5f7-1b94-4195-82fd-209f4ec34392">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7bebd5f7-1b94-4195-82fd-209f4ec34392','966dafcb-e2cc-439c-8d19-cef7d537d1f3','27d9c7f2-bc0d-4862-9228-80c39baf92d9','../lite/tree/../notebooks/index.html?path=ce3a4f5e_8131_4fac_a27c_b37e5711b233.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rfn</span><span class="o">.</span><span class="n">get_names</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">1</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)])</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
@@ -1478,11 +1449,11 @@ must have fields otherwise error is raised.</p>
 </div>
 </div>
 </div>
-<div id="478e101b-d745-42b1-81e6-bcbb3ad1e4cb" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5c0f638e-4156-4302-a989-35d8970dde14','478e101b-d745-42b1-81e6-bcbb3ad1e4cb')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5c0f638e-4156-4302-a989-35d8970dde14','478e101b-d745-42b1-81e6-bcbb3ad1e4cb')">Open In Tab</button></div><div id="cff517fc-3925-4ad8-9d3f-95762141b6ef" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="27d9c7f2-bc0d-4862-9228-80c39baf92d9" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7bebd5f7-1b94-4195-82fd-209f4ec34392','27d9c7f2-bc0d-4862-9228-80c39baf92d9')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7bebd5f7-1b94-4195-82fd-209f4ec34392','27d9c7f2-bc0d-4862-9228-80c39baf92d9')">Open In Tab</button></div><div id="966dafcb-e2cc-439c-8d19-cef7d537d1f3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.get_names_flat">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">get_names_flat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L141-L171"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.get_names_flat" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">get_names_flat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L137-L167"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.get_names_flat" title="Link to this definition">#</a></dt>
 <dd><p>Returns the field names of the input datatype as a tuple. Input datatype
 must have fields otherwise error is raised.
 Nested structure are flattened beforehand.</p>
@@ -1495,8 +1466,8 @@ Nested structure are flattened beforehand.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="d118c0d2-361c-4b6c-95e5-095825346045">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d118c0d2-361c-4b6c-95e5-095825346045','27f6e0d6-80ad-4be5-83b2-2d7255c53458','cd5831ca-988e-4c0b-a308-d210a150a822','../lite/tree/../notebooks/index.html?path=0cb5cc52_89fd_4960_8125_8dbd3e3532ab.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="062d3d08-1103-4f49-bb22-2022e54e9f44">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('062d3d08-1103-4f49-bb22-2022e54e9f44','a2391ceb-d9e8-4fe0-9223-7fdbf0e11fde','329da7c7-bb2c-4fe1-95f3-620904b062d8','../lite/tree/../notebooks/index.html?path=3df6de6e_1693_41ce_b957_aa3c00920c37.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rfn</span><span class="o">.</span><span class="n">get_names_flat</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">1</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">)])</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span>
@@ -1510,11 +1481,11 @@ Nested structure are flattened beforehand.</p>
 </div>
 </div>
 </div>
-<div id="cd5831ca-988e-4c0b-a308-d210a150a822" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d118c0d2-361c-4b6c-95e5-095825346045','cd5831ca-988e-4c0b-a308-d210a150a822')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d118c0d2-361c-4b6c-95e5-095825346045','cd5831ca-988e-4c0b-a308-d210a150a822')">Open In Tab</button></div><div id="27f6e0d6-80ad-4be5-83b2-2d7255c53458" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="329da7c7-bb2c-4fe1-95f3-620904b062d8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('062d3d08-1103-4f49-bb22-2022e54e9f44','329da7c7-bb2c-4fe1-95f3-620904b062d8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('062d3d08-1103-4f49-bb22-2022e54e9f44','329da7c7-bb2c-4fe1-95f3-620904b062d8')">Open In Tab</button></div><div id="a2391ceb-d9e8-4fe0-9223-7fdbf0e11fde" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.join_by">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">join_by</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jointype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inner'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1491-L1668"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.join_by" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">join_by</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jointype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inner'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1483-L1660"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.join_by" title="Link to this definition">#</a></dt>
 <dd><p>Join arrays <em class="xref py py-obj">r1</em> and <em class="xref py py-obj">r2</em> on key <em class="xref py py-obj">key</em>.</p>
 <p>The key should be either a string or a sequence of string corresponding
 to the fields used to join the array.  An exception is raised if the
@@ -1566,7 +1537,7 @@ preserved if there are some duplicates…</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.merge_arrays">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">merge_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqarrays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L368-L502"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.merge_arrays" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">merge_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqarrays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L364-L498"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.merge_arrays" title="Link to this definition">#</a></dt>
 <dd><p>Merge arrays field by field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1599,8 +1570,8 @@ depending on what its corresponding type:</p>
 <li><p>XXX: I just obtained these values empirically</p></li>
 </ul>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="9c297096-8625-46a0-8e08-1b0777122f7c">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9c297096-8625-46a0-8e08-1b0777122f7c','fb352b29-4cf7-41fc-b52d-92cd77ed4130','68cf7c40-9f9d-4028-a292-b90e0f8846c9','../lite/tree/../notebooks/index.html?path=307dafe2_af81_4c0a_89d8_3d3240581f63.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="8989a198-929a-480f-99ac-4380ef16d3f6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8989a198-929a-480f-99ac-4380ef16d3f6','1dbeb32b-6a2f-4029-9394-f74084c498db','dc33d1b3-1c1e-43ee-8976-60ffdf12bf1b','../lite/tree/../notebooks/index.html?path=de71b1b4_faed_4876_8bf3_ec9c5a7bce0d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rfn</span><span class="o">.</span><span class="n">merge_arrays</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">20.</span><span class="p">,</span> <span class="mf">30.</span><span class="p">])))</span>
@@ -1621,11 +1592,11 @@ depending on what its corresponding type:</p>
 </div>
 </div>
 </div>
-<div id="68cf7c40-9f9d-4028-a292-b90e0f8846c9" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9c297096-8625-46a0-8e08-1b0777122f7c','68cf7c40-9f9d-4028-a292-b90e0f8846c9')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9c297096-8625-46a0-8e08-1b0777122f7c','68cf7c40-9f9d-4028-a292-b90e0f8846c9')">Open In Tab</button></div><div id="fb352b29-4cf7-41fc-b52d-92cd77ed4130" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="dc33d1b3-1c1e-43ee-8976-60ffdf12bf1b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8989a198-929a-480f-99ac-4380ef16d3f6','dc33d1b3-1c1e-43ee-8976-60ffdf12bf1b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8989a198-929a-480f-99ac-4380ef16d3f6','dc33d1b3-1c1e-43ee-8976-60ffdf12bf1b')">Open In Tab</button></div><div id="1dbeb32b-6a2f-4029-9394-f74084c498db" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.rec_append_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rec_append_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L739-L771"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rec_append_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rec_append_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L731-L763"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rec_append_fields" title="Link to this definition">#</a></dt>
 <dd><p>Add new fields to an existing array.</p>
 <p>The names of the fields are given with the <em class="xref py py-obj">names</em> arguments,
 the corresponding values with the <em class="xref py py-obj">data</em> arguments.
@@ -1662,13 +1633,13 @@ If None, the datatypes are estimated from the <em class="xref py py-obj">data</e
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.rec_drop_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rec_drop_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_names</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L604-L609"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rec_drop_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rec_drop_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop_names</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L596-L601"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rec_drop_fields" title="Link to this definition">#</a></dt>
 <dd><p>Returns a new numpy.recarray with fields in <em class="xref py py-obj">drop_names</em> dropped.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.rec_join">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rec_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jointype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inner'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1677-L1690"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rec_join" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rec_join</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jointype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inner'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r1postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r2postfix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1669-L1682"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rec_join" title="Link to this definition">#</a></dt>
 <dd><p>Join arrays <em class="xref py py-obj">r1</em> and <em class="xref py py-obj">r2</em> on keys.
 Alternative to join_by, that always returns a np.recarray.</p>
 <div class="admonition seealso">
@@ -1682,7 +1653,7 @@ Alternative to join_by, that always returns a np.recarray.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.recursive_fill_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">recursive_fill_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L36-L73"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.recursive_fill_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">recursive_fill_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L32-L69"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.recursive_fill_fields" title="Link to this definition">#</a></dt>
 <dd><p>Fills fields from output with fields from input,
 with support for nested structures.</p>
 <dl class="field-list simple">
@@ -1700,8 +1671,8 @@ with support for nested structures.</p>
 <li><p><em class="xref py py-obj">output</em> should be at least the same size as <em class="xref py py-obj">input</em></p></li>
 </ul>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e155d8b6-e4b2-4a03-ae4e-07b0f9d44a49">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e155d8b6-e4b2-4a03-ae4e-07b0f9d44a49','25203aab-96c4-4694-91eb-513679ed61fa','2776131e-ac47-467f-af9c-8707e0e37544','../lite/tree/../notebooks/index.html?path=e68de6d9_7f5b_48d1_8084_42a290d02015.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="42ab0e4d-6327-499f-b8c1-3da8ccd8c6c7">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('42ab0e4d-6327-499f-b8c1-3da8ccd8c6c7','b2a14bab-ef2f-4ec0-b5c9-dcefb264f88f','d2c34876-d9a8-44bb-8724-23da5be9d58e','../lite/tree/../notebooks/index.html?path=e4e46a93_2b17_49dc_bdb4_ead8cb014f52.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">10.</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">20.</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)])</span>
@@ -1712,11 +1683,11 @@ with support for nested structures.</p>
 </div>
 </div>
 </div>
-<div id="2776131e-ac47-467f-af9c-8707e0e37544" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e155d8b6-e4b2-4a03-ae4e-07b0f9d44a49','2776131e-ac47-467f-af9c-8707e0e37544')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e155d8b6-e4b2-4a03-ae4e-07b0f9d44a49','2776131e-ac47-467f-af9c-8707e0e37544')">Open In Tab</button></div><div id="25203aab-96c4-4694-91eb-513679ed61fa" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="d2c34876-d9a8-44bb-8724-23da5be9d58e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('42ab0e4d-6327-499f-b8c1-3da8ccd8c6c7','d2c34876-d9a8-44bb-8724-23da5be9d58e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('42ab0e4d-6327-499f-b8c1-3da8ccd8c6c7','d2c34876-d9a8-44bb-8724-23da5be9d58e')">Open In Tab</button></div><div id="b2a14bab-ef2f-4ec0-b5c9-dcefb264f88f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.rename_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rename_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namemapper</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L616-L654"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rename_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">rename_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namemapper</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L608-L646"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.rename_fields" title="Link to this definition">#</a></dt>
 <dd><p>Rename the fields from a flexible-datatype ndarray or recarray.</p>
 <p>Nested fields are supported.</p>
 <dl class="field-list simple">
@@ -1730,8 +1701,8 @@ with support for nested structures.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="30477e37-d110-456a-bf43-e8016e966ca6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('30477e37-d110-456a-bf43-e8016e966ca6','94c3dc76-9d36-42ad-964f-b30e6a4eacd2','79271778-5856-49fc-8440-4f1fe35f58d8','../lite/tree/../notebooks/index.html?path=a7d85d9d_4fad_432b_9b77_4c9038a3b3d5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="3e0228a6-aece-411c-8c03-a043476f63d3">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3e0228a6-aece-411c-8c03-a043476f63d3','6eb3aa44-dedd-4f9f-9eb3-e380cb59f789','5b8f5ffc-f9f4-4a91-b52d-b3295ecb9b18','../lite/tree/../notebooks/index.html?path=704ae027_b15a_430d_8e96_a6f141638434.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">30.</span><span class="p">])),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">[</span><span class="mf">6.0</span><span class="p">,</span> <span class="mf">60.</span><span class="p">]))],</span>
@@ -1743,11 +1714,11 @@ with support for nested structures.</p>
 </div>
 </div>
 </div>
-<div id="79271778-5856-49fc-8440-4f1fe35f58d8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('30477e37-d110-456a-bf43-e8016e966ca6','79271778-5856-49fc-8440-4f1fe35f58d8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('30477e37-d110-456a-bf43-e8016e966ca6','79271778-5856-49fc-8440-4f1fe35f58d8')">Open In Tab</button></div><div id="94c3dc76-9d36-42ad-964f-b30e6a4eacd2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="5b8f5ffc-f9f4-4a91-b52d-b3295ecb9b18" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3e0228a6-aece-411c-8c03-a043476f63d3','5b8f5ffc-f9f4-4a91-b52d-b3295ecb9b18')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3e0228a6-aece-411c-8c03-a043476f63d3','5b8f5ffc-f9f4-4a91-b52d-b3295ecb9b18')">Open In Tab</button></div><div id="6eb3aa44-dedd-4f9f-9eb3-e380cb59f789" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.repack_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">repack_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L778-L860"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.repack_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">repack_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recurse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L770-L852"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.repack_fields" title="Link to this definition">#</a></dt>
 <dd><p>Re-pack the fields of a structured array or dtype in memory.</p>
 <p>The memory layout of structured datatypes allows fields at arbitrary
 byte offsets. This means the fields can be separated by padding bytes,
@@ -1782,8 +1753,8 @@ needed.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="9a6a11dd-dde0-42a6-ba98-fce02af58b7d">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9a6a11dd-dde0-42a6-ba98-fce02af58b7d','9682ba48-2764-4238-b2b8-7caca0f97a8d','752120dc-0fe5-4fac-adf9-1655858b73cb','../lite/tree/../notebooks/index.html?path=b860b8bc_c1f1_4f24_bfbf_339bdb9e2559.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="248f7238-00c5-4d49-95c9-2f00a6528476">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('248f7238-00c5-4d49-95c9-2f00a6528476','e3158ae1-7a2a-434d-a2b7-a4aacae8916c','fa8a4083-0a14-4d2b-a0df-5c893a2489bf','../lite/tree/../notebooks/index.html?path=9700b71c_d9a4_495b_a816_3d72b329b060.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1808,11 +1779,11 @@ needed.</p>
 </div>
 </div>
 </div>
-<div id="752120dc-0fe5-4fac-adf9-1655858b73cb" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9a6a11dd-dde0-42a6-ba98-fce02af58b7d','752120dc-0fe5-4fac-adf9-1655858b73cb')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9a6a11dd-dde0-42a6-ba98-fce02af58b7d','752120dc-0fe5-4fac-adf9-1655858b73cb')">Open In Tab</button></div><div id="9682ba48-2764-4238-b2b8-7caca0f97a8d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="fa8a4083-0a14-4d2b-a0df-5c893a2489bf" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('248f7238-00c5-4d49-95c9-2f00a6528476','fa8a4083-0a14-4d2b-a0df-5c893a2489bf')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('248f7238-00c5-4d49-95c9-2f00a6528476','fa8a4083-0a14-4d2b-a0df-5c893a2489bf')">Open In Tab</button></div><div id="e3158ae1-7a2a-434d-a2b7-a4aacae8916c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.require_fields">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">require_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_dtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1282-L1324"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.require_fields" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">require_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_dtype</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1274-L1316"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.require_fields" title="Link to this definition">#</a></dt>
 <dd><p>Casts a structured array to a new dtype using assignment by field-name.</p>
 <p>This function assigns from the old to the new array by name, so the
 value of a field in the output array is the value of the field with the
@@ -1838,8 +1809,8 @@ the input array with the same name</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="eb03212b-8b23-4fc3-a518-8d44467a8dbb">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('eb03212b-8b23-4fc3-a518-8d44467a8dbb','a281e6ea-91bf-40bc-b5a1-67242e724f4a','ec53154c-af28-4c76-acfe-5ccbe410bc05','../lite/tree/../notebooks/index.html?path=b2e28a1f_2e5c_47b0_8551_fb3cd7d3f465.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="7cb65034-0548-4508-89c0-7549757ea237">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7cb65034-0548-4508-89c0-7549757ea237','94408bbc-f6b2-4639-a76e-a0a0c04f22a1','7369a3c0-354c-4ce7-be61-1737507f25e3','../lite/tree/../notebooks/index.html?path=84d8486d_e8b2_4803_bc3a_8b6fea4e029c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1855,11 +1826,11 @@ the input array with the same name</p>
 </div>
 </div>
 </div>
-<div id="ec53154c-af28-4c76-acfe-5ccbe410bc05" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('eb03212b-8b23-4fc3-a518-8d44467a8dbb','ec53154c-af28-4c76-acfe-5ccbe410bc05')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('eb03212b-8b23-4fc3-a518-8d44467a8dbb','ec53154c-af28-4c76-acfe-5ccbe410bc05')">Open In Tab</button></div><div id="a281e6ea-91bf-40bc-b5a1-67242e724f4a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="7369a3c0-354c-4ce7-be61-1737507f25e3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7cb65034-0548-4508-89c0-7549757ea237','7369a3c0-354c-4ce7-be61-1737507f25e3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7cb65034-0548-4508-89c0-7549757ea237','7369a3c0-354c-4ce7-be61-1737507f25e3')">Open In Tab</button></div><div id="94408bbc-f6b2-4639-a76e-a0a0c04f22a1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.stack_arrays">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">stack_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arrays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoconvert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1332-L1418"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.stack_arrays" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">stack_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arrays</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usemask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asrecarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoconvert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1324-L1410"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.stack_arrays" title="Link to this definition">#</a></dt>
 <dd><p>Superposes arrays fields by fields</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1880,8 +1851,8 @@ or just a flexible-type ndarray.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e95b5582-5ef6-4523-8f89-b3fcf0a81cea">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e95b5582-5ef6-4523-8f89-b3fcf0a81cea','2cb82de3-dda6-4f26-9dc3-417a84b1fd46','524d2a43-f952-4a5c-98ad-08bc750f899e','../lite/tree/../notebooks/index.html?path=c8b436a7_e4cf_41b5_a22b_1f473d34f8c8.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="94c1df98-6a52-4b19-81e7-32803eeedb76">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('94c1df98-6a52-4b19-81e7-32803eeedb76','89f4f560-d753-4a70-8362-6cd2549d14e1','7b0e8da1-9bbe-4f19-8cb7-8d556e7c05d2','../lite/tree/../notebooks/index.html?path=4b3f69fc_02b3_45ea_968b_d5c206b337fb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib</span> <span class="kn">import</span> <span class="n">recfunctions</span> <span class="k">as</span> <span class="n">rfn</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,])</span>
@@ -1903,11 +1874,11 @@ or just a flexible-type ndarray.</p>
 </div>
 </div>
 </div>
-<div id="524d2a43-f952-4a5c-98ad-08bc750f899e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e95b5582-5ef6-4523-8f89-b3fcf0a81cea','524d2a43-f952-4a5c-98ad-08bc750f899e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e95b5582-5ef6-4523-8f89-b3fcf0a81cea','524d2a43-f952-4a5c-98ad-08bc750f899e')">Open In Tab</button></div><div id="2cb82de3-dda6-4f26-9dc3-417a84b1fd46" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="7b0e8da1-9bbe-4f19-8cb7-8d556e7c05d2" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('94c1df98-6a52-4b19-81e7-32803eeedb76','7b0e8da1-9bbe-4f19-8cb7-8d556e7c05d2')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('94c1df98-6a52-4b19-81e7-32803eeedb76','7b0e8da1-9bbe-4f19-8cb7-8d556e7c05d2')">Open In Tab</button></div><div id="89f4f560-d753-4a70-8362-6cd2549d14e1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.structured_to_unstructured">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">structured_to_unstructured</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">casting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'unsafe'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L948-L1076"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.structured_to_unstructured" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">structured_to_unstructured</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">casting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'unsafe'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L940-L1068"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.structured_to_unstructured" title="Link to this definition">#</a></dt>
 <dd><p>Converts an n-D structured array into an (n+1)-D unstructured array.</p>
 <p>The new array will have a new last dimension equal in size to the
 number of field-elements of the input array. If not supplied, the output
@@ -1944,8 +1915,8 @@ data casting may occur.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="2c7aad47-7529-4e91-93fc-3f86f0a27544">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2c7aad47-7529-4e91-93fc-3f86f0a27544','6b882883-1f04-4643-b966-d304435bd57d','ca2542e3-f3ee-4dda-8a65-69906cef7eb2','../lite/tree/../notebooks/index.html?path=38901bde_4ffd_4ee9_baa4_e05c0243139f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="ab1e2e53-ac6f-4f7d-b605-90bf7ec1a397">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ab1e2e53-ac6f-4f7d-b605-90bf7ec1a397','dacc6e0e-00cd-44a7-82e1-f0e67dcbbe00','4f5ed3c2-88a1-46da-8408-02fb0c6adb9a','../lite/tree/../notebooks/index.html?path=064236e5_ac91_4025_bfad_5df19c29def4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -1970,11 +1941,11 @@ data casting may occur.</p>
 </div>
 </div>
 </div>
-<div id="ca2542e3-f3ee-4dda-8a65-69906cef7eb2" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2c7aad47-7529-4e91-93fc-3f86f0a27544','ca2542e3-f3ee-4dda-8a65-69906cef7eb2')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2c7aad47-7529-4e91-93fc-3f86f0a27544','ca2542e3-f3ee-4dda-8a65-69906cef7eb2')">Open In Tab</button></div><div id="6b882883-1f04-4643-b966-d304435bd57d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="4f5ed3c2-88a1-46da-8408-02fb0c6adb9a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ab1e2e53-ac6f-4f7d-b605-90bf7ec1a397','4f5ed3c2-88a1-46da-8408-02fb0c6adb9a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ab1e2e53-ac6f-4f7d-b605-90bf7ec1a397','4f5ed3c2-88a1-46da-8408-02fb0c6adb9a')">Open In Tab</button></div><div id="dacc6e0e-00cd-44a7-82e1-f0e67dcbbe00" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.lib.recfunctions.unstructured_to_structured">
-<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">unstructured_to_structured</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">casting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'unsafe'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1083-L1189"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.unstructured_to_structured" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">numpy.lib.recfunctions.</span></span><span class="sig-name descname"><span class="pre">unstructured_to_structured</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">casting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'unsafe'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/lib/recfunctions.py#L1075-L1181"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.lib.recfunctions.unstructured_to_structured" title="Link to this definition">#</a></dt>
 <dd><p>Converts an n-D unstructured array into an (n-1)-D structured array.</p>
 <p>The last dimension of the input array is converted into a structure, with
 number of field-elements equal to the size of the last dimension of the
@@ -2012,8 +1983,8 @@ data casting may occur.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e88806b9-08a8-49d5-a022-d225f43b99a2">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e88806b9-08a8-49d5-a022-d225f43b99a2','15a4d1d6-9963-4cb2-a7c4-fdd390460321','90064566-0d15-422f-a0b2-3b43f0c0f989','../lite/tree/../notebooks/index.html?path=5cde5fa7_94ef_45d3_be46_7335a6aef0ad.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="f0a4d0c6-e2bd-4c44-9720-a39924481ece">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f0a4d0c6-e2bd-4c44-9720-a39924481ece','c60f1982-b57d-427f-a8ab-965664c95bbb','62705e9f-ebe9-4f8a-8aea-669856d94c28','../lite/tree/../notebooks/index.html?path=5fe3f983_def3_44ce_ad38_7191baa7b2dd.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -2033,7 +2004,7 @@ data casting may occur.</p>
 </div>
 </div>
 </div>
-<div id="90064566-0d15-422f-a0b2-3b43f0c0f989" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e88806b9-08a8-49d5-a022-d225f43b99a2','90064566-0d15-422f-a0b2-3b43f0c0f989')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e88806b9-08a8-49d5-a022-d225f43b99a2','90064566-0d15-422f-a0b2-3b43f0c0f989')">Open In Tab</button></div><div id="15a4d1d6-9963-4cb2-a7c4-fdd390460321" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="62705e9f-ebe9-4f8a-8aea-669856d94c28" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f0a4d0c6-e2bd-4c44-9720-a39924481ece','62705e9f-ebe9-4f8a-8aea-669856d94c28')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f0a4d0c6-e2bd-4c44-9720-a39924481ece','62705e9f-ebe9-4f8a-8aea-669856d94c28')">Open In Tab</button></div><div id="c60f1982-b57d-427f-a8ab-965664c95bbb" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 </section>
 </section>
@@ -2074,7 +2045,8 @@ data casting may occur.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -2155,8 +2127,8 @@ data casting may occur.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2167,7 +2139,7 @@ data casting may occur.</p>
 
   <p class="copyright">
     
-      © Copyright 2008-2024, NumPy Developers.
+      © Copyright 2008-2025, NumPy Developers.
       <br/>
     
   </p>
@@ -2176,7 +2148,7 @@ data casting may occur.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -2189,7 +2161,8 @@ data casting may occur.</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -735,8 +735,8 @@ equation <code class="docutils literal notranslate"><span class="pre">low</span>
 </pre></div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="9119647c-44d3-40c3-8337-8acd835e956b">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9119647c-44d3-40c3-8337-8acd835e956b','8cdbd4c7-2e96-498d-864f-46ecc203e729','efa4ab7d-b49e-46cb-aa6f-6858bc8321f3','../../../lite/tree/../notebooks/index.html?path=f8efbbbd_caa3_488c_baec_6efbde9b288f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="59055440-0e49-43da-b5f1-ec0c5abf92a6">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('59055440-0e49-43da-b5f1-ec0c5abf92a6','11e48142-497e-40e0-87c8-8ade1d8c2a8c','07ae3275-870e-4f45-bf6d-bc943d2f8251','../../../lite/tree/../notebooks/index.html?path=1d61c1f5_37e7_4f2e_a5fd_69384cbf70fb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Draw samples from the distribution:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
@@ -750,7 +750,7 @@ equation <code class="docutils literal notranslate"><span class="pre">low</span>
 </div>
 <p>Display the histogram of the samples, along with the
 probability density function:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">bins</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -761,7 +761,7 @@ probability density function:</p>
 </figure>
 </div>
 </div>
-<div id="efa4ab7d-b49e-46cb-aa6f-6858bc8321f3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9119647c-44d3-40c3-8337-8acd835e956b','efa4ab7d-b49e-46cb-aa6f-6858bc8321f3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9119647c-44d3-40c3-8337-8acd835e956b','efa4ab7d-b49e-46cb-aa6f-6858bc8321f3')">Open In Tab</button></div><div id="8cdbd4c7-2e96-498d-864f-46ecc203e729" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="07ae3275-870e-4f45-bf6d-bc943d2f8251" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('59055440-0e49-43da-b5f1-ec0c5abf92a6','07ae3275-870e-4f45-bf6d-bc943d2f8251')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('59055440-0e49-43da-b5f1-ec0c5abf92a6','07ae3275-870e-4f45-bf6d-bc943d2f8251')">Open In Tab</button></div><div id="11e48142-497e-40e0-87c8-8ade1d8c2a8c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

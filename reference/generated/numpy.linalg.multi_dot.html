@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -603,7 +603,7 @@ this can speed up the multiplication a lot.</p>
 If the last argument is 1-D it is treated as a column vector.
 The other arguments must be 2-D.</p>
 <p>Think of <a class="reference internal" href="#numpy.linalg.multi_dot" title="numpy.linalg.multi_dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi_dot</span></code></a> as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">multi_dot</span><span class="p">(</span><span class="n">arrays</span><span class="p">):</span> <span class="k">return</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">,</span> <span class="n">arrays</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">multi_dot</span><span class="p">(</span><span class="n">arrays</span><span class="p">):</span> <span class="k">return</span> <span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">,</span> <span class="n">arrays</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -639,7 +639,7 @@ to be flexible.</p>
 <p class="rubric">Notes</p>
 <p>The cost for a matrix multiplication can be calculated with the
 following function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cost</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -662,11 +662,11 @@ following function:</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e4c8036d-4641-47f2-9114-22d899a0a862">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e4c8036d-4641-47f2-9114-22d899a0a862','bd1ea3ee-3ec9-4e8f-993a-6245f834dc8e','e03614a5-ceac-4dc3-b6ea-6bc804363579','../../lite/tree/../notebooks/index.html?path=08922b17_9ad1_4373_a5cc_b8d62bf6ea2f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="5a17af14-4515-4316-855d-c68d0f83bd73">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5a17af14-4515-4316-855d-c68d0f83bd73','26397ed7-51ad-4455-a636-19cbf9617b02','388fda6f-a599-4255-b532-c7b76065a00d','../../lite/tree/../notebooks/index.html?path=9d28d305_9cce_43f6_8955_78fdfcb118ef.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p><a class="reference internal" href="#numpy.linalg.multi_dot" title="numpy.linalg.multi_dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi_dot</span></code></a> allows you to write:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">multi_dot</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">multi_dot</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Prepare some data</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
@@ -684,7 +684,7 @@ following function:</p>
 </div>
 </div>
 </div>
-<div id="e03614a5-ceac-4dc3-b6ea-6bc804363579" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e4c8036d-4641-47f2-9114-22d899a0a862','e03614a5-ceac-4dc3-b6ea-6bc804363579')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e4c8036d-4641-47f2-9114-22d899a0a862','e03614a5-ceac-4dc3-b6ea-6bc804363579')">Open In Tab</button></div><div id="bd1ea3ee-3ec9-4e8f-993a-6245f834dc8e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="388fda6f-a599-4255-b532-c7b76065a00d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5a17af14-4515-4316-855d-c68d0f83bd73','388fda6f-a599-4255-b532-c7b76065a00d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5a17af14-4515-4316-855d-c68d0f83bd73','388fda6f-a599-4255-b532-c7b76065a00d')">Open In Tab</button></div><div id="26397ed7-51ad-4455-a636-19cbf9617b02" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

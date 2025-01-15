@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -616,8 +616,8 @@ than the corresponding window size.</p>
 <p>For many applications using a sliding window view can be convenient, but
 potentially very slow. Often specialized solutions exist, for example:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.fftconvolve.html#scipy.signal.fftconvolve" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.signal.fftconvolve</span></code></a></p></li>
-<li><p>filtering functions in <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/ndimage.html#module-scipy.ndimage" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.ndimage</span></code></a></p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.fftconvolve.html#scipy.signal.fftconvolve" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.signal.fftconvolve</span></code></a></p></li>
+<li><p>filtering functions in <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/ndimage.html#module-scipy.ndimage" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.ndimage</span></code></a></p></li>
 <li><p>moving window functions provided by
 <a class="reference external" href="https://github.com/pydata/bottleneck">bottleneck</a>.</p></li>
 </ul>
@@ -629,10 +629,10 @@ version.</p>
 <p>Nevertheless, for small window sizes, when no custom algorithm exists, or
 as a prototyping and developing tool, this function can be a good solution.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="3390a3d3-0a34-41db-8843-263786bb795e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3390a3d3-0a34-41db-8843-263786bb795e','4590f28c-d7fd-4dcb-9e1e-2a6d690f37cc','7cb2b416-c7ba-4cd2-bf3a-35636e9dd830','../../lite/tree/../notebooks/index.html?path=9c45b7f2_aef1_4114_b4cc_34dc6f8ebfca.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib.stride_tricks</span> <span class="kn">import</span> <span class="n">sliding_window_view</span>
+<div class="try_examples_outer_container docutils container" id="eafcdaf7-0e0c-4443-97d8-916a918ce193">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('eafcdaf7-0e0c-4443-97d8-916a918ce193','fc81620c-3222-478b-8a65-f11d9d9cc58a','573ab61f-2b71-4b7f-a51e-886d811de0e3','../../lite/tree/../notebooks/index.html?path=9108c0b8_d13d_4d0e_8b20_e570738b5c67.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.lib.stride_tricks</span><span class="w"> </span><span class="kn">import</span> <span class="n">sliding_window_view</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">shape</span>
 <span class="go">(6,)</span>
@@ -738,7 +738,7 @@ statistics. The simplest example is the
 <p>Note that a sliding window approach is often <strong>not</strong> optimal (see Notes).</p>
 </div>
 </div>
-<div id="7cb2b416-c7ba-4cd2-bf3a-35636e9dd830" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3390a3d3-0a34-41db-8843-263786bb795e','7cb2b416-c7ba-4cd2-bf3a-35636e9dd830')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3390a3d3-0a34-41db-8843-263786bb795e','7cb2b416-c7ba-4cd2-bf3a-35636e9dd830')">Open In Tab</button></div><div id="4590f28c-d7fd-4dcb-9e1e-2a6d690f37cc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="573ab61f-2b71-4b7f-a51e-886d811de0e3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('eafcdaf7-0e0c-4443-97d8-916a918ce193','573ab61f-2b71-4b7f-a51e-886d811de0e3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('eafcdaf7-0e0c-4443-97d8-916a918ce193','573ab61f-2b71-4b7f-a51e-886d811de0e3')">Open In Tab</button></div><div id="fc81620c-3222-478b-8a65-f11d9d9cc58a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

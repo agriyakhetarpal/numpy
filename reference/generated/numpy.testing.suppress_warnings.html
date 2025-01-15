@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -621,8 +621,8 @@ warnings context). The forwarding rule argument can modify this
 behaviour.</p>
 <p>Like <code class="docutils literal notranslate"><span class="pre">catch_warnings</span></code> this context manager is not threadsafe.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="f11b5f5b-28c0-4f6f-8c78-7f6917d010e8">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f11b5f5b-28c0-4f6f-8c78-7f6917d010e8','fe2ff657-78e9-42f0-aa9b-4358e416eb8e','7ed0eb2e-ba58-4efc-bfec-1914e9ed429e','../../lite/tree/../notebooks/index.html?path=26d23f54_c9a6_489c_b345_0582b3d66bb1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="af93143b-5a0a-41d4-8639-3fe1112c634f">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('af93143b-5a0a-41d4-8639-3fe1112c634f','84393bc0-9862-49b4-add5-a08c10a5dbad','b16501e5-dfb3-43cb-8aef-0ccd67202e4b','../../lite/tree/../notebooks/index.html?path=d874c12e_d311_402a_ab82_d20b1e1c06dd.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>With a context manager:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">suppress_warnings</span><span class="p">()</span> <span class="k">as</span> <span class="n">sup</span><span class="p">:</span>
     <span class="n">sup</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="ne">DeprecationWarning</span><span class="p">,</span> <span class="s2">&quot;Some text&quot;</span><span class="p">)</span>
@@ -640,14 +640,14 @@ behaviour.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sup</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">suppress_warnings</span><span class="p">()</span>
 <span class="n">sup</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">module</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">core</span><span class="p">)</span>  <span class="c1"># module must match exactly</span>
 <span class="nd">@sup</span>
-<span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">some_function</span><span class="p">():</span>
     <span class="c1"># do something which causes a warning in np.ma.core</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div id="7ed0eb2e-ba58-4efc-bfec-1914e9ed429e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f11b5f5b-28c0-4f6f-8c78-7f6917d010e8','7ed0eb2e-ba58-4efc-bfec-1914e9ed429e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f11b5f5b-28c0-4f6f-8c78-7f6917d010e8','7ed0eb2e-ba58-4efc-bfec-1914e9ed429e')">Open In Tab</button></div><div id="fe2ff657-78e9-42f0-aa9b-4358e416eb8e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p class="rubric">Methods</p>
+<div id="b16501e5-dfb3-43cb-8aef-0ccd67202e4b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('af93143b-5a0a-41d4-8639-3fe1112c634f','b16501e5-dfb3-43cb-8aef-0ccd67202e4b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('af93143b-5a0a-41d4-8639-3fe1112c634f','b16501e5-dfb3-43cb-8aef-0ccd67202e4b')">Open In Tab</button></div><div id="84393bc0-9862-49b4-add5-a08c10a5dbad" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="numpy.testing.suppress_warnings.__call__.html#numpy.testing.suppress_warnings.__call__" title="numpy.testing.suppress_warnings.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a>(func)</p></td>

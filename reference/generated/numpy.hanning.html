@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -615,9 +615,9 @@ The University of Alberta Press, 1975, pp. 106-108.</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="827fb54b-d30a-42f5-93ac-819befbc1d71">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('827fb54b-d30a-42f5-93ac-819befbc1d71','1a59a243-a454-45b5-902f-955d0e305608','77dae39a-4702-4dbb-b172-98822569b7b1','../../lite/tree/../notebooks/index.html?path=5a1b80bb_d011_4985_9e79_c79c4467d0da.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="074a28c1-fa37-47d5-80c8-0f97fd6888be">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('074a28c1-fa37-47d5-80c8-0f97fd6888be','98c4dd79-5680-4bad-b019-3326b8fc6308','32a6063b-c3a6-4b6d-9deb-041d34a32554','../../lite/tree/../notebooks/index.html?path=33067a87_5f4c_4f7a_bff8_9bce5b7bb759.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">hanning</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 <span class="go">array([0.        , 0.07937323, 0.29229249, 0.57115742, 0.82743037,</span>
 <span class="go">       0.97974649, 0.97974649, 0.82743037, 0.57115742, 0.29229249,</span>
@@ -625,8 +625,8 @@ The University of Alberta Press, 1975, pp. 106-108.</p>
 </pre></div>
 </div>
 <p>Plot the window and its frequency response.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">numpy.fft</span> <span class="kn">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">fftshift</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.fft</span><span class="w"> </span><span class="kn">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">fftshift</span>
 <span class="n">window</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hanning</span><span class="p">(</span><span class="mi">51</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hann window&quot;</span><span class="p">)</span>
@@ -658,7 +658,7 @@ The University of Alberta Press, 1975, pp. 106-108.</p>
 </figure>
 </div>
 </div>
-<div id="77dae39a-4702-4dbb-b172-98822569b7b1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('827fb54b-d30a-42f5-93ac-819befbc1d71','77dae39a-4702-4dbb-b172-98822569b7b1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('827fb54b-d30a-42f5-93ac-819befbc1d71','77dae39a-4702-4dbb-b172-98822569b7b1')">Open In Tab</button></div><div id="1a59a243-a454-45b5-902f-955d0e305608" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="32a6063b-c3a6-4b6d-9deb-041d34a32554" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('074a28c1-fa37-47d5-80c8-0f97fd6888be','32a6063b-c3a6-4b6d-9deb-041d34a32554')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('074a28c1-fa37-47d5-80c8-0f97fd6888be','32a6063b-c3a6-4b6d-9deb-041d34a32554')">Open In Tab</button></div><div id="98c4dd79-5680-4bad-b019-3326b8fc6308" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

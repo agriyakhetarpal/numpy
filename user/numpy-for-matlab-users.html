@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -572,9 +572,9 @@ expressions. These are similar expressions, not equivalents. For
 details, see the <a class="reference internal" href="../reference/index.html#reference"><span class="std std-ref">documentation</span></a>.</p>
 <p>In the table below, it is assumed that you have executed the following
 commands in Python:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">io</span><span class="p">,</span> <span class="n">integrate</span><span class="p">,</span> <span class="n">linalg</span><span class="p">,</span> <span class="n">signal</span>
-<span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">cg</span><span class="p">,</span> <span class="n">eigs</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">io</span><span class="p">,</span> <span class="n">integrate</span><span class="p">,</span> <span class="n">linalg</span><span class="p">,</span> <span class="n">signal</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.sparse.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">cg</span><span class="p">,</span> <span class="n">eigs</span>
 </pre></div>
 </div>
 <p>Also assume below that if the Notes talk about “matrix” that the
@@ -677,7 +677,7 @@ precision</p></td>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">load</span> <span class="pre">data.mat</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">io.loadmat('data.mat')</span></code></p></td>
 <td><p>Load MATLAB variables saved to the file <code class="docutils literal notranslate"><span class="pre">data.mat</span></code>. (Note: When saving arrays to
-<code class="docutils literal notranslate"><span class="pre">data.mat</span></code> in MATLAB/Octave, use a recent binary format. <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html#scipy.io.loadmat" title="(in SciPy v1.14.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.io.loadmat</span></code></a>
+<code class="docutils literal notranslate"><span class="pre">data.mat</span></code> in MATLAB/Octave, use a recent binary format. <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.loadmat.html#scipy.io.loadmat" title="(in SciPy v1.15.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.io.loadmat</span></code></a>
 will create a dictionary with the saved arrays and further information.)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ode45</span></code></p></td>
@@ -884,7 +884,7 @@ vector, <code class="docutils literal notranslate"><span class="pre">v</span></c
 </pre></div>
 </div>
 </td>
-<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">default_rng</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 </pre></div>
@@ -1272,14 +1272,14 @@ in a particular file accessible.</p>
 <p>For example you might make a startup script that looks like this (Note:
 this is just an example, not a statement of “best practices”):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make all numpy available via shorter &#39;np&#39; prefix</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="c1">#</span>
 <span class="c1"># Make the SciPy linear algebra functions available as linalg.func()</span>
 <span class="c1"># e.g. linalg.lu, linalg.eig (for general l*B@u==A@u solution)</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linalg</span>
 <span class="c1">#</span>
 <span class="c1"># Define a Hermitian function</span>
-<span class="k">def</span> <span class="nf">hermitian</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hermitian</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="c1"># Make a shortcut for hermitian:</span>
 <span class="c1">#    hermitian(A) --&gt; H(A)</span>
@@ -1288,9 +1288,9 @@ this is just an example, not a statement of “best practices”):</p>
 </div>
 <p>To use the deprecated <em class="xref py py-obj">matrix</em> and other <em class="xref py py-obj">matlib</em> functions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make all matlib functions accessible at the top level via M.func()</span>
-<span class="kn">import</span> <span class="nn">numpy.matlib</span> <span class="k">as</span> <span class="nn">M</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy.matlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">M</span>
 <span class="c1"># Make some matlib functions accessible directly at the top level via, e.g. rand(3,3)</span>
-<span class="kn">from</span> <span class="nn">numpy.matlib</span> <span class="kn">import</span> <span class="n">matrix</span><span class="p">,</span><span class="n">rand</span><span class="p">,</span><span class="n">zeros</span><span class="p">,</span><span class="n">ones</span><span class="p">,</span><span class="n">empty</span><span class="p">,</span><span class="n">eye</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.matlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">matrix</span><span class="p">,</span><span class="n">rand</span><span class="p">,</span><span class="n">zeros</span><span class="p">,</span><span class="n">ones</span><span class="p">,</span><span class="n">empty</span><span class="p">,</span><span class="n">eye</span>
 </pre></div>
 </div>
 </section>

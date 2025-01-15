@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -705,7 +705,7 @@ size <em class="xref py py-obj">nsample</em> taken from a set of <em class="xref
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.hypergeom.html#scipy.stats.hypergeom" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.stats.hypergeom</span></code></a></dt><dd><p>probability density function, distribution or cumulative density function, etc.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.hypergeom.html#scipy.stats.hypergeom" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.stats.hypergeom</span></code></a></dt><dd><p>probability density function, distribution or cumulative density function, etc.</p>
 </dd>
 <dt><a class="reference internal" href="numpy.random.Generator.hypergeometric.html#numpy.random.Generator.hypergeometric" title="numpy.random.Generator.hypergeometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random.Generator.hypergeometric</span></code></a></dt><dd><p>which should be used for new code.</p>
 </dd>
@@ -747,13 +747,13 @@ MathWorld–A Wolfram Web Resource.
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="0d287c48-5603-4b94-b7a3-4d1c2753b5d1">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0d287c48-5603-4b94-b7a3-4d1c2753b5d1','d1d54629-4abf-45d5-895f-f4b66caeb90d','f71ff8a2-f7d4-4561-9d17-8c2186c3549f','../../../lite/tree/../notebooks/index.html?path=36cb1a3b_7941_4ac1_b878_ddb2b41c2a19.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="85defe62-99cb-4d77-888b-a2a1e6f9021d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('85defe62-99cb-4d77-888b-a2a1e6f9021d','72772c8e-cea6-40be-9fd0-73f854ad1f8c','3adade76-bd8b-486b-af9e-d115d3bb6b35','../../../lite/tree/../notebooks/index.html?path=a2f46e5a_d423_44cb_a2b3_ce2b22d9485a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Draw samples from the distribution:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">nsamp</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span>
 <span class="go"># number of good, number of bad, and number of samples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">hypergeometric</span><span class="p">(</span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">nsamp</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">hist</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="kn">import</span> <span class="n">hist</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="go">#   note that it is very unlikely to grab both bad items</span>
 </pre></div>
@@ -768,7 +768,7 @@ If you pull 15 marbles at random, how likely is it that
 </div>
 </div>
 </div>
-<div id="f71ff8a2-f7d4-4561-9d17-8c2186c3549f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0d287c48-5603-4b94-b7a3-4d1c2753b5d1','f71ff8a2-f7d4-4561-9d17-8c2186c3549f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0d287c48-5603-4b94-b7a3-4d1c2753b5d1','f71ff8a2-f7d4-4561-9d17-8c2186c3549f')">Open In Tab</button></div><div id="d1d54629-4abf-45d5-895f-f4b66caeb90d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="3adade76-bd8b-486b-af9e-d115d3bb6b35" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('85defe62-99cb-4d77-888b-a2a1e6f9021d','3adade76-bd8b-486b-af9e-d115d3bb6b35')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('85defe62-99cb-4d77-888b-a2a1e6f9021d','3adade76-bd8b-486b-af9e-d115d3bb6b35')">Open In Tab</button></div><div id="72772c8e-cea6-40be-9fd0-73f854ad1f8c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

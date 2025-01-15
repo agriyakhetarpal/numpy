@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -786,9 +786,9 @@ mask boolean. The returned record shape matches self.shape.</p>
 <p>A side-effect of transforming a masked array into a flexible <a class="reference internal" href="numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a> is
 that meta information (<code class="docutils literal notranslate"><span class="pre">fill_value</span></code>, …) will be lost.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="25bcdea4-8bb0-4db0-9fcf-edd71d089aac">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('25bcdea4-8bb0-4db0-9fcf-edd71d089aac','f196d65b-216c-4753-84e4-1f06443775e3','b8fcb5c0-0304-472d-8898-38c2ef560640','../../lite/tree/../notebooks/index.html?path=65bf235b_ceea_4767_a081_db21aa68cbac.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="3eb9af7a-0c27-487f-8f93-5d43595adf45">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3eb9af7a-0c27-487f-8f93-5d43595adf45','a631db87-9358-40d6-8f6b-27f553513eb7','a9234d19-d66b-4b64-adeb-fda5c3b41a2a','../../lite/tree/../notebooks/index.html?path=3e64725e_7f53_4323_8e4c_3a3490ac7728.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]],</span> <span class="n">mask</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
 <span class="go">masked_array(</span>
@@ -808,7 +808,7 @@ that meta information (<code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 </div>
-<div id="b8fcb5c0-0304-472d-8898-38c2ef560640" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('25bcdea4-8bb0-4db0-9fcf-edd71d089aac','b8fcb5c0-0304-472d-8898-38c2ef560640')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('25bcdea4-8bb0-4db0-9fcf-edd71d089aac','b8fcb5c0-0304-472d-8898-38c2ef560640')">Open In Tab</button></div><div id="f196d65b-216c-4753-84e4-1f06443775e3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="a9234d19-d66b-4b64-adeb-fda5c3b41a2a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3eb9af7a-0c27-487f-8f93-5d43595adf45','a9234d19-d66b-4b64-adeb-fda5c3b41a2a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3eb9af7a-0c27-487f-8f93-5d43595adf45','a9234d19-d66b-4b64-adeb-fda5c3b41a2a')">Open In Tab</button></div><div id="a631db87-9358-40d6-8f6b-27f553513eb7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

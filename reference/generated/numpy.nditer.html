@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -706,14 +706,14 @@ the Python iterator protocol, and another which mirrors the C-style
 do-while pattern.  The native Python approach is better in most cases, but
 if you need the coordinates or index of an iterator, use the C-style pattern.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="431cc7b4-3ab5-41e7-9a98-9d05c0d91641">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('431cc7b4-3ab5-41e7-9a98-9d05c0d91641','a68e0174-5da1-499d-b299-7ed1607d5e4a','f1c5e025-37d2-40c0-8d3b-223af90fb6ee','../../lite/tree/../notebooks/index.html?path=ee8d631e_aa93_407e_b55a_6bd7e171164f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="45e8dc67-841a-40b9-bd5e-1b0b1ea563bf">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('45e8dc67-841a-40b9-bd5e-1b0b1ea563bf','3171aa98-0f47-417a-8062-000d2c68af13','1ac85a76-0746-4b86-8afa-eaa2070df608','../../lite/tree/../notebooks/index.html?path=71fffb60_5a2e_4396_9f5f_dd6b2907b934.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Here is how we might write an <code class="docutils literal notranslate"><span class="pre">iter_add</span></code> function, using the
 Python iterator protocol:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">iter_add_py</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">iter_add_py</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">addop</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span>
 <span class="gp">... </span>    <span class="n">it</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="p">],</span> <span class="p">[],</span>
 <span class="gp">... </span>                <span class="p">[[</span><span class="s1">&#39;readonly&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;readonly&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;writeonly&#39;</span><span class="p">,</span><span class="s1">&#39;allocate&#39;</span><span class="p">]])</span>
@@ -724,7 +724,7 @@ Python iterator protocol:</p>
 </pre></div>
 </div>
 <p>Here is the same function, but following the C-style pattern:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">iter_add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">iter_add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>   <span class="n">addop</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span>
 <span class="gp">... </span>   <span class="n">it</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="p">],</span> <span class="p">[],</span>
 <span class="gp">... </span>               <span class="p">[[</span><span class="s1">&#39;readonly&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;readonly&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;writeonly&#39;</span><span class="p">,</span><span class="s1">&#39;allocate&#39;</span><span class="p">]])</span>
@@ -736,7 +736,7 @@ Python iterator protocol:</p>
 </pre></div>
 </div>
 <p>Here is an example outer product function:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">outer_it</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">outer_it</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">mulop</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span>
 <span class="gp">... </span>    <span class="n">it</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;external_loop&#39;</span><span class="p">],</span>
 <span class="gp">... </span>            <span class="p">[[</span><span class="s1">&#39;readonly&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;readonly&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;writeonly&#39;</span><span class="p">,</span> <span class="s1">&#39;allocate&#39;</span><span class="p">]],</span>
@@ -757,7 +757,7 @@ Python iterator protocol:</p>
 </pre></div>
 </div>
 <p>Here is an example function which operates like a “lambda” ufunc:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">luf</span><span class="p">(</span><span class="n">lamdaexpr</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">luf</span><span class="p">(</span><span class="n">lamdaexpr</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">... </span><span class="w">   </span><span class="sd">&#39;&#39;&#39;luf(lambdaexpr, op1, ..., opn, out=None, order=&#39;K&#39;, casting=&#39;safe&#39;, buffersize=0)&#39;&#39;&#39;</span>
 <span class="gp">... </span>   <span class="n">nargs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 <span class="gp">... </span>   <span class="n">op</span> <span class="o">=</span> <span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;out&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">),)</span> <span class="o">+</span> <span class="n">args</span>
@@ -809,7 +809,7 @@ one will affect the other.</p>
 <p>Context management and the <a class="reference internal" href="numpy.nditer.close.html#numpy.nditer.close" title="numpy.nditer.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a> method appeared in version 1.15.0.</p>
 </div>
 </div>
-<div id="f1c5e025-37d2-40c0-8d3b-223af90fb6ee" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('431cc7b4-3ab5-41e7-9a98-9d05c0d91641','f1c5e025-37d2-40c0-8d3b-223af90fb6ee')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('431cc7b4-3ab5-41e7-9a98-9d05c0d91641','f1c5e025-37d2-40c0-8d3b-223af90fb6ee')">Open In Tab</button></div><div id="a68e0174-5da1-499d-b299-7ed1607d5e4a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><dl class="field-list simple">
+<div id="1ac85a76-0746-4b86-8afa-eaa2070df608" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('45e8dc67-841a-40b9-bd5e-1b0b1ea563bf','1ac85a76-0746-4b86-8afa-eaa2070df608')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('45e8dc67-841a-40b9-bd5e-1b0b1ea563bf','1ac85a76-0746-4b86-8afa-eaa2070df608')">Open In Tab</button></div><div id="3171aa98-0f47-417a-8062-000d2c68af13" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>dtypes</strong><span class="classifier">tuple of dtype(s)</span></dt><dd><p>The data types of the values provided in <a class="reference internal" href="numpy.nditer.value.html#numpy.nditer.value" title="numpy.nditer.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a>. This may be

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -656,7 +656,7 @@ fit to the data in <em class="xref py py-obj">y</em>’s <em class="xref py py-o
 <dt>RankWarning</dt><dd><p>Raised if the matrix in the least-squares fit is rank deficient.
 The warning is only raised if <code class="docutils literal notranslate"><span class="pre">full</span> <span class="pre">==</span> <span class="pre">False</span></code>.  The warnings can
 be turned off by:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">warnings</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">RankWarning</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -678,7 +678,7 @@ be turned off by:</p>
 </dd>
 <dt><a class="reference internal" href="numpy.linalg.lstsq.html#numpy.linalg.lstsq" title="numpy.linalg.lstsq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.linalg.lstsq</span></code></a></dt><dd><p>Computes a least-squares fit from the matrix.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.UnivariateSpline.html#scipy.interpolate.UnivariateSpline" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.interpolate.UnivariateSpline</span></code></a></dt><dd><p>Computes spline fits.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.UnivariateSpline.html#scipy.interpolate.UnivariateSpline" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.interpolate.UnivariateSpline</span></code></a></dt><dd><p>Computes spline fits.</p>
 </dd>
 </dl>
 </div>
@@ -712,10 +712,10 @@ distribution of the sample points and the smoothness of the data.  If
 the quality of the fit is inadequate, splines may be a good
 alternative.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="f31e647d-9102-4686-a416-4056d4a2f540">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f31e647d-9102-4686-a416-4056d4a2f540','b7769ca6-5bbf-4b74-a43c-7cb1221b2729','9dfb6277-e95c-4aa0-ac2b-2ab59791946b','../../lite/tree/../notebooks/index.html?path=f1e42a78_ced9_480b_8e58_418014bf7d01.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.polynomial</span> <span class="kn">import</span> <span class="n">polynomial</span> <span class="k">as</span> <span class="n">P</span>
+<div class="try_examples_outer_container docutils container" id="bdc296cb-4145-4153-bbe2-11d31a4f7c0f">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('bdc296cb-4145-4153-bbe2-11d31a4f7c0f','8365623a-36d8-40d4-8e7b-78d55872133c','90951600-e7e6-4aa4-8b42-2a9e1eb83d47','../../lite/tree/../notebooks/index.html?path=91575a7d_d99e_406a_b7a5_aaafcaf1f04e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.polynomial</span><span class="w"> </span><span class="kn">import</span> <span class="n">polynomial</span> <span class="k">as</span> <span class="n">P</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">51</span><span class="p">)</span>  <span class="c1"># x &quot;data&quot;: [-1, -0.96, ..., 0.96, 1]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">err</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -744,7 +744,7 @@ alternative.</p>
 </div>
 </div>
 </div>
-<div id="9dfb6277-e95c-4aa0-ac2b-2ab59791946b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f31e647d-9102-4686-a416-4056d4a2f540','9dfb6277-e95c-4aa0-ac2b-2ab59791946b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f31e647d-9102-4686-a416-4056d4a2f540','9dfb6277-e95c-4aa0-ac2b-2ab59791946b')">Open In Tab</button></div><div id="b7769ca6-5bbf-4b74-a43c-7cb1221b2729" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="90951600-e7e6-4aa4-8b42-2a9e1eb83d47" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('bdc296cb-4145-4153-bbe2-11d31a4f7c0f','90951600-e7e6-4aa4-8b42-2a9e1eb83d47')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('bdc296cb-4145-4153-bbe2-11d31a4f7c0f','90951600-e7e6-4aa4-8b42-2a9e1eb83d47')">Open In Tab</button></div><div id="8365623a-36d8-40d4-8e7b-78d55872133c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

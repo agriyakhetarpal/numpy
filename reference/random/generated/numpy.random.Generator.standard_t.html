@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -662,8 +662,8 @@ Springer, 2002.</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="16ff67c9-4d64-416f-bda9-faa0fce0242f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('16ff67c9-4d64-416f-bda9-faa0fce0242f','1d450af4-dbb5-44e2-a649-29626bd611f3','053e3b32-3557-440e-a173-a9ecb60bf06b','../../../lite/tree/../notebooks/index.html?path=57ad9b65_03d1_4490_a303_f0be3a84920f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b67bebd8-206e-4ce7-a787-46f8fc504564">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b67bebd8-206e-4ce7-a787-46f8fc504564','3cf594c3-c4ee-4ece-a6b6-4568d7789a0e','9d2a13db-b41a-4d96-ba0c-81497f6ae988','../../../lite/tree/../notebooks/index.html?path=ab64abe7_478a_4e68_af80_f92e609e9909.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>From Dalgaard page 83 <a class="reference internal" href="#rb7c952f3992e-1" id="id3">[1]</a>, suppose the daily energy intake for 11
 women in kilojoules (kJ) is:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">intake</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5260.</span><span class="p">,</span> <span class="mi">5470</span><span class="p">,</span> <span class="mi">5640</span><span class="p">,</span> <span class="mi">6180</span><span class="p">,</span> <span class="mi">6390</span><span class="p">,</span> <span class="mi">6515</span><span class="p">,</span> <span class="mi">6805</span><span class="p">,</span> <span class="mi">7515</span><span class="p">,</span> \
@@ -692,7 +692,7 @@ root).</p>
 </div>
 <p>We draw 1000000 samples from Student’s t distribution with the adequate
 degrees of freedom.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_t</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">h</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -714,7 +714,7 @@ the null hypothesis of no deviation.</p>
 </figure>
 </div>
 </div>
-<div id="053e3b32-3557-440e-a173-a9ecb60bf06b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('16ff67c9-4d64-416f-bda9-faa0fce0242f','053e3b32-3557-440e-a173-a9ecb60bf06b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('16ff67c9-4d64-416f-bda9-faa0fce0242f','053e3b32-3557-440e-a173-a9ecb60bf06b')">Open In Tab</button></div><div id="1d450af4-dbb5-44e2-a649-29626bd611f3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="9d2a13db-b41a-4d96-ba0c-81497f6ae988" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b67bebd8-206e-4ce7-a787-46f8fc504564','9d2a13db-b41a-4d96-ba0c-81497f6ae988')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b67bebd8-206e-4ce7-a787-46f8fc504564','9d2a13db-b41a-4d96-ba0c-81497f6ae988')">Open In Tab</button></div><div id="3cf594c3-c4ee-4ece-a6b6-4568d7789a0e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

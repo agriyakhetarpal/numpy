@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -599,7 +599,7 @@ so all of the NumPy examples shown below are also applicable to SciPy</p>
 <h3>Running tests from inside Python<a class="headerlink" href="#running-tests-from-inside-python" title="Link to this heading">#</a></h3>
 <p>You can test an installed NumPy by <a class="reference internal" href="#numpy.test" title="numpy.test"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.test</span></code></a>, for example,
 To run NumPy’s full test suite, use the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;slow&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -668,23 +668,23 @@ classes (named <code class="docutils literal notranslate"><span class="pre">Test
 function <code class="docutils literal notranslate"><span class="pre">zzz()</span></code>.  To test this function you would create a test
 module called <code class="docutils literal notranslate"><span class="pre">test_yyy.py</span></code>.  If you only need to test one aspect of
 <code class="docutils literal notranslate"><span class="pre">zzz</span></code>, you can simply add a test function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_zzz</span><span class="p">():</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_zzz</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">zzz</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Hello from zzz&#39;</span>
 </pre></div>
 </div>
 <p>More often, we need to group a number of tests together, so we create
 a test class:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 <span class="c1"># import xxx symbols</span>
-<span class="kn">from</span> <span class="nn">numpy.xxx.yyy</span> <span class="kn">import</span> <span class="n">zzz</span>
-<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.xxx.yyy</span><span class="w"> </span><span class="kn">import</span> <span class="n">zzz</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
-<span class="k">class</span> <span class="nc">TestZzz</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">test_simple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestZzz</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_simple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">assert</span> <span class="n">zzz</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Hello from zzz&#39;</span>
 
-    <span class="k">def</span> <span class="nf">test_invalid_parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_invalid_parameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s1">&#39;.*some matching regex.*&#39;</span><span class="p">):</span>
             <span class="o">...</span>
 </pre></div>
@@ -763,8 +763,8 @@ macros.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="a3000b81-4612-4b09-a113-2ffc1b0188aa">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a3000b81-4612-4b09-a113-2ffc1b0188aa','76aa96e6-f735-4f1b-8c2f-c64f11b5b7e9','3fd3a0a6-2ea5-46a6-be65-cb224de90508','../lite/tree/../notebooks/index.html?path=09d572b6_c3ae_438b_80ea_fb17fbe0ee01.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="a3bae7c8-420a-4bd4-ad38-71a88475dc4c">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a3bae7c8-420a-4bd4-ad38-71a88475dc4c','fe85805d-45d0-4289-b235-dfda584842ef','15ecc186-3682-4dbe-a5e5-f70c161412f0','../lite/tree/../notebooks/index.html?path=d8f33495_d3ca_4cd2_a18e_9247d6d51170.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">functions</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;test_bytes&quot;</span><span class="p">,</span> <span class="s2">&quot;METH_O&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="go">    if ( !PyBytesCheck(args)) {</span>
 <span class="go">        Py_RETURN_FALSE;</span>
@@ -778,7 +778,7 @@ macros.</p>
 </div>
 </div>
 </div>
-<div id="3fd3a0a6-2ea5-46a6-be65-cb224de90508" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a3000b81-4612-4b09-a113-2ffc1b0188aa','3fd3a0a6-2ea5-46a6-be65-cb224de90508')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a3000b81-4612-4b09-a113-2ffc1b0188aa','3fd3a0a6-2ea5-46a6-be65-cb224de90508')">Open In Tab</button></div><div id="76aa96e6-f735-4f1b-8c2f-c64f11b5b7e9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="15ecc186-3682-4dbe-a5e5-f70c161412f0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a3bae7c8-420a-4bd4-ad38-71a88475dc4c','15ecc186-3682-4dbe-a5e5-f70c161412f0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a3bae7c8-420a-4bd4-ad38-71a88475dc4c','15ecc186-3682-4dbe-a5e5-f70c161412f0')">Open In Tab</button></div><div id="fe85805d-45d0-4289-b235-dfda584842ef" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 </section>
 <section id="labeling-tests">
@@ -787,17 +787,17 @@ macros.</p>
 <code class="docutils literal notranslate"><span class="pre">numpy.test()</span></code> run.  If you want to label your test as slow - and
 therefore reserved for a full <code class="docutils literal notranslate"><span class="pre">numpy.test(label='full')</span></code> run, you
 can label it with <code class="docutils literal notranslate"><span class="pre">pytest.mark.slow</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">slow</span>
-<span class="k">def</span> <span class="nf">test_big</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_big</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Big, slow test&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Similarly for methods:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">test_zzz</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">test_zzz</span><span class="p">:</span>
     <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">slow</span>
-    <span class="k">def</span> <span class="nf">test_simple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">test_simple</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">assert_</span><span class="p">(</span><span class="n">zzz</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Hello from zzz&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -806,21 +806,21 @@ can label it with <code class="docutils literal notranslate"><span class="pre">p
 <h3>Easier setup and teardown functions / methods<a class="headerlink" href="#easier-setup-and-teardown-functions-methods" title="Link to this heading">#</a></h3>
 <p>Testing looks for module-level or class method-level setup and teardown
 functions by name; thus:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup_module</span><span class="p">():</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">setup_module</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Module-level setup&quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;doing setup&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">teardown_module</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">teardown_module</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Module-level teardown&quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;doing teardown&#39;</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">TestMe</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">setup_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestMe</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Class-level setup&quot;&quot;&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;doing setup&#39;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">teardown_method</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">teardown_method</span><span class="p">():</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Class-level teardown&quot;&quot;&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;doing teardown&#39;</span><span class="p">)</span>
 </pre></div>
@@ -839,7 +839,7 @@ suppose you wish to test <code class="docutils literal notranslate"><span class=
 array sizes and two data types:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;dimensionality&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;dtype&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">test_solve</span><span class="p">(</span><span class="n">dimensionality</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_solve</span><span class="p">(</span><span class="n">dimensionality</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">842523</span><span class="p">)</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">dimensionality</span><span class="p">,</span> <span class="n">dimensionality</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">dimensionality</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
@@ -860,7 +860,7 @@ actual output to the expected output.</p>
 <p>The doctests can be run by adding the <code class="docutils literal notranslate"><span class="pre">doctests</span></code> argument to the
 <code class="docutils literal notranslate"><span class="pre">test()</span></code> call; for example, to run all tests (including doctests)
 for numpy.lib:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">doctests</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -884,7 +884,7 @@ run the tests by going to the <code class="docutils literal notranslate"><span c
 </div>
 <p>Or if you add <code class="docutils literal notranslate"><span class="pre">numpy/xxx/tests/</span></code> to the Python path, you could run
 the tests interactively in the interpreter like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">test_yyy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">test_yyy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test_yyy</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -896,15 +896,15 @@ isn’t desirable. Instead it would better to invoke the test straight
 from the module <code class="docutils literal notranslate"><span class="pre">xxx</span></code>. To this end, simply place the following lines
 at the end of your package’s <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">numpy.testing</span> <span class="kn">import</span> <span class="n">Tester</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.testing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tester</span>
     <span class="k">return</span> <span class="n">Tester</span><span class="p">()</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">verbosity</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You will also need to add the tests directory in the configuration
 section of your setup.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="k">def</span> <span class="nf">configuration</span><span class="p">(</span><span class="n">parent_package</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">top_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">configuration</span><span class="p">(</span><span class="n">parent_package</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">top_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="o">...</span>
     <span class="n">config</span><span class="o">.</span><span class="n">add_subpackage</span><span class="p">(</span><span class="s1">&#39;tests&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">config</span>
@@ -912,13 +912,13 @@ section of your setup.py:</p>
 </pre></div>
 </div>
 <p>Now you can do the following to test your module:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Also, when invoking the entire NumPy test suite, your tests will be
 found and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
 <span class="go"># your tests are included and run automatically!</span>
 </pre></div>
@@ -933,10 +933,10 @@ found and run:</p>
 such as when the test suite is being written before the code it’s
 meant to test, or if a test only fails on a particular architecture.</p>
 <p>To skip a test, simply use <code class="docutils literal notranslate"><span class="pre">skipif</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">skipif</span><span class="p">(</span><span class="n">SkipMyTest</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s2">&quot;Skipping this test because...&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_something</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_something</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
     <span class="o">...</span>
 </pre></div>
 </div>
@@ -944,10 +944,10 @@ meant to test, or if a test only fails on a particular architecture.</p>
 and the message in verbose test output is the second argument given to
 <code class="docutils literal notranslate"><span class="pre">skipif</span></code>.  Similarly, a test can be marked as a known failure by
 using <code class="docutils literal notranslate"><span class="pre">xfail</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">xfail</span><span class="p">(</span><span class="n">MyTestFails</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s2">&quot;This test is known to fail because...&quot;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_something_else</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_something_else</span><span class="p">(</span><span class="n">foo</span><span class="p">):</span>
     <span class="o">...</span>
 </pre></div>
 </div>
@@ -982,7 +982,7 @@ each failure, and better-than-naive-random techniques for triggering bugs.</p>
 <span class="sig-prename descclassname"><span class="pre">numpy.</span></span><span class="sig-name descname"><span class="pre">test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fast'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_argv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doctests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coverage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">durations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#numpy.test" title="Link to this definition">#</a></dt>
 <dd><p>Pytest test runner.</p>
 <p>A test function is typically added to a package’s __init__.py like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy._pytesttester</span> <span class="kn">import</span> <span class="n">PytestTester</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy._pytesttester</span><span class="w"> </span><span class="kn">import</span> <span class="n">PytestTester</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">PytestTester</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span><span class="o">.</span><span class="n">test</span>
 <span class="k">del</span> <span class="n">PytestTester</span>
 </pre></div>

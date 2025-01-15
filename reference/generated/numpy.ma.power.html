@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -773,10 +773,10 @@
 <p>The <em>out</em> argument to <a class="reference internal" href="numpy.power.html#numpy.power" title="numpy.power"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.power</span></code></a> is not supported, <em class="xref py py-obj">third</em> has to be
 None.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="84b68056-0d64-4a4b-8fbc-76ba0873edef">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('84b68056-0d64-4a4b-8fbc-76ba0873edef','f71efb98-d2c7-49fb-89a6-864824e199f9','3947156d-2a95-4a69-ada3-bf84b226980a','../../lite/tree/../notebooks/index.html?path=fb626190_a688_4720_ba91_3b540e7e07c8.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
+<div class="try_examples_outer_container docutils container" id="a70c424f-7e79-4e57-97b6-2b502ec8879d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a70c424f-7e79-4e57-97b6-2b502ec8879d','0a98a189-56fc-491f-9d5f-58463978b7f2','71572643-8f09-4f0e-a7f1-cf1d743432aa','../../lite/tree/../notebooks/index.html?path=0ed5eea1_71cb_4257_86c9_80ad89370baf.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.ma</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ma</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mf">11.2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.973</span><span class="p">,</span> <span class="mf">0.801</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.41</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">masked_x</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
@@ -803,7 +803,7 @@ None.</p>
 </div>
 </div>
 </div>
-<div id="3947156d-2a95-4a69-ada3-bf84b226980a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('84b68056-0d64-4a4b-8fbc-76ba0873edef','3947156d-2a95-4a69-ada3-bf84b226980a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('84b68056-0d64-4a4b-8fbc-76ba0873edef','3947156d-2a95-4a69-ada3-bf84b226980a')">Open In Tab</button></div><div id="f71efb98-d2c7-49fb-89a6-864824e199f9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="71572643-8f09-4f0e-a7f1-cf1d743432aa" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a70c424f-7e79-4e57-97b6-2b502ec8879d','71572643-8f09-4f0e-a7f1-cf1d743432aa')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a70c424f-7e79-4e57-97b6-2b502ec8879d','71572643-8f09-4f0e-a7f1-cf1d743432aa')">Open In Tab</button></div><div id="0a98a189-56fc-491f-9d5f-58463978b7f2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

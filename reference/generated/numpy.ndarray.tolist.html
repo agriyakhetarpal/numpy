@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -600,11 +600,11 @@ not be a list at all, but a simple Python scalar.</p>
 <p>The array may be recreated via <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">np.array(a.tolist())</span></code>, although this
 may sometimes lose precision.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="65163814-ded4-4253-8efc-1da1fc8e19d6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('65163814-ded4-4253-8efc-1da1fc8e19d6','2f86e2e4-46d8-4862-bd6e-ebb0689d0aff','22e4bd98-9544-4ec1-9740-d9e1948fdbc3','../../lite/tree/../notebooks/index.html?path=55b5b225_1537_4b65_9b96_7db892a307e2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="7b1434c2-e38a-406a-a560-4fc29674bb78">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7b1434c2-e38a-406a-a560-4fc29674bb78','e0a51933-0e8d-415f-b2f5-b9db49433ead','44086f09-8619-4fc1-8f99-d4998fd9bc13','../../lite/tree/../notebooks/index.html?path=60a2290a_8687_4298_96af_b3ed7acd2815.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>For a 1D array, <code class="docutils literal notranslate"><span class="pre">a.tolist()</span></code> is almost the same as <code class="docutils literal notranslate"><span class="pre">list(a)</span></code>,
 except that <code class="docutils literal notranslate"><span class="pre">tolist</span></code> changes numpy scalars to Python scalars:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a_list</span>
@@ -638,7 +638,7 @@ except that <code class="docutils literal notranslate"><span class="pre">tolist<
 </div>
 </div>
 </div>
-<div id="22e4bd98-9544-4ec1-9740-d9e1948fdbc3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('65163814-ded4-4253-8efc-1da1fc8e19d6','22e4bd98-9544-4ec1-9740-d9e1948fdbc3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('65163814-ded4-4253-8efc-1da1fc8e19d6','22e4bd98-9544-4ec1-9740-d9e1948fdbc3')">Open In Tab</button></div><div id="2f86e2e4-46d8-4862-bd6e-ebb0689d0aff" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="44086f09-8619-4fc1-8f99-d4998fd9bc13" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7b1434c2-e38a-406a-a560-4fc29674bb78','44086f09-8619-4fc1-8f99-d4998fd9bc13')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7b1434c2-e38a-406a-a560-4fc29674bb78','44086f09-8619-4fc1-8f99-d4998fd9bc13')">Open In Tab</button></div><div id="e0a51933-0e8d-415f-b2f5-b9db49433ead" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -581,9 +581,9 @@
 </div>
 <p>All built-in data-type objects have byteorder either ‘=’ or ‘|’.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="46a58e51-8319-4c6d-bb34-84945dffc0c9">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('46a58e51-8319-4c6d-bb34-84945dffc0c9','982a5a7d-1661-4b6a-9ca3-c7cd9a9ba52d','6edb9616-8ce4-4865-860e-27c58edeec3c','../../lite/tree/../notebooks/index.html?path=8d36bd47_91f8_4ef2_acf3_e1ac1ac9a7a5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="ccbe55f3-6203-4f1b-977a-a068608e7e33">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ccbe55f3-6203-4f1b-977a-a068608e7e33','6ce272fc-fcd2-4889-9585-1db32ee8ab3d','dba41bca-7b89-40be-a9d1-9b0946b32b01','../../lite/tree/../notebooks/index.html?path=05c8fe4a_bfda_42b8_8550_3ed9039caeba.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;i2&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span><span class="o">.</span><span class="n">byteorder</span>
 <span class="go">&#39;=&#39;</span>
@@ -595,7 +595,7 @@
 <span class="go">&#39;|&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Even if specific code is given, and it is native</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># &#39;=&#39; is the byteorder</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sys_is_le</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;little&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">native_code</span> <span class="o">=</span> <span class="s1">&#39;&lt;&#39;</span> <span class="k">if</span> <span class="n">sys_is_le</span> <span class="k">else</span> <span class="s1">&#39;&gt;&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">swapped_code</span> <span class="o">=</span> <span class="s1">&#39;&gt;&#39;</span> <span class="k">if</span> <span class="n">sys_is_le</span> <span class="k">else</span> <span class="s1">&#39;&lt;&#39;</span>
@@ -610,7 +610,7 @@
 </div>
 </div>
 </div>
-<div id="6edb9616-8ce4-4865-860e-27c58edeec3c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('46a58e51-8319-4c6d-bb34-84945dffc0c9','6edb9616-8ce4-4865-860e-27c58edeec3c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('46a58e51-8319-4c6d-bb34-84945dffc0c9','6edb9616-8ce4-4865-860e-27c58edeec3c')">Open In Tab</button></div><div id="982a5a7d-1661-4b6a-9ca3-c7cd9a9ba52d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="dba41bca-7b89-40be-a9d1-9b0946b32b01" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ccbe55f3-6203-4f1b-977a-a068608e7e33','dba41bca-7b89-40be-a9d1-9b0946b32b01')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ccbe55f3-6203-4f1b-977a-a068608e7e33','dba41bca-7b89-40be-a9d1-9b0946b32b01')">Open In Tab</button></div><div id="6ce272fc-fcd2-4889-9585-1db32ee8ab3d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

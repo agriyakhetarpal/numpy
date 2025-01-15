@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -654,9 +654,9 @@ frequency; aliasing with its symmetric counterpart. By Hermitian symmetry,
 the value is thus treated as purely real. To avoid losing information, the
 correct length of the real input <strong>must</strong> be given.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="78f423e9-9d96-43df-a421-cfbf4767b15a">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('78f423e9-9d96-43df-a421-cfbf4767b15a','aa4704e0-35eb-4976-9e29-82adf89c5ef8','0d7542c6-5323-42c1-b087-d5d4f4a3150a','../../lite/tree/../notebooks/index.html?path=8f08abcc_8a41_4c3f_998f_3a2692a8963f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="1d5c0c7b-6fe2-4beb-95f1-c9811c1c5dff">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('1d5c0c7b-6fe2-4beb-95f1-c9811c1c5dff','110c68a9-467a-4d05-8e42-a1f99515f8e1','0970ecba-4f01-4103-8255-cf60f2ca9fa2','../../lite/tree/../notebooks/index.html?path=bcab6cb8_f98a_4dc5_9da1_72d5abfc7168.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="n">j</span><span class="p">])</span>
 <span class="go">array([0.+0.j,  1.+0.j,  0.+0.j,  0.+0.j]) # may vary</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="n">j</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
@@ -669,7 +669,7 @@ part everywhere.  When calling <a class="reference internal" href="#numpy.fft.ir
 specified, and the output array is purely real.</p>
 </div>
 </div>
-<div id="0d7542c6-5323-42c1-b087-d5d4f4a3150a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('78f423e9-9d96-43df-a421-cfbf4767b15a','0d7542c6-5323-42c1-b087-d5d4f4a3150a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('78f423e9-9d96-43df-a421-cfbf4767b15a','0d7542c6-5323-42c1-b087-d5d4f4a3150a')">Open In Tab</button></div><div id="aa4704e0-35eb-4976-9e29-82adf89c5ef8" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="0970ecba-4f01-4103-8255-cf60f2ca9fa2" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('1d5c0c7b-6fe2-4beb-95f1-c9811c1c5dff','0970ecba-4f01-4103-8255-cf60f2ca9fa2')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('1d5c0c7b-6fe2-4beb-95f1-c9811c1c5dff','0970ecba-4f01-4103-8255-cf60f2ca9fa2')">Open In Tab</button></div><div id="110c68a9-467a-4d05-8e42-a1f99515f8e1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

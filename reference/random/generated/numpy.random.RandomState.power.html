@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -730,8 +730,8 @@ Handbook Series, June 2003.
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="37bb807b-60c3-4d6b-88e9-ae59e654de81">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('37bb807b-60c3-4d6b-88e9-ae59e654de81','d1fe2f30-dbec-479c-92fc-baf0f623da12','6d12e753-48a8-4615-9c89-552d4f399732','../../../lite/tree/../notebooks/index.html?path=3918f778_3677_4d29_9f60_08c5b8c517d3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="80270320-ce7f-4bac-9416-abbe9ad0fe5a">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('80270320-ce7f-4bac-9416-abbe9ad0fe5a','f7122148-322a-4642-a628-cd93606b6ebe','18be9abb-0c75-4be8-b41b-1f11ba5a5a9c','../../../lite/tree/../notebooks/index.html?path=0c86a740_fdc0_491a_8696_4ace9796944e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Draw samples from the distribution:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mf">5.</span> <span class="c1"># shape</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">samples</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -740,7 +740,7 @@ Handbook Series, June 2003.
 </div>
 <p>Display the histogram of the samples, along with
 the probability density function:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="mf">1.</span><span class="p">)</span>
@@ -753,7 +753,7 @@ the probability density function:</p>
 <img alt="../../../_images/numpy-random-RandomState-power-1_00_00.png" class="plot-directive" src="../../../_images/numpy-random-RandomState-power-1_00_00.png" />
 </figure>
 <p>Compare the power function distribution to the inverse of the Pareto.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span> 
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span> 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rvs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rvsp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">pareto</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -789,7 +789,7 @@ the probability density function:</p>
 </figure>
 </div>
 </div>
-<div id="6d12e753-48a8-4615-9c89-552d4f399732" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('37bb807b-60c3-4d6b-88e9-ae59e654de81','6d12e753-48a8-4615-9c89-552d4f399732')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('37bb807b-60c3-4d6b-88e9-ae59e654de81','6d12e753-48a8-4615-9c89-552d4f399732')">Open In Tab</button></div><div id="d1fe2f30-dbec-479c-92fc-baf0f623da12" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="18be9abb-0c75-4be8-b41b-1f11ba5a5a9c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('80270320-ce7f-4bac-9416-abbe9ad0fe5a','18be9abb-0c75-4be8-b41b-1f11ba5a5a9c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('80270320-ce7f-4bac-9416-abbe9ad0fe5a','18be9abb-0c75-4be8-b41b-1f11ba5a5a9c')">Open In Tab</button></div><div id="f7122148-322a-4642-a628-cd93606b6ebe" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

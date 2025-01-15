@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -642,13 +642,13 @@ When passed a legacy <a class="reference internal" href="legacy.html#numpy.rando
 is instantiated. This function does not manage a default global instance.</p>
 <p>See <a class="reference internal" href="bit_generators/index.html#seeding-and-entropy"><span class="std std-ref">Seeding and entropy</span></a> for more information about seeding.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="8a365f85-7c5d-46e6-a89f-0990d3da8507">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8a365f85-7c5d-46e6-a89f-0990d3da8507','a5da899a-ee81-4c3b-82fb-735ce194a28a','cdd0a566-527a-4c74-9fd4-8d417db2ec5b','../../lite/tree/../notebooks/index.html?path=d564783c_7621_42df_8382_242e5aa29503.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="0580b10f-8d71-43dd-9863-d54ebfbb1276">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0580b10f-8d71-43dd-9863-d54ebfbb1276','f623a497-4fa6-4389-bf03-9cfcc8b4b317','db285c53-9bf6-4ace-88b9-588f569c6bb3','../../lite/tree/../notebooks/index.html?path=6ff774fb_1701_483f_ac3b_3040040ff5f0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p><a class="reference internal" href="#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> is the recommended constructor for the random number class
 <a class="reference internal" href="#numpy.random.Generator" title="numpy.random.Generator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator</span></code></a>. Here are several ways we can construct a random 
 number generator using <a class="reference internal" href="#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> and the <a class="reference internal" href="#numpy.random.Generator" title="numpy.random.Generator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator</span></code></a> class.</p>
 <p>Here we use <a class="reference internal" href="#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> to generate a random float:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span>
 <span class="go">Generator(PCG64)</span>
@@ -661,7 +661,7 @@ number generator using <a class="reference internal" href="#numpy.random.default
 </div>
 <p>Here we use <a class="reference internal" href="#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> to generate 3 random integers between 0 
 (inclusive) and 10 (exclusive):</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">12345</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rints</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rints</span>
@@ -671,7 +671,7 @@ number generator using <a class="reference internal" href="#numpy.random.default
 </pre></div>
 </div>
 <p>Here we specify a seed so that we have reproducible results:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">rng</span><span class="p">)</span>
 <span class="go">Generator(PCG64)</span>
@@ -684,7 +684,7 @@ number generator using <a class="reference internal" href="#numpy.random.default
 </div>
 <p>If we exit and restart our Python interpreter, we’ll see that we
 generate the same random numbers again:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">arr2</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">arr2</span>
@@ -695,7 +695,7 @@ generate the same random numbers again:</p>
 </div>
 </div>
 </div>
-<div id="cdd0a566-527a-4c74-9fd4-8d417db2ec5b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8a365f85-7c5d-46e6-a89f-0990d3da8507','cdd0a566-527a-4c74-9fd4-8d417db2ec5b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8a365f85-7c5d-46e6-a89f-0990d3da8507','cdd0a566-527a-4c74-9fd4-8d417db2ec5b')">Open In Tab</button></div><div id="a5da899a-ee81-4c3b-82fb-735ce194a28a" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="db285c53-9bf6-4ace-88b9-588f569c6bb3" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0580b10f-8d71-43dd-9863-d54ebfbb1276','db285c53-9bf6-4ace-88b9-588f569c6bb3')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0580b10f-8d71-43dd-9863-d54ebfbb1276','db285c53-9bf6-4ace-88b9-588f569c6bb3')">Open In Tab</button></div><div id="f623a497-4fa6-4389-bf03-9cfcc8b4b317" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.random.Generator">
@@ -737,9 +737,9 @@ be accessed using <a class="reference internal" href="bit_generators/mt19937.htm
 NumPy-aware, has the advantage that it provides a much larger number
 of probability distributions to choose from.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="2d4fd743-91bf-44cc-b62f-397df46e2daa">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2d4fd743-91bf-44cc-b62f-397df46e2daa','a54ce74d-8f14-4e77-9d1c-54bd17dfa2e3','fcc31fb1-eb6d-47c3-8c95-8646dde99a97','../../lite/tree/../notebooks/index.html?path=c78bcdc6_72a8_4463_a711_327344724dfc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">PCG64</span>
+<div class="try_examples_outer_container docutils container" id="929511a3-2c8b-48e0-ac0b-b7c4f045606b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('929511a3-2c8b-48e0-ac0b-b7c4f045606b','a5be6d2e-8e38-48b0-b6e8-38b56c662ab6','53f66b7f-2865-4b0a-a7ef-b8cc9ab42d43','../../lite/tree/../notebooks/index.html?path=21c359c8_f887_4809_b2c6_7306069fd00c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">PCG64</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">Generator</span><span class="p">(</span><span class="n">PCG64</span><span class="p">())</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">()</span>
 <span class="go">-0.203  # random</span>
@@ -747,7 +747,7 @@ of probability distributions to choose from.</p>
 </div>
 </div>
 </div>
-<div id="fcc31fb1-eb6d-47c3-8c95-8646dde99a97" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2d4fd743-91bf-44cc-b62f-397df46e2daa','fcc31fb1-eb6d-47c3-8c95-8646dde99a97')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2d4fd743-91bf-44cc-b62f-397df46e2daa','fcc31fb1-eb6d-47c3-8c95-8646dde99a97')">Open In Tab</button></div><div id="a54ce74d-8f14-4e77-9d1c-54bd17dfa2e3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="53f66b7f-2865-4b0a-a7ef-b8cc9ab42d43" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('929511a3-2c8b-48e0-ac0b-b7c4f045606b','53f66b7f-2865-4b0a-a7ef-b8cc9ab42d43')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('929511a3-2c8b-48e0-ac0b-b7c4f045606b','53f66b7f-2865-4b0a-a7ef-b8cc9ab42d43')">Open In Tab</button></div><div id="a5be6d2e-8e38-48b0-b6e8-38b56c662ab6" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 <section id="accessing-the-bitgenerator-and-spawning">
 <h2>Accessing the BitGenerator and spawning<a class="headerlink" href="#accessing-the-bitgenerator-and-spawning" title="Link to this heading">#</a></h2>
@@ -834,9 +834,9 @@ returns a copy.</p>
 <p>By default, <a class="reference internal" href="generated/numpy.random.Generator.permuted.html#numpy.random.Generator.permuted" title="numpy.random.Generator.permuted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator.permuted</span></code></a> returns a copy.  To operate in-place with
 <a class="reference internal" href="generated/numpy.random.Generator.permuted.html#numpy.random.Generator.permuted" title="numpy.random.Generator.permuted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator.permuted</span></code></a>, pass the same array as the first argument <em>and</em> as
 the value of the <code class="docutils literal notranslate"><span class="pre">out</span></code> parameter.  For example,</p>
-<div class="try_examples_outer_container docutils container" id="3e96dcaa-1b6c-4bee-ae8f-903dba74fa1e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3e96dcaa-1b6c-4bee-ae8f-903dba74fa1e','5be69a08-dba5-4a59-8a95-d2057844dfee','956414e2-627b-457b-9952-64ae93821cc2','../../lite/tree/../notebooks/index.html?path=b84dd271_1d49_44d0_a33f_c0d2e515f71c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="373c797f-5c6a-449e-9ab6-bc5af05c340d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('373c797f-5c6a-449e-9ab6-bc5af05c340d','5460ddf9-bd8c-4c4c-b190-3e6953d02370','e7a4da75-ac11-4cf6-aa94-7c442931c472','../../lite/tree/../notebooks/index.html?path=6ef1ed79_7516_498c_ba5d_195a2f1831bc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> 
@@ -857,7 +857,7 @@ the value of the <code class="docutils literal notranslate"><span class="pre">ou
 </div>
 </div>
 </div>
-<div id="956414e2-627b-457b-9952-64ae93821cc2" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3e96dcaa-1b6c-4bee-ae8f-903dba74fa1e','956414e2-627b-457b-9952-64ae93821cc2')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3e96dcaa-1b6c-4bee-ae8f-903dba74fa1e','956414e2-627b-457b-9952-64ae93821cc2')">Open In Tab</button></div><div id="5be69a08-dba5-4a59-8a95-d2057844dfee" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></section>
+<div id="e7a4da75-ac11-4cf6-aa94-7c442931c472" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('373c797f-5c6a-449e-9ab6-bc5af05c340d','e7a4da75-ac11-4cf6-aa94-7c442931c472')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('373c797f-5c6a-449e-9ab6-bc5af05c340d','e7a4da75-ac11-4cf6-aa94-7c442931c472')">Open In Tab</button></div><div id="5460ddf9-bd8c-4c4c-b190-3e6953d02370" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></section>
 <section id="handling-the-axis-parameter">
 <span id="generator-handling-axis-parameter"></span><h3>Handling the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter<a class="headerlink" href="#handling-the-axis-parameter" title="Link to this heading">#</a></h3>
 <p>An important distinction for these methods is how they handle the <code class="docutils literal notranslate"><span class="pre">axis</span></code>
@@ -866,9 +866,9 @@ input as a one-dimensional sequence, and the <code class="docutils literal notra
 which dimension of the input array to use as the sequence. In the case of a
 two-dimensional array, <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> will, in effect, rearrange the rows of the
 array, and  <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> will rearrange the columns.  For example</p>
-<div class="try_examples_outer_container docutils container" id="7d9991d6-cef4-4c32-9475-05986ed74e80">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7d9991d6-cef4-4c32-9475-05986ed74e80','1dc2b505-9835-4711-8c54-ff7356933cd3','3dc154a4-71f3-4488-8646-c2b6635750f1','../../lite/tree/../notebooks/index.html?path=b497e395_b7f3_4a5b_8d1e_d735f0180de9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="b9131cf4-fdd5-4ff6-94b6-3f584511efea">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b9131cf4-fdd5-4ff6-94b6-3f584511efea','ac648edc-dee4-4f6d-a7bd-ef8f2b4f58dc','aefd912c-8fd9-422f-8f0c-74fe9a47402d','../../lite/tree/../notebooks/index.html?path=64c0ff20_91c6_464d_8078_ed67c21f4c29.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
@@ -883,15 +883,15 @@ array, and  <code class="docutils literal notranslate"><span class="pre">axis=1<
 </div>
 </div>
 </div>
-<div id="3dc154a4-71f3-4488-8646-c2b6635750f1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7d9991d6-cef4-4c32-9475-05986ed74e80','3dc154a4-71f3-4488-8646-c2b6635750f1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7d9991d6-cef4-4c32-9475-05986ed74e80','3dc154a4-71f3-4488-8646-c2b6635750f1')">Open In Tab</button></div><div id="1dc2b505-9835-4711-8c54-ff7356933cd3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>Note that the columns have been rearranged “in bulk”: the values within
+<div id="aefd912c-8fd9-422f-8f0c-74fe9a47402d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b9131cf4-fdd5-4ff6-94b6-3f584511efea','aefd912c-8fd9-422f-8f0c-74fe9a47402d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b9131cf4-fdd5-4ff6-94b6-3f584511efea','aefd912c-8fd9-422f-8f0c-74fe9a47402d')">Open In Tab</button></div><div id="ac648edc-dee4-4f6d-a7bd-ef8f2b4f58dc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>Note that the columns have been rearranged “in bulk”: the values within
 each column have not changed.</p>
 <p>The method <a class="reference internal" href="generated/numpy.random.Generator.permuted.html#numpy.random.Generator.permuted" title="numpy.random.Generator.permuted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator.permuted</span></code></a> treats the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter similar to
 how <a class="reference internal" href="../generated/numpy.sort.html#numpy.sort" title="numpy.sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.sort</span></code></a> treats it.  Each slice along the given axis is shuffled
 independently of the others.  Compare the following example of the use of
 <a class="reference internal" href="generated/numpy.random.Generator.permuted.html#numpy.random.Generator.permuted" title="numpy.random.Generator.permuted"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator.permuted</span></code></a> to the above example of <a class="reference internal" href="generated/numpy.random.Generator.permutation.html#numpy.random.Generator.permutation" title="numpy.random.Generator.permutation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator.permutation</span></code></a>:</p>
-<div class="try_examples_outer_container docutils container" id="323a27a5-94b8-4a24-970f-e9ba2dd758ee">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('323a27a5-94b8-4a24-970f-e9ba2dd758ee','3113984c-c4cd-4cd7-919c-2c9b928960fe','9913eaa6-18f3-4fe3-bcca-fa42987e63c4','../../lite/tree/../notebooks/index.html?path=061cecbb_33fc_4a11_92b9_afbe050d226e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="598828e3-6a1b-42b5-8ef4-01a5fcea05f1">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('598828e3-6a1b-42b5-8ef4-01a5fcea05f1','ecc51886-bf03-4759-abd2-a54c1c89a135','77c1ed43-431f-4865-8b82-8f9d28840bc2','../../lite/tree/../notebooks/index.html?path=5104a4ac_4ec5_436c_b6e1_480b0d68cef7.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span><span class="o">.</span><span class="n">permuted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
 <span class="go">array([[ 1,  0,  2,  4,  3],  # random</span>
@@ -901,7 +901,7 @@ independently of the others.  Compare the following example of the use of
 </div>
 </div>
 </div>
-<div id="9913eaa6-18f3-4fe3-bcca-fa42987e63c4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('323a27a5-94b8-4a24-970f-e9ba2dd758ee','9913eaa6-18f3-4fe3-bcca-fa42987e63c4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('323a27a5-94b8-4a24-970f-e9ba2dd758ee','9913eaa6-18f3-4fe3-bcca-fa42987e63c4')">Open In Tab</button></div><div id="3113984c-c4cd-4cd7-919c-2c9b928960fe" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>In this example, the values within each row (i.e. the values along
+<div id="77c1ed43-431f-4865-8b82-8f9d28840bc2" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('598828e3-6a1b-42b5-8ef4-01a5fcea05f1','77c1ed43-431f-4865-8b82-8f9d28840bc2')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('598828e3-6a1b-42b5-8ef4-01a5fcea05f1','77c1ed43-431f-4865-8b82-8f9d28840bc2')">Open In Tab</button></div><div id="ecc51886-bf03-4759-abd2-a54c1c89a135" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>In this example, the values within each row (i.e. the values along
 <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>) have been shuffled independently.  This is not a “bulk”
 shuffle of the columns.</p>
 </section>
@@ -909,9 +909,9 @@ shuffle of the columns.</p>
 <h3>Shuffling non-NumPy sequences<a class="headerlink" href="#shuffling-non-numpy-sequences" title="Link to this heading">#</a></h3>
 <p><a class="reference internal" href="generated/numpy.random.Generator.shuffle.html#numpy.random.Generator.shuffle" title="numpy.random.Generator.shuffle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator.shuffle</span></code></a> works on non-NumPy sequences.  That is, if it is given
 a sequence that is not a NumPy array, it shuffles that sequence in-place.</p>
-<div class="try_examples_outer_container docutils container" id="ea00da26-51c8-4a48-8d8d-629a17e948ae">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ea00da26-51c8-4a48-8d8d-629a17e948ae','fbaa8a82-91ac-4cc4-bafc-7b57b75cf71f','805c77c0-cfcb-4c6f-890a-f174ab829805','../../lite/tree/../notebooks/index.html?path=c0538fdd_32fd_49b7_a737_30c9c665f9f5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="e76bc5ab-df13-475a-ab21-da7aaa8677a4">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e76bc5ab-df13-475a-ab21-da7aaa8677a4','f5ace09c-8151-4002-8ac2-b83ab67261b3','ec4ed301-a1b6-4122-8ac3-fd6dff94c01e','../../lite/tree/../notebooks/index.html?path=1c528881_c483_4a1b_920e_101099a3ae7f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># shuffle the list in-place</span>
@@ -921,7 +921,7 @@ a sequence that is not a NumPy array, it shuffles that sequence in-place.</p>
 </div>
 </div>
 </div>
-<div id="805c77c0-cfcb-4c6f-890a-f174ab829805" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ea00da26-51c8-4a48-8d8d-629a17e948ae','805c77c0-cfcb-4c6f-890a-f174ab829805')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ea00da26-51c8-4a48-8d8d-629a17e948ae','805c77c0-cfcb-4c6f-890a-f174ab829805')">Open In Tab</button></div><div id="fbaa8a82-91ac-4cc4-bafc-7b57b75cf71f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></section>
+<div id="ec4ed301-a1b6-4122-8ac3-fd6dff94c01e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e76bc5ab-df13-475a-ab21-da7aaa8677a4','ec4ed301-a1b6-4122-8ac3-fd6dff94c01e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e76bc5ab-df13-475a-ab21-da7aaa8677a4','ec4ed301-a1b6-4122-8ac3-fd6dff94c01e')">Open In Tab</button></div><div id="f5ace09c-8151-4002-8ac2-b83ab67261b3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></section>
 </section>
 <section id="distributions">
 <h2>Distributions<a class="headerlink" href="#distributions" title="Link to this heading">#</a></h2>

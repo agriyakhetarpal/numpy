@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -602,9 +602,9 @@ This is equivalent to using <code class="docutils literal notranslate"><span cla
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="7221c85a-352e-4661-952c-f20864827a98">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7221c85a-352e-4661-952c-f20864827a98','5dadeffc-fa29-4d81-8367-c2ff8f383039','d4f6ffb3-b060-4fdf-9e42-5cd1d0978a71','../../lite/tree/../notebooks/index.html?path=ba779fe1_2d1a_40fe_a3c1_e54f62f73b3f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="8f055e63-90fc-4dd3-aa48-44beb2ee8252">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8f055e63-90fc-4dd3-aa48-44beb2ee8252','002fb575-92ac-4d72-a419-cb04ebd6c1df','7a17328e-db8a-4f1e-ba9b-c738f647077f','../../lite/tree/../notebooks/index.html?path=4525ed2a_e2c5_4b70_83e2_cc9225e9fadf.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">shares_memory</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>
 <span class="go">False</span>
@@ -619,7 +619,7 @@ runtime may increase exponentially in the number of
 dimensions. Hence, <em class="xref py py-obj">max_work</em> should generally be set to a finite
 number, as it is possible to construct examples that take
 extremely long to run:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.lib.stride_tricks</span> <span class="kn">import</span> <span class="n">as_strided</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.lib.stride_tricks</span><span class="w"> </span><span class="kn">import</span> <span class="n">as_strided</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">192163377</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x1</span> <span class="o">=</span> <span class="n">as_strided</span><span class="p">(</span>
 <span class="gp">... </span>    <span class="n">x</span><span class="p">,</span> <span class="n">strides</span><span class="o">=</span><span class="p">(</span><span class="mi">36674</span><span class="p">,</span> <span class="mi">61119</span><span class="p">,</span> <span class="mi">85569</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1049</span><span class="p">,</span> <span class="mi">1049</span><span class="p">,</span> <span class="mi">1049</span><span class="p">))</span>
@@ -636,7 +636,7 @@ around 1 minute for this case. It is possible to find problems
 that take still significantly longer.</p>
 </div>
 </div>
-<div id="d4f6ffb3-b060-4fdf-9e42-5cd1d0978a71" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7221c85a-352e-4661-952c-f20864827a98','d4f6ffb3-b060-4fdf-9e42-5cd1d0978a71')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7221c85a-352e-4661-952c-f20864827a98','d4f6ffb3-b060-4fdf-9e42-5cd1d0978a71')">Open In Tab</button></div><div id="5dadeffc-fa29-4d81-8367-c2ff8f383039" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="7a17328e-db8a-4f1e-ba9b-c738f647077f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8f055e63-90fc-4dd3-aa48-44beb2ee8252','7a17328e-db8a-4f1e-ba9b-c738f647077f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8f055e63-90fc-4dd3-aa48-44beb2ee8252','7a17328e-db8a-4f1e-ba9b-c738f647077f')">Open In Tab</button></div><div id="002fb575-92ac-4d72-a419-cb04ebd6c1df" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

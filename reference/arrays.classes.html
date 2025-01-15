@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -718,8 +718,8 @@ arguments.</p>
 below) for registering <code class="docutils literal notranslate"><span class="pre">__array_function__</span></code> implementations.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HANDLED_FUNCTIONS</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="k">class</span> <span class="nc">MyArray</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__array_function__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyArray</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__array_function__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">func</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">HANDLED_FUNCTIONS</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">NotImplemented</span>
         <span class="c1"># Note: this allows subclasses that don&#39;t override</span>
@@ -728,19 +728,19 @@ below) for registering <code class="docutils literal notranslate"><span class="p
             <span class="k">return</span> <span class="bp">NotImplemented</span>
         <span class="k">return</span> <span class="n">HANDLED_FUNCTIONS</span><span class="p">[</span><span class="n">func</span><span class="p">](</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">implements</span><span class="p">(</span><span class="n">numpy_function</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">implements</span><span class="p">(</span><span class="n">numpy_function</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Register an __array_function__ implementation for MyArray objects.&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
         <span class="n">HANDLED_FUNCTIONS</span><span class="p">[</span><span class="n">numpy_function</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
         <span class="k">return</span> <span class="n">func</span>
     <span class="k">return</span> <span class="n">decorator</span>
 
 <span class="nd">@implements</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">concatenate</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">concatenate</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="o">...</span>  <span class="c1"># implementation of concatenate for MyArray objects</span>
 
 <span class="nd">@implements</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">broadcast_to</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">broadcast_to</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">broadcast_to</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
     <span class="o">...</span>  <span class="c1"># implementation of broadcast_to for MyArray objects</span>
 </pre></div>
 </div>
@@ -947,9 +947,9 @@ alias for “matrix “in NumPy.</p>
 </table>
 </div>
 <p>Example 1: Matrix creation from a string</p>
-<div class="try_examples_outer_container docutils container" id="06f08690-77c7-40b7-9cac-c01471060e72">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('06f08690-77c7-40b7-9cac-c01471060e72','6f347b5a-c11e-457c-8d33-bac4f172177e','847eca6c-6e65-405e-8b47-15263ca8dba8','../lite/tree/../notebooks/index.html?path=07bf9a56_7113_4f3f_96b0_1bcb2053ef01.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="6377759a-5f27-4493-948f-4a1002b6cdfc">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6377759a-5f27-4493-948f-4a1002b6cdfc','04916230-a1a7-4492-aa14-4544380a1857','a136f254-9f87-4b7f-a3fa-f82914cc0f89','../lite/tree/../notebooks/index.html?path=5965b261_0048_4206_817b_3974bc6e325e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="s1">&#39;1 2 3; 4 5 3&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
 <span class="go">  [[ 0.29239766 -0.13450292]</span>
@@ -958,10 +958,10 @@ alias for “matrix “in NumPy.</p>
 </div>
 </div>
 </div>
-<div id="847eca6c-6e65-405e-8b47-15263ca8dba8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('06f08690-77c7-40b7-9cac-c01471060e72','847eca6c-6e65-405e-8b47-15263ca8dba8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('06f08690-77c7-40b7-9cac-c01471060e72','847eca6c-6e65-405e-8b47-15263ca8dba8')">Open In Tab</button></div><div id="6f347b5a-c11e-457c-8d33-bac4f172177e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 2: Matrix creation from a nested sequence</p>
-<div class="try_examples_outer_container docutils container" id="a42be3a1-1ca5-400f-a2d9-534a28059a7e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a42be3a1-1ca5-400f-a2d9-534a28059a7e','8d076aac-a127-4404-960c-544f127aeb3f','59081c72-32ad-4a9a-8745-0d740eec33ef','../lite/tree/../notebooks/index.html?path=33b5d640_8222_48b1_ace7_4f2d049e6279.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div id="a136f254-9f87-4b7f-a3fa-f82914cc0f89" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6377759a-5f27-4493-948f-4a1002b6cdfc','a136f254-9f87-4b7f-a3fa-f82914cc0f89')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6377759a-5f27-4493-948f-4a1002b6cdfc','a136f254-9f87-4b7f-a3fa-f82914cc0f89')">Open In Tab</button></div><div id="04916230-a1a7-4492-aa14-4544380a1857" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 2: Matrix creation from a nested sequence</p>
+<div class="try_examples_outer_container docutils container" id="b1b06ee7-df66-438d-89fc-54d286cdb915">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b1b06ee7-df66-438d-89fc-54d286cdb915','697921af-afc7-4c1e-8a35-f95047ef04d8','eca59226-4948-4bdf-be13-cab8cf27230d','../lite/tree/../notebooks/index.html?path=a0b99887_fb4f_492e_9be8_b107ce81c775.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">],[</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="n">j</span><span class="p">]])</span>
 <span class="go">matrix([[  1.+0.j,   5.+0.j,  10.+0.j],</span>
 <span class="go">        [  1.+0.j,   3.+0.j,   0.+4.j]])</span>
@@ -969,10 +969,10 @@ alias for “matrix “in NumPy.</p>
 </div>
 </div>
 </div>
-<div id="59081c72-32ad-4a9a-8745-0d740eec33ef" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a42be3a1-1ca5-400f-a2d9-534a28059a7e','59081c72-32ad-4a9a-8745-0d740eec33ef')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a42be3a1-1ca5-400f-a2d9-534a28059a7e','59081c72-32ad-4a9a-8745-0d740eec33ef')">Open In Tab</button></div><div id="8d076aac-a127-4404-960c-544f127aeb3f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 3: Matrix creation from an array</p>
-<div class="try_examples_outer_container docutils container" id="3ad30928-6986-462d-9deb-9b613c9a7ec6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3ad30928-6986-462d-9deb-9b613c9a7ec6','b1ca4c0c-da43-41a7-9d8f-2625a20874b1','f03c4cc5-083c-4609-9edf-3ad017997ddc','../lite/tree/../notebooks/index.html?path=e0de89b2_5729_47c8_aa9b_49e998bf683c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div id="eca59226-4948-4bdf-be13-cab8cf27230d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b1b06ee7-df66-438d-89fc-54d286cdb915','eca59226-4948-4bdf-be13-cab8cf27230d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b1b06ee7-df66-438d-89fc-54d286cdb915','eca59226-4948-4bdf-be13-cab8cf27230d')">Open In Tab</button></div><div id="697921af-afc7-4c1e-8a35-f95047ef04d8" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Example 3: Matrix creation from an array</p>
+<div class="try_examples_outer_container docutils container" id="5f876774-db93-47e0-ba01-ed1b26412029">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5f876774-db93-47e0-ba01-ed1b26412029','e5f59c5f-5682-4465-9887-3be2359023c7','99ef166a-e229-4c51-8542-b51bb95af999','../lite/tree/../notebooks/index.html?path=37224d63_106f_4955_a9d0_3d8ff65a92c1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
 <span class="go">matrix([[4.17022005e-01, 3.02332573e-01, 1.86260211e-01],</span>
 <span class="go">        [7.20324493e-01, 1.46755891e-01, 3.45560727e-01],</span>
@@ -981,7 +981,7 @@ alias for “matrix “in NumPy.</p>
 </div>
 </div>
 </div>
-<div id="f03c4cc5-083c-4609-9edf-3ad017997ddc" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3ad30928-6986-462d-9deb-9b613c9a7ec6','f03c4cc5-083c-4609-9edf-3ad017997ddc')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3ad30928-6986-462d-9deb-9b613c9a7ec6','f03c4cc5-083c-4609-9edf-3ad017997ddc')">Open In Tab</button></div><div id="b1ca4c0c-da43-41a7-9d8f-2625a20874b1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="99ef166a-e229-4c51-8542-b51bb95af999" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5f876774-db93-47e0-ba01-ed1b26412029','99ef166a-e229-4c51-8542-b51bb95af999')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5f876774-db93-47e0-ba01-ed1b26412029','99ef166a-e229-4c51-8542-b51bb95af999')">Open In Tab</button></div><div id="e5f59c5f-5682-4465-9887-3be2359023c7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="memory-mapped-file-arrays">
 <h2>Memory-mapped file arrays<a class="headerlink" href="#memory-mapped-file-arrays" title="Link to this heading">#</a></h2>
 <p id="index-1">Memory-mapped files are useful for reading and/or modifying small
@@ -1007,9 +1007,9 @@ array actually get written to disk.</p>
 </table>
 </div>
 <p>Example:</p>
-<div class="try_examples_outer_container docutils container" id="c318bb12-a32e-4736-a646-0d9e8202ad50">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c318bb12-a32e-4736-a646-0d9e8202ad50','cdd300b3-1f79-4dd7-8655-f290a8d93c57','14e985c2-602a-4e24-a7a1-c91e96a715c0','../lite/tree/../notebooks/index.html?path=c284fbc3_7b84_4d0e_8d66_fcdc436eff58.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="df325c8f-d560-45fa-b659-9aae65af400d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('df325c8f-d560-45fa-b659-9aae65af400d','49465398-4e69-40fa-be2e-bfa51a7e5222','71a52c8e-2948-4f33-8d57-7c92aad9f711','../lite/tree/../notebooks/index.html?path=6073c4ee_2772_4028_8733_0181af07fe33.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">memmap</span><span class="p">(</span><span class="s1">&#39;newfile.dat&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w+&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
@@ -1030,7 +1030,7 @@ array actually get written to disk.</p>
 </div>
 </div>
 </div>
-<div id="14e985c2-602a-4e24-a7a1-c91e96a715c0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c318bb12-a32e-4736-a646-0d9e8202ad50','14e985c2-602a-4e24-a7a1-c91e96a715c0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c318bb12-a32e-4736-a646-0d9e8202ad50','14e985c2-602a-4e24-a7a1-c91e96a715c0')">Open In Tab</button></div><div id="cdd300b3-1f79-4dd7-8655-f290a8d93c57" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="71a52c8e-2948-4f33-8d57-7c92aad9f711" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('df325c8f-d560-45fa-b659-9aae65af400d','71a52c8e-2948-4f33-8d57-7c92aad9f711')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('df325c8f-d560-45fa-b659-9aae65af400d','71a52c8e-2948-4f33-8d57-7c92aad9f711')">Open In Tab</button></div><div id="49465398-4e69-40fa-be2e-bfa51a7e5222" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="character-arrays-numpy-char">
 <h2>Character arrays (<a class="reference internal" href="routines.char.html#module-numpy.char" title="numpy.char"><code class="xref py py-mod docutils literal notranslate"><span class="pre">numpy.char</span></code></a>)<a class="headerlink" href="#character-arrays-numpy-char" title="Link to this heading">#</a></h2>
 <div class="admonition seealso">
@@ -1153,9 +1153,9 @@ used as an iterator. The default behavior is equivalent to:</p>
 <p>This default iterator selects a sub-array of dimension <span class="math notranslate nohighlight">\(N-1\)</span>
 from the array. This can be a useful construct for defining recursive
 algorithms. To loop over the entire array requires <span class="math notranslate nohighlight">\(N\)</span> for-loops.</p>
-<div class="try_examples_outer_container docutils container" id="fc755871-57bd-4902-b998-aba04d9c8e54">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fc755871-57bd-4902-b998-aba04d9c8e54','8180cee2-3a82-452f-904a-2417ba4ff275','eb60f269-8f3f-4df8-9476-169b5e90e0e0','../lite/tree/../notebooks/index.html?path=c31932b7_5ceb_4f14_9d55_83c4a77491ee.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="3be0b813-3971-4735-b0a7-31a4dc3c6654">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3be0b813-3971-4735-b0a7-31a4dc3c6654','9f6552df-d1eb-4827-a860-86de3a04de85','65ecd4de-3dac-4826-a24a-596f1c4872dd','../lite/tree/../notebooks/index.html?path=d32ab5ab_6e20_4a60_9ccb_cc78cbe8b19f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;item:&#39;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
@@ -1169,7 +1169,7 @@ algorithms. To loop over the entire array requires <span class="math notranslate
 </div>
 </div>
 </div>
-<div id="eb60f269-8f3f-4df8-9476-169b5e90e0e0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fc755871-57bd-4902-b998-aba04d9c8e54','eb60f269-8f3f-4df8-9476-169b5e90e0e0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fc755871-57bd-4902-b998-aba04d9c8e54','eb60f269-8f3f-4df8-9476-169b5e90e0e0')">Open In Tab</button></div><div id="8180cee2-3a82-452f-904a-2417ba4ff275" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="65ecd4de-3dac-4826-a24a-596f1c4872dd" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3be0b813-3971-4735-b0a7-31a4dc3c6654','65ecd4de-3dac-4826-a24a-596f1c4872dd')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3be0b813-3971-4735-b0a7-31a4dc3c6654','65ecd4de-3dac-4826-a24a-596f1c4872dd')">Open In Tab</button></div><div id="9f6552df-d1eb-4827-a860-86de3a04de85" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="flat-iteration">
 <h3>Flat iteration<a class="headerlink" href="#flat-iteration" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -1183,9 +1183,9 @@ algorithms. To loop over the entire array requires <span class="math notranslate
 <p>As mentioned previously, the flat attribute of ndarray objects returns
 an iterator that will cycle over the entire array in C-style
 contiguous order.</p>
-<div class="try_examples_outer_container docutils container" id="adee2e65-a023-4eef-a248-3a68fef855fb">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('adee2e65-a023-4eef-a248-3a68fef855fb','4427d7b1-08cb-4774-a6d0-e25b2d290a06','55358d7a-b786-45c9-a059-30e24de74871','../lite/tree/../notebooks/index.html?path=67d0b147_ac11_45eb_abcd_abf9efd24f8d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="d30d50c5-bbb4-422d-9967-25816bbaf0d2">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d30d50c5-bbb4-422d-9967-25816bbaf0d2','b2c348d0-a633-4edc-b49b-30be3e70d23b','d28d16e7-1077-4d8d-8995-2e858b51d2ec','../lite/tree/../notebooks/index.html?path=5338ad8b_be54_4438_bdc0_e270f929e173.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">flat</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
 <span class="go">0 10</span>
@@ -1197,7 +1197,7 @@ contiguous order.</p>
 </div>
 </div>
 </div>
-<div id="55358d7a-b786-45c9-a059-30e24de74871" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('adee2e65-a023-4eef-a248-3a68fef855fb','55358d7a-b786-45c9-a059-30e24de74871')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('adee2e65-a023-4eef-a248-3a68fef855fb','55358d7a-b786-45c9-a059-30e24de74871')">Open In Tab</button></div><div id="4427d7b1-08cb-4774-a6d0-e25b2d290a06" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Here, I’ve used the built-in enumerate iterator to return the iterator
+<div id="d28d16e7-1077-4d8d-8995-2e858b51d2ec" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d30d50c5-bbb4-422d-9967-25816bbaf0d2','d28d16e7-1077-4d8d-8995-2e858b51d2ec')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d30d50c5-bbb4-422d-9967-25816bbaf0d2','d28d16e7-1077-4d8d-8995-2e858b51d2ec')">Open In Tab</button></div><div id="b2c348d0-a633-4edc-b49b-30be3e70d23b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>Here, I’ve used the built-in enumerate iterator to return the iterator
 index as well as the value.</p>
 </section>
 <section id="n-dimensional-enumeration">
@@ -1212,9 +1212,9 @@ index as well as the value.</p>
 </div>
 <p>Sometimes it may be useful to get the N-dimensional index while
 iterating. The ndenumerate iterator can achieve this.</p>
-<div class="try_examples_outer_container docutils container" id="f31aa283-521f-47f9-a889-4cc1c129a625">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f31aa283-521f-47f9-a889-4cc1c129a625','d70dfc5e-0d3c-4af0-a9b5-c75f8530b89b','86c93360-bbeb-4e91-b75d-d0726aeb8e8c','../lite/tree/../notebooks/index.html?path=a6b0905a_392c_4e4a_bfad_ddfd44440c83.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="ad689ab0-b5bd-4308-9d4c-c100d12c7eaa">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ad689ab0-b5bd-4308-9d4c-c100d12c7eaa','c76aa431-8359-4444-a447-d8088e2aa9a3','97250c61-6e3c-4855-a209-35c3ee33fb2f','../lite/tree/../notebooks/index.html?path=c92b225b_6920_4fdf_9e58_12e039fdcd20.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndenumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 <span class="go">            print(i, val)</span>
@@ -1226,7 +1226,7 @@ iterating. The ndenumerate iterator can achieve this.</p>
 </div>
 </div>
 </div>
-<div id="86c93360-bbeb-4e91-b75d-d0726aeb8e8c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f31aa283-521f-47f9-a889-4cc1c129a625','86c93360-bbeb-4e91-b75d-d0726aeb8e8c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f31aa283-521f-47f9-a889-4cc1c129a625','86c93360-bbeb-4e91-b75d-d0726aeb8e8c')">Open In Tab</button></div><div id="d70dfc5e-0d3c-4af0-a9b5-c75f8530b89b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="97250c61-6e3c-4855-a209-35c3ee33fb2f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ad689ab0-b5bd-4308-9d4c-c100d12c7eaa','97250c61-6e3c-4855-a209-35c3ee33fb2f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ad689ab0-b5bd-4308-9d4c-c100d12c7eaa','97250c61-6e3c-4855-a209-35c3ee33fb2f')">Open In Tab</button></div><div id="c76aa431-8359-4444-a447-d8088e2aa9a3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 <section id="iterator-for-broadcasting">
 <h3>Iterator for broadcasting<a class="headerlink" href="#iterator-for-broadcasting" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -1242,9 +1242,9 @@ using the <a class="reference internal" href="generated/numpy.broadcast.html#num
 objects as inputs and returns an iterator that returns tuples
 providing each of the input sequence elements in the broadcasted
 result.</p>
-<div class="try_examples_outer_container docutils container" id="ec37ffc9-e627-422a-804c-95d273b3558f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ec37ffc9-e627-422a-804c-95d273b3558f','36624f6f-1f62-4a83-8bad-0170126ff972','5a028260-0e55-467a-9628-c29a226fb35b','../lite/tree/../notebooks/index.html?path=61b806ba_dfea_4d0a_877d_7e4a1b96095b.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="84fb2486-b951-41c8-998d-63e3a8c31e83">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('84fb2486-b951-41c8-998d-63e3a8c31e83','ada6ce68-52c6-4a65-8c02-b3c35a1f6df2','550354da-c1b8-4d20-92f6-78490d78dd33','../lite/tree/../notebooks/index.html?path=7f8be371_306b_4d63_9df9_61c4b6fc4ddb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">broadcast</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
 <span class="go">(np.int64(1), np.int64(0))</span>
@@ -1255,7 +1255,7 @@ result.</p>
 </div>
 </div>
 </div>
-<div id="5a028260-0e55-467a-9628-c29a226fb35b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ec37ffc9-e627-422a-804c-95d273b3558f','5a028260-0e55-467a-9628-c29a226fb35b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ec37ffc9-e627-422a-804c-95d273b3558f','5a028260-0e55-467a-9628-c29a226fb35b')">Open In Tab</button></div><div id="36624f6f-1f62-4a83-8bad-0170126ff972" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
+<div id="550354da-c1b8-4d20-92f6-78490d78dd33" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('84fb2486-b951-41c8-998d-63e3a8c31e83','550354da-c1b8-4d20-92f6-78490d78dd33')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('84fb2486-b951-41c8-998d-63e3a8c31e83','550354da-c1b8-4d20-92f6-78490d78dd33')">Open In Tab</button></div><div id="ada6ce68-52c6-4a65-8c02-b3c35a1f6df2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></section>
 </section>
 </section>
 

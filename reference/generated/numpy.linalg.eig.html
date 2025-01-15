@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -635,9 +635,9 @@ eigenvalue <code class="docutils literal notranslate"><span class="pre">eigenval
 </dd>
 <dt><a class="reference internal" href="numpy.linalg.eigvalsh.html#numpy.linalg.eigvalsh" title="numpy.linalg.eigvalsh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigvalsh</span></code></a></dt><dd><p>eigenvalues of a real symmetric or complex Hermitian (conjugate symmetric) array.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eig.html#scipy.linalg.eig" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.eig</span></code></a></dt><dd><p>Similar function in SciPy that also solves the generalized eigenvalue problem.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.eig.html#scipy.linalg.eig" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.eig</span></code></a></dt><dd><p>Similar function in SciPy that also solves the generalized eigenvalue problem.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.schur.html#scipy.linalg.schur" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.schur</span></code></a></dt><dd><p>Best choice for unitary and other non-Hermitian normal matrices.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.schur.html#scipy.linalg.schur" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.schur</span></code></a></dt><dd><p>Best choice for unitary and other non-Hermitian normal matrices.</p>
 </dd>
 </dl>
 </div>
@@ -656,7 +656,7 @@ that fact. If the eigenvalues are all different, then theoretically the
 eigenvectors are linearly independent and <em class="xref py py-obj">a</em> can be diagonalized by a
 similarity transformation using <em class="xref py py-obj">eigenvectors</em>, i.e, <code class="docutils literal notranslate"><span class="pre">inv(eigenvectors)</span> <span class="pre">&#64;</span>
 <span class="pre">a</span> <span class="pre">&#64;</span> <span class="pre">eigenvectors</span></code> is diagonal.</p>
-<p>For non-Hermitian normal matrices the SciPy function <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.schur.html#scipy.linalg.schur" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.schur</span></code></a>
+<p>For non-Hermitian normal matrices the SciPy function <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.schur.html#scipy.linalg.schur" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.schur</span></code></a>
 is preferred because the matrix <em class="xref py py-obj">eigenvectors</em> is guaranteed to be
 unitary, which is not the case when using <a class="reference internal" href="#numpy.linalg.eig" title="numpy.linalg.eig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eig</span></code></a>. The Schur factorization
 produces an upper triangular matrix rather than a diagonal matrix, but for
@@ -671,10 +671,10 @@ necessarily the (perhaps conjugate) transposes of each other.</p>
 <p>G. Strang, <em>Linear Algebra and Its Applications</em>, 2nd Ed., Orlando, FL,
 Academic Press, Inc., 1980, Various pp.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="5d342df1-3de5-4b0b-ba64-7ab0bccbff15">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5d342df1-3de5-4b0b-ba64-7ab0bccbff15','74f33c8b-c0f2-4124-a4d9-8af70f24eeb3','962d35e0-7957-4947-b7b9-11cc8ce05f7d','../../lite/tree/../notebooks/index.html?path=8c0ed16d_747a_46f7_b8fc_34631ad8c17a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">LA</span>
+<div class="try_examples_outer_container docutils container" id="ae3f81f5-72ec-474d-9da8-5891828d99db">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ae3f81f5-72ec-474d-9da8-5891828d99db','e9ea6ff1-c83c-4860-aee4-2de6f40cae5d','25398842-1a91-4cd5-9b7a-54ad7de6e7b8','../../lite/tree/../notebooks/index.html?path=90551131_8946_41b0_ad6e_519f1f296c72.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">LA</span>
 </pre></div>
 </div>
 <p>(Almost) trivial example with real eigenvalues and eigenvectors.</p>
@@ -721,7 +721,7 @@ eigenvectors); note that <code class="docutils literal notranslate"><span class=
 </div>
 </div>
 </div>
-<div id="962d35e0-7957-4947-b7b9-11cc8ce05f7d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5d342df1-3de5-4b0b-ba64-7ab0bccbff15','962d35e0-7957-4947-b7b9-11cc8ce05f7d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5d342df1-3de5-4b0b-ba64-7ab0bccbff15','962d35e0-7957-4947-b7b9-11cc8ce05f7d')">Open In Tab</button></div><div id="74f33c8b-c0f2-4124-a4d9-8af70f24eeb3" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="25398842-1a91-4cd5-9b7a-54ad7de6e7b8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ae3f81f5-72ec-474d-9da8-5891828d99db','25398842-1a91-4cd5-9b7a-54ad7de6e7b8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ae3f81f5-72ec-474d-9da8-5891828d99db','25398842-1a91-4cd5-9b7a-54ad7de6e7b8')">Open In Tab</button></div><div id="e9ea6ff1-c83c-4860-aee4-2de6f40cae5d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

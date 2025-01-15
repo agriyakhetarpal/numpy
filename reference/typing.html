@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -599,7 +599,7 @@ you can either use a <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 <p>or explicitly type the array like object as <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Any</span></code></a>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">array_like</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">array_like</span><span class="p">)</span>
 <span class="go">array(&lt;generator object &lt;genexpr&gt; at ...&gt;, dtype=object)</span>
@@ -634,12 +634,12 @@ Please see : <a class="reference internal" href="arrays.dtypes.html#arrays-dtype
 <p>The precision of <a class="reference internal" href="arrays.scalars.html#numpy.number" title="numpy.number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.number</span></code></a> subclasses is treated as a invariant generic
 parameter (see <a class="reference internal" href="#numpy.typing.NBitBase" title="numpy.typing.NBitBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">NBitBase</span></code></a>), simplifying the annotating of processes
 involving precision-based casting.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeVar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npt</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">npt</span><span class="o">.</span><span class="n">NBitBase</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="s2">&quot;np.floating[T]&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="s2">&quot;np.floating[T]&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;np.floating[T]&quot;</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="s2">&quot;np.floating[T]&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="s2">&quot;np.floating[T]&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;np.floating[T]&quot;</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="o">...</span>
 </pre></div>
 </div>
@@ -707,13 +707,13 @@ into an <a class="reference internal" href="generated/numpy.ndarray.html#numpy.n
 <p class="rubric">Examples</p>
 </dd></dl>
 
-<div class="try_examples_outer_container docutils container" id="57d5bf66-9e42-4b15-8b3e-1a99f97b839f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('57d5bf66-9e42-4b15-8b3e-1a99f97b839f','8ba42985-3b3f-4483-99d5-127099660728','5931b6f5-5ecc-41ef-acb6-b05361b8f958','../lite/tree/../notebooks/index.html?path=8c2e277b_7550_44ba_bdbe_6e4f4f7076e1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="715bb57c-5948-4849-a974-d476c69f06ed">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('715bb57c-5948-4849-a974-d476c69f06ed','16508dd5-56a4-4b87-b753-b3ef8ed188f6','77915607-fe03-4feb-9afe-9faccc7a2ba4','../lite/tree/../notebooks/index.html?path=b8d3eb9a_ab63_46a7_8dd5_d9770ec55b34.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npt</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">as_array</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">as_array</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -743,16 +743,16 @@ into data types.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npt</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">as_dtype</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">DTypeLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">as_dtype</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">DTypeLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">:</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div id="5931b6f5-5ecc-41ef-acb6-b05361b8f958" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('57d5bf66-9e42-4b15-8b3e-1a99f97b839f','5931b6f5-5ecc-41ef-acb6-b05361b8f958')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('57d5bf66-9e42-4b15-8b3e-1a99f97b839f','5931b6f5-5ecc-41ef-acb6-b05361b8f958')">Open In Tab</button></div><div id="8ba42985-3b3f-4483-99d5-127099660728" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><dl class="py data">
+<div id="77915607-fe03-4feb-9afe-9faccc7a2ba4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('715bb57c-5948-4849-a974-d476c69f06ed','77915607-fe03-4feb-9afe-9faccc7a2ba4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('715bb57c-5948-4849-a974-d476c69f06ed','77915607-fe03-4feb-9afe-9faccc7a2ba4')">Open In Tab</button></div><div id="16508dd5-56a4-4b87-b753-b3ef8ed188f6" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><dl class="py data">
 <dt class="sig sig-object py" id="numpy.typing.NDArray">
 <span class="sig-prename descclassname"><span class="pre">numpy.typing.</span></span><span class="sig-name descname"><span class="pre">NDArray</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">numpy.ndarray[tuple[int,</span> <span class="pre">...],</span> <span class="pre">numpy.dtype[+_ScalarType_co]]</span></em><a class="headerlink" href="#numpy.typing.NDArray" title="Link to this definition">#</a></dt>
 <dd><p>A <a class="reference internal" href="generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np.ndarray[tuple[int,</span> <span class="pre">...],</span> <span class="pre">np.dtype[+ScalarType]]</span></code></a>
@@ -764,8 +764,8 @@ and unspecified shape.</p>
 <p><span class="versionmodified added">Added in version 1.21.</span></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npt</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">)</span>
 <span class="go">numpy.ndarray[tuple[int, ...], numpy.dtype[+_ScalarType_co]]</span>
@@ -776,7 +776,7 @@ and unspecified shape.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">NDArrayInt</span> <span class="o">=</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">int_</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">:</span> <span class="n">NDArrayInt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">npt</span><span class="o">.</span><span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">npt</span><span class="o">.</span><span class="n">NDArray</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -794,21 +794,21 @@ of precision, <em>e.g.</em> <code class="docutils literal notranslate"><span cla
 <p><span class="versionmodified added">Added in version 1.20.</span></p>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="a76e771b-2e3f-42c8-ae08-d8d7fa387c84">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a76e771b-2e3f-42c8-ae08-d8d7fa387c84','de7e6a74-4ef4-47cd-b857-55d4a1519668','7578dc0e-3cd5-4220-b72f-c6236b945d40','../lite/tree/../notebooks/index.html?path=f5d38ae9_58fd_432f_bc56_b2086af39364.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="ce40a055-3c06-4a4f-8b02-50ba398218cf">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ce40a055-3c06-4a4f-8b02-50ba398218cf','f1b4bda6-2522-4e9a-bfb8-cb2c78250a26','8b17a577-cc11-4916-b005-7a84e0822bcd','../lite/tree/../notebooks/index.html?path=41e57982_2e24_48cc_991d_a16d94da0f18.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Below is a typical usage example: <a class="reference internal" href="#numpy.typing.NBitBase" title="numpy.typing.NBitBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NBitBase</span></code></a> is herein used for annotating
 a function that takes a float and integer of arbitrary precision
 as arguments and returns a new float of whichever precision is largest
 (<em>e.g.</em> <code class="docutils literal notranslate"><span class="pre">np.float16</span> <span class="pre">+</span> <span class="pre">np.int64</span> <span class="pre">-&gt;</span> <span class="pre">np.float64</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.typing</span> <span class="k">as</span> <span class="nn">npt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TypeVar</span><span class="p">,</span> <span class="n">TYPE_CHECKING</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npt</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">npt</span><span class="o">.</span><span class="n">NBitBase</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">npt</span><span class="o">.</span><span class="n">NBitBase</span><span class="p">)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">[</span><span class="n">S</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">[</span><span class="n">S</span> <span class="o">|</span> <span class="n">T</span><span class="p">]:</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">[</span><span class="n">S</span><span class="p">],</span> <span class="n">b</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">integer</span><span class="p">[</span><span class="n">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">floating</span><span class="p">[</span><span class="n">S</span> <span class="o">|</span> <span class="n">T</span><span class="p">]:</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">()</span>
@@ -825,7 +825,7 @@ as arguments and returns a new float of whichever precision is largest
 </div>
 </div>
 </div>
-<div id="7578dc0e-3cd5-4220-b72f-c6236b945d40" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a76e771b-2e3f-42c8-ae08-d8d7fa387c84','7578dc0e-3cd5-4220-b72f-c6236b945d40')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a76e771b-2e3f-42c8-ae08-d8d7fa387c84','7578dc0e-3cd5-4220-b72f-c6236b945d40')">Open In Tab</button></div><div id="de7e6a74-4ef4-47cd-b857-55d4a1519668" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="8b17a577-cc11-4916-b005-7a84e0822bcd" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ce40a055-3c06-4a4f-8b02-50ba398218cf','8b17a577-cc11-4916-b005-7a84e0822bcd')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ce40a055-3c06-4a4f-8b02-50ba398218cf','8b17a577-cc11-4916-b005-7a84e0822bcd')">Open In Tab</button></div><div id="f1b4bda6-2522-4e9a-bfb8-cb2c78250a26" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 </section>
 </section>

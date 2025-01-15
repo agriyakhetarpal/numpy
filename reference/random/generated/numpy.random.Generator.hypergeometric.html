@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -650,7 +650,7 @@ size <em class="xref py py-obj">nsample</em> taken from a set of <em class="xref
 <dl class="simple">
 <dt><a class="reference internal" href="numpy.random.Generator.multivariate_hypergeometric.html#numpy.random.Generator.multivariate_hypergeometric" title="numpy.random.Generator.multivariate_hypergeometric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multivariate_hypergeometric</span></code></a></dt><dd><p>Draw samples from the multivariate hypergeometric distribution.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.hypergeom.html#scipy.stats.hypergeom" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.stats.hypergeom</span></code></a></dt><dd><p>probability density function, distribution or cumulative density function, etc.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.hypergeom.html#scipy.stats.hypergeom" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.stats.hypergeom</span></code></a></dt><dd><p>probability density function, distribution or cumulative density function, etc.</p>
 </dd>
 </dl>
 </div>
@@ -702,14 +702,14 @@ Mathematics, 31, pp. 181-189 (1990).</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="78437f91-747f-4008-9433-b58792848a65">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('78437f91-747f-4008-9433-b58792848a65','dded9fc5-29ba-4bc1-891e-d41a64691315','64ff59eb-ea78-4eaf-b026-802b71ade85b','../../../lite/tree/../notebooks/index.html?path=43ef7fbd_5e95_4d37_8122_516f4ee672cb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="deccbe36-a2df-46e9-a68a-b8f3b928672e">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('deccbe36-a2df-46e9-a68a-b8f3b928672e','4b037e36-06fa-4a0f-b500-5c5108d333b2','36928c26-f303-40f7-920c-6c782a7e8693','../../../lite/tree/../notebooks/index.html?path=9ae37f69_161a_4ba9_8239_9f1f2b889bda.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Draw samples from the distribution:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">nsamp</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span>
 <span class="go"># number of good, number of bad, and number of samples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">hypergeometric</span><span class="p">(</span><span class="n">ngood</span><span class="p">,</span> <span class="n">nbad</span><span class="p">,</span> <span class="n">nsamp</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">hist</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="kn">import</span> <span class="n">hist</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="go">#   note that it is very unlikely to grab both bad items</span>
 </pre></div>
@@ -724,7 +724,7 @@ If you pull 15 marbles at random, how likely is it that
 </div>
 </div>
 </div>
-<div id="64ff59eb-ea78-4eaf-b026-802b71ade85b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('78437f91-747f-4008-9433-b58792848a65','64ff59eb-ea78-4eaf-b026-802b71ade85b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('78437f91-747f-4008-9433-b58792848a65','64ff59eb-ea78-4eaf-b026-802b71ade85b')">Open In Tab</button></div><div id="dded9fc5-29ba-4bc1-891e-d41a64691315" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="36928c26-f303-40f7-920c-6c782a7e8693" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('deccbe36-a2df-46e9-a68a-b8f3b928672e','36928c26-f303-40f7-920c-6c782a7e8693')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('deccbe36-a2df-46e9-a68a-b8f3b928672e','36928c26-f303-40f7-920c-6c782a7e8693')">Open In Tab</button></div><div id="4b037e36-06fa-4a0f-b500-5c5108d333b2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

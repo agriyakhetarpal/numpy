@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -586,7 +586,7 @@ working with polynomials.</p>
 <p>The following table highlights some of the main differences between the
 legacy polynomial module and the polynomial package for common tasks.
 The <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.html#numpy.polynomial.polynomial.Polynomial" title="numpy.polynomial.polynomial.Polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polynomial</span></code></a> class is imported for brevity:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.polynomial</span> <span class="kn">import</span> <span class="n">Polynomial</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.polynomial</span><span class="w"> </span><span class="kn">import</span> <span class="n">Polynomial</span>
 </pre></div>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -640,9 +640,9 @@ For example, the following demonstrates how you would convert a <a class="refere
 instance representing the expression <span class="math notranslate nohighlight">\(x^{2} + 2x + 3\)</span> to a
 <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.html#numpy.polynomial.polynomial.Polynomial" title="numpy.polynomial.polynomial.Polynomial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Polynomial</span></code></a> instance representing the same
 expression:</p>
-<div class="try_examples_outer_container docutils container" id="86157951-a930-42be-9caf-bc7faf36fddd">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('86157951-a930-42be-9caf-bc7faf36fddd','1409642e-8e25-4a99-8eb7-4e5c4d2d950f','6bd79394-1630-4b51-bd9d-1577d279cb62','../lite/tree/../notebooks/index.html?path=90ece967_1e2c_4d68_9fcf_22acff69b0a0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="4d42f13f-46c6-409b-bc2c-2d020bc3c3c2">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4d42f13f-46c6-409b-bc2c-2d020bc3c3c2','88232d21-2c02-4c41-9373-5db38f503527','b3cd9698-fad7-4c62-93af-d22c35565162','../lite/tree/../notebooks/index.html?path=19e252e0_5389_464a_9181_707b7cff0814.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p1d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -669,7 +669,7 @@ can’t be mixed in arithmetic:</p>
 </div>
 </div>
 </div>
-<div id="6bd79394-1630-4b51-bd9d-1577d279cb62" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('86157951-a930-42be-9caf-bc7faf36fddd','6bd79394-1630-4b51-bd9d-1577d279cb62')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('86157951-a930-42be-9caf-bc7faf36fddd','6bd79394-1630-4b51-bd9d-1577d279cb62')">Open In Tab</button></div><div id="1409642e-8e25-4a99-8eb7-4e5c4d2d950f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>See the documentation for the
+<div id="b3cd9698-fad7-4c62-93af-d22c35565162" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4d42f13f-46c6-409b-bc2c-2d020bc3c3c2','b3cd9698-fad7-4c62-93af-d22c35565162')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4d42f13f-46c6-409b-bc2c-2d020bc3c3c2','b3cd9698-fad7-4c62-93af-d22c35565162')">Open In Tab</button></div><div id="88232d21-2c02-4c41-9373-5db38f503527" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script><p>See the documentation for the
 <a class="reference external" href="routines.polynomials.classes">convenience classes</a> for further details on
 the <code class="docutils literal notranslate"><span class="pre">domain</span></code> and <code class="docutils literal notranslate"><span class="pre">window</span></code> attributes.</p>
 <p>Another major difference between the legacy polynomial module and the
@@ -687,7 +687,7 @@ example, consider a simple linear fit to the following data:</p>
 <p>With the legacy polynomial module, a linear fit (i.e. polynomial of degree 1)
 could be applied to these data with <a class="reference internal" href="generated/numpy.polyfit.html#numpy.polyfit" title="numpy.polyfit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">polyfit</span></code></a>:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="gh">Out[4]: </span><span class="go">array([ 1.05005228, -1.06851103])</span>
+<span class="gh">Out[4]: </span><span class="go">array([0.90042985, 0.57952226])</span>
 </pre></div>
 </div>
 <p>With the new polynomial API, the <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.fit.html#numpy.polynomial.polynomial.Polynomial.fit" title="numpy.polynomial.polynomial.Polynomial.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>
@@ -695,7 +695,7 @@ class method is preferred:</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">p_fitted</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polynomial</span><span class="o">.</span><span class="n">Polynomial</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">deg</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="gp">In [6]: </span><span class="n">p_fitted</span>
-<span class="gh">Out[6]: </span><span class="go">Polynomial([3.65672423, 4.72523526], domain=[0., 9.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
+<span class="gh">Out[6]: </span><span class="go">Polynomial([4.63145657, 4.05193431], domain=[0., 9.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
 </pre></div>
 </div>
 <p>Note that the coefficients are given <em>in the scaled domain</em> defined by the
@@ -703,7 +703,7 @@ linear mapping between the <code class="docutils literal notranslate"><span clas
 <a class="reference internal" href="generated/numpy.polynomial.polynomial.Polynomial.convert.html#numpy.polynomial.polynomial.Polynomial.convert" title="numpy.polynomial.polynomial.Polynomial.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a> can be used to get the
 coefficients in the unscaled data domain.</p>
 <div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">p_fitted</span><span class="o">.</span><span class="n">convert</span><span class="p">()</span>
-<span class="gh">Out[7]: </span><span class="go">Polynomial([-1.06851103,  1.05005228], domain=[-1.,  1.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
+<span class="gh">Out[7]: </span><span class="go">Polynomial([0.57952226, 0.90042985], domain=[-1.,  1.], window=[-1.,  1.], symbol=&#39;x&#39;)</span>
 </pre></div>
 </div>
 </section>

@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -553,7 +553,7 @@ respectively. Lists and tuples can define ndarray creation:</p>
 <li><p>a list of lists will create a 2D array,</p></li>
 <li><p>further nested lists will create higher-dimensional arrays. In general, any array object is called an <strong>ndarray</strong> in NumPy.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a2D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a3D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]])</span>
@@ -566,7 +566,7 @@ more control over the underlying data structures and how the elements
 are handled in C/C++ functions.
 When values do not fit and you are using a <code class="docutils literal notranslate"><span class="pre">dtype</span></code>, NumPy may raise an
 error:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">127</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">129</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">)</span>
 <span class="gt">Traceback (most recent call last):</span>
 <span class="c">...</span>
@@ -578,7 +578,7 @@ Assigning the <code class="docutils literal notranslate"><span class="pre">int8<
 in overflow. This feature can often be misunderstood. If you
 perform calculations with mismatching <code class="docutils literal notranslate"><span class="pre">dtypes</span></code>, you can get unwanted
 results, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c_unsigned32</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
@@ -620,7 +620,7 @@ dimension of the array they create:</p>
 <p><a class="reference internal" href="../reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.arange</span></code></a> creates arrays with regularly incrementing values.
 Check the documentation for complete information and examples. A few
 examples are shown:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="go">array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
@@ -637,7 +637,7 @@ the <code class="docutils literal notranslate"><span class="pre">stop</span></co
 <p><a class="reference internal" href="../reference/generated/numpy.linspace.html#numpy.linspace" title="numpy.linspace"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.linspace</span></code></a> will create arrays with a specified number of elements, and
 spaced equally between the specified beginning and end values. For
 example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="go">array([1. ,  1.6,  2.2,  2.8,  3.4,  4. ])</span>
 </pre></div>
@@ -652,7 +652,7 @@ number of elements and the starting and end point. The previous
 define properties of special matrices represented as 2D arrays.</p>
 <p><code class="docutils literal notranslate"><span class="pre">np.eye(n,</span> <span class="pre">m)</span></code> defines a 2D identity matrix. The elements where i=j (row index and column index are equal) are 1
 and the rest are 0, as such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="go">array([[1., 0., 0.],</span>
 <span class="go">       [0., 1., 0.],</span>
@@ -667,7 +667,7 @@ and the rest are 0, as such:</p>
 the diagonal <em>or</em> if given a 2D array returns a 1D array that is
 only the diagonal elements. The two array creation functions can be helpful while
 doing linear algebra, as such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="go">array([[1, 0, 0],</span>
 <span class="go">       [0, 2, 0],</span>
@@ -687,7 +687,7 @@ of the Vandermonde matrix is a decreasing power of the input 1D array or
 list or tuple,
 <code class="docutils literal notranslate"><span class="pre">x</span></code> where the highest polynomial order is <code class="docutils literal notranslate"><span class="pre">n-1</span></code>. This array creation
 routine is helpful in generating linear least squares models, as such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">vander</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
 <span class="go">array([[0. , 1. ],</span>
 <span class="go">      [0.5, 1. ],</span>
@@ -716,7 +716,7 @@ can create arrays with any dimension by specifying how many dimensions
 and length along that dimension in a tuple or list.</p>
 <p><a class="reference internal" href="../reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.zeros</span></code></a> will create an array filled with 0 values with the
 specified shape. The default dtype is <code class="docutils literal notranslate"><span class="pre">float64</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="go">array([[0., 0., 0.],</span>
 <span class="go">       [0., 0., 0.]])</span>
@@ -732,7 +732,7 @@ specified shape. The default dtype is <code class="docutils literal notranslate"
 </div>
 <p><a class="reference internal" href="../reference/generated/numpy.ones.html#numpy.ones" title="numpy.ones"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.ones</span></code></a> will create an array filled with 1 values. It is identical to
 <code class="docutils literal notranslate"><span class="pre">zeros</span></code> in all other respects as such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="go">array([[1., 1., 1.],</span>
 <span class="go">       [1., 1., 1.]])</span>
@@ -752,8 +752,8 @@ values between 0 and 1. It is included with the <a class="reference internal" hr
 library. Below, two arrays are created with shapes (2,3) and (2,3,2),
 respectively. The seed is set to 42 so you can reproduce these
 pseudorandom numbers:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">default_rng</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">default_rng</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="go">array([[0.77395605, 0.43887844, 0.85859792],</span>
 <span class="go">       [0.69736803, 0.09417735, 0.97562235]])</span>
@@ -769,7 +769,7 @@ pseudorandom numbers:</p>
 <p><a class="reference internal" href="../reference/generated/numpy.indices.html#numpy.indices" title="numpy.indices"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.indices</span></code></a> will create a set of arrays (stacked as a one-higher
 dimensioned array), one per dimension with each representing variation in that
 dimension:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">indices</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="go">array([[[0, 0, 0],</span>
 <span class="go">        [1, 1, 1],</span>
@@ -790,7 +790,7 @@ existing arrays to create new arrays. When you assign an array or its
 elements to a new variable, you have to explicitly <a class="reference internal" href="../reference/generated/numpy.copy.html#numpy.copy" title="numpy.copy"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.copy</span></code></a> the array,
 otherwise the variable is a view into the original array. Consider the
 following example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -802,7 +802,7 @@ following example:</p>
 <code class="docutils literal notranslate"><span class="pre">b</span></code> that viewed the first 2 elements of <code class="docutils literal notranslate"><span class="pre">a</span></code>. When you added 1 to <code class="docutils literal notranslate"><span class="pre">b</span></code> you
 would get the same result by adding 1 to <code class="docutils literal notranslate"><span class="pre">a[:2]</span></code>. If you want to create a
 <em>new</em> array, use the <a class="reference internal" href="../reference/generated/numpy.copy.html#numpy.copy" title="numpy.copy"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.copy</span></code></a> array creation routine as such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -814,7 +814,7 @@ would get the same result by adding 1 to <code class="docutils literal notransla
 <p>There are a number of routines to join existing arrays e.g. <a class="reference internal" href="../reference/generated/numpy.vstack.html#numpy.vstack" title="numpy.vstack"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.vstack</span></code></a>,
 <a class="reference internal" href="../reference/generated/numpy.hstack.html#numpy.hstack" title="numpy.hstack"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.hstack</span></code></a>, and <a class="reference internal" href="../reference/generated/numpy.block.html#numpy.block" title="numpy.block"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.block</span></code></a>. Here is an example of joining four 2-by-2
 arrays into a 4-by-4 array using <code class="docutils literal notranslate"><span class="pre">block</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -866,7 +866,7 @@ x,<span class="w"> </span>y
 </pre></div>
 </div>
 <p>Importing <code class="docutils literal notranslate"><span class="pre">simple.csv</span></code> is accomplished using <a class="reference internal" href="../reference/generated/numpy.loadtxt.html#numpy.loadtxt" title="numpy.loadtxt"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code></a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;simple.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> 
 <span class="go">array([[0., 0.],</span>
 <span class="go">       [1., 1.],</span>
@@ -874,7 +874,7 @@ x,<span class="w"> </span>y
 <span class="go">       [3., 9.]])</span>
 </pre></div>
 </div>
-<p>More generic ASCII files can be read using <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/io.html#module-scipy.io" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.io</span></code></a> and <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>.</p>
+<p>More generic ASCII files can be read using <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/io.html#module-scipy.io" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.io</span></code></a> and <a class="reference external" href="https://pandas.pydata.org/">Pandas</a>.</p>
 </section>
 </section>
 <section id="creating-arrays-from-raw-bytes-through-the-use-of-strings-or-buffers">

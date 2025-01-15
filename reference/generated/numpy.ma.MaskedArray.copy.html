@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -788,9 +788,9 @@ arguments, and this function always passes sub-classes through.)</p>
 function <a class="reference internal" href="numpy.copy.html#numpy.copy" title="numpy.copy"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.copy</span></code></a> is similar, but it defaults to using order ‘K’,
 and will not pass sub-classes through by default.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="cf089631-53ec-4a33-b1dc-3fcab8a9bc2b">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('cf089631-53ec-4a33-b1dc-3fcab8a9bc2b','68bc8e21-5e07-4410-8c69-726c3539e31e','9edc362a-ed50-4448-a3da-3f4f479e7922','../../lite/tree/../notebooks/index.html?path=78908ef8_89e4_48bf_9f22_02810d714e6f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="cf5a4ad0-fa8f-43f7-8d64-2d44f009ff93">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('cf5a4ad0-fa8f-43f7-8d64-2d44f009ff93','35b61093-b1c3-4684-a9f4-f0c86a582cc6','24e385c5-a017-4f1e-be88-acbc7b9edcf5','../../lite/tree/../notebooks/index.html?path=3c6c6a4b_53d7_4b18_a265_85bbca78fd80.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]],</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -827,7 +827,7 @@ be modified (is mutable):</p>
 </div>
 <p>To ensure all elements within an <code class="docutils literal notranslate"><span class="pre">object</span></code> array are copied,
 use <a class="reference external" href="https://docs.python.org/3/library/copy.html#copy.deepcopy" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy.deepcopy</span></code></a>:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">copy</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
@@ -839,7 +839,7 @@ use <a class="reference external" href="https://docs.python.org/3/library/copy.h
 </div>
 </div>
 </div>
-<div id="9edc362a-ed50-4448-a3da-3f4f479e7922" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('cf089631-53ec-4a33-b1dc-3fcab8a9bc2b','9edc362a-ed50-4448-a3da-3f4f479e7922')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('cf089631-53ec-4a33-b1dc-3fcab8a9bc2b','9edc362a-ed50-4448-a3da-3f4f479e7922')">Open In Tab</button></div><div id="68bc8e21-5e07-4410-8c69-726c3539e31e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="24e385c5-a017-4f1e-be88-acbc7b9edcf5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('cf5a4ad0-fa8f-43f7-8d64-2d44f009ff93','24e385c5-a017-4f1e-be88-acbc7b9edcf5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('cf5a4ad0-fa8f-43f7-8d64-2d44f009ff93','24e385c5-a017-4f1e-be88-acbc7b9edcf5')">Open In Tab</button></div><div id="35b61093-b1c3-4684-a9f4-f0c86a582cc6" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

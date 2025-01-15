@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -727,8 +727,8 @@ From MathWorld–A Wolfram Web Resource.
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="81221036-202a-4407-aa95-a5c8a927b1b6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('81221036-202a-4407-aa95-a5c8a927b1b6','77d528f1-6610-4dc3-8ddb-dbc6832fb1d0','36148df3-c461-4ac4-8dd5-d98baaff6c40','../../../lite/tree/../notebooks/index.html?path=b6d4b791_1277_4d21_bbb4_a841140466fc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="d213bb11-0beb-4773-b3e6-bb09c31d8a3a">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d213bb11-0beb-4773-b3e6-bb09c31d8a3a','8889a2a4-8fb3-4634-b5b0-dcd8f842d0b5','da37701f-f254-4682-a450-703ecf9c8fb4','../../../lite/tree/../notebooks/index.html?path=aee4a568_f9a2_42de_b5af_ad61be065d94.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>In a study, testing for a specific alternative to the null hypothesis
 requires use of the Noncentral F distribution. We need to calculate the
 area in the tail of the distribution that exceeds the value of the F
@@ -741,7 +741,7 @@ distributions for comparison.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">NF</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">nc_vals</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">dfnum</span><span class="p">,</span> <span class="n">dfden</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">c_vals</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">F</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:],</span> <span class="n">F</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">NF</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">:],</span> <span class="n">NF</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -752,7 +752,7 @@ distributions for comparison.</p>
 </figure>
 </div>
 </div>
-<div id="36148df3-c461-4ac4-8dd5-d98baaff6c40" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('81221036-202a-4407-aa95-a5c8a927b1b6','36148df3-c461-4ac4-8dd5-d98baaff6c40')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('81221036-202a-4407-aa95-a5c8a927b1b6','36148df3-c461-4ac4-8dd5-d98baaff6c40')">Open In Tab</button></div><div id="77d528f1-6610-4dc3-8ddb-dbc6832fb1d0" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="da37701f-f254-4682-a450-703ecf9c8fb4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d213bb11-0beb-4773-b3e6-bb09c31d8a3a','da37701f-f254-4682-a450-703ecf9c8fb4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d213bb11-0beb-4773-b3e6-bb09c31d8a3a','da37701f-f254-4682-a450-703ecf9c8fb4')">Open In Tab</button></div><div id="8889a2a4-8fb3-4634-b5b0-dcd8f842d0b5" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -66,7 +66,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -478,7 +478,7 @@ so we will need to construct a list for the <em class="xref py py-obj">op_axes</
 Here’s how this looks.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">axis_to_axeslist</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">ndim</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">axis_to_axeslist</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">ndim</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">ndim</span>
 <span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
@@ -494,7 +494,7 @@ Here’s how this looks.</p>
 <span class="gp">... </span>                <span class="n">ax</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="n">axeslist</span>
 <span class="gp">...</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">sum_squares_py</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">sum_squares_py</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">axeslist</span> <span class="o">=</span> <span class="n">axis_to_axeslist</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
 <span class="gp">... </span>    <span class="n">it</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">([</span><span class="n">arr</span><span class="p">,</span> <span class="n">out</span><span class="p">],</span> <span class="n">flags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;reduce_ok&#39;</span><span class="p">,</span>
 <span class="gp">... </span>                                      <span class="s1">&#39;buffered&#39;</span><span class="p">,</span> <span class="s1">&#39;delay_bufalloc&#39;</span><span class="p">],</span>
@@ -521,11 +521,11 @@ Cython code that’s specialized for the float64 dtype. With the
 ‘external_loop’ flag enabled, the arrays provided to the inner loop will
 always be one-dimensional, so very little checking needs to be done.</p>
 <p>Here’s the listing of sum_squares.pyx:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">cimport</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="n">cimport</span> <span class="n">cython</span>
 
-<span class="k">def</span> <span class="nf">axis_to_axeslist</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">ndim</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">axis_to_axeslist</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">ndim</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">ndim</span>
     <span class="k">else</span><span class="p">:</span>
@@ -542,7 +542,7 @@ always be one-dimensional, so very little checking needs to be done.</p>
         <span class="k">return</span> <span class="n">axeslist</span>
 
 <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">sum_squares_cy</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sum_squares_cy</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">cdef</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="n">double</span><span class="p">]</span> <span class="n">x</span>
     <span class="n">cdef</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">[</span><span class="n">double</span><span class="p">]</span> <span class="n">y</span>
     <span class="n">cdef</span> <span class="nb">int</span> <span class="n">size</span>
@@ -578,7 +578,7 @@ $ gcc -shared -pthread -fPIC -fwrapv -O2 -Wall -I/usr/include/python2.7 -fno-str
 as our native Python/NumPy code did.</p>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">sum_squares</span> <span class="kn">import</span> <span class="n">sum_squares_cy</span> 
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sum_squares</span><span class="w"> </span><span class="kn">import</span> <span class="n">sum_squares_cy</span> 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sum_squares_cy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
 <span class="go">array(55.0)</span>

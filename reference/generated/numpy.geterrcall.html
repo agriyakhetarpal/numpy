@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -577,14 +577,14 @@ that is called or the log instance that is written to is returned by
 <p>For complete documentation of the types of floating-point exceptions and
 treatment options, see <a class="reference internal" href="numpy.seterr.html#numpy.seterr" title="numpy.seterr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seterr</span></code></a>.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="ccdfe59a-9784-49a7-8b82-a35a3c502c5c">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ccdfe59a-9784-49a7-8b82-a35a3c502c5c','0364e779-3e63-4d1e-9e41-cb24761fc2e4','2be49a36-c12d-4ae1-9b91-be9b3b8c0dba','../../lite/tree/../notebooks/index.html?path=11833989_bf8d_4dc9_8cfa_08eaa4e9312b.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="b2ad5510-a470-49fb-8cb0-4b0a1b657985">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b2ad5510-a470-49fb-8cb0-4b0a1b657985','185d07f9-5d61-4124-ba89-44b0a2773322','60df63fd-3f77-46ca-8f89-ac767a68bf83','../../lite/tree/../notebooks/index.html?path=4c523fc9_2b0c_4612_ac4b_9c1c9e89a12c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">geterrcall</span><span class="p">()</span>  <span class="c1"># we did not yet set a handler, returns None</span>
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">orig_settings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="s1">&#39;call&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">err_handler</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">err_handler</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Floating point error (</span><span class="si">%s</span><span class="s2">), with flag </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">flag</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">old_handler</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">seterrcall</span><span class="p">(</span><span class="n">err_handler</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">/</span> <span class="mf">0.0</span>
@@ -601,7 +601,7 @@ treatment options, see <a class="reference internal" href="numpy.seterr.html#num
 </div>
 </div>
 </div>
-<div id="2be49a36-c12d-4ae1-9b91-be9b3b8c0dba" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ccdfe59a-9784-49a7-8b82-a35a3c502c5c','2be49a36-c12d-4ae1-9b91-be9b3b8c0dba')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ccdfe59a-9784-49a7-8b82-a35a3c502c5c','2be49a36-c12d-4ae1-9b91-be9b3b8c0dba')">Open In Tab</button></div><div id="0364e779-3e63-4d1e-9e41-cb24761fc2e4" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="60df63fd-3f77-46ca-8f89-ac767a68bf83" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b2ad5510-a470-49fb-8cb0-4b0a1b657985','60df63fd-3f77-46ca-8f89-ac767a68bf83')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b2ad5510-a470-49fb-8cb0-4b0a1b657985','60df63fd-3f77-46ca-8f89-ac767a68bf83')">Open In Tab</button></div><div id="185d07f9-5d61-4124-ba89-44b0a2773322" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

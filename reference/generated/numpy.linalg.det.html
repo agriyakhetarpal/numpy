@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -613,7 +613,7 @@
 <dl class="simple">
 <dt><a class="reference internal" href="numpy.linalg.slogdet.html#numpy.linalg.slogdet" title="numpy.linalg.slogdet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slogdet</span></code></a></dt><dd><p>Another way to represent the determinant, more suitable for large matrices where underflow/overflow may occur.</p>
 </dd>
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.det.html#scipy.linalg.det" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.det</span></code></a></dt><dd><p>Similar function in SciPy.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.det.html#scipy.linalg.det" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.det</span></code></a></dt><dd><p>Similar function in SciPy.</p>
 </dd>
 </dl>
 </div>
@@ -623,10 +623,10 @@ details.</p>
 <p>The determinant is computed via LU factorization using the LAPACK
 routine <code class="docutils literal notranslate"><span class="pre">z/dgetrf</span></code>.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="91ea29b3-3f6a-459d-9f65-f55fa8288f15">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('91ea29b3-3f6a-459d-9f65-f55fa8288f15','d4c0c7c4-398b-43b2-bab8-a2c1fbab4d1d','3eb76fd6-af46-4127-9423-2bf0302135de','../../lite/tree/../notebooks/index.html?path=712da3a1_0707_4d1d_8498_91757fca40f7.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="0e6ec9dd-806c-4686-a56d-0fee3e695786">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0e6ec9dd-806c-4686-a56d-0fee3e695786','d9394073-230b-46ea-b823-e8cd4e290f7b','f61f94b0-6ae0-4f1b-8c78-338927d09365','../../lite/tree/../notebooks/index.html?path=eba76b07_0f43_40d7_a3ff_e6d2d8ffd66b.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>The determinant of a 2-D array [[a, b], [c, d]] is ad - bc:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="go">-2.0 # may vary</span>
@@ -642,7 +642,7 @@ routine <code class="docutils literal notranslate"><span class="pre">z/dgetrf</s
 </div>
 </div>
 </div>
-<div id="3eb76fd6-af46-4127-9423-2bf0302135de" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('91ea29b3-3f6a-459d-9f65-f55fa8288f15','3eb76fd6-af46-4127-9423-2bf0302135de')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('91ea29b3-3f6a-459d-9f65-f55fa8288f15','3eb76fd6-af46-4127-9423-2bf0302135de')">Open In Tab</button></div><div id="d4c0c7c4-398b-43b2-bab8-a2c1fbab4d1d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="f61f94b0-6ae0-4f1b-8c78-338927d09365" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0e6ec9dd-806c-4686-a56d-0fee3e695786','f61f94b0-6ae0-4f1b-8c78-338927d09365')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0e6ec9dd-806c-4686-a56d-0fee3e695786','f61f94b0-6ae0-4f1b-8c78-338927d09365')">Open In Tab</button></div><div id="d9394073-230b-46ea-b823-e8cd4e290f7b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

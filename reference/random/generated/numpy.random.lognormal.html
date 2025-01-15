@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -698,7 +698,7 @@ Otherwise, <code class="docutils literal notranslate"><span class="pre">np.broad
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html#scipy.stats.lognorm" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.stats.lognorm</span></code></a></dt><dd><p>probability density function, distribution, cumulative density function, etc.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.lognorm.html#scipy.stats.lognorm" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.stats.lognorm</span></code></a></dt><dd><p>probability density function, distribution, cumulative density function, etc.</p>
 </dd>
 <dt><a class="reference internal" href="numpy.random.Generator.lognormal.html#numpy.random.Generator.lognormal" title="numpy.random.Generator.lognormal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">random.Generator.lognormal</span></code></a></dt><dd><p>which should be used for new code.</p>
 </dd>
@@ -734,8 +734,8 @@ Values,” Basel: Birkhauser Verlag, 2001, pp. 31-32.</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="6bf3755b-aafb-4947-bda2-eea0f961d3e5">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6bf3755b-aafb-4947-bda2-eea0f961d3e5','b10575bc-056a-4a09-a17d-56b81b63a4a1','10f82b21-d3ef-4d60-87e2-8d73f0f7b116','../../../lite/tree/../notebooks/index.html?path=8aa2ae68_4107_42bb_88fc_809506dba76c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="783650ff-2d99-4fbd-b75d-f93c44c710cf">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('783650ff-2d99-4fbd-b75d-f93c44c710cf','ae8f3b90-ed82-41dc-ba7e-c949f0c2e348','ed6733bb-ba31-4585-b1ab-c108f51bdfbf','../../../lite/tree/../notebooks/index.html?path=036f0b1e_9fb0_40f4_8fae_c731bb8520e6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Draw samples from the distribution:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">1.</span> <span class="c1"># mean and standard deviation</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
@@ -743,7 +743,7 @@ Values,” Basel: Birkhauser Verlag, 2001, pp. 31-32.</p>
 </div>
 <p>Display the histogram of the samples, along with
 the probability density function:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">count</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ignored</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -791,7 +791,7 @@ function.</p>
 </figure>
 </div>
 </div>
-<div id="10f82b21-d3ef-4d60-87e2-8d73f0f7b116" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6bf3755b-aafb-4947-bda2-eea0f961d3e5','10f82b21-d3ef-4d60-87e2-8d73f0f7b116')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6bf3755b-aafb-4947-bda2-eea0f961d3e5','10f82b21-d3ef-4d60-87e2-8d73f0f7b116')">Open In Tab</button></div><div id="b10575bc-056a-4a09-a17d-56b81b63a4a1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
+<div id="ed6733bb-ba31-4585-b1ab-c108f51bdfbf" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('783650ff-2d99-4fbd-b75d-f93c44c710cf','ed6733bb-ba31-4585-b1ab-c108f51bdfbf')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('783650ff-2d99-4fbd-b75d-f93c44c710cf','ed6733bb-ba31-4585-b1ab-c108f51bdfbf')">Open In Tab</button></div><div id="ae8f3b90-ed82-41dc-ba7e-c949f0c2e348" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script></dd></dl>
 
 </section>
 

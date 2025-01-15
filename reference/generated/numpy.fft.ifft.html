@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -644,15 +644,15 @@ is padded by appending zeros at the end.  Even though this is the common
 approach, it might lead to surprising results.  If a different padding is
 desired, it must be performed before calling <a class="reference internal" href="#numpy.fft.ifft" title="numpy.fft.ifft"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ifft</span></code></a>.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="39914de4-d112-47e3-b9f4-af280a96a0c3">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('39914de4-d112-47e3-b9f4-af280a96a0c3','f97966ca-1b0e-47b2-a5f8-8099dbe19fef','e6ffa046-91ee-4895-a067-495bf2337e01','../../lite/tree/../notebooks/index.html?path=7a383fe2_fb90_4988_9c4c_be86d481179c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="6e286528-830d-4c10-ba7f-fe42e6d59e5d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6e286528-830d-4c10-ba7f-fe42e6d59e5d','07867db0-5570-4e32-9360-49ed4f96914c','c2698a1a-8327-45e7-8ef3-6f94c80dd43f','../../lite/tree/../notebooks/index.html?path=fc0dfaa0_fad2_48bb_b188_ba3786c217a5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
 <span class="go">array([ 1.+0.j,  0.+1.j, -1.+0.j,  0.-1.j]) # may vary</span>
 </pre></div>
 </div>
 <p>Create and plot a band-limited signal with random phases:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">400</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">n</span><span class="p">[</span><span class="mi">40</span><span class="p">:</span><span class="mi">60</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,)))</span>
@@ -671,7 +671,7 @@ desired, it must be performed before calling <a class="reference internal" href=
 </figure>
 </div>
 </div>
-<div id="e6ffa046-91ee-4895-a067-495bf2337e01" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('39914de4-d112-47e3-b9f4-af280a96a0c3','e6ffa046-91ee-4895-a067-495bf2337e01')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('39914de4-d112-47e3-b9f4-af280a96a0c3','e6ffa046-91ee-4895-a067-495bf2337e01')">Open In Tab</button></div><div id="f97966ca-1b0e-47b2-a5f8-8099dbe19fef" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="c2698a1a-8327-45e7-8ef3-6f94c80dd43f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6e286528-830d-4c10-ba7f-fe42e6d59e5d','c2698a1a-8327-45e7-8ef3-6f94c80dd43f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6e286528-830d-4c10-ba7f-fe42e6d59e5d','c2698a1a-8327-45e7-8ef3-6f94c80dd43f')">Open In Tab</button></div><div id="07867db0-5570-4e32-9360-49ed4f96914c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

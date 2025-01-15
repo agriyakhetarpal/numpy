@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -525,14 +525,14 @@ N-dimensional array distributed across multiple nodes, and <a class="reference e
 a GPU.</p>
 <p>To get a feel for writing custom array containers, we’ll begin with a simple
 example that has rather narrow utility but illustrates the concepts involved.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DiagonalArray</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">DiagonalArray</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_N</span> <span class="o">=</span> <span class="n">N</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">=</span> <span class="n">value</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(N=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="si">}</span><span class="s2">, value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_i</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">copy</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
 <span class="gp">... </span>                <span class="s2">&quot;`copy=False` isn&#39;t supported. A copy is always created.&quot;</span>
@@ -589,20 +589,20 @@ on.  For the common case, <code class="docutils literal notranslate"><span class
 <li><p><code class="docutils literal notranslate"><span class="pre">kwargs</span></code>, keyword arguments passed to the function</p></li>
 </ul>
 <p>For this example we will only handle the method <code class="docutils literal notranslate"><span class="pre">__call__</span></code></p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numbers</span> <span class="kn">import</span> <span class="n">Number</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DiagonalArray</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numbers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Number</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">DiagonalArray</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_N</span> <span class="o">=</span> <span class="n">N</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">=</span> <span class="n">value</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(N=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="si">}</span><span class="s2">, value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_i</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">copy</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
 <span class="gp">... </span>                <span class="s2">&quot;`copy=False` isn&#39;t supported. A copy is always created.&quot;</span>
 <span class="gp">... </span>            <span class="p">)</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array_ufunc__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array_ufunc__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;__call__&#39;</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">... </span>            <span class="n">scalars</span> <span class="o">=</span> <span class="p">[]</span>
@@ -644,20 +644,20 @@ on.  For the common case, <code class="docutils literal notranslate"><span class
 and so on to dispatch to the corresponding ufunc. We can achieve this
 conveniently by inheriting from the mixin
 <a class="reference internal" href="../reference/generated/numpy.lib.mixins.NDArrayOperatorsMixin.html#numpy.lib.mixins.NDArrayOperatorsMixin" title="numpy.lib.mixins.NDArrayOperatorsMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">NDArrayOperatorsMixin</span></code></a>.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy.lib.mixins</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DiagonalArray</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">mixins</span><span class="o">.</span><span class="n">NDArrayOperatorsMixin</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy.lib.mixins</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">DiagonalArray</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">mixins</span><span class="o">.</span><span class="n">NDArrayOperatorsMixin</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_N</span> <span class="o">=</span> <span class="n">N</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">=</span> <span class="n">value</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(N=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="si">}</span><span class="s2">, value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_i</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">copy</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
 <span class="gp">... </span>                <span class="s2">&quot;`copy=False` isn&#39;t supported. A copy is always created.&quot;</span>
 <span class="gp">... </span>            <span class="p">)</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array_ufunc__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array_ufunc__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;__call__&#39;</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">... </span>            <span class="n">scalars</span> <span class="o">=</span> <span class="p">[]</span>
@@ -688,19 +688,19 @@ conveniently by inheriting from the mixin
 <p>Now let’s tackle <code class="docutils literal notranslate"><span class="pre">__array_function__</span></code>. We’ll create dict that maps numpy
 functions to our custom variants.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HANDLED_FUNCTIONS</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DiagonalArray</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">mixins</span><span class="o">.</span><span class="n">NDArrayOperatorsMixin</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">DiagonalArray</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">mixins</span><span class="o">.</span><span class="n">NDArrayOperatorsMixin</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_N</span> <span class="o">=</span> <span class="n">N</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">=</span> <span class="n">value</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(N=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="si">}</span><span class="s2">, value=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_i</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">copy</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
 <span class="gp">... </span>                <span class="s2">&quot;`copy=False` isn&#39;t supported. A copy is always created.&quot;</span>
 <span class="gp">... </span>            <span class="p">)</span>
 <span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_i</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_N</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array_ufunc__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array_ufunc__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;__call__&#39;</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="n">N</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="gp">... </span>            <span class="n">scalars</span> <span class="o">=</span> <span class="p">[]</span>
@@ -720,7 +720,7 @@ functions to our custom variants.</p>
 <span class="gp">... </span>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">ufunc</span><span class="p">(</span><span class="o">*</span><span class="n">scalars</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
 <span class="gp">... </span>        <span class="k">else</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">return</span> <span class="bp">NotImplemented</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">__array_function__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">__array_function__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">types</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="k">if</span> <span class="n">func</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">HANDLED_FUNCTIONS</span><span class="p">:</span>
 <span class="gp">... </span>            <span class="k">return</span> <span class="bp">NotImplemented</span>
 <span class="gp">... </span>        <span class="c1"># Note: this allows subclasses that don&#39;t override</span>
@@ -733,9 +733,9 @@ functions to our custom variants.</p>
 </div>
 <p>A convenient pattern is to define a decorator <code class="docutils literal notranslate"><span class="pre">implements</span></code> that can be used
 to add functions to <code class="docutils literal notranslate"><span class="pre">HANDLED_FUNCTIONS</span></code>.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">implements</span><span class="p">(</span><span class="n">np_function</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">implements</span><span class="p">(</span><span class="n">np_function</span><span class="p">):</span>
 <span class="gp">... </span>   <span class="s2">&quot;Register an __array_function__ implementation for DiagonalArray objects.&quot;</span>
-<span class="gp">... </span>   <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="k">def</span><span class="w"> </span><span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
 <span class="gp">... </span>       <span class="n">HANDLED_FUNCTIONS</span><span class="p">[</span><span class="n">np_function</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span>
 <span class="gp">... </span>       <span class="k">return</span> <span class="n">func</span>
 <span class="gp">... </span>   <span class="k">return</span> <span class="n">decorator</span>
@@ -746,12 +746,12 @@ to add functions to <code class="docutils literal notranslate"><span class="pre"
 For completeness, to support the usage <code class="docutils literal notranslate"><span class="pre">arr.sum()</span></code> add a method <code class="docutils literal notranslate"><span class="pre">sum</span></code> that
 calls <code class="docutils literal notranslate"><span class="pre">numpy.sum(self)</span></code>, and the same for <code class="docutils literal notranslate"><span class="pre">mean</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@implements</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">)</span>
-<span class="gp">... </span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<span class="gp">... </span><span class="k">def</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="s2">&quot;Implementation of np.sum for DiagonalArray objects&quot;</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">_i</span> <span class="o">*</span> <span class="n">arr</span><span class="o">.</span><span class="n">_N</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nd">@implements</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
-<span class="gp">... </span><span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+<span class="gp">... </span><span class="k">def</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="s2">&quot;Implementation of np.mean for DiagonalArray objects&quot;</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">_i</span> <span class="o">/</span> <span class="n">arr</span><span class="o">.</span><span class="n">_N</span>
 <span class="gp">...</span>
@@ -805,7 +805,7 @@ implement the <code class="docutils literal notranslate"><span class="pre">__arr
 <code class="docutils literal notranslate"><span class="pre">numpy.testing.overrides</span></code> namespace.</p>
 <p>To check if a Numpy function can be overridden via <code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span></code>, you can
 use <a class="reference internal" href="../reference/generated/numpy.testing.overrides.allows_array_ufunc_override.html#numpy.testing.overrides.allows_array_ufunc_override" title="numpy.testing.overrides.allows_array_ufunc_override"><code class="xref py py-func docutils literal notranslate"><span class="pre">allows_array_ufunc_override</span></code></a>:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.testing.overrides</span> <span class="kn">import</span> <span class="n">allows_array_ufunc_override</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.testing.overrides</span><span class="w"> </span><span class="kn">import</span> <span class="n">allows_array_ufunc_override</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">allows_array_ufunc_override</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>

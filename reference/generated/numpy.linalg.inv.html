@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -619,7 +619,7 @@
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html#scipy.linalg.inv" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.inv</span></code></a></dt><dd><p>Similar function in SciPy.</p>
+<dt><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.inv.html#scipy.linalg.inv" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.linalg.inv</span></code></a></dt><dd><p>Similar function in SciPy.</p>
 </dd>
 <dt><a class="reference internal" href="numpy.linalg.cond.html#numpy.linalg.cond" title="numpy.linalg.cond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.linalg.cond</span></code></a></dt><dd><p>Compute the condition number of a matrix.</p>
 </dd>
@@ -642,10 +642,10 @@ be inaccurate due to floating-point errors.</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e78a08b6-7814-40a8-9672-2721fe5f71b7">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e78a08b6-7814-40a8-9672-2721fe5f71b7','9854cf03-8514-41c0-9ab4-9a7f6f5dccec','d9bab4f9-4f1e-48e5-8f85-b468efcd225c','../../lite/tree/../notebooks/index.html?path=03575f44_d5e5_4247_93c1_22cd9a7462f3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
+<div class="try_examples_outer_container docutils container" id="39b0c139-9da4-4ff0-9a7e-654fcfa4ec32">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('39b0c139-9da4-4ff0-9a7e-654fcfa4ec32','e16c2e65-176c-4ce7-909c-37608d7cc823','dfc6da2e-bf84-4d76-906b-660d7a97f546','../../lite/tree/../notebooks/index.html?path=9b345be3_9e0d_4fc2_ae81_84b9f4b05ab3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">inv</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ainv</span> <span class="o">=</span> <span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">a</span> <span class="o">@</span> <span class="n">ainv</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
@@ -690,7 +690,7 @@ more ill-conditioned the matrix is. As a rule of thumb, if the condition
 number <code class="docutils literal notranslate"><span class="pre">cond(a)</span> <span class="pre">=</span> <span class="pre">10**k</span></code>, then you may lose up to <code class="docutils literal notranslate"><span class="pre">k</span></code> digits of
 accuracy on top of what would be lost to the numerical method due to loss
 of precision from arithmetic methods.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">cond</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">cond</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cond</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="go">np.float64(8.659885634118668e+17)  # may vary</span>
 </pre></div>
@@ -698,7 +698,7 @@ of precision from arithmetic methods.</p>
 <p>It is also possible to detect ill-conditioning by inspecting the matrix’s
 singular values directly. The ratio between the largest and the smallest
 singular value is the condition number:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">svd</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="kn">import</span> <span class="n">svd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sigma</span> <span class="o">=</span> <span class="n">svd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">compute_uv</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Do not compute singular vectors</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sigma</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">/</span><span class="n">sigma</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 <span class="go">8.659885634118668e+17  # may vary</span>
@@ -706,7 +706,7 @@ singular value is the condition number:</p>
 </div>
 </div>
 </div>
-<div id="d9bab4f9-4f1e-48e5-8f85-b468efcd225c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e78a08b6-7814-40a8-9672-2721fe5f71b7','d9bab4f9-4f1e-48e5-8f85-b468efcd225c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e78a08b6-7814-40a8-9672-2721fe5f71b7','d9bab4f9-4f1e-48e5-8f85-b468efcd225c')">Open In Tab</button></div><div id="9854cf03-8514-41c0-9ab4-9a7f6f5dccec" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="dfc6da2e-bf84-4d76-906b-660d7a97f546" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('39b0c139-9da4-4ff0-9a7e-654fcfa4ec32','dfc6da2e-bf84-4d76-906b-660d7a97f546')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('39b0c139-9da4-4ff0-9a7e-654fcfa4ec32','dfc6da2e-bf84-4d76-906b-660d7a97f546')">Open In Tab</button></div><div id="e16c2e65-176c-4ce7-909c-37608d7cc823" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

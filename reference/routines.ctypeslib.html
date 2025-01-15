@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -539,10 +539,10 @@
 <p>The shape parameter must be given if converting from a ctypes POINTER.
 The shape parameter is ignored if converting from a ctypes array</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="97f7b56d-92c8-4a18-90d6-018471c8bc65">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('97f7b56d-92c8-4a18-90d6-018471c8bc65','6335ff3e-30ed-4add-b2b5-c2284afe85dc','101e206b-e0a8-4fdb-8982-4d17aaac18af','../lite/tree/../notebooks/index.html?path=6759a160_023e_4198_a4b7_8ee211bd66fc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="1482f766-a793-46a3-98e4-fbf6f73329cd">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('1482f766-a793-46a3-98e4-fbf6f73329cd','da95b815-7190-4c93-8fef-582c4a55d02e','6e12300b-02aa-4866-abcf-ce62a752dcdc','../lite/tree/../notebooks/index.html?path=b83c9646_6423_40c7_95c8_db96d60f40c5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Converting a ctypes integer array:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ctypes</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">ctypes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctypes_array</span> <span class="o">=</span> <span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">ctypes_array</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span>
@@ -550,7 +550,7 @@ The shape parameter is ignored if converting from a ctypes array</p>
 </pre></div>
 </div>
 <p>Converting a ctypes POINTER:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ctypes</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">ctypes</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">buffer</span> <span class="o">=</span> <span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pointer</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">POINTER</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">c_int</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_array</span><span class="p">(</span><span class="n">pointer</span><span class="p">,</span> <span class="p">(</span><span class="mi">5</span><span class="p">,))</span>
@@ -560,7 +560,7 @@ The shape parameter is ignored if converting from a ctypes array</p>
 </div>
 </div>
 </div>
-<div id="101e206b-e0a8-4fdb-8982-4d17aaac18af" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('97f7b56d-92c8-4a18-90d6-018471c8bc65','101e206b-e0a8-4fdb-8982-4d17aaac18af')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('97f7b56d-92c8-4a18-90d6-018471c8bc65','101e206b-e0a8-4fdb-8982-4d17aaac18af')">Open In Tab</button></div><div id="6335ff3e-30ed-4add-b2b5-c2284afe85dc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="6e12300b-02aa-4866-abcf-ce62a752dcdc" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('1482f766-a793-46a3-98e4-fbf6f73329cd','6e12300b-02aa-4866-abcf-ce62a752dcdc')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('1482f766-a793-46a3-98e4-fbf6f73329cd','6e12300b-02aa-4866-abcf-ce62a752dcdc')">Open In Tab</button></div><div id="da95b815-7190-4c93-8fef-582c4a55d02e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.as_ctypes">
@@ -568,8 +568,8 @@ The shape parameter is ignored if converting from a ctypes array</p>
 <dd><p>Create and return a ctypes object from a numpy array.  Actually
 anything that exposes the __array_interface__ is accepted.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e3c704ba-0056-4a14-b4e4-89f647e88cbb">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e3c704ba-0056-4a14-b4e4-89f647e88cbb','ed77fdcd-d3cf-4cdf-a6fb-52675abeba23','134bc67b-dfdd-4de6-b50d-f6838423f25c','../lite/tree/../notebooks/index.html?path=12e9c8ab_6840_4e55_8ad7_cfdd33c8312d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="1153076e-5281-4b0f-8fdb-8621d7041a99">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('1153076e-5281-4b0f-8fdb-8621d7041a99','816b5bc2-a5f7-4f22-a11f-921153bf74e7','ccd3ffdb-8a8a-4935-9515-c1339dc101c6','../lite/tree/../notebooks/index.html?path=f403fc1b_488f_48c1_9b92_d0b0a6b94651.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Create ctypes object from inferred int <code class="docutils literal notranslate"><span class="pre">np.array</span></code>:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inferred_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c_int_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_ctypes</span><span class="p">(</span><span class="n">inferred_int_array</span><span class="p">)</span>
@@ -590,7 +590,7 @@ anything that exposes the __array_interface__ is accepted.</p>
 </div>
 </div>
 </div>
-<div id="134bc67b-dfdd-4de6-b50d-f6838423f25c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e3c704ba-0056-4a14-b4e4-89f647e88cbb','134bc67b-dfdd-4de6-b50d-f6838423f25c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e3c704ba-0056-4a14-b4e4-89f647e88cbb','134bc67b-dfdd-4de6-b50d-f6838423f25c')">Open In Tab</button></div><div id="ed77fdcd-d3cf-4cdf-a6fb-52675abeba23" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="ccd3ffdb-8a8a-4935-9515-c1339dc101c6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('1153076e-5281-4b0f-8fdb-8621d7041a99','ccd3ffdb-8a8a-4935-9515-c1339dc101c6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('1153076e-5281-4b0f-8fdb-8621d7041a99','ccd3ffdb-8a8a-4935-9515-c1339dc101c6')">Open In Tab</button></div><div id="816b5bc2-a5f7-4f22-a11f-921153bf74e7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.as_ctypes_type">
@@ -633,8 +633,8 @@ anything that exposes the __array_interface__ is accepted.</p>
 <li><p>insert padding fields</p></li>
 </ul>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="2b58ae4a-7870-4bee-9339-96d6402c8ef6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2b58ae4a-7870-4bee-9339-96d6402c8ef6','bee11e8f-455f-45b5-9d50-09c49b7a60a7','c1390f53-3242-4efa-8224-e69000ce5019','../lite/tree/../notebooks/index.html?path=3982338f_aed7_40fe_9d5f_1ee0835cecb6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="5795b8d1-f68b-4537-9b99-3062001ca46b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('5795b8d1-f68b-4537-9b99-3062001ca46b','3be31661-8041-4159-9049-961406879c49','e27d492c-8645-4b2f-8aee-9b3c41fffc92','../lite/tree/../notebooks/index.html?path=3765d442_aea7_4069_8689_fdc35cd86616.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Converting a simple dtype:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">&#39;int8&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">as_ctypes_type</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
@@ -651,7 +651,7 @@ anything that exposes the __array_interface__ is accepted.</p>
 </div>
 </div>
 </div>
-<div id="c1390f53-3242-4efa-8224-e69000ce5019" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2b58ae4a-7870-4bee-9339-96d6402c8ef6','c1390f53-3242-4efa-8224-e69000ce5019')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2b58ae4a-7870-4bee-9339-96d6402c8ef6','c1390f53-3242-4efa-8224-e69000ce5019')">Open In Tab</button></div><div id="bee11e8f-455f-45b5-9d50-09c49b7a60a7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="e27d492c-8645-4b2f-8aee-9b3c41fffc92" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('5795b8d1-f68b-4537-9b99-3062001ca46b','e27d492c-8645-4b2f-8aee-9b3c41fffc92')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('5795b8d1-f68b-4537-9b99-3062001ca46b','e27d492c-8645-4b2f-8aee-9b3c41fffc92')">Open In Tab</button></div><div id="3be31661-8041-4159-9049-961406879c49" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.ctypeslib.load_library">
@@ -740,8 +740,8 @@ dtype, ndim, shape and flags information.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="42f233ee-8d19-4113-9276-e3571c803227">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('42f233ee-8d19-4113-9276-e3571c803227','672799c2-1902-4456-80cf-8da740c1a399','f2a430e2-20d2-493e-bcd1-84622227c1f9','../lite/tree/../notebooks/index.html?path=e508be27_8335_4197_a8d1_ffde8d6dc4c5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="83205f19-2bed-4840-b049-264f92b458ff">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('83205f19-2bed-4840-b049-264f92b458ff','d254f27f-a616-4d85-bfcf-265be6b3f839','99043495-2d86-408c-91fd-05576e87689d','../lite/tree/../notebooks/index.html?path=404b3ae4_5b28_4797_8f7e_495e6f9823cf.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">clib</span><span class="o">.</span><span class="n">somefunc</span><span class="o">.</span><span class="n">argtypes</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">ndpointer</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span>
 <span class="gp">... </span>                                                 <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
 <span class="gp">... </span>                                                 <span class="n">flags</span><span class="o">=</span><span class="s1">&#39;C_CONTIGUOUS&#39;</span><span class="p">)]</span>
@@ -752,7 +752,7 @@ dtype, ndim, shape and flags information.</p>
 </div>
 </div>
 </div>
-<div id="f2a430e2-20d2-493e-bcd1-84622227c1f9" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('42f233ee-8d19-4113-9276-e3571c803227','f2a430e2-20d2-493e-bcd1-84622227c1f9')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('42f233ee-8d19-4113-9276-e3571c803227','f2a430e2-20d2-493e-bcd1-84622227c1f9')">Open In Tab</button></div><div id="672799c2-1902-4456-80cf-8da740c1a399" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
+<div id="99043495-2d86-408c-91fd-05576e87689d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('83205f19-2bed-4840-b049-264f92b458ff','99043495-2d86-408c-91fd-05576e87689d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('83205f19-2bed-4840-b049-264f92b458ff','99043495-2d86-408c-91fd-05576e87689d')">Open In Tab</button></div><div id="d254f27f-a616-4d85-bfcf-265be6b3f839" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../try_examples.json");});</script></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.ctypeslib.c_intp">

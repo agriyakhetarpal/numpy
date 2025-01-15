@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -659,10 +659,10 @@ the extension module (which must be done in the usual fashion). It
 does provide a modified distutils class called <code class="docutils literal notranslate"><span class="pre">build_ext</span></code> which lets
 you build an extension module from a <code class="docutils literal notranslate"><span class="pre">.pyx</span></code> source. Thus, you could
 write in a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Cython.Distutils</span> <span class="kn">import</span> <span class="n">build_ext</span>
-<span class="kn">from</span> <span class="nn">distutils.extension</span> <span class="kn">import</span> <span class="n">Extension</span>
-<span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">Cython.Distutils</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_ext</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">distutils.extension</span><span class="w"> </span><span class="kn">import</span> <span class="n">Extension</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">distutils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
 <span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;mine&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Nothing&#39;</span><span class="p">,</span>
       <span class="n">ext_modules</span><span class="o">=</span><span class="p">[</span><span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;filter&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;filter.pyx&#39;</span><span class="p">],</span>
@@ -689,20 +689,20 @@ modules using Cython 0.21.1.</p>
 <h3>Complex addition in Cython<a class="headerlink" href="#complex-addition-in-cython" title="Link to this heading">#</a></h3>
 <p>Here is part of a Cython module named <code class="docutils literal notranslate"><span class="pre">add.pyx</span></code> which implements the
 complex addition functions we previously implemented using f2py:</p>
-<div class="highlight-cython notranslate"><div class="highlight"><pre><span></span><span class="k">cimport</span> <span class="nn">cython</span>
-<span class="k">cimport</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="k">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-cython notranslate"><div class="highlight"><pre><span></span><span class="k">cimport</span><span class="w"> </span><span class="nn">cython</span>
+<span class="k">cimport</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c"># We need to initialize NumPy.</span>
 <span class="n">np</span><span class="o">.</span><span class="n">import_array</span><span class="p">()</span>
 
 <span class="c">#@cython.boundscheck(False)</span>
-<span class="k">def</span> <span class="nf">zadd</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">):</span>
-    <span class="k">cdef</span> <span class="kt">double</span> <span class="kt">complex</span>[<span class="p">:]</span> <span class="n">a</span> <span class="o">=</span> <span class="n">in1</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-    <span class="k">cdef</span> <span class="kt">double</span> <span class="kt">complex</span>[<span class="p">:]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">in2</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">zadd</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">):</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="kt">complex</span>[<span class="p">:]</span> <span class="n">a</span> <span class="o">=</span> <span class="n">in1</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="kt">complex</span>[<span class="p">:]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">in2</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
 
     <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">complex64</span><span class="p">)</span>
-    <span class="k">cdef</span> <span class="kt">double</span> <span class="kt">complex</span>[<span class="p">:]</span> <span class="n">c</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="kt">complex</span>[<span class="p">:]</span> <span class="n">c</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]):</span>
         <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">real</span>
@@ -735,17 +735,17 @@ but the view syntax is preferred.</p>
 <h3>Image filter in Cython<a class="headerlink" href="#image-filter-in-cython" title="Link to this heading">#</a></h3>
 <p>The two-dimensional example we created using Fortran is just as easy to write
 in Cython:</p>
-<div class="highlight-cython notranslate"><div class="highlight"><pre><span></span><span class="k">cimport</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="k">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-cython notranslate"><div class="highlight"><pre><span></span><span class="k">cimport</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">import_array</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
-    <span class="k">cdef</span> <span class="kt">double</span>[<span class="p">:,</span> <span class="p">:]</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span>[<span class="p">:,</span> <span class="p">:]</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
     <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
-    <span class="k">cdef</span> <span class="kt">double</span>[<span class="p">:,</span> <span class="p">::</span><span class="mf">1</span><span class="p">]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">out</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span>[<span class="p">:,</span> <span class="p">::</span><span class="mf">1</span><span class="p">]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">out</span>
 
-    <span class="k">cdef</span> <span class="kt">np</span>.<span class="kt">npy_intp</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">np</span>.<span class="kt">npy_intp</span> <span class="nf">i</span><span class="p">,</span> <span class="nf">j</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1</span><span class="p">):</span>
@@ -762,7 +762,7 @@ in Cython:</p>
 the pointer computations are done only as needed. If the code above is
 compiled as a module <code class="docutils literal notranslate"><span class="pre">image</span></code>, then a 2-d image, <code class="docutils literal notranslate"><span class="pre">img</span></code>, can be filtered
 using this code very quickly using:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">image</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">image</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1100,8 +1100,8 @@ constructed. To do this create a file named interface.py with the
 following lines at the top:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="s1">&#39;filter2d&#39;</span><span class="p">]</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="n">_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="s1">&#39;__file__&#39;</span><span class="p">)</span>
 <span class="n">lib</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ctypeslib</span><span class="o">.</span><span class="n">load_library</span><span class="p">(</span><span class="s1">&#39;code&#39;</span><span class="p">,</span> <span class="n">_path</span><span class="p">)</span>
@@ -1143,7 +1143,7 @@ strides and shape of an ndarray) as the last two arguments.:</p>
 </div>
 <p>Next, define a simple selection function that chooses which addition
 function to call in the shared library based on the data-type:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">select</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">dtype</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">dtype</span><span class="o">.</span><span class="n">char</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;?bBhHf&#39;</span><span class="p">]:</span>
         <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">sadd</span><span class="p">,</span> <span class="n">single</span>
     <span class="k">elif</span> <span class="n">dtype</span><span class="o">.</span><span class="n">char</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">]:</span>
@@ -1157,7 +1157,7 @@ function to call in the shared library based on the data-type:</p>
 </div>
 <p>Finally, the two functions to be exported by the interface can be
 written simply as:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="n">requires</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CONTIGUOUS&#39;</span><span class="p">,</span> <span class="s1">&#39;ALIGNED&#39;</span><span class="p">]</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">func</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
@@ -1169,7 +1169,7 @@ written simply as:</p>
 </pre></div>
 </div>
 <p>and:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filter2d</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">filter2d</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;ALIGNED&#39;</span><span class="p">])</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="n">lib</span><span class="o">.</span><span class="n">dfilter2d</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">ctypes</span><span class="o">.</span><span class="n">strides</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">ctypes</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>

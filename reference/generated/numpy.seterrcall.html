@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -592,15 +592,15 @@ a string.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="cb5d8675-4211-4f5a-af53-6ee9bf4ec41d">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('cb5d8675-4211-4f5a-af53-6ee9bf4ec41d','fd0ff0b9-deeb-48ff-aff9-456c9d0c7376','909a8a52-51db-4075-9be1-25ca3620de8a','../../lite/tree/../notebooks/index.html?path=b2f9c601_c183_456d_ab4a_7125b40cfb75.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b57b2af6-b481-4acb-b24c-e39874c01911">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b57b2af6-b481-4acb-b24c-e39874c01911','a120018d-fc20-43fa-b1fb-2a0ce313e799','63fa8fba-fe68-4691-9ce2-a811c1400e2c','../../lite/tree/../notebooks/index.html?path=545b4e5d_1ed4_4bf6_a2eb_89d025fc81a6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Callback upon error:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">err_handler</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">err_handler</span><span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">flag</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Floating point error (</span><span class="si">%s</span><span class="s2">), with flag </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">type</span><span class="p">,</span> <span class="n">flag</span><span class="p">))</span>
 <span class="gp">...</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">orig_handler</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">seterrcall</span><span class="p">(</span><span class="n">err_handler</span><span class="p">)</span>
@@ -619,8 +619,8 @@ a string.</p>
 </pre></div>
 </div>
 <p>Log error message:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Log</span><span class="p">:</span>
-<span class="gp">... </span>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Log</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
 <span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LOG: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span><span class="p">)</span>
 <span class="gp">...</span>
 </pre></div>
@@ -643,7 +643,7 @@ a string.</p>
 </div>
 </div>
 </div>
-<div id="909a8a52-51db-4075-9be1-25ca3620de8a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('cb5d8675-4211-4f5a-af53-6ee9bf4ec41d','909a8a52-51db-4075-9be1-25ca3620de8a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('cb5d8675-4211-4f5a-af53-6ee9bf4ec41d','909a8a52-51db-4075-9be1-25ca3620de8a')">Open In Tab</button></div><div id="fd0ff0b9-deeb-48ff-aff9-456c9d0c7376" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="63fa8fba-fe68-4691-9ce2-a811c1400e2c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b57b2af6-b481-4acb-b24c-e39874c01911','63fa8fba-fe68-4691-9ce2-a811c1400e2c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b57b2af6-b481-4acb-b24c-e39874c01911','63fa8fba-fe68-4691-9ce2-a811c1400e2c')">Open In Tab</button></div><div id="a120018d-fc20-43fa-b1fb-2a0ce313e799" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

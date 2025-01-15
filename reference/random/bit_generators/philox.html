@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -617,7 +617,7 @@ counter is set to 0.</p>
 <p>The preferred way to use a BitGenerator in parallel applications is to use
 the <a class="reference internal" href="generated/numpy.random.SeedSequence.spawn.html#numpy.random.SeedSequence.spawn" title="numpy.random.SeedSequence.spawn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence.spawn</span></code></a> method to obtain entropy values, and to use these
 to generate new BitGenerators:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Philox</span><span class="p">,</span> <span class="n">SeedSequence</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Philox</span><span class="p">,</span> <span class="n">SeedSequence</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">sg</span> <span class="o">=</span> <span class="n">SeedSequence</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rg</span> <span class="o">=</span> <span class="p">[</span><span class="n">Generator</span><span class="p">(</span><span class="n">Philox</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sg</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 </pre></div>
@@ -628,7 +628,7 @@ been generated. Alternatively, <a class="reference internal" href="generated/num
 counter for any positive step in [0, 2**256). When using <a class="reference internal" href="generated/numpy.random.Philox.jumped.html#numpy.random.Philox.jumped" title="numpy.random.Philox.jumped"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jumped</span></code></a>, all
 generators should be chained to ensure that the segments come from the same
 sequence.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Philox</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Philox</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bit_generator</span> <span class="o">=</span> <span class="n">Philox</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rg</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
@@ -656,9 +656,9 @@ Networking, Storage and Analysis (SC11), New York, NY: ACM, 2011.</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="4b1b70e7-697d-4832-9a6d-744b30fc0944">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('4b1b70e7-697d-4832-9a6d-744b30fc0944','4a241765-2ac8-47fb-b6f6-1e801ccc09b9','9a1b16cb-3963-434b-b246-6ef2c00861de','../../../lite/tree/../notebooks/index.html?path=2161516c_23f5_4054_a8ff_755b27a3c7a3.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Philox</span>
+<div class="try_examples_outer_container docutils container" id="32045b8a-b720-4b86-805c-0e074359e98e">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('32045b8a-b720-4b86-805c-0e074359e98e','afb6d194-c74f-4014-b3af-3c38160398ee','14ff1c06-9ded-4931-b0dd-2ba43addcc7f','../../../lite/tree/../notebooks/index.html?path=eca583e6_86af_45aa_a0af_853fa46d7ec6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">Generator</span><span class="p">,</span> <span class="n">Philox</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rg</span> <span class="o">=</span> <span class="n">Generator</span><span class="p">(</span><span class="n">Philox</span><span class="p">(</span><span class="mi">1234</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rg</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">()</span>
 <span class="go">0.123  # random</span>
@@ -666,7 +666,7 @@ Networking, Storage and Analysis (SC11), New York, NY: ACM, 2011.</p>
 </div>
 </div>
 </div>
-<div id="9a1b16cb-3963-434b-b246-6ef2c00861de" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('4b1b70e7-697d-4832-9a6d-744b30fc0944','9a1b16cb-3963-434b-b246-6ef2c00861de')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('4b1b70e7-697d-4832-9a6d-744b30fc0944','9a1b16cb-3963-434b-b246-6ef2c00861de')">Open In Tab</button></div><div id="4a241765-2ac8-47fb-b6f6-1e801ccc09b9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script><dl class="field-list simple">
+<div id="14ff1c06-9ded-4931-b0dd-2ba43addcc7f" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('32045b8a-b720-4b86-805c-0e074359e98e','14ff1c06-9ded-4931-b0dd-2ba43addcc7f')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('32045b8a-b720-4b86-805c-0e074359e98e','14ff1c06-9ded-4931-b0dd-2ba43addcc7f')">Open In Tab</button></div><div id="afb6d194-c74f-4014-b3af-3c38160398ee" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../../try_examples.json");});</script><dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>lock: threading.Lock</strong></dt><dd><p>Lock instance that is shared so that the same bit git generator can

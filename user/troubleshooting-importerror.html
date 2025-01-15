@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -66,7 +66,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -576,7 +576,7 @@ In many cases files from old builds may lead to incorrect builds.</p>
 <p>In general how to set and check your environment variables depends on
 your system. If you can open a correct python shell, you can also run the
 following in python:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PYTHONPATH:&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;PYTHONPATH&#39;</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PATH:&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;PATH&#39;</span><span class="p">))</span>
 </pre></div>
@@ -603,7 +603,7 @@ version you are expecting to run.</p>
 </pre></div>
 </div>
 <p>or when a package implemented with Cython:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span> <span class="n">size</span> <span class="n">changed</span><span class="p">,</span> <span class="n">may</span> <span class="n">indicate</span> <span class="n">binary</span> <span class="n">incompatibility</span><span class="o">.</span> <span class="n">Expected</span> <span class="mi">96</span> <span class="kn">from</span> <span class="nn">C</span> <span class="n">header</span><span class="p">,</span> <span class="n">got</span> <span class="mi">88</span> <span class="kn">from</span> <span class="nn">PyObject</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">ValueError</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dtype</span> <span class="n">size</span> <span class="n">changed</span><span class="p">,</span> <span class="n">may</span> <span class="n">indicate</span> <span class="n">binary</span> <span class="n">incompatibility</span><span class="o">.</span> <span class="n">Expected</span> <span class="mi">96</span> <span class="kn">from</span><span class="w"> </span><span class="nn">C</span> <span class="n">header</span><span class="p">,</span> <span class="n">got</span> <span class="mi">88</span> <span class="kn">from</span><span class="w"> </span><span class="nn">PyObject</span>
 </pre></div>
 </div>
 <p>This means that a package depending on NumPy was build in a way that is not

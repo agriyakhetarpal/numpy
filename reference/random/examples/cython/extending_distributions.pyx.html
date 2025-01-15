@@ -30,7 +30,7 @@
   <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -568,29 +568,29 @@
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This file shows how the to use a BitGenerator to create a distribution.</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="k">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="k">cimport</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="k">cimport</span> <span class="nn">cython</span>
-<span class="k">from</span> <span class="nn">cpython.pycapsule</span> <span class="k">cimport</span> <span class="n">PyCapsule_IsValid</span><span class="p">,</span> <span class="n">PyCapsule_GetPointer</span>
-<span class="k">from</span> <span class="nn">libc.stdint</span> <span class="k">cimport</span> <span class="n">uint16_t</span><span class="p">,</span> <span class="n">uint64_t</span>
-<span class="k">from</span> <span class="nn">numpy.random</span> <span class="k">cimport</span> <span class="n">bitgen_t</span>
-<span class="k">from</span> <span class="nn">numpy.random</span> <span class="k">import</span> <span class="n">PCG64</span>
-<span class="k">from</span> <span class="nn">numpy.random.c_distributions</span> <span class="k">cimport</span> <span class="p">(</span>
+<span class="k">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">cimport</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="k">cimport</span><span class="w"> </span><span class="nn">cython</span>
+<span class="k">from</span><span class="w"> </span><span class="nn">cpython.pycapsule</span><span class="w"> </span><span class="k">cimport</span> <span class="n">PyCapsule_IsValid</span><span class="p">,</span> <span class="n">PyCapsule_GetPointer</span>
+<span class="k">from</span><span class="w"> </span><span class="nn">libc.stdint</span><span class="w"> </span><span class="k">cimport</span> <span class="n">uint16_t</span><span class="p">,</span> <span class="n">uint64_t</span>
+<span class="k">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="k">cimport</span> <span class="n">bitgen_t</span>
+<span class="k">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="k">import</span> <span class="n">PCG64</span>
+<span class="k">from</span><span class="w"> </span><span class="nn">numpy.random.c_distributions</span><span class="w"> </span><span class="k">cimport</span> <span class="p">(</span>
       <span class="n">random_standard_uniform_fill</span><span class="p">,</span> <span class="n">random_standard_uniform_fill_f</span><span class="p">)</span>
 
 
 <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">uniforms</span><span class="p">(</span><span class="nb">Py_ssize_t</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">uniforms</span><span class="p">(</span><span class="nb">Py_ssize_t</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create an array of `n` uniformly distributed doubles.</span>
 <span class="sd">    A &#39;real&#39; distribution would want to process the values into</span>
 <span class="sd">    some non-uniform distribution</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">cdef</span> <span class="kt">Py_ssize_t</span> <span class="nf">i</span>
-    <span class="k">cdef</span> <span class="kt">bitgen_t</span> *<span class="nf">rng</span>
-    <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">char</span> *<span class="nf">capsule_name</span> <span class="o">=</span> <span class="s">&quot;BitGenerator&quot;</span>
-    <span class="k">cdef</span> <span class="kt">double</span>[<span class="p">::</span><span class="mf">1</span><span class="p">]</span> <span class="n">random_values</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">Py_ssize_t</span> <span class="nf">i</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">bitgen_t</span> *<span class="nf">rng</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">const</span> <span class="kt">char</span> *<span class="nf">capsule_name</span><span class="w"> </span><span class="o">=</span> <span class="s">&quot;BitGenerator&quot;</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span>[<span class="p">::</span><span class="mf">1</span><span class="p">]</span> <span class="n">random_values</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="n">PCG64</span><span class="p">()</span>
     <span class="n">capsule</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">capsule</span>
@@ -611,15 +611,15 @@
 <span class="c"># cython example 2</span>
 <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">uint10_uniforms</span><span class="p">(</span><span class="nb">Py_ssize_t</span> <span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">uint10_uniforms</span><span class="p">(</span><span class="nb">Py_ssize_t</span> <span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Uniform 10 bit integers stored as 16-bit unsigned integers&quot;&quot;&quot;</span>
-    <span class="k">cdef</span> <span class="kt">Py_ssize_t</span> <span class="nf">i</span>
-    <span class="k">cdef</span> <span class="kt">bitgen_t</span> *<span class="nf">rng</span>
-    <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">char</span> *<span class="nf">capsule_name</span> <span class="o">=</span> <span class="s">&quot;BitGenerator&quot;</span>
-    <span class="k">cdef</span> <span class="kt">uint16_t</span>[<span class="p">::</span><span class="mf">1</span><span class="p">]</span> <span class="n">random_values</span>
-    <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">bits_remaining</span>
-    <span class="k">cdef</span> <span class="kt">int</span> <span class="nf">width</span> <span class="o">=</span> <span class="mf">10</span>
-    <span class="k">cdef</span> <span class="kt">uint64_t</span> <span class="nf">buff</span><span class="p">,</span> <span class="nf">mask</span> <span class="o">=</span> <span class="mf">0</span><span class="n">x3FF</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">Py_ssize_t</span> <span class="nf">i</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">bitgen_t</span> *<span class="nf">rng</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">const</span> <span class="kt">char</span> *<span class="nf">capsule_name</span><span class="w"> </span><span class="o">=</span> <span class="s">&quot;BitGenerator&quot;</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">uint16_t</span>[<span class="p">::</span><span class="mf">1</span><span class="p">]</span> <span class="n">random_values</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">int</span> <span class="nf">bits_remaining</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">int</span> <span class="nf">width</span><span class="w"> </span><span class="o">=</span> <span class="mf">10</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">uint64_t</span> <span class="nf">buff</span><span class="p">,</span> <span class="nf">mask</span><span class="w"> </span><span class="o">=</span> <span class="mf">0</span><span class="n">x3FF</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="n">PCG64</span><span class="p">()</span>
     <span class="n">capsule</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">capsule</span>
@@ -640,7 +640,7 @@
     <span class="k">return</span> <span class="n">randoms</span>
 
 <span class="c"># cython example 3</span>
-<span class="k">def</span> <span class="nf">uniforms_ex</span><span class="p">(</span><span class="n">bit_generator</span><span class="p">,</span> <span class="nb">Py_ssize_t</span> <span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">uniforms_ex</span><span class="p">(</span><span class="n">bit_generator</span><span class="p">,</span> <span class="nb">Py_ssize_t</span> <span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create an array of `n` uniformly distributed doubles via a &quot;fill&quot; function.</span>
 
@@ -656,10 +656,10 @@
 <span class="sd">        Desired dtype, either &#39;d&#39; (or &#39;float64&#39;) or &#39;f&#39; (or &#39;float32&#39;). The</span>
 <span class="sd">        default dtype value is &#39;d&#39;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">cdef</span> <span class="kt">Py_ssize_t</span> <span class="nf">i</span>
-    <span class="k">cdef</span> <span class="kt">bitgen_t</span> *<span class="nf">rng</span>
-    <span class="k">cdef</span> <span class="kt">const</span> <span class="kt">char</span> *<span class="nf">capsule_name</span> <span class="o">=</span> <span class="s">&quot;BitGenerator&quot;</span>
-    <span class="k">cdef</span> <span class="kt">np</span>.<span class="kt">ndarray</span> <span class="nf">randoms</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">Py_ssize_t</span> <span class="nf">i</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">bitgen_t</span> *<span class="nf">rng</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">const</span> <span class="kt">char</span> *<span class="nf">capsule_name</span><span class="w"> </span><span class="o">=</span> <span class="s">&quot;BitGenerator&quot;</span>
+    <span class="k">cdef</span><span class="w"> </span><span class="kt">np</span>.<span class="kt">ndarray</span> <span class="nf">randoms</span>
 
     <span class="n">capsule</span> <span class="o">=</span> <span class="n">bit_generator</span><span class="o">.</span><span class="n">capsule</span>
     <span class="c"># Optional check that the capsule if from a BitGenerator</span>

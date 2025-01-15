@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -561,13 +561,13 @@ this dictionary, <code class="docutils literal notranslate"><span class="pre">nu
 <h3>SciPy pure Python package example<a class="headerlink" href="#scipy-pure-python-package-example" title="Link to this heading">#</a></h3>
 <p>Below is an example of a minimal <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file for a pure SciPy package:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
-<span class="k">def</span> <span class="nf">configuration</span><span class="p">(</span><span class="n">parent_package</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">top_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">numpy.distutils.misc_util</span> <span class="kn">import</span> <span class="n">Configuration</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">configuration</span><span class="p">(</span><span class="n">parent_package</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">top_path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.distutils.misc_util</span><span class="w"> </span><span class="kn">import</span> <span class="n">Configuration</span>
     <span class="n">config</span> <span class="o">=</span> <span class="n">Configuration</span><span class="p">(</span><span class="s1">&#39;mypackage&#39;</span><span class="p">,</span><span class="n">parent_package</span><span class="p">,</span><span class="n">top_path</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">config</span>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">numpy.distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.distutils.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup</span>
     <span class="c1">#setup(**configuration(top_path=&#39;&#39;).todict())</span>
     <span class="n">setup</span><span class="p">(</span><span class="n">configuration</span><span class="o">=</span><span class="n">configuration</span><span class="p">)</span>
 </pre></div>
@@ -726,9 +726,9 @@ be built. This is the recommended way to conditionally define
 extension modules. Source generator functions are called by the
 <code class="docutils literal notranslate"><span class="pre">build_src</span></code> sub-command of <code class="docutils literal notranslate"><span class="pre">numpy.distutils</span></code>.</p>
 <p>For example, here is a typical source generator function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_source</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span><span class="n">build_dir</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">os</span>
-    <span class="kn">from</span> <span class="nn">distutils.dep_util</span> <span class="kn">import</span> <span class="n">newer</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_source</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span><span class="n">build_dir</span><span class="p">):</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">distutils.dep_util</span><span class="w"> </span><span class="kn">import</span> <span class="n">newer</span>
     <span class="n">target</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">build_dir</span><span class="p">,</span><span class="s1">&#39;somesource.c&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">newer</span><span class="p">(</span><span class="n">target</span><span class="p">,</span><span class="vm">__file__</span><span class="p">):</span>
         <span class="c1"># create target file</span>
@@ -996,12 +996,12 @@ relative to parent_path when given. Handles also <code class="docutils literal n
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="c1"># import functions into module namespace</span>
-<span class="kn">from</span> <span class="nn">.subpackage</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.subpackage</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="o">...</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span>
 
-<span class="kn">from</span> <span class="nn">numpy.testing</span> <span class="kn">import</span> <span class="n">Tester</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy.testing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tester</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">Tester</span><span class="p">()</span><span class="o">.</span><span class="n">test</span>
 <span class="n">bench</span> <span class="o">=</span> <span class="n">Tester</span><span class="p">()</span><span class="o">.</span><span class="n">bench</span>
 </pre></div>

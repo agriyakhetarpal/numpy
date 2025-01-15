@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -562,7 +562,7 @@ containing a function).</p>
 <p>and a wrapper built using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">ftype.f</span> <span class="pre">-m</span> <span class="pre">ftype</span></code>.</p>
 <p>In Python, you can observe the types of <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>, and how to access
 individual objects of the wrapped Fortran code.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">ftype</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">ftype</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ftype</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">This module &#39;ftype&#39; is auto-generated with f2py (version:2).</span>
 <span class="go">Functions:</span>
@@ -627,7 +627,7 @@ the intent attribute</span></a>.</p></li>
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">scalar</span> <span class="pre">scalar.f</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">scalar</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">scalar</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">scalar</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">foo(a,b)</span>
 
@@ -642,7 +642,7 @@ the intent attribute</span></a>.</p></li>
 <span class="go">     A=  2. B=  3.</span>
 <span class="go"> INCREMENT A AND B</span>
 <span class="go"> NEW A=  3. B=  4.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># these are integer rank-0 arrays</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">scalar</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -693,7 +693,7 @@ array version of a string in order to have <em>in situ</em> changes be effective
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">mystring</span> <span class="pre">string.f</span></code>.</p>
 <p>Python session:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">mystring</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">mystring</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mystring</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">foo(a,b,c,d)</span>
 
@@ -706,7 +706,7 @@ array version of a string in order to have <em>in situ</em> changes be effective
 <span class="go">c : input string(len=-1)</span>
 <span class="go">d : in/output rank-0 array(string(len=-1),&#39;c&#39;)</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">array</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;123</span><span class="se">\0\0</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;123</span><span class="se">\0\0</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
@@ -775,8 +775,8 @@ them to Fortran routines, use the function <a class="reference internal" href=".
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">arr</span> <span class="pre">array.f</span> <span class="pre">-DF2PY_REPORT_ON_ARRAY_COPY=1</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">arr</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">asfortranarray</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">arr</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">asfortranarray</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">a = foo(a,[overwrite_a])</span>
 
@@ -885,7 +885,7 @@ them to Fortran routines, use the function <a class="reference internal" href=".
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">callback</span> <span class="pre">callback.f</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">callback</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">callback</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">foo</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">r = foo(fun,[fun_extra_args])</span>
 
@@ -914,7 +914,7 @@ them to Fortran routines, use the function <a class="reference internal" href=".
 <span class="go">  Return objects:</span>
 <span class="go">    r : float</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span>
 <span class="gp">... </span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">callback</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
 <span class="go">110.0</span>
@@ -993,10 +993,10 @@ In order to use a Python function for <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">intent(callback)</span></code> and it must be specified before the <code class="docutils literal notranslate"><span class="pre">external</span></code> statement.</p>
 <p>Finally, build an extension module using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">foo</span> <span class="pre">calculate.f</span></code></p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">foo</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">foo</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 <span class="go">array([  0.,   1.,   4.,   9.,  16.])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">math</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">)</span>
 <span class="go">array([  1.        ,   2.71828183,   7.3890561,  20.08553692,  54.59815003])</span>
 </pre></div>
@@ -1029,13 +1029,13 @@ is itself called by another Fortran function.</p>
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">pfromf</span> <span class="pre">extcallback.f</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pfromf</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pfromf</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pfromf</span><span class="o">.</span><span class="n">f2</span><span class="p">()</span>
 <span class="gt">Traceback (most recent call last):</span>
   File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
 <span class="gr">pfromf.error</span>: <span class="n">Callback fpy not defined (as an argument or module pfromf attribute).</span>
 
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;python f&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">():</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;python f&quot;</span><span class="p">)</span>
 <span class="gp">... </span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pfromf</span><span class="o">.</span><span class="n">fpy</span> <span class="o">=</span> <span class="n">f</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pfromf</span><span class="o">.</span><span class="n">f2</span><span class="p">()</span>
@@ -1063,13 +1063,13 @@ bare Fortran routine will be used. For more details, see
 argument <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;_extra_args</span></code> is introduced by F2PY. This argument can be used
 to pass extra arguments to user provided call-back functions.</p>
 <p>If a F2PY generated wrapper function expects the following call-back argument:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">a_n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fun</span><span class="p">(</span><span class="n">a_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">a_n</span><span class="p">):</span>
    <span class="o">...</span>
    <span class="k">return</span> <span class="n">x_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">x_k</span>
 </pre></div>
 </div>
 <p>but the following Python function</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gun</span><span class="p">(</span><span class="n">b_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">b_m</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gun</span><span class="p">(</span><span class="n">b_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">b_m</span><span class="p">):</span>
    <span class="o">...</span>
    <span class="k">return</span> <span class="n">y_1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">y_l</span>
 </pre></div>
@@ -1128,7 +1128,7 @@ corresponding array objects.</p>
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">common</span> <span class="pre">common.f</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">common</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">common</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">common</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">i : &#39;i&#39;-scalar</span>
 <span class="go">x : &#39;i&#39;-array(4)</span>
@@ -1188,7 +1188,7 @@ Fortran 77 common blocks.</p>
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">moddata</span> <span class="pre">moddata.f90</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">moddata</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">moddata</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">moddata</span><span class="o">.</span><span class="n">mod</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">i : &#39;i&#39;-scalar</span>
 <span class="go">x : &#39;i&#39;-array(4)</span>
@@ -1243,7 +1243,7 @@ Fortran 77 common blocks.</p>
 </div>
 <p>and wrap it using <code class="docutils literal notranslate"><span class="pre">f2py</span> <span class="pre">-c</span> <span class="pre">-m</span> <span class="pre">allocarr</span> <span class="pre">allocarr.f90</span></code>.</p>
 <p>In Python:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">allocarr</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">allocarr</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">allocarr</span><span class="o">.</span><span class="n">mod</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="go">b : &#39;f&#39;-array(-1,-1), not allocated</span>
 <span class="go">foo()</span>

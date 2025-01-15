@@ -30,7 +30,7 @@
   <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -621,7 +621,7 @@ need to take those inputs and process them into a high-quality internal state
 for the BitGenerator. All of the BitGenerators in numpy delegate that task to
 <a class="reference internal" href="generated/numpy.random.SeedSequence.html#numpy.random.SeedSequence" title="numpy.random.SeedSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence</span></code></a>, which uses hashing techniques to ensure that even low-quality
 seeds generate high-quality initial states.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">PCG64</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCG64</span>
 
 <span class="n">bg</span> <span class="o">=</span> <span class="n">PCG64</span><span class="p">(</span><span class="mi">12345678903141592653589793</span><span class="p">)</span>
 </pre></div>
@@ -634,7 +634,7 @@ provide that value through some mechanism, a command-line argument is common,
 so that the user can then re-enter that entropy to reproduce the result.
 <a class="reference internal" href="generated/numpy.random.SeedSequence.html#numpy.random.SeedSequence" title="numpy.random.SeedSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence</span></code></a> can take care of everything except for communicating with the
 user, which is up to you.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
 
 <span class="c1"># Get the user&#39;s seed somehow, maybe through `argparse`.</span>
 <span class="c1"># If the user did not provide a seed, it should return `None`.</span>
@@ -663,7 +663,7 @@ is to construct a random generator instance for each simulation.
 To make sure that the random streams have distinct initial states, you can use
 the <em class="xref py py-obj">spawn</em> method of <a class="reference internal" href="generated/numpy.random.SeedSequence.html#numpy.random.SeedSequence" title="numpy.random.SeedSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence</span></code></a>. For instance, here we construct a list
 of 12 instances:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
 
 <span class="c1"># High quality initial entropy</span>
 <span class="n">entropy</span> <span class="o">=</span> <span class="mh">0x87351080e25cb0fad77a44a3be03b491</span>
@@ -674,7 +674,7 @@ of 12 instances:</p>
 </div>
 <p>If you already have an initial random generator instance, you can shorten
 the above by using the <a class="reference internal" href="generated/numpy.random.BitGenerator.spawn.html#numpy.random.BitGenerator.spawn" title="numpy.random.BitGenerator.spawn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spawn</span></code></a> method:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
 <span class="c1"># High quality initial entropy</span>
 <span class="n">entropy</span> <span class="o">=</span> <span class="mh">0x87351080e25cb0fad77a44a3be03b491</span>
 <span class="n">base_bitgen</span> <span class="o">=</span> <span class="n">PCG64</span><span class="p">(</span><span class="n">entropy</span><span class="p">)</span>
@@ -684,7 +684,7 @@ the above by using the <a class="reference internal" href="generated/numpy.rando
 <p>An alternative way is to use the fact that a <a class="reference internal" href="generated/numpy.random.SeedSequence.html#numpy.random.SeedSequence" title="numpy.random.SeedSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence</span></code></a> can be initialized
 by a tuple of elements. Here we use a base entropy value and an integer
 <code class="docutils literal notranslate"><span class="pre">worker_id</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCG64</span><span class="p">,</span> <span class="n">SeedSequence</span>
 
 <span class="c1"># High quality initial entropy</span>
 <span class="n">entropy</span> <span class="o">=</span> <span class="mh">0x87351080e25cb0fad77a44a3be03b491</span>

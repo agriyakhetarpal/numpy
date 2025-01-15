@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -612,7 +612,7 @@ memory, and are skipped if your system does not have enough.</p>
 <section id="other-build-options">
 <h2>Other build options<a class="headerlink" href="#other-build-options" title="Link to this heading">#</a></h2>
 <p>For more options including selecting compilers, setting custom compiler flags
-and controlling parallelism, see <a class="reference external" href="https://docs.scipy.org/doc/scipy/building/compilers_and_options.html" title="(in SciPy v1.14.1)"><span>Compiler selection and customizing a build</span></a>
+and controlling parallelism, see <a class="reference external" href="https://docs.scipy.org/doc/scipy/building/compilers_and_options.html" title="(in SciPy v1.15.1)"><span>Compiler selection and customizing a build</span></a>
 (from the SciPy documentation.)</p>
 </section>
 <section id="running-tests">
@@ -704,7 +704,7 @@ First, ensure that you have gdb installed on your system with the Python
 extensions (often the default on Linux). You can see which version of
 Python is running inside gdb to verify your setup:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">python</span>
-<span class="o">&gt;</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="o">&gt;</span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="o">&gt;</span><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">)</span>
 <span class="o">&gt;</span><span class="n">end</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">(</span><span class="n">major</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">minor</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">micro</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">releaselevel</span><span class="o">=</span><span class="s1">&#39;final&#39;</span><span class="p">,</span> <span class="n">serial</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -735,7 +735,7 @@ For complete instructions please refer to
 </div>
 <p>Next you need to write a Python script that invokes the C code whose execution
 you want to debug. For instance <code class="docutils literal notranslate"><span class="pre">mytest.py</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>

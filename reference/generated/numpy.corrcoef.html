@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -636,16 +636,16 @@ for backwards compatibility with previous versions of this function.  These
 arguments had no effect on the return values of the function and can be
 safely ignored in this and previous versions of numpy.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="010621df-6876-42ee-8a81-93ef59d0dd4d">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('010621df-6876-42ee-8a81-93ef59d0dd4d','4e0ba6cf-c562-4f2a-9727-fa2ee77209c1','99dc48aa-a8a5-45d9-964f-58a3a4267092','../../lite/tree/../notebooks/index.html?path=5517b9a8_1f94_4cac_8e61_7349ad513532.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="try_examples_outer_container docutils container" id="47f653b6-4d00-412c-8a41-5480848a1905">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('47f653b6-4d00-412c-8a41-5480848a1905','272012fc-086e-4cc0-b3cf-a60123bd365e','a0de8357-53a5-4bfa-a54a-eef3c407e2b1','../../lite/tree/../notebooks/index.html?path=2183be38_73ea_4076_a184_ed238983b8cc.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 <p>In this example we generate two random arrays, <code class="docutils literal notranslate"><span class="pre">xarr</span></code> and <code class="docutils literal notranslate"><span class="pre">yarr</span></code>, and
 compute the row-wise and column-wise Pearson correlation coefficients,
 <code class="docutils literal notranslate"><span class="pre">R</span></code>. Since <code class="docutils literal notranslate"><span class="pre">rowvar</span></code> is  true by  default, we first find the row-wise
 Pearson correlation coefficients between the variables of <code class="docutils literal notranslate"><span class="pre">xarr</span></code>.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xarr</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">xarr</span>
@@ -704,7 +704,7 @@ correlation coefficients between variables in <code class="docutils literal notr
 </div>
 </div>
 </div>
-<div id="99dc48aa-a8a5-45d9-964f-58a3a4267092" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('010621df-6876-42ee-8a81-93ef59d0dd4d','99dc48aa-a8a5-45d9-964f-58a3a4267092')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('010621df-6876-42ee-8a81-93ef59d0dd4d','99dc48aa-a8a5-45d9-964f-58a3a4267092')">Open In Tab</button></div><div id="4e0ba6cf-c562-4f2a-9727-fa2ee77209c1" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="a0de8357-53a5-4bfa-a54a-eef3c407e2b1" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('47f653b6-4d00-412c-8a41-5480848a1905','a0de8357-53a5-4bfa-a54a-eef3c407e2b1')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('47f653b6-4d00-412c-8a41-5480848a1905','a0de8357-53a5-4bfa-a54a-eef3c407e2b1')">Open In Tab</button></div><div id="272012fc-086e-4cc0-b3cf-a60123bd365e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

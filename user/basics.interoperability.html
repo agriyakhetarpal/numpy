@@ -30,7 +30,7 @@
   <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=e6a976a6"></script>
+    <script src="../_static/documentation_options.js?v=56e54f54"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 02, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
   </head>
   
   
@@ -517,7 +517,7 @@ general, its concrete implementation has limitations. As datasets grow and NumPy
 becomes used in a variety of new environments and architectures, there are cases
 where the strided in-RAM storage strategy is inappropriate, which has caused
 different libraries to reimplement this API for their own uses. This includes
-GPU arrays (<a class="reference external" href="https://cupy.dev/">CuPy</a>), Sparse arrays (<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.html#module-scipy.sparse" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.sparse</span></code></a>, <a class="reference external" href="https://sparse.pydata.org/">PyData/Sparse</a>)
+GPU arrays (<a class="reference external" href="https://cupy.dev/">CuPy</a>), Sparse arrays (<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.html#module-scipy.sparse" title="(in SciPy v1.15.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.sparse</span></code></a>, <a class="reference external" href="https://sparse.pydata.org/">PyData/Sparse</a>)
 and parallel arrays (<a class="reference external" href="https://docs.dask.org/">Dask</a> arrays) as well as various NumPy-like implementations
 in deep learning frameworks, like <a class="reference external" href="https://www.tensorflow.org/">TensorFlow</a> and <a class="reference external" href="https://pytorch.org/">PyTorch</a>. Similarly, there are
 many projects that build on top of the NumPy API for labeled and indexed arrays
@@ -575,7 +575,7 @@ array-like object;</p></li>
 array-like object;</p></li>
 </ul>
 <p>The <code class="docutils literal notranslate"><span class="pre">__array_interface__</span></code> attribute can be inspected directly:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">__array_interface__</span>
 <span class="go">{&#39;data&#39;: (94708397920832, False), &#39;strides&#39;: None, &#39;descr&#39;: [(&#39;&#39;, &#39;&lt;f8&#39;)], &#39;typestr&#39;: &#39;&lt;f8&#39;, &#39;shape&#39;: (4,), &#39;version&#39;: 3}</span>
@@ -583,7 +583,7 @@ array-like object;</p></li>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">__array_interface__</span></code> attribute can also be used to manipulate the object
 data in place:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">wrapper</span><span class="p">():</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">wrapper</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="k">pass</span>
 <span class="gp">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -655,8 +655,8 @@ like <a class="reference external" href="https://pytorch.org/">PyTorch</a> and <
 <p>A second set of methods defined by the NumPy API allows us to defer the
 execution from a NumPy function to another array library.</p>
 <p>Consider the following function.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -741,7 +741,7 @@ metadata before returning the array to the user.</p>
 <section id="example-pandas-series-objects">
 <h3>Example: Pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects<a class="headerlink" href="#example-pandas-series-objects" title="Link to this heading">#</a></h3>
 <p>Consider the following:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">ser</span><span class="p">)</span>
 <span class="go">pandas.core.series.Series</span>
@@ -786,7 +786,7 @@ learning using GPUs and CPUs. PyTorch arrays are commonly called <em>tensors</em
 Tensors are similar to NumPy’s ndarrays, except that tensors can run on GPUs or
 other hardware accelerators. In fact, tensors and NumPy arrays can often share
 the same underlying memory, eliminating the need to copy data.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -827,7 +827,7 @@ for details.</p>
 </div>
 <p>Note also that we can see <code class="docutils literal notranslate"><span class="pre">__array_wrap__</span></code> in action here, even though
 <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> is not a subclass of ndarray:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 <span class="go">tensor([0, 1, 2, 3])</span>
@@ -842,7 +842,7 @@ returned from these functions.</p>
 <p>CuPy is a NumPy/SciPy-compatible array library for GPU-accelerated computing
 with Python. CuPy implements a subset of the NumPy interface by implementing
 <code class="docutils literal notranslate"><span class="pre">cupy.ndarray</span></code>, <a class="reference external" href="https://docs.cupy.dev/en/stable/reference/ndarray.html">a counterpart to NumPy ndarrays</a>.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">cupy</span> <span class="k">as</span> <span class="nn">cp</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x_gpu</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -880,7 +880,7 @@ implements a subset of the NumPy ndarray interface using blocked algorithms,
 cutting up the large array into many small arrays. This allows computations on
 larger-than-memory arrays using multiple cores.</p>
 <p>Dask supports <code class="docutils literal notranslate"><span class="pre">__array__()</span></code> and <code class="docutils literal notranslate"><span class="pre">__array_ufunc__</span></code>.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">dask.array</span> <span class="k">as</span> <span class="nn">da</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">dask.array</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">da</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="go">dask.array&lt;mean_agg-aggregate, shape=(), dtype=float64, chunksize=(), chunktype=numpy.ndarray&gt;</span>
@@ -903,7 +903,7 @@ Among them are <a class="reference external" href="https://pytorch.org/">PyTorch
 this protocol can be found on
 <a class="reference external" href="https://dmlc.github.io/dlpack/latest/index.html" title="(in DLPack)"><span class="xref std std-doc">this page of DLPack documentation</span></a>.</p>
 <p>Convert a PyTorch CPU tensor to NumPy array:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x_torch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x_torch</span>
 <span class="go">tensor([0, 1, 2, 3, 4])</span>

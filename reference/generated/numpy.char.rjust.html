@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -591,7 +591,7 @@
 <h1>numpy.char.rjust<a class="headerlink" href="#numpy-char-rjust" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.char.rjust">
-<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">rjust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fillchar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L786-L847"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.rjust" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">rjust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fillchar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L787-L848"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.rjust" title="Link to this definition">#</a></dt>
 <dd><p>Return an array with the elements of <em class="xref py py-obj">a</em> right-justified in a
 string of length <em class="xref py py-obj">width</em>.</p>
 <dl class="field-list">
@@ -623,8 +623,8 @@ depending on input types</p>
 passing a non-ASCII character in <code class="docutils literal notranslate"><span class="pre">fillchar</span></code> when <code class="docutils literal notranslate"><span class="pre">a</span></code> is of dtype “S”
 is not allowed, and a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="86ef1ef1-1766-439c-a727-00e3608a3f44">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('86ef1ef1-1766-439c-a727-00e3608a3f44','2a890b9c-3483-4a03-a6a0-b667b2573605','0d300ea4-b1ea-45ca-a8a3-5d0319441957','../../lite/tree/../notebooks/index.html?path=4e6311ff_9352_41d9_926e_a3122cb94f6a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="2eed2285-4bae-44dd-811d-2833d12ee729">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2eed2285-4bae-44dd-811d-2833d12ee729','8a160e44-aeb8-4887-af41-21c6f7bd388e','fdf3691b-1d0d-4014-9111-3eaf7fb52bdb','../../lite/tree/../notebooks/index.html?path=45c96875_76f9_4d64_af02_99373e36643a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;aAaAaA&#39;</span><span class="p">,</span> <span class="s1">&#39;  aA  &#39;</span><span class="p">,</span> <span class="s1">&#39;abBABba&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">strings</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -635,7 +635,7 @@ is not allowed, and a <code class="docutils literal notranslate"><span class="pr
 </div>
 </div>
 </div>
-<div id="0d300ea4-b1ea-45ca-a8a3-5d0319441957" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('86ef1ef1-1766-439c-a727-00e3608a3f44','0d300ea4-b1ea-45ca-a8a3-5d0319441957')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('86ef1ef1-1766-439c-a727-00e3608a3f44','0d300ea4-b1ea-45ca-a8a3-5d0319441957')">Open In Tab</button></div><div id="2a890b9c-3483-4a03-a6a0-b667b2573605" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="fdf3691b-1d0d-4014-9111-3eaf7fb52bdb" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2eed2285-4bae-44dd-811d-2833d12ee729','fdf3691b-1d0d-4014-9111-3eaf7fb52bdb')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2eed2285-4bae-44dd-811d-2833d12ee729','fdf3691b-1d0d-4014-9111-3eaf7fb52bdb')">Open In Tab</button></div><div id="8a160e44-aeb8-4887-af41-21c6f7bd388e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

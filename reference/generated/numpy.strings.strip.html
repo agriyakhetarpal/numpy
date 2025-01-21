@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -64,11 +64,11 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="numpy.strings.swapcase" href="numpy.strings.swapcase.html" />
-    <link rel="prev" title="numpy.strings.rstrip" href="numpy.strings.rstrip.html" />
+    <link rel="prev" title="numpy.strings.slice" href="numpy.strings.slice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rpartition.html">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.title.html">numpy.strings.title</a></li>
@@ -591,7 +592,7 @@
 <h1>numpy.strings.strip<a class="headerlink" href="#numpy-strings-strip" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.strings.strip">
-<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">strip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L988-L1032"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.strip" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">strip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L989-L1033"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.strip" title="Link to this definition">#</a></dt>
 <dd><p>For each element in <em class="xref py py-obj">a</em>, return a copy with the leading and
 trailing characters removed.</p>
 <dl class="field-list">
@@ -621,8 +622,8 @@ depending on input types</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="7aca5142-502b-4e37-8492-ce94f21c87ee">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7aca5142-502b-4e37-8492-ce94f21c87ee','27ce80bd-5c7e-4325-8d89-19cf2118670f','a1bad287-6cd9-430d-b273-712b3ff4158d','../../lite/tree/../notebooks/index.html?path=ef26fc4f_d421_4db6_8531_363c8e44748f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b71e2c41-b7f3-4b19-8697-8a6f21bf594b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b71e2c41-b7f3-4b19-8697-8a6f21bf594b','e514cb1d-982a-4123-a4fb-a649e2c2c52c','c09aef5c-797c-413b-902c-507be2338e1c','../../lite/tree/../notebooks/index.html?path=18799ceb_8bc8_4195_b0fe_7626158a1a69.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;aAaAaA&#39;</span><span class="p">,</span> <span class="s1">&#39;  aA  &#39;</span><span class="p">,</span> <span class="s1">&#39;abBABba&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span>
@@ -639,7 +640,7 @@ depending on input types</p>
 </div>
 </div>
 </div>
-<div id="a1bad287-6cd9-430d-b273-712b3ff4158d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7aca5142-502b-4e37-8492-ce94f21c87ee','a1bad287-6cd9-430d-b273-712b3ff4158d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7aca5142-502b-4e37-8492-ce94f21c87ee','a1bad287-6cd9-430d-b273-712b3ff4158d')">Open In Tab</button></div><div id="27ce80bd-5c7e-4325-8d89-19cf2118670f" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="c09aef5c-797c-413b-902c-507be2338e1c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b71e2c41-b7f3-4b19-8697-8a6f21bf594b','c09aef5c-797c-413b-902c-507be2338e1c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b71e2c41-b7f3-4b19-8697-8a6f21bf594b','c09aef5c-797c-413b-902c-507be2338e1c')">Open In Tab</button></div><div id="e514cb1d-982a-4123-a4fb-a649e2c2c52c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 
@@ -654,12 +655,12 @@ depending on input types</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="numpy.strings.rstrip.html"
+       href="numpy.strings.slice.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">numpy.strings.rstrip</p>
+        <p class="prev-next-title">numpy.strings.slice</p>
       </div>
     </a>
     <a class="right-next"

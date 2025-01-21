@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -652,8 +652,8 @@ different sizes.</p>
 </pre></div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="c24daf62-69e5-4122-a955-3bb36e0f2cf4">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c24daf62-69e5-4122-a955-3bb36e0f2cf4','46295eac-e55a-4d4d-87ee-701774cb05ad','995e2403-e285-41fd-acd7-6100fb440dfa','../../lite/tree/../notebooks/index.html?path=5f55be74_2e58_4f8a_bc72_7193dedcb081.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="e1e848c0-1002-4e91-99d0-6cef815227ae">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e1e848c0-1002-4e91-99d0-6cef815227ae','768bd297-6ede-4aec-bfef-d9d636219589','7ee87e74-b7c7-4b93-a0a9-3de228cdb3ed','../../lite/tree/../notebooks/index.html?path=9d78ba99_7389_43b4_951f_75b1f0eafed0.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Ordinary inner product for vectors:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
@@ -690,7 +690,7 @@ different sizes.</p>
 </div>
 </div>
 </div>
-<div id="995e2403-e285-41fd-acd7-6100fb440dfa" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c24daf62-69e5-4122-a955-3bb36e0f2cf4','995e2403-e285-41fd-acd7-6100fb440dfa')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c24daf62-69e5-4122-a955-3bb36e0f2cf4','995e2403-e285-41fd-acd7-6100fb440dfa')">Open In Tab</button></div><div id="46295eac-e55a-4d4d-87ee-701774cb05ad" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="7ee87e74-b7c7-4b93-a0a9-3de228cdb3ed" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e1e848c0-1002-4e91-99d0-6cef815227ae','7ee87e74-b7c7-4b93-a0a9-3de228cdb3ed')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e1e848c0-1002-4e91-99d0-6cef815227ae','7ee87e74-b7c7-4b93-a0a9-3de228cdb3ed')">Open In Tab</button></div><div id="768bd297-6ede-4aec-bfef-d9d636219589" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

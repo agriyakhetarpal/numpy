@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -573,7 +573,7 @@
 <h1>numpy.testing.assert_array_equal<a class="headerlink" href="#numpy-testing-assert-array-equal" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.testing.assert_array_equal">
-<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_equal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L896-L1022"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_equal" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_equal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L897-L1023"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_equal" title="Link to this definition">#</a></dt>
 <dd><p>Raises an AssertionError if two array_like objects are not equal.</p>
 <p>Given two array_like objects, check that the shape is equal and all
 elements of these objects are equal (but see the Notes for the special
@@ -636,8 +636,8 @@ handling for scalars mentioned in the Notes section is disabled.</p>
 the function checks that each element of the array_like object is equal to
 the scalar. This behaviour can be disabled with the <em class="xref py py-obj">strict</em> parameter.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="1c39e37d-536f-4501-853e-63b3d81f13b6">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('1c39e37d-536f-4501-853e-63b3d81f13b6','8bdb784b-d60f-4a7b-a9df-13bb49971418','87e5e5b1-61ac-40b2-9f6d-230932b0b14a','../../lite/tree/../notebooks/index.html?path=56ddc260_d9dc_4b44_9677_ad76d3eef2e5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="2fbe99e4-62c0-422a-90ed-07d12cefbbad">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2fbe99e4-62c0-422a-90ed-07d12cefbbad','5056eb4b-4091-44c0-aceb-b40420e2b959','634573fa-9af1-45e7-b10f-cd08ee0f04c6','../../lite/tree/../notebooks/index.html?path=90640339_df02_46d2_85fe_8e75475f83bf.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>The first assert does not raise an exception:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.33333</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
 <span class="gp">... </span>                              <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="mf">2.33333</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
@@ -701,7 +701,7 @@ array:</p>
 </div>
 </div>
 </div>
-<div id="87e5e5b1-61ac-40b2-9f6d-230932b0b14a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('1c39e37d-536f-4501-853e-63b3d81f13b6','87e5e5b1-61ac-40b2-9f6d-230932b0b14a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('1c39e37d-536f-4501-853e-63b3d81f13b6','87e5e5b1-61ac-40b2-9f6d-230932b0b14a')">Open In Tab</button></div><div id="8bdb784b-d60f-4a7b-a9df-13bb49971418" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="634573fa-9af1-45e7-b10f-cd08ee0f04c6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2fbe99e4-62c0-422a-90ed-07d12cefbbad','634573fa-9af1-45e7-b10f-cd08ee0f04c6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2fbe99e4-62c0-422a-90ed-07d12cefbbad','634573fa-9af1-45e7-b10f-cd08ee0f04c6')">Open In Tab</button></div><div id="5056eb4b-4091-44c0-aceb-b40420e2b959" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

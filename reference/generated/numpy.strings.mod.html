@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rpartition.html">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.strip.html">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.title.html">numpy.strings.title</a></li>
@@ -591,7 +592,7 @@
 <h1>numpy.strings.mod<a class="headerlink" href="#numpy-strings-mod" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.strings.mod">
-<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">mod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L196-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.mod" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">mod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L197-L231"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.mod" title="Link to this definition">#</a></dt>
 <dd><p>Return (a % i), that is pre-Python 2.6 string formatting
 (interpolation), element-wise for a pair of array_likes of str
 or unicode.</p>
@@ -612,8 +613,8 @@ depending on input types</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="cfc1b770-a4b6-4c96-a0ab-62bc31ad5ae3">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('cfc1b770-a4b6-4c96-a0ab-62bc31ad5ae3','359679eb-b30b-4f49-8db8-fe47db41cb2b','6a721826-f9eb-4106-9d97-810d4d63161a','../../lite/tree/../notebooks/index.html?path=3a2830e7_c5d7_4bb7_9ccf_8a183447027e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="2658db83-e530-424a-9728-c57d9eb67bab">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('2658db83-e530-424a-9728-c57d9eb67bab','48f3cb4e-7472-4b72-a070-d1a15df91376','c3e3fcaf-2947-4d7a-abb2-0370a986eded','../../lite/tree/../notebooks/index.html?path=d147a007_d831_48c7_8aa1_ee565f28eda2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;NumPy is a </span><span class="si">%s</span><span class="s2"> library&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">strings</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">])</span>
@@ -628,7 +629,7 @@ depending on input types</p>
 </div>
 </div>
 </div>
-<div id="6a721826-f9eb-4106-9d97-810d4d63161a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('cfc1b770-a4b6-4c96-a0ab-62bc31ad5ae3','6a721826-f9eb-4106-9d97-810d4d63161a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('cfc1b770-a4b6-4c96-a0ab-62bc31ad5ae3','6a721826-f9eb-4106-9d97-810d4d63161a')">Open In Tab</button></div><div id="359679eb-b30b-4f49-8db8-fe47db41cb2b" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="c3e3fcaf-2947-4d7a-abb2-0370a986eded" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('2658db83-e530-424a-9728-c57d9eb67bab','c3e3fcaf-2947-4d7a-abb2-0370a986eded')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('2658db83-e530-424a-9728-c57d9eb67bab','c3e3fcaf-2947-4d7a-abb2-0370a986eded')">Open In Tab</button></div><div id="48f3cb4e-7472-4b72-a070-d1a15df91376" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rpartition.html">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.strip.html">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.title.html">numpy.strings.title</a></li>
@@ -633,8 +634,8 @@ This is a scalar if both <em class="xref py py-obj">x1</em> and <em class="xref 
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="09ac4b5e-de9d-4249-9a27-ca61aa1443a0">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('09ac4b5e-de9d-4249-9a27-ca61aa1443a0','244554e5-11d3-49b0-8165-6bbfb744608d','77abc4e6-8da7-45f6-962c-cf93c688722e','../../lite/tree/../notebooks/index.html?path=007c5cbe_250b_44e2_b39a_e678965fcf36.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c720bad3-d0cc-4702-a3dd-f9128ae3d3a3">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c720bad3-d0cc-4702-a3dd-f9128ae3d3a3','e20ac263-6c7f-4307-aee9-060e7f35cd67','a6a48f20-ec57-4fa3-ac81-d0091a9b5bf7','../../lite/tree/../notebooks/index.html?path=dcfa1b64_1f5a_4702_8060_ceff21d2028c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">greater_equal</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="go">array([ True, True, False])</span>
@@ -650,7 +651,7 @@ on ndarrays.</p>
 </div>
 </div>
 </div>
-<div id="77abc4e6-8da7-45f6-962c-cf93c688722e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('09ac4b5e-de9d-4249-9a27-ca61aa1443a0','77abc4e6-8da7-45f6-962c-cf93c688722e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('09ac4b5e-de9d-4249-9a27-ca61aa1443a0','77abc4e6-8da7-45f6-962c-cf93c688722e')">Open In Tab</button></div><div id="244554e5-11d3-49b0-8165-6bbfb744608d" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="a6a48f20-ec57-4fa3-ac81-d0091a9b5bf7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c720bad3-d0cc-4702-a3dd-f9128ae3d3a3','a6a48f20-ec57-4fa3-ac81-d0091a9b5bf7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c720bad3-d0cc-4702-a3dd-f9128ae3d3a3','a6a48f20-ec57-4fa3-ac81-d0091a9b5bf7')">Open In Tab</button></div><div id="e20ac263-6c7f-4307-aee9-060e7f35cd67" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -453,6 +453,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -465,7 +466,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -659,8 +659,8 @@ Otherwise the shape is (K,).</p>
 <p class="rubric">Notes</p>
 <p>If <em class="xref py py-obj">b</em> is a matrix, then all array results are returned as matrices.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="584558b7-c4c2-4f9a-9f92-0d5eca6fdd39">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('584558b7-c4c2-4f9a-9f92-0d5eca6fdd39','02cb6beb-4221-464d-930e-4d8755202f00','f7dc496e-4c3b-4b46-b250-ffddd8b23ef8','../../lite/tree/../notebooks/index.html?path=bf4093bf_758b_4243_ad73_87293e6ea0b4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="56286d99-4a2a-4e87-87bf-e241f9c70d30">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('56286d99-4a2a-4e87-87bf-e241f9c70d30','e0ac39fc-cbb7-4f65-af94-3899a077e069','bc8410f8-4485-441d-a5c0-5c1faf4511c0','../../lite/tree/../notebooks/index.html?path=f524e304_3b79_4074_ad5d_bfb924bef05a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Fit a line, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">mx</span> <span class="pre">+</span> <span class="pre">c</span></code>, through some noisy data-points:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
@@ -697,7 +697,7 @@ and <code class="docutils literal notranslate"><span class="pre">p</span> <span 
 </figure>
 </div>
 </div>
-<div id="f7dc496e-4c3b-4b46-b250-ffddd8b23ef8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('584558b7-c4c2-4f9a-9f92-0d5eca6fdd39','f7dc496e-4c3b-4b46-b250-ffddd8b23ef8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('584558b7-c4c2-4f9a-9f92-0d5eca6fdd39','f7dc496e-4c3b-4b46-b250-ffddd8b23ef8')">Open In Tab</button></div><div id="02cb6beb-4221-464d-930e-4d8755202f00" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="bc8410f8-4485-441d-a5c0-5c1faf4511c0" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('56286d99-4a2a-4e87-87bf-e241f9c70d30','bc8410f8-4485-441d-a5c0-5c1faf4511c0')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('56286d99-4a2a-4e87-87bf-e241f9c70d30','bc8410f8-4485-441d-a5c0-5c1faf4511c0')">Open In Tab</button></div><div id="e0ac39fc-cbb7-4f65-af94-3899a077e069" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

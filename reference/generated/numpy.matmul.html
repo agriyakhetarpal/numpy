@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -64,11 +64,11 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="numpy.linalg.matmul" href="numpy.linalg.matmul.html" />
-    <link rel="prev" title="numpy.outer" href="numpy.outer.html" />
+    <link rel="prev" title="numpy.linalg.outer" href="numpy.linalg.outer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -675,8 +675,8 @@ were elements, respecting the signature <code class="docutils literal notranslat
 introduced in Python 3.5 following <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0465/"><strong>PEP 465</strong></a>.</p>
 <p>It uses an optimized BLAS library when possible (see <a class="reference internal" href="../routines.linalg.html#module-numpy.linalg" title="numpy.linalg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.linalg</span></code></a>).</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="764ba5e7-0a56-4e76-950b-ac66812928d3">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('764ba5e7-0a56-4e76-950b-ac66812928d3','e3e51f4a-c3d7-4bcc-adcb-d0d5b48d1d92','cc4a6ae2-5079-43fa-b1b8-7184d662dc5d','../../lite/tree/../notebooks/index.html?path=44561058_f161_4909_82c9_64b1696e220e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="baf98cee-9898-4b45-9649-aec8399eedca">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('baf98cee-9898-4b45-9649-aec8399eedca','34046d82-42ec-45bc-9d61-239f3a848229','b3352777-9c38-427d-ae10-ee00780f02fe','../../lite/tree/../notebooks/index.html?path=7216a5ea_b417_4e9a_a69e_016ed0984ae9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>For 2-D arrays it is the matrix product:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
@@ -732,7 +732,7 @@ ndarrays.</p>
 </div>
 </div>
 </div>
-<div id="cc4a6ae2-5079-43fa-b1b8-7184d662dc5d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('764ba5e7-0a56-4e76-950b-ac66812928d3','cc4a6ae2-5079-43fa-b1b8-7184d662dc5d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('764ba5e7-0a56-4e76-950b-ac66812928d3','cc4a6ae2-5079-43fa-b1b8-7184d662dc5d')">Open In Tab</button></div><div id="e3e51f4a-c3d7-4bcc-adcb-d0d5b48d1d92" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="b3352777-9c38-427d-ae10-ee00780f02fe" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('baf98cee-9898-4b45-9649-aec8399eedca','b3352777-9c38-427d-ae10-ee00780f02fe')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('baf98cee-9898-4b45-9649-aec8399eedca','b3352777-9c38-427d-ae10-ee00780f02fe')">Open In Tab</button></div><div id="34046d82-42ec-45bc-9d61-239f3a848229" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 
@@ -747,12 +747,12 @@ ndarrays.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="numpy.outer.html"
+       href="numpy.linalg.outer.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">numpy.outer</p>
+        <p class="prev-next-title">numpy.linalg.outer</p>
       </div>
     </a>
     <a class="right-next"

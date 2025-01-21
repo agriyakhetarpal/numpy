@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -573,7 +573,7 @@
 <h1>numpy.testing.assert_array_almost_equal<a class="headerlink" href="#numpy-testing-assert-array-almost-equal" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.testing.assert_array_almost_equal">
-<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_almost_equal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1025-L1137"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_almost_equal" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_almost_equal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1026-L1138"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_almost_equal" title="Link to this definition">#</a></dt>
 <dd><p>Raises an AssertionError if two objects are not equal up to desired
 precision.</p>
 <div class="admonition note">
@@ -624,8 +624,8 @@ objects have NaNs in the same positions.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="6da3a42b-efb1-4e34-bebf-8b4c1c4fb88f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6da3a42b-efb1-4e34-bebf-8b4c1c4fb88f','fceda0ec-f4cf-4e7b-a000-7c7eb03628cd','17727d23-519d-43d5-b80e-3f9fec049264','../../lite/tree/../notebooks/index.html?path=cfd1da34_78c6_431d_9f23_eed1798bf7bb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c149ee0b-e841-4e89-a142-c97746850831">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c149ee0b-e841-4e89-a142-c97746850831','d90502df-d8c6-4dc3-be26-0e52bb076fad','9293ecdc-b7d9-4c86-a924-999a869ca530','../../lite/tree/../notebooks/index.html?path=5cf67bd2_683a_4af1_8ab0_57b18162d277.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>the first assert does not raise an exception</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.333</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
 <span class="gp">... </span>                                     <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.333</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])</span>
@@ -659,7 +659,7 @@ objects have NaNs in the same positions.</p>
 </div>
 </div>
 </div>
-<div id="17727d23-519d-43d5-b80e-3f9fec049264" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6da3a42b-efb1-4e34-bebf-8b4c1c4fb88f','17727d23-519d-43d5-b80e-3f9fec049264')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6da3a42b-efb1-4e34-bebf-8b4c1c4fb88f','17727d23-519d-43d5-b80e-3f9fec049264')">Open In Tab</button></div><div id="fceda0ec-f4cf-4e7b-a000-7c7eb03628cd" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="9293ecdc-b7d9-4c86-a924-999a869ca530" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c149ee0b-e841-4e89-a142-c97746850831','9293ecdc-b7d9-4c86-a924-999a869ca530')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c149ee0b-e841-4e89-a142-c97746850831','9293ecdc-b7d9-4c86-a924-999a869ca530')">Open In Tab</button></div><div id="d90502df-d8c6-4dc3-be26-0e52bb076fad" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

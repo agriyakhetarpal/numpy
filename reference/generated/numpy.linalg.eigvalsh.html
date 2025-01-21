@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -642,8 +642,8 @@ its multiplicity.</p>
 details.</p>
 <p>The eigenvalues are computed using LAPACK routines <code class="docutils literal notranslate"><span class="pre">_syevd</span></code>, <code class="docutils literal notranslate"><span class="pre">_heevd</span></code>.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="0d323bf0-eadf-4a63-98fe-e19c3b6002fd">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0d323bf0-eadf-4a63-98fe-e19c3b6002fd','5bfb840b-0657-422c-9802-b8797c1cbcfa','f355cd66-f1e7-40af-a1d6-d4439e732ccd','../../lite/tree/../notebooks/index.html?path=c23c9ae2_0931_4c52_a92a_a44bdac4e136.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="03535953-9fbc-4ce8-92da-35ab46923f62">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('03535953-9fbc-4ce8-92da-35ab46923f62','d8783ab5-4491-4c47-81fa-756ff6e30016','c549af55-6419-4452-8e81-f5d667c8a3b5','../../lite/tree/../notebooks/index.html?path=b07be5e0_141d_49d4_8c12_e9f478a37cd2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">LA</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="n">j</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
@@ -672,7 +672,7 @@ details.</p>
 </div>
 </div>
 </div>
-<div id="f355cd66-f1e7-40af-a1d6-d4439e732ccd" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0d323bf0-eadf-4a63-98fe-e19c3b6002fd','f355cd66-f1e7-40af-a1d6-d4439e732ccd')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0d323bf0-eadf-4a63-98fe-e19c3b6002fd','f355cd66-f1e7-40af-a1d6-d4439e732ccd')">Open In Tab</button></div><div id="5bfb840b-0657-422c-9802-b8797c1cbcfa" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="c549af55-6419-4452-8e81-f5d667c8a3b5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('03535953-9fbc-4ce8-92da-35ab46923f62','c549af55-6419-4452-8e81-f5d667c8a3b5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('03535953-9fbc-4ce8-92da-35ab46923f62','c549af55-6419-4452-8e81-f5d667c8a3b5')">Open In Tab</button></div><div id="d8783ab5-4491-4c47-81fa-756ff6e30016" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

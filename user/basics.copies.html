@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../_static/documentation_options.js?v=953d3030"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -591,12 +591,12 @@ For example:</p>
 <span class="go">       [6, 7, 8]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">base</span> <span class="ow">is</span> <span class="kc">None</span>
 <span class="go">True</span>
-
-<span class="go">Here, ``y`` is a copy, as signified by the :attr:`base &lt;.ndarray.base&gt;`</span>
-<span class="go">attribute. We can also confirm this by assigning new values to ``x[[1, 2]]``</span>
-<span class="go">which in turn will not affect ``y`` at all::</span>
-
-<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">y</span></code> is a copy, as signified by the <a class="reference internal" href="../reference/generated/numpy.ndarray.base.html#numpy.ndarray.base" title="numpy.ndarray.base"><code class="xref py py-attr docutils literal notranslate"><span class="pre">base</span></code></a>
+attribute. We can also confirm this by assigning new values to <code class="docutils literal notranslate"><span class="pre">x[[1,</span> <span class="pre">2]]</span></code>
+which in turn will not affect <code class="docutils literal notranslate"><span class="pre">y</span></code> at all:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
 <span class="go">array([[ 0,  1,  2],</span>
 <span class="go">       [10, 11, 12],</span>

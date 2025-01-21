@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -591,7 +591,7 @@
 <h1>numpy.char.splitlines<a class="headerlink" href="#numpy-char-splitlines" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.char.splitlines">
-<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">splitlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepends</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1420-L1454"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.splitlines" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">splitlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepends</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1421-L1455"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.splitlines" title="Link to this definition">#</a></dt>
 <dd><p>For each element in <em class="xref py py-obj">a</em>, return a list of the lines in the
 element, breaking at line boundaries.</p>
 <p>Calls <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.splitlines" title="(in Python v3.13)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.splitlines</span></code></a> element-wise.</p>
@@ -618,8 +618,8 @@ keepends is given and true.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="8bf4760e-9f94-4614-b2ca-1932e0577def">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8bf4760e-9f94-4614-b2ca-1932e0577def','0d0de9b8-6ad1-47c0-8b78-60252fca9407','92c52abe-273b-426d-a463-354a0151e24c','../../lite/tree/../notebooks/index.html?path=3a67b0a8_ec21_4a46_936c_9dc248ef27bf.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="43203e8b-4cae-4190-aaf0-c78dcaf58788">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('43203e8b-4cae-4190-aaf0-c78dcaf58788','4ac2e9c5-c1fd-4bf0-b35e-0b3d5786e09c','275f19f1-e111-4aa2-b43d-b4b428fc6dd6','../../lite/tree/../notebooks/index.html?path=84c70d48_71c4_40f3_b12f_d27ba8e36ce4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="s2">&quot;first line</span><span class="se">\n</span><span class="s2">second line&quot;</span><span class="p">)</span>
 <span class="go">array(list([&#39;first line&#39;, &#39;second line&#39;]), dtype=object)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;first</span><span class="se">\n</span><span class="s2">second&quot;</span><span class="p">,</span> <span class="s2">&quot;third</span><span class="se">\n</span><span class="s2">fourth&quot;</span><span class="p">])</span>
@@ -629,7 +629,7 @@ keepends is given and true.</p>
 </div>
 </div>
 </div>
-<div id="92c52abe-273b-426d-a463-354a0151e24c" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8bf4760e-9f94-4614-b2ca-1932e0577def','92c52abe-273b-426d-a463-354a0151e24c')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8bf4760e-9f94-4614-b2ca-1932e0577def','92c52abe-273b-426d-a463-354a0151e24c')">Open In Tab</button></div><div id="0d0de9b8-6ad1-47c0-8b78-60252fca9407" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="275f19f1-e111-4aa2-b43d-b4b428fc6dd6" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('43203e8b-4cae-4190-aaf0-c78dcaf58788','275f19f1-e111-4aa2-b43d-b4b428fc6dd6')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('43203e8b-4cae-4190-aaf0-c78dcaf58788','275f19f1-e111-4aa2-b43d-b4b428fc6dd6')">Open In Tab</button></div><div id="4ac2e9c5-c1fd-4bf0-b35e-0b3d5786e09c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

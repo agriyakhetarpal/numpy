@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -615,8 +615,8 @@ to be of the same length as <em class="xref py py-obj">condlist</em>.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="8e97ca7f-3bd2-4af3-8d35-8443ea1b2cd4">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8e97ca7f-3bd2-4af3-8d35-8443ea1b2cd4','241b4c6e-3f24-43ec-85fa-7c30bd5860e6','87ad35c9-b648-4fd7-90a7-41d28246e155','../../lite/tree/../notebooks/index.html?path=209a3cf5_3870_4b3b_a61a_aa4a099b5ada.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="8f6346e3-fc59-4b54-aa8e-55e4b926ce6e">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8f6346e3-fc59-4b54-aa8e-55e4b926ce6e','a0192aab-2009-4959-a8b1-66f54eac48f9','577e3efe-f71c-4b4c-8696-da65db999e98','../../lite/tree/../notebooks/index.html?path=0a05dab8_fc73_4e7f_96fa_c06a98c9e32f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
@@ -626,9 +626,9 @@ are squared, and elements not meeting either of these conditions
 (exactly <code class="docutils literal notranslate"><span class="pre">3</span></code>) are replaced with a <em class="xref py py-obj">default</em> value of <code class="docutils literal notranslate"><span class="pre">42</span></code>.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">condlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">choicelist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">choicelist</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">condlist</span><span class="p">,</span> <span class="n">choicelist</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
-<span class="go">array([ 0,  1,  2, 42, 16, 25])</span>
+<span class="go">array([ 0,  -1,  -2, 42, 16, 25])</span>
 </pre></div>
 </div>
 <p>When multiple conditions are satisfied, the first one encountered in
@@ -641,7 +641,7 @@ are squared, and elements not meeting either of these conditions
 </div>
 </div>
 </div>
-<div id="87ad35c9-b648-4fd7-90a7-41d28246e155" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8e97ca7f-3bd2-4af3-8d35-8443ea1b2cd4','87ad35c9-b648-4fd7-90a7-41d28246e155')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8e97ca7f-3bd2-4af3-8d35-8443ea1b2cd4','87ad35c9-b648-4fd7-90a7-41d28246e155')">Open In Tab</button></div><div id="241b4c6e-3f24-43ec-85fa-7c30bd5860e6" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="577e3efe-f71c-4b4c-8696-da65db999e98" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8f6346e3-fc59-4b54-aa8e-55e4b926ce6e','577e3efe-f71c-4b4c-8696-da65db999e98')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8f6346e3-fc59-4b54-aa8e-55e4b926ce6e','577e3efe-f71c-4b4c-8696-da65db999e98')">Open In Tab</button></div><div id="a0192aab-2009-4959-a8b1-66f54eac48f9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

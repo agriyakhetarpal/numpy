@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rpartition.html">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.strip.html">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.title.html">numpy.strings.title</a></li>
@@ -633,8 +634,8 @@ This is a scalar if <em class="xref py py-obj">x</em> is a scalar.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="065b8010-d361-4ef1-b8be-1701c5d994db">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('065b8010-d361-4ef1-b8be-1701c5d994db','e30b8a12-b178-4300-84f6-d64a8a825489','7f2dcfee-c7f6-4b9f-943d-5d5b8cb38941','../../lite/tree/../notebooks/index.html?path=62ede5fb_da03_4efd_8970_caadc36f857b.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="9674e9fd-d908-44e0-af31-6516e19d1564">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9674e9fd-d908-44e0-af31-6516e19d1564','8218242b-729f-466d-8b49-c651d2d36fcb','893ce4c2-04b9-42e1-ba39-915bb25b06f4','../../lite/tree/../notebooks/index.html?path=bed46953_1181_4504_ba91_2f5925375adb.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">strings</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">([</span><span class="s1">&#39;123&#39;</span><span class="p">,</span> <span class="s1">&#39;123abc&#39;</span><span class="p">,</span> <span class="s1">&#39;9.0&#39;</span><span class="p">,</span> <span class="s1">&#39;1/4&#39;</span><span class="p">,</span> <span class="s1">&#39;VIII&#39;</span><span class="p">])</span>
 <span class="go">array([ True, False, False, False, False])</span>
@@ -642,7 +643,7 @@ This is a scalar if <em class="xref py py-obj">x</em> is a scalar.</p>
 </div>
 </div>
 </div>
-<div id="7f2dcfee-c7f6-4b9f-943d-5d5b8cb38941" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('065b8010-d361-4ef1-b8be-1701c5d994db','7f2dcfee-c7f6-4b9f-943d-5d5b8cb38941')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('065b8010-d361-4ef1-b8be-1701c5d994db','7f2dcfee-c7f6-4b9f-943d-5d5b8cb38941')">Open In Tab</button></div><div id="e30b8a12-b178-4300-84f6-d64a8a825489" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="893ce4c2-04b9-42e1-ba39-915bb25b06f4" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9674e9fd-d908-44e0-af31-6516e19d1564','893ce4c2-04b9-42e1-ba39-915bb25b06f4')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9674e9fd-d908-44e0-af31-6516e19d1564','893ce4c2-04b9-42e1-ba39-915bb25b06f4')">Open In Tab</button></div><div id="8218242b-729f-466d-8b49-c651d2d36fcb" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

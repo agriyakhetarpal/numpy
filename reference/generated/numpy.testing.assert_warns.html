@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -573,7 +573,7 @@
 <h1>numpy.testing.assert_warns<a class="headerlink" href="#numpy-testing-assert-warns" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.testing.assert_warns">
-<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_warns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning_class</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1900-L1956"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_warns" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_warns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warning_class</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1901-L1957"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_warns" title="Link to this definition">#</a></dt>
 <dd><p>Fail unless the given callable throws the specified warning.</p>
 <p>A warning of class warning_class should be thrown by the callable when
 invoked with arguments args and keyword arguments kwargs.
@@ -605,8 +605,8 @@ used as a context manager:</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="a0164e13-33c1-4ed2-8700-03a1606fa322">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a0164e13-33c1-4ed2-8700-03a1606fa322','4ac7ffd3-a13b-48b1-9fae-745edc87ef73','72b1ed6a-bdc9-4ee5-b95e-c69c547d788e','../../lite/tree/../notebooks/index.html?path=494e5ba1_db16_4288_84e2_8942acdaa6b9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="6851110c-4b2f-481a-b407-12e15df36563">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('6851110c-4b2f-481a-b407-12e15df36563','283fbb3c-487b-4784-9ef9-e64a42bf7c46','316eef4d-4f60-491d-9747-01aed52f008e','../../lite/tree/../notebooks/index.html?path=9b5521ca_f1eb_4eee_831a_1ddaae1c8623.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span><span class="w"> </span><span class="nf">deprecated_func</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
 <span class="gp">... </span>    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Please upgrade&quot;</span><span class="p">,</span> <span class="ne">DeprecationWarning</span><span class="p">)</span>
@@ -620,7 +620,7 @@ used as a context manager:</p>
 </div>
 </div>
 </div>
-<div id="72b1ed6a-bdc9-4ee5-b95e-c69c547d788e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a0164e13-33c1-4ed2-8700-03a1606fa322','72b1ed6a-bdc9-4ee5-b95e-c69c547d788e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a0164e13-33c1-4ed2-8700-03a1606fa322','72b1ed6a-bdc9-4ee5-b95e-c69c547d788e')">Open In Tab</button></div><div id="4ac7ffd3-a13b-48b1-9fae-745edc87ef73" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="316eef4d-4f60-491d-9747-01aed52f008e" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('6851110c-4b2f-481a-b407-12e15df36563','316eef4d-4f60-491d-9747-01aed52f008e')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('6851110c-4b2f-481a-b407-12e15df36563','316eef4d-4f60-491d-9747-01aed52f008e')">Open In Tab</button></div><div id="283fbb3c-487b-4784-9ef9-e64a42bf7c46" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

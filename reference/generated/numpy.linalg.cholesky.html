@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -64,12 +64,12 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="numpy.linalg.outer" href="numpy.linalg.outer.html" />
+    <link rel="next" title="numpy.linalg.qr" href="numpy.linalg.qr.html" />
     <link rel="prev" title="numpy.linalg.cross" href="numpy.linalg.cross.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -453,6 +453,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -465,7 +466,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -655,8 +655,8 @@ details.</p>
 <div class="math notranslate nohighlight">
 \[L^{H} \mathbf{x} = \mathbf{y}.\]</div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="36d725b7-3c1a-4f0a-a465-200d74377d08">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('36d725b7-3c1a-4f0a-a465-200d74377d08','d2fa6322-1cf1-48ac-9ce4-7bc8cf3c43c7','4916e02a-41bf-4a12-a3af-297d403be350','../../lite/tree/../notebooks/index.html?path=93b3b6aa_f38e_4f54_b4ab_34bec11eeee2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c385bd23-4a58-4df8-b6f9-5ab71ed0669b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c385bd23-4a58-4df8-b6f9-5ab71ed0669b','e6391bff-2b15-4adc-981a-f3e14e977f70','09ccda62-2169-421a-a224-0154b7ee6eaf','../../lite/tree/../notebooks/index.html?path=823f7390_c006_45c2_83fc_71d46ac6c78a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="n">j</span><span class="p">],[</span><span class="mi">2</span><span class="n">j</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">A</span>
@@ -685,7 +685,7 @@ details.</p>
 </div>
 </div>
 </div>
-<div id="4916e02a-41bf-4a12-a3af-297d403be350" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('36d725b7-3c1a-4f0a-a465-200d74377d08','4916e02a-41bf-4a12-a3af-297d403be350')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('36d725b7-3c1a-4f0a-a465-200d74377d08','4916e02a-41bf-4a12-a3af-297d403be350')">Open In Tab</button></div><div id="d2fa6322-1cf1-48ac-9ce4-7bc8cf3c43c7" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="09ccda62-2169-421a-a224-0154b7ee6eaf" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c385bd23-4a58-4df8-b6f9-5ab71ed0669b','09ccda62-2169-421a-a224-0154b7ee6eaf')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c385bd23-4a58-4df8-b6f9-5ab71ed0669b','09ccda62-2169-421a-a224-0154b7ee6eaf')">Open In Tab</button></div><div id="e6391bff-2b15-4adc-981a-f3e14e977f70" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 
@@ -709,11 +709,11 @@ details.</p>
       </div>
     </a>
     <a class="right-next"
-       href="numpy.linalg.outer.html"
+       href="numpy.linalg.qr.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">numpy.linalg.outer</p>
+        <p class="prev-next-title">numpy.linalg.qr</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

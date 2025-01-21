@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../_static/documentation_options.js?v=953d3030"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -453,6 +453,7 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.matvec.html">numpy.matvec</a></li>
@@ -465,7 +466,6 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -647,37 +647,40 @@ other methods when computing the matrix product between 2d arrays. The
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.outer.html#numpy.outer" title="numpy.outer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outer</span></code></a>(a, b[, out])</p></td>
 <td><p>Compute the outer product of two vectors.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.matmul.html#numpy.matmul" title="numpy.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.outer.html#numpy.linalg.outer" title="numpy.linalg.outer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.outer</span></code></a>(x1, x2, /)</p></td>
+<td><p>Compute the outer product of two vectors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.matmul.html#numpy.matmul" title="numpy.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matmul</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
 <td><p>Matrix product of two arrays.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.matmul.html#numpy.linalg.matmul" title="numpy.linalg.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.matmul</span></code></a>(x1, x2, /)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.matmul.html#numpy.linalg.matmul" title="numpy.linalg.matmul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.matmul</span></code></a>(x1, x2, /)</p></td>
 <td><p>Computes the matrix product.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.matvec.html#numpy.matvec" title="numpy.matvec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matvec</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.matvec.html#numpy.matvec" title="numpy.matvec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matvec</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
 <td><p>Matrix-vector dot product of two arrays.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.vecmat.html#numpy.vecmat" title="numpy.vecmat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vecmat</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.vecmat.html#numpy.vecmat" title="numpy.vecmat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vecmat</span></code></a>(x1, x2, /[, out, casting, order, ...])</p></td>
 <td><p>Vector-matrix dot product of two arrays.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.tensordot.html#numpy.tensordot" title="numpy.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a>(a, b[, axes])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.tensordot.html#numpy.tensordot" title="numpy.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tensordot</span></code></a>(a, b[, axes])</p></td>
 <td><p>Compute tensor dot product along specified axes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.tensordot.html#numpy.linalg.tensordot" title="numpy.linalg.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.tensordot</span></code></a>(x1, x2, /, *[, axes])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.tensordot.html#numpy.linalg.tensordot" title="numpy.linalg.tensordot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.tensordot</span></code></a>(x1, x2, /, *[, axes])</p></td>
 <td><p>Compute tensor dot product along specified axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.einsum.html#numpy.einsum" title="numpy.einsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">einsum</span></code></a>(subscripts, *operands[, out, dtype, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.einsum.html#numpy.einsum" title="numpy.einsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">einsum</span></code></a>(subscripts, *operands[, out, dtype, ...])</p></td>
 <td><p>Evaluates the Einstein summation convention on the operands.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.einsum_path.html#numpy.einsum_path" title="numpy.einsum_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">einsum_path</span></code></a>(subscripts, *operands[, optimize])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.einsum_path.html#numpy.einsum_path" title="numpy.einsum_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">einsum_path</span></code></a>(subscripts, *operands[, optimize])</p></td>
 <td><p>Evaluates the lowest cost contraction order for an einsum expression by considering the creation of intermediate arrays.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.matrix_power.html#numpy.linalg.matrix_power" title="numpy.linalg.matrix_power"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.matrix_power</span></code></a>(a, n)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.matrix_power.html#numpy.linalg.matrix_power" title="numpy.linalg.matrix_power"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.matrix_power</span></code></a>(a, n)</p></td>
 <td><p>Raise a square matrix to the (integer) power <em class="xref py py-obj">n</em>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.kron.html#numpy.kron" title="numpy.kron"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kron</span></code></a>(a, b)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.kron.html#numpy.kron" title="numpy.kron"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kron</span></code></a>(a, b)</p></td>
 <td><p>Kronecker product of two arrays.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.cross.html#numpy.linalg.cross" title="numpy.linalg.cross"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.cross</span></code></a>(x1, x2, /, *[, axis])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.cross.html#numpy.linalg.cross" title="numpy.linalg.cross"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.cross</span></code></a>(x1, x2, /, *[, axis])</p></td>
 <td><p>Returns the cross product of 3-element vectors.</p></td>
 </tr>
 </tbody>
@@ -691,16 +694,13 @@ other methods when computing the matrix product between 2d arrays. The
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.cholesky.html#numpy.linalg.cholesky" title="numpy.linalg.cholesky"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.cholesky</span></code></a>(a, /, *[, upper])</p></td>
 <td><p>Cholesky decomposition.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.outer.html#numpy.linalg.outer" title="numpy.linalg.outer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.outer</span></code></a>(x1, x2, /)</p></td>
-<td><p>Compute the outer product of two vectors.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.qr.html#numpy.linalg.qr" title="numpy.linalg.qr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.qr</span></code></a>(a[, mode])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.qr.html#numpy.linalg.qr" title="numpy.linalg.qr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.qr</span></code></a>(a[, mode])</p></td>
 <td><p>Compute the qr factorization of a matrix.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.svd.html#numpy.linalg.svd" title="numpy.linalg.svd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.svd</span></code></a>(a[, full_matrices, compute_uv, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.svd.html#numpy.linalg.svd" title="numpy.linalg.svd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.svd</span></code></a>(a[, full_matrices, compute_uv, ...])</p></td>
 <td><p>Singular Value Decomposition.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/numpy.linalg.svdvals.html#numpy.linalg.svdvals" title="numpy.linalg.svdvals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.svdvals</span></code></a>(x, /)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/numpy.linalg.svdvals.html#numpy.linalg.svdvals" title="numpy.linalg.svdvals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linalg.svdvals</span></code></a>(x, /)</p></td>
 <td><p>Returns the singular values of a matrix (or a stack of matrices) <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></td>
 </tr>
 </tbody>

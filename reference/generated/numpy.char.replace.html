@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -591,7 +591,7 @@
 <h1>numpy.char.replace<a class="headerlink" href="#numpy-char-replace" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.char.replace">
-<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1231-L1292"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.replace" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1232-L1293"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.replace" title="Link to this definition">#</a></dt>
 <dd><p>For each element in <code class="docutils literal notranslate"><span class="pre">a</span></code>, return a copy of the string with
 occurrences of substring <code class="docutils literal notranslate"><span class="pre">old</span></code> replaced by <code class="docutils literal notranslate"><span class="pre">new</span></code>.</p>
 <dl class="field-list">
@@ -619,8 +619,8 @@ depending on input types</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="12c10685-4be1-4f41-a70c-0e499eebb635">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('12c10685-4be1-4f41-a70c-0e499eebb635','3840531d-c9e7-49fb-831f-89aa20af13d2','7e4df31d-3d7b-4729-a43b-8346f78bb250','../../lite/tree/../notebooks/index.html?path=f066465a_1a1e_4d3a_be5a_a84950a1ecfe.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="723db823-0ac5-4473-ba8d-ad0a17b63534">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('723db823-0ac5-4473-ba8d-ad0a17b63534','d7eb769d-619f-40c0-9c38-f85808293504','94991d13-2fb0-46c8-99b0-600115eaf6e7','../../lite/tree/../notebooks/index.html?path=dc128cfe_2d3b_4892_98ae_7725e3701073.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;That is a mango&quot;</span><span class="p">,</span> <span class="s2">&quot;Monkeys eat mangos&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">strings</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">)</span>
@@ -634,7 +634,7 @@ depending on input types</p>
 </div>
 </div>
 </div>
-<div id="7e4df31d-3d7b-4729-a43b-8346f78bb250" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('12c10685-4be1-4f41-a70c-0e499eebb635','7e4df31d-3d7b-4729-a43b-8346f78bb250')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('12c10685-4be1-4f41-a70c-0e499eebb635','7e4df31d-3d7b-4729-a43b-8346f78bb250')">Open In Tab</button></div><div id="3840531d-c9e7-49fb-831f-89aa20af13d2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="94991d13-2fb0-46c8-99b0-600115eaf6e7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('723db823-0ac5-4473-ba8d-ad0a17b63534','94991d13-2fb0-46c8-99b0-600115eaf6e7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('723db823-0ac5-4473-ba8d-ad0a17b63534','94991d13-2fb0-46c8-99b0-600115eaf6e7')">Open In Tab</button></div><div id="d7eb769d-619f-40c0-9c38-f85808293504" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

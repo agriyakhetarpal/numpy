@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -573,7 +573,7 @@
 <h1>numpy.testing.assert_array_almost_equal_nulp<a class="headerlink" href="#numpy-testing-assert-array-almost-equal-nulp" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.testing.assert_array_almost_equal_nulp">
-<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_almost_equal_nulp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nulp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1682-L1742"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_almost_equal_nulp" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_almost_equal_nulp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nulp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1683-L1743"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_almost_equal_nulp" title="Link to this definition">#</a></dt>
 <dd><p>Compare two arrays relatively to their spacing.</p>
 <p>This is a relatively robust method to compare two arrays whose amplitude
 is variable.</p>
@@ -615,8 +615,8 @@ than <em class="xref py py-obj">nulp</em>.</p>
 </pre></div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="bd9803bb-f063-4f19-9d6c-e5fcf572a544">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('bd9803bb-f063-4f19-9d6c-e5fcf572a544','fe3c89d2-bef7-4a89-b811-33121f42bfb9','9eadabc1-787e-44dc-9be2-dfc72e3f5954','../../lite/tree/../notebooks/index.html?path=84e3688c_986a_463e_a025_e037f841096a.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="d2ce3938-5838-4351-8560-940c9a587a4b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d2ce3938-5838-4351-8560-940c9a587a4b','09dca4d0-aefb-440b-a140-36c022ef7cfa','1fb5212e-8fcb-4970-871c-b8ee1454b852','../../lite/tree/../notebooks/index.html?path=78ce51df_a869_4042_a15e_ccd367a1c111.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1e-10</span><span class="p">,</span> <span class="mf">1e-20</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">eps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal_nulp</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="n">eps</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span>
@@ -630,7 +630,7 @@ than <em class="xref py py-obj">nulp</em>.</p>
 </div>
 </div>
 </div>
-<div id="9eadabc1-787e-44dc-9be2-dfc72e3f5954" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('bd9803bb-f063-4f19-9d6c-e5fcf572a544','9eadabc1-787e-44dc-9be2-dfc72e3f5954')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('bd9803bb-f063-4f19-9d6c-e5fcf572a544','9eadabc1-787e-44dc-9be2-dfc72e3f5954')">Open In Tab</button></div><div id="fe3c89d2-bef7-4a89-b811-33121f42bfb9" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="1fb5212e-8fcb-4970-871c-b8ee1454b852" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d2ce3938-5838-4351-8560-940c9a587a4b','1fb5212e-8fcb-4970-871c-b8ee1454b852')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d2ce3938-5838-4351-8560-940c9a587a4b','1fb5212e-8fcb-4970-871c-b8ee1454b852')">Open In Tab</button></div><div id="09dca4d0-aefb-440b-a140-36c022ef7cfa" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

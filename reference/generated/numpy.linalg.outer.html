@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -63,12 +63,12 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="numpy.linalg.qr" href="numpy.linalg.qr.html" />
-    <link rel="prev" title="numpy.linalg.cholesky" href="numpy.linalg.cholesky.html" />
+    <link rel="next" title="numpy.matmul" href="numpy.matmul.html" />
+    <link rel="prev" title="numpy.outer" href="numpy.outer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -621,8 +621,8 @@ Must have a numeric data type.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="314c418d-a40c-4dc6-80be-7cb3bd8aaa6e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('314c418d-a40c-4dc6-80be-7cb3bd8aaa6e','4f48fdbe-ff46-4a3c-87b8-63a5de26c9ac','abc42638-950a-4670-aabc-c66703b33503','../../lite/tree/../notebooks/index.html?path=c3c42957_1be2_4bab_884f_ef764c599df9.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="e8e60d79-39fd-4d3d-9362-81a2a896aa8d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e8e60d79-39fd-4d3d-9362-81a2a896aa8d','1637a061-0a3e-44a2-926e-1ac5dc08c9a2','6f8cdfdf-83cb-4871-a073-d1ad23ac027b','../../lite/tree/../notebooks/index.html?path=f2a205f1_4359_4495_bd7b_8ab39fb5a270.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Make a (<em>very</em> coarse) grid for computing a Mandelbrot set:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">5</span><span class="p">,)),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rl</span>
@@ -657,7 +657,7 @@ Must have a numeric data type.</p>
 </div>
 </div>
 </div>
-<div id="abc42638-950a-4670-aabc-c66703b33503" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('314c418d-a40c-4dc6-80be-7cb3bd8aaa6e','abc42638-950a-4670-aabc-c66703b33503')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('314c418d-a40c-4dc6-80be-7cb3bd8aaa6e','abc42638-950a-4670-aabc-c66703b33503')">Open In Tab</button></div><div id="4f48fdbe-ff46-4a3c-87b8-63a5de26c9ac" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="6f8cdfdf-83cb-4871-a073-d1ad23ac027b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e8e60d79-39fd-4d3d-9362-81a2a896aa8d','6f8cdfdf-83cb-4871-a073-d1ad23ac027b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e8e60d79-39fd-4d3d-9362-81a2a896aa8d','6f8cdfdf-83cb-4871-a073-d1ad23ac027b')">Open In Tab</button></div><div id="1637a061-0a3e-44a2-926e-1ac5dc08c9a2" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 
@@ -672,20 +672,20 @@ Must have a numeric data type.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="numpy.linalg.cholesky.html"
+       href="numpy.outer.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">numpy.linalg.cholesky</p>
+        <p class="prev-next-title">numpy.outer</p>
       </div>
     </a>
     <a class="right-next"
-       href="numpy.linalg.qr.html"
+       href="numpy.matmul.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">numpy.linalg.qr</p>
+        <p class="prev-next-title">numpy.matmul</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

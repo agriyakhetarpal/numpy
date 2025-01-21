@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -628,8 +628,8 @@ which to compute the cross-product. Default: <code class="docutils literal notra
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="e6031f80-c388-41e7-921e-c64ca5e4e03f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('e6031f80-c388-41e7-921e-c64ca5e4e03f','1e2c0a85-40f8-448d-82e2-c4f6e5a5b3ff','fb70ff65-ef2e-4bc4-bd4f-c8e2d4f9e0ee','../../lite/tree/../notebooks/index.html?path=220f10d2_3f8c_486f_b24a_b19ed1d5e977.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="495639fb-6a12-40b3-b2b3-90e7f45c8103">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('495639fb-6a12-40b3-b2b3-90e7f45c8103','184f9cfa-7746-4525-87b1-55e2115f5123','1db1019b-e216-481e-83d0-8d148753d771','../../lite/tree/../notebooks/index.html?path=f9be131c_c63c_4687_abb3_fccee2026aa2.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Vector cross-product.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
@@ -656,7 +656,7 @@ product vector is defined by the <em>right-hand rule</em>.</p>
 </div>
 </div>
 </div>
-<div id="fb70ff65-ef2e-4bc4-bd4f-c8e2d4f9e0ee" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('e6031f80-c388-41e7-921e-c64ca5e4e03f','fb70ff65-ef2e-4bc4-bd4f-c8e2d4f9e0ee')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('e6031f80-c388-41e7-921e-c64ca5e4e03f','fb70ff65-ef2e-4bc4-bd4f-c8e2d4f9e0ee')">Open In Tab</button></div><div id="1e2c0a85-40f8-448d-82e2-c4f6e5a5b3ff" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="1db1019b-e216-481e-83d0-8d148753d771" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('495639fb-6a12-40b3-b2b3-90e7f45c8103','1db1019b-e216-481e-83d0-8d148753d771')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('495639fb-6a12-40b3-b2b3-90e7f45c8103','1db1019b-e216-481e-83d0-8d148753d771')">Open In Tab</button></div><div id="184f9cfa-7746-4525-87b1-55e2115f5123" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

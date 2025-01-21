@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.strip.html">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.title.html">numpy.strings.title</a></li>
@@ -591,7 +592,7 @@
 <h1>numpy.strings.rpartition<a class="headerlink" href="#numpy-strings-rpartition" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.strings.rpartition">
-<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">rpartition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1525-L1591"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.rpartition" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">rpartition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1526-L1592"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.rpartition" title="Link to this definition">#</a></dt>
 <dd><p>Partition (split) each element around the right-most separator.</p>
 <p>For each element in <code class="docutils literal notranslate"><span class="pre">a</span></code>, split the element at the last
 occurrence of <code class="docutils literal notranslate"><span class="pre">sep</span></code>, and return a 3-tuple containing the part
@@ -629,8 +630,8 @@ part after the separator</p></li>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="da1cb11e-054c-485b-920e-f35d7332561e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('da1cb11e-054c-485b-920e-f35d7332561e','332e1eab-a6a0-4b48-97cc-3e872d02e478','959200c9-b1b3-4b81-a8f1-ece779e1466a','../../lite/tree/../notebooks/index.html?path=cc109aa9_5159_4306_a7c9_7b39eb4f8a3e.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="8efe7fff-abd3-4ff4-810b-9af938501507">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('8efe7fff-abd3-4ff4-810b-9af938501507','7da0694e-b831-4cb5-8e9e-0baa02d5d880','54331cdd-4d55-4d75-9014-7424e5ff3dd8','../../lite/tree/../notebooks/index.html?path=18a7fa8c_8e49_47ac_8acb_2a5870ca647f.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;aAaAaA&#39;</span><span class="p">,</span> <span class="s1">&#39;  aA  &#39;</span><span class="p">,</span> <span class="s1">&#39;abBABba&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">strings</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">)</span>
@@ -641,7 +642,7 @@ part after the separator</p></li>
 </div>
 </div>
 </div>
-<div id="959200c9-b1b3-4b81-a8f1-ece779e1466a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('da1cb11e-054c-485b-920e-f35d7332561e','959200c9-b1b3-4b81-a8f1-ece779e1466a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('da1cb11e-054c-485b-920e-f35d7332561e','959200c9-b1b3-4b81-a8f1-ece779e1466a')">Open In Tab</button></div><div id="332e1eab-a6a0-4b48-97cc-3e872d02e478" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="54331cdd-4d55-4d75-9014-7424e5ff3dd8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('8efe7fff-abd3-4ff4-810b-9af938501507','54331cdd-4d55-4d75-9014-7424e5ff3dd8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('8efe7fff-abd3-4ff4-810b-9af938501507','54331cdd-4d55-4d75-9014-7424e5ff3dd8')">Open In Tab</button></div><div id="7da0694e-b831-4cb5-8e9e-0baa02d5d880" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

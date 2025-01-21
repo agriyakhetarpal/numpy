@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rpartition.html">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.strip.html">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">numpy.strings.title</a></li>
@@ -591,7 +592,7 @@
 <h1>numpy.strings.title<a class="headerlink" href="#numpy-strings-title" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.strings.title">
-<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1189-L1228"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.title" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1190-L1229"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.title" title="Link to this definition">#</a></dt>
 <dd><p>Return element-wise title cased version of string or unicode.</p>
 <p>Title case words start with uppercase characters, all remaining cased
 characters are lowercase.</p>
@@ -619,8 +620,8 @@ depending on input types</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="9db7608f-4f59-4d60-ad59-e076ae016e7e">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('9db7608f-4f59-4d60-ad59-e076ae016e7e','49a17fa0-32e5-43c3-8836-f2908933abdc','b93eeb82-93d3-4471-8ea6-f2cecaba3b50','../../lite/tree/../notebooks/index.html?path=b2318400_e5f4_4740_b127_9db5a5fdec06.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="c92db330-6a58-4f0c-9ceb-4836e447e0b0">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c92db330-6a58-4f0c-9ceb-4836e447e0b0','8e5096a8-1054-437a-86a0-3441a004ee94','a0dc76d5-4778-4dfb-8bbf-e70b2cf6fafd','../../lite/tree/../notebooks/index.html?path=48a336d3_913a_423b_9979_68ff27a93993.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a1b c&#39;</span><span class="p">,</span><span class="s1">&#39;1b ca&#39;</span><span class="p">,</span><span class="s1">&#39;b ca1&#39;</span><span class="p">,</span><span class="s1">&#39;ca1b&#39;</span><span class="p">],</span><span class="s1">&#39;S5&#39;</span><span class="p">);</span> <span class="n">c</span>
 <span class="go">array([&#39;a1b c&#39;, &#39;1b ca&#39;, &#39;b ca1&#39;, &#39;ca1b&#39;],</span>
@@ -632,7 +633,7 @@ depending on input types</p>
 </div>
 </div>
 </div>
-<div id="b93eeb82-93d3-4471-8ea6-f2cecaba3b50" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('9db7608f-4f59-4d60-ad59-e076ae016e7e','b93eeb82-93d3-4471-8ea6-f2cecaba3b50')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('9db7608f-4f59-4d60-ad59-e076ae016e7e','b93eeb82-93d3-4471-8ea6-f2cecaba3b50')">Open In Tab</button></div><div id="49a17fa0-32e5-43c3-8836-f2908933abdc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="a0dc76d5-4778-4dfb-8bbf-e70b2cf6fafd" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c92db330-6a58-4f0c-9ceb-4836e447e0b0','a0dc76d5-4778-4dfb-8bbf-e70b2cf6fafd')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c92db330-6a58-4f0c-9ceb-4836e447e0b0','a0dc76d5-4778-4dfb-8bbf-e70b2cf6fafd')">Open In Tab</button></div><div id="8e5096a8-1054-437a-86a0-3441a004ee94" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

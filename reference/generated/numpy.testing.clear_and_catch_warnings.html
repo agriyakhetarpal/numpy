@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -573,7 +573,7 @@
 <h1>numpy.testing.clear_and_catch_warnings<a class="headerlink" href="#numpy-testing-clear-and-catch-warnings" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="numpy.testing.clear_and_catch_warnings">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.testing.</span></span><span class="sig-name descname"><span class="pre">clear_and_catch_warnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L2115-L2178"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.clear_and_catch_warnings" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">numpy.testing.</span></span><span class="sig-name descname"><span class="pre">clear_and_catch_warnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L2116-L2179"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.clear_and_catch_warnings" title="Link to this definition">#</a></dt>
 <dd><p>Context manager that resets warning registry for catching warnings</p>
 <p>Warnings can be slippery, because, whenever a warning is triggered, Python
 adds a <code class="docutils literal notranslate"><span class="pre">__warningregistry__</span></code> member to the <em>calling</em> module.  This makes
@@ -606,8 +606,8 @@ filter by one of these modules.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="ffed7991-6326-4a8c-9785-71726b89b619">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('ffed7991-6326-4a8c-9785-71726b89b619','c520184e-3d2a-4237-b0bf-9f1d767c0010','e1188e50-187b-4212-b479-479392f9b6f8','../../lite/tree/../notebooks/index.html?path=9b55e70e_a73e_42ed_9ff4_266dd3d9ba76.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="02c63d18-af10-4210-8f3c-877fba4c3d0d">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('02c63d18-af10-4210-8f3c-877fba4c3d0d','323a78bc-d5ca-446f-ac00-112659c3cbf4','e6355bfa-deec-42a9-8a0d-9aabe88c2f72','../../lite/tree/../notebooks/index.html?path=bf1de18f_a429_4c3a_929c_f77c732bc23d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">clear_and_catch_warnings</span><span class="p">(</span>
 <span class="gp">... </span>        <span class="n">modules</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">_core</span><span class="o">.</span><span class="n">fromnumeric</span><span class="p">]):</span>
@@ -619,7 +619,7 @@ filter by one of these modules.</p>
 </div>
 </div>
 </div>
-<div id="e1188e50-187b-4212-b479-479392f9b6f8" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('ffed7991-6326-4a8c-9785-71726b89b619','e1188e50-187b-4212-b479-479392f9b6f8')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('ffed7991-6326-4a8c-9785-71726b89b619','e1188e50-187b-4212-b479-479392f9b6f8')">Open In Tab</button></div><div id="c520184e-3d2a-4237-b0bf-9f1d767c0010" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="e6355bfa-deec-42a9-8a0d-9aabe88c2f72" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('02c63d18-af10-4210-8f3c-877fba4c3d0d','e6355bfa-deec-42a9-8a0d-9aabe88c2f72')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('02c63d18-af10-4210-8f3c-877fba4c3d0d','e6355bfa-deec-42a9-8a0d-9aabe88c2f72')">Open In Tab</button></div><div id="323a78bc-d5ca-446f-ac00-112659c3cbf4" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

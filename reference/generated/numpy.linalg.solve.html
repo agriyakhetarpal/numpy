@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -650,8 +650,8 @@ FL, Academic Press, Inc., 1980, pg. 22.</p>
 </div>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="67a046c2-397e-4901-a70a-5362a52fa55f">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('67a046c2-397e-4901-a70a-5362a52fa55f','f956ad6d-c311-4008-b0af-84aabd7eb493','406c2eca-1e75-4754-b48b-b9dbfd37245b','../../lite/tree/../notebooks/index.html?path=725a79a3_48cc_4d7a_b9fc_87305e2cd6f4.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="3246ea4c-aafb-48e1-a992-a7a103cbf414">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('3246ea4c-aafb-48e1-a992-a7a103cbf414','3c854a09-0335-431f-acd2-9a261690f5bc','feacd5c6-9708-4157-9faa-259c7dcfe178','../../lite/tree/../notebooks/index.html?path=82bae4f6_29a4_41ae_a8b7_bc1709e7a03c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Solve the system of equations:
 <code class="docutils literal notranslate"><span class="pre">x0</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x1</span> <span class="pre">=</span> <span class="pre">1</span></code> and
 <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">*</span> <span class="pre">x0</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">*</span> <span class="pre">x1</span> <span class="pre">=</span> <span class="pre">2</span></code>:</p>
@@ -670,7 +670,7 @@ FL, Academic Press, Inc., 1980, pg. 22.</p>
 </div>
 </div>
 </div>
-<div id="406c2eca-1e75-4754-b48b-b9dbfd37245b" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('67a046c2-397e-4901-a70a-5362a52fa55f','406c2eca-1e75-4754-b48b-b9dbfd37245b')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('67a046c2-397e-4901-a70a-5362a52fa55f','406c2eca-1e75-4754-b48b-b9dbfd37245b')">Open In Tab</button></div><div id="f956ad6d-c311-4008-b0af-84aabd7eb493" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="feacd5c6-9708-4157-9faa-259c7dcfe178" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('3246ea4c-aafb-48e1-a992-a7a103cbf414','feacd5c6-9708-4157-9faa-259c7dcfe178')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('3246ea4c-aafb-48e1-a992-a7a103cbf414','feacd5c6-9708-4157-9faa-259c7dcfe178')">Open In Tab</button></div><div id="3c854a09-0335-431f-acd2-9a261690f5bc" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

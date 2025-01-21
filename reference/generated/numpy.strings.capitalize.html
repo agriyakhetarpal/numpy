@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -451,6 +451,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rjust.html">numpy.strings.rjust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rpartition.html">numpy.strings.rpartition</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.rstrip.html">numpy.strings.rstrip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.strings.slice.html">numpy.strings.slice</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.strip.html">numpy.strings.strip</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.swapcase.html">numpy.strings.swapcase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.strings.title.html">numpy.strings.title</a></li>
@@ -591,7 +592,7 @@
 <h1>numpy.strings.capitalize<a class="headerlink" href="#numpy-strings-capitalize" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.strings.capitalize">
-<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">capitalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1149-L1186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.capitalize" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">strings.</span></span><span class="sig-name descname"><span class="pre">capitalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L1150-L1187"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.strings.capitalize" title="Link to this definition">#</a></dt>
 <dd><p>Return a copy of <code class="docutils literal notranslate"><span class="pre">a</span></code> with only the first character of each element
 capitalized.</p>
 <p>Calls <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.capitalize" title="(in Python v3.13)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str.capitalize</span></code></a> element-wise.</p>
@@ -618,8 +619,8 @@ depending on input types</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="1ccf9f58-cc6c-4e04-bb8f-c2ffeea1dc31">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('1ccf9f58-cc6c-4e04-bb8f-c2ffeea1dc31','ece1804d-5572-4e4b-96d8-3d84a34a243c','6f101783-7da9-49e8-8011-7ee2894920c5','../../lite/tree/../notebooks/index.html?path=86c242f5_77d8_4b87_a7f5_0b59cb2e961d.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="7ab7bab3-166d-455e-a726-fddee59b83a2">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7ab7bab3-166d-455e-a726-fddee59b83a2','df0a72c5-f6b8-46c2-b346-151aba4711bb','c364cebe-f8e5-468c-b24d-c7bf86b674dd','../../lite/tree/../notebooks/index.html?path=88cccb6c_e137_4284_984e_76daf36a0a34.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a1b2&#39;</span><span class="p">,</span><span class="s1">&#39;1b2a&#39;</span><span class="p">,</span><span class="s1">&#39;b2a1&#39;</span><span class="p">,</span><span class="s1">&#39;2a1b&#39;</span><span class="p">],</span><span class="s1">&#39;S4&#39;</span><span class="p">);</span> <span class="n">c</span>
 <span class="go">array([&#39;a1b2&#39;, &#39;1b2a&#39;, &#39;b2a1&#39;, &#39;2a1b&#39;],</span>
@@ -631,7 +632,7 @@ depending on input types</p>
 </div>
 </div>
 </div>
-<div id="6f101783-7da9-49e8-8011-7ee2894920c5" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('1ccf9f58-cc6c-4e04-bb8f-c2ffeea1dc31','6f101783-7da9-49e8-8011-7ee2894920c5')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('1ccf9f58-cc6c-4e04-bb8f-c2ffeea1dc31','6f101783-7da9-49e8-8011-7ee2894920c5')">Open In Tab</button></div><div id="ece1804d-5572-4e4b-96d8-3d84a34a243c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="c364cebe-f8e5-468c-b24d-c7bf86b674dd" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7ab7bab3-166d-455e-a726-fddee59b83a2','c364cebe-f8e5-468c-b24d-c7bf86b674dd')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7ab7bab3-166d-455e-a726-fddee59b83a2','c364cebe-f8e5-468c-b24d-c7bf86b674dd')">Open In Tab</button></div><div id="df0a72c5-f6b8-46c2-b346-151aba4711bb" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

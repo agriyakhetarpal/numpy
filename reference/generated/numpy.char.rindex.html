@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -591,7 +591,7 @@
 <h1>numpy.char.rindex<a class="headerlink" href="#numpy-char-rindex" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.char.rindex">
-<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">rindex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L348-L379"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.rindex" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">char.</span></span><span class="sig-name descname"><span class="pre">rindex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/_core/strings.py#L349-L380"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.char.rindex" title="Link to this definition">#</a></dt>
 <dd><p>Like <a class="reference internal" href="numpy.char.rfind.html#numpy.char.rfind" title="numpy.char.rfind"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rfind</span></code></a>, but raises <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> when the substring <em class="xref py py-obj">sub</em> is
 not found.</p>
 <dl class="field-list">
@@ -616,8 +616,8 @@ not found.</p>
 </dl>
 </div>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="00eb33c0-9f04-4560-bbdc-9f8ca0007fb9">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('00eb33c0-9f04-4560-bbdc-9f8ca0007fb9','29c3c72e-3494-47fb-8f8b-4acab0222023','10507f02-2f08-411b-b701-2b300a4f957d','../../lite/tree/../notebooks/index.html?path=1267e804_280f_4082_b208_cfd4d8a39b36.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="fd4ef8aa-6fab-4d66-ae3f-8b61771980b7">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('fd4ef8aa-6fab-4d66-ae3f-8b61771980b7','b5d87aa3-88a8-4981-a57f-17e39a81ee63','4ce8b2ab-5349-4c43-91f8-e3a040a09b49','../../lite/tree/../notebooks/index.html?path=d2053a57_53c0_4453_8128_067affdd65e6.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;Computer Science&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">strings</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;Science&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="go">array([9])</span>
@@ -625,7 +625,7 @@ not found.</p>
 </div>
 </div>
 </div>
-<div id="10507f02-2f08-411b-b701-2b300a4f957d" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('00eb33c0-9f04-4560-bbdc-9f8ca0007fb9','10507f02-2f08-411b-b701-2b300a4f957d')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('00eb33c0-9f04-4560-bbdc-9f8ca0007fb9','10507f02-2f08-411b-b701-2b300a4f957d')">Open In Tab</button></div><div id="29c3c72e-3494-47fb-8f8b-4acab0222023" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="4ce8b2ab-5349-4c43-91f8-e3a040a09b49" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('fd4ef8aa-6fab-4d66-ae3f-8b61771980b7','4ce8b2ab-5349-4c43-91f8-e3a040a09b49')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('fd4ef8aa-6fab-4d66-ae3f-8b61771980b7','4ce8b2ab-5349-4c43-91f8-e3a040a09b49')">Open In Tab</button></div><div id="b5d87aa3-88a8-4981-a57f-17e39a81ee63" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

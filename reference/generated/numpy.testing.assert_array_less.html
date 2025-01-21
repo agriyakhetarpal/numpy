@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -573,7 +573,7 @@
 <h1>numpy.testing.assert_array_less<a class="headerlink" href="#numpy-testing-assert-array-less" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="numpy.testing.assert_array_less">
-<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_less</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1140-L1252"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_less" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">testing.</span></span><span class="sig-name descname"><span class="pre">assert_array_less</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/numpy/numpy/blob/main/numpy/testing/_private/utils.py#L1141-L1253"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numpy.testing.assert_array_less" title="Link to this definition">#</a></dt>
 <dd><p>Raises an AssertionError if two array_like objects are not ordered by less
 than.</p>
 <p>Given two array_like objects <em class="xref py py-obj">x</em> and <em class="xref py py-obj">y</em>, check that the shape is equal and
@@ -624,8 +624,8 @@ function performs the comparison as though the scalar were broadcasted
 to the shape of the array. This behaviour can be disabled with the <em class="xref py py-obj">strict</em>
 parameter.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="c727dfef-8359-4c13-9239-f97d471a1c12">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('c727dfef-8359-4c13-9239-f97d471a1c12','00423765-5d17-43e2-8479-3c25f7fde7eb','4729a69c-04e2-49eb-8d75-494537b2e5df','../../lite/tree/../notebooks/index.html?path=fef3933e_4d90_4237_9981_24ac98cdb9d1.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="a04ec948-e2b0-4ccd-af7f-c49c29ee907b">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('a04ec948-e2b0-4ccd-af7f-c49c29ee907b','63239a8c-4e46-40ff-a43d-33561f472516','094b0987-ba7f-4a91-8e23-2eee67f8a871','../../lite/tree/../notebooks/index.html?path=210ee2fe_328d_4a27_887d_b87e7abcb0d8.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>The following assertion passes because each finite element of <em class="xref py py-obj">x</em> is
 strictly less than the corresponding element of <em class="xref py py-obj">y</em>, and the NaNs are in
 corresponding locations.</p>
@@ -686,7 +686,7 @@ arrays do not match.</p>
 </div>
 </div>
 </div>
-<div id="4729a69c-04e2-49eb-8d75-494537b2e5df" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('c727dfef-8359-4c13-9239-f97d471a1c12','4729a69c-04e2-49eb-8d75-494537b2e5df')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('c727dfef-8359-4c13-9239-f97d471a1c12','4729a69c-04e2-49eb-8d75-494537b2e5df')">Open In Tab</button></div><div id="00423765-5d17-43e2-8479-3c25f7fde7eb" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="094b0987-ba7f-4a91-8e23-2eee67f8a871" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('a04ec948-e2b0-4ccd-af7f-c49c29ee907b','094b0987-ba7f-4a91-8e23-2eee67f8a871')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('a04ec948-e2b0-4ccd-af7f-c49c29ee907b','094b0987-ba7f-4a91-8e23-2eee67f8a871')">Open In Tab</button></div><div id="63239a8c-4e46-40ff-a43d-33561f472516" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

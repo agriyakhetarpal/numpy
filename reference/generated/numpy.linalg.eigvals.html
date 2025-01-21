@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -637,8 +637,8 @@ details.</p>
 <p>This is implemented using the <code class="docutils literal notranslate"><span class="pre">_geev</span></code> LAPACK routines which compute
 the eigenvalues and eigenvectors of general square arrays.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="b06e8573-28af-4f66-bbfe-aff554762157">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b06e8573-28af-4f66-bbfe-aff554762157','868744a7-c553-4c46-a707-4f69b6e9452c','65447d08-2ea2-459e-8519-b8b0726f1136','../../lite/tree/../notebooks/index.html?path=7e9bd088_1e7e_4141_a9ee_1b0088bda381.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="0f5a8abb-83f0-409a-b28c-c83b202cbe98">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('0f5a8abb-83f0-409a-b28c-c83b202cbe98','4a66596c-18cd-4a16-9efe-42f458cfd689','1ab0df89-e39e-4fa4-b282-cef415f224d7','../../lite/tree/../notebooks/index.html?path=91027307_b8f6_412b_8e0e_3a29705f67cf.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>Illustration, using the fact that the eigenvalues of a diagonal matrix
 are its diagonal elements, that multiplying a matrix on the left
 by an orthogonal matrix, <em class="xref py py-obj">Q</em>, and on the right by <em class="xref py py-obj">Q.T</em> (the transpose
@@ -666,7 +666,7 @@ by <code class="docutils literal notranslate"><span class="pre">Q.T</span></code
 </div>
 </div>
 </div>
-<div id="65447d08-2ea2-459e-8519-b8b0726f1136" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b06e8573-28af-4f66-bbfe-aff554762157','65447d08-2ea2-459e-8519-b8b0726f1136')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b06e8573-28af-4f66-bbfe-aff554762157','65447d08-2ea2-459e-8519-b8b0726f1136')">Open In Tab</button></div><div id="868744a7-c553-4c46-a707-4f69b6e9452c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="1ab0df89-e39e-4fa4-b282-cef415f224d7" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('0f5a8abb-83f0-409a-b28c-c83b202cbe98','1ab0df89-e39e-4fa4-b282-cef415f224d7')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('0f5a8abb-83f0-409a-b28c-c83b202cbe98','1ab0df89-e39e-4fa4-b282-cef415f224d7')">Open In Tab</button></div><div id="4a66596c-18cd-4a16-9efe-42f458cfd689" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

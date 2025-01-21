@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -452,6 +452,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.vecdot.html">numpy.linalg.vecdot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.inner.html">numpy.inner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.outer.html">numpy.outer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matmul.html">numpy.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.matmul.html">numpy.linalg.matmul</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.matvec.html">numpy.matvec</a></li>
@@ -464,7 +465,6 @@
 <li class="toctree-l3"><a class="reference internal" href="numpy.kron.html">numpy.kron</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cross.html">numpy.linalg.cross</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.cholesky.html">numpy.linalg.cholesky</a></li>
-<li class="toctree-l3"><a class="reference internal" href="numpy.linalg.outer.html">numpy.linalg.outer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.qr.html">numpy.linalg.qr</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svd.html">numpy.linalg.svd</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numpy.linalg.svdvals.html">numpy.linalg.svdvals</a></li>
@@ -646,8 +646,8 @@ contracted first, the result of this contraction is then appended to the
 end of the contraction list. This list can then be iterated over until all
 intermediate contractions are complete.</p>
 <p class="rubric">Examples</p>
-<div class="try_examples_outer_container docutils container" id="7b4eb0c1-fbac-47d8-955d-0b391d57d605">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('7b4eb0c1-fbac-47d8-955d-0b391d57d605','679866ec-d80c-4ff6-8728-3d33cac67ac6','65972a24-f516-46f2-be44-0a6338184009','../../lite/tree/../notebooks/index.html?path=b1e3b841_1fd1_42f9_b2dd_29315d7a6820.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="b348278b-aee5-48aa-b681-0ccc62b37a83">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('b348278b-aee5-48aa-b681-0ccc62b37a83','56b3c66a-4317-414d-b376-ac1f26994493','cc8eef38-35f1-4763-ac17-c7a223352372','../../lite/tree/../notebooks/index.html?path=b0fd7382_dfe5_4914_aa7d_18068a09caac.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <p>We can begin with a chain dot example. In this case, it is optimal to
 contract the <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> tensors first as represented by the first
 element of the path <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">2)</span></code>. The resulting tensor is added to the end
@@ -703,7 +703,7 @@ completed.</p>
 </div>
 </div>
 </div>
-<div id="65972a24-f516-46f2-be44-0a6338184009" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('7b4eb0c1-fbac-47d8-955d-0b391d57d605','65972a24-f516-46f2-be44-0a6338184009')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('7b4eb0c1-fbac-47d8-955d-0b391d57d605','65972a24-f516-46f2-be44-0a6338184009')">Open In Tab</button></div><div id="679866ec-d80c-4ff6-8728-3d33cac67ac6" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
+<div id="cc8eef38-35f1-4763-ac17-c7a223352372" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('b348278b-aee5-48aa-b681-0ccc62b37a83','cc8eef38-35f1-4763-ac17-c7a223352372')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('b348278b-aee5-48aa-b681-0ccc62b37a83','cc8eef38-35f1-4763-ac17-c7a223352372')">Open In Tab</button></div><div id="56b3c66a-4317-414d-b376-ac1f26994493" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script></dd></dl>
 
 </section>
 

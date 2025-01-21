@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -69,7 +69,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -561,8 +561,8 @@
 probability distributions. In general, users will create a <a class="reference internal" href="generator.html#numpy.random.Generator" title="numpy.random.Generator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator</span></code></a> instance
 with <a class="reference internal" href="generator.html#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> and call the various methods on it to obtain samples from
 different distributions.</p>
-<div class="try_examples_outer_container docutils container" id="f7c9fefc-acdc-4a19-bff4-d0598546b94a">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('f7c9fefc-acdc-4a19-bff4-d0598546b94a','e28653c4-8851-459d-bdf4-7440a0e30340','8e3617cf-aafc-45d0-a9ba-3c406d4fb862','../../lite/tree/../notebooks/index.html?path=725ff17c_0d7a_43d0_9279_4fdd07cd207c.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="50fd8adf-fecc-4339-8665-ebf97d087f81">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('50fd8adf-fecc-4339-8665-ebf97d087f81','1118586e-49a9-4030-989a-a4050ea6b1ba','094ce4a2-cd6f-4655-bdd6-92dae7910516','../../lite/tree/../notebooks/index.html?path=0943e8a1_731d_416c_9e0e_656d883afc37.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 </pre></div>
@@ -585,14 +585,14 @@ different distributions.</p>
 </div>
 </div>
 </div>
-<div id="8e3617cf-aafc-45d0-a9ba-3c406d4fb862" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('f7c9fefc-acdc-4a19-bff4-d0598546b94a','8e3617cf-aafc-45d0-a9ba-3c406d4fb862')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('f7c9fefc-acdc-4a19-bff4-d0598546b94a','8e3617cf-aafc-45d0-a9ba-3c406d4fb862')">Open In Tab</button></div><div id="e28653c4-8851-459d-bdf4-7440a0e30340" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>Our RNGs are deterministic sequences and can be reproduced by specifying a seed integer to
+<div id="094ce4a2-cd6f-4655-bdd6-92dae7910516" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('50fd8adf-fecc-4339-8665-ebf97d087f81','094ce4a2-cd6f-4655-bdd6-92dae7910516')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('50fd8adf-fecc-4339-8665-ebf97d087f81','094ce4a2-cd6f-4655-bdd6-92dae7910516')">Open In Tab</button></div><div id="1118586e-49a9-4030-989a-a4050ea6b1ba" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>Our RNGs are deterministic sequences and can be reproduced by specifying a seed integer to
 derive its initial state. By default, with no seed provided, <a class="reference internal" href="generator.html#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> will
 seed the RNG from nondeterministic data from the operating system and therefore
 generate different numbers each time. The pseudo-random sequences will be
 independent for all practical purposes, at least those purposes for which our
 pseudo-randomness was good for in the first place.</p>
-<div class="try_examples_outer_container docutils container" id="d26d60ae-0d30-4047-8bfa-649a4bd7f493">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('d26d60ae-0d30-4047-8bfa-649a4bd7f493','1d96df6b-bd0b-422e-afd2-d39011b0fe1e','5c609182-ce75-4544-9283-4a5d97e79bfa','../../lite/tree/../notebooks/index.html?path=b72981ea_072f_4b96_b693_fafa868896b7.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="46f12779-19ad-405c-b5b9-bc80a0e27149">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('46f12779-19ad-405c-b5b9-bc80a0e27149','bef6fc71-659a-4863-9e79-033b18cdb1fd','f9f97bc0-02b2-470d-9c50-4887d779dead','../../lite/tree/../notebooks/index.html?path=5cac4af1_964c_4dd3_9809_ada9c16e4a05.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">rng1</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  
@@ -604,7 +604,7 @@ pseudo-randomness was good for in the first place.</p>
 </div>
 </div>
 </div>
-<div id="5c609182-ce75-4544-9283-4a5d97e79bfa" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('d26d60ae-0d30-4047-8bfa-649a4bd7f493','5c609182-ce75-4544-9283-4a5d97e79bfa')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('d26d60ae-0d30-4047-8bfa-649a4bd7f493','5c609182-ce75-4544-9283-4a5d97e79bfa')">Open In Tab</button></div><div id="1d96df6b-bd0b-422e-afd2-d39011b0fe1e" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><div class="admonition warning">
+<div id="f9f97bc0-02b2-470d-9c50-4887d779dead" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('46f12779-19ad-405c-b5b9-bc80a0e27149','f9f97bc0-02b2-470d-9c50-4887d779dead')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('46f12779-19ad-405c-b5b9-bc80a0e27149','f9f97bc0-02b2-470d-9c50-4887d779dead')">Open In Tab</button></div><div id="bef6fc71-659a-4863-9e79-033b18cdb1fd" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The pseudo-random number generators implemented in this module are designed
 for statistical modeling and simulation. They are not suitable for security
@@ -618,8 +618,8 @@ that your results are statistically independent from theirs unless you are
 intentionally <em>trying</em> to reproduce their result. A convenient way to get
 such a seed number is to use <a class="reference external" href="https://docs.python.org/3/library/secrets.html#secrets.randbits" title="(in Python v3.13)"><code class="xref py py-func docutils literal notranslate"><span class="pre">secrets.randbits</span></code></a> to get an
 arbitrary 128-bit integer.</p>
-<div class="try_examples_outer_container docutils container" id="dcaf87e4-5e06-4a90-8092-37fc242d1fc4">
-<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('dcaf87e4-5e06-4a90-8092-37fc242d1fc4','db73deb4-4131-43a0-accf-9a9c07756111','2c39b299-72c2-4bfc-9f09-cb111cb8a348','../../lite/tree/../notebooks/index.html?path=c3a6a051_6f98_4865_a045_e98190c56cd5.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
+<div class="try_examples_outer_container docutils container" id="adcc6523-238e-4ab3-baf6-747d7b982c18">
+<div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesShowIframe('adcc6523-238e-4ab3-baf6-747d7b982c18','5745c964-68dd-477c-9806-bc6ca4a8521c','5c720aad-de42-4181-8cc3-d9b66041be3a','../../lite/tree/../notebooks/index.html?path=9cf62b2a_ecb3_4e64_bf69_f02421bda861.ipynb','None')">Try it in your browser!</button></div><div class="try_examples_content docutils container">
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">secrets</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">secrets</span><span class="o">.</span><span class="n">randbits</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>  
@@ -634,7 +634,7 @@ arbitrary 128-bit integer.</p>
 </div>
 </div>
 </div>
-<div id="2c39b299-72c2-4bfc-9f09-cb111cb8a348" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('dcaf87e4-5e06-4a90-8092-37fc242d1fc4','2c39b299-72c2-4bfc-9f09-cb111cb8a348')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('dcaf87e4-5e06-4a90-8092-37fc242d1fc4','2c39b299-72c2-4bfc-9f09-cb111cb8a348')">Open In Tab</button></div><div id="db73deb4-4131-43a0-accf-9a9c07756111" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>See the documentation on <a class="reference internal" href="generator.html#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> and <a class="reference internal" href="bit_generators/generated/numpy.random.SeedSequence.html#numpy.random.SeedSequence" title="numpy.random.SeedSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence</span></code></a> for more advanced
+<div id="5c720aad-de42-4181-8cc3-d9b66041be3a" class="try_examples_outer_iframe  hidden"><div class="try_examples_button_container"><button class="try_examples_button" onclick="window.tryExamplesHideIframe('adcc6523-238e-4ab3-baf6-747d7b982c18','5c720aad-de42-4181-8cc3-d9b66041be3a')">Go Back</button><button class="try_examples_button" onclick="window.openInNewTab('adcc6523-238e-4ab3-baf6-747d7b982c18','5c720aad-de42-4181-8cc3-d9b66041be3a')">Open In Tab</button></div><div id="5745c964-68dd-477c-9806-bc6ca4a8521c" class="jupyterlite_sphinx_iframe_container"></div></div><script>document.addEventListener("DOMContentLoaded", function() {window.loadTryExamplesConfig("../../try_examples.json");});</script><p>See the documentation on <a class="reference internal" href="generator.html#numpy.random.default_rng" title="numpy.random.default_rng"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_rng</span></code></a> and <a class="reference internal" href="bit_generators/generated/numpy.random.SeedSequence.html#numpy.random.SeedSequence" title="numpy.random.SeedSequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SeedSequence</span></code></a> for more advanced
 options for controlling the seed in specialized scenarios.</p>
 <p><a class="reference internal" href="generator.html#numpy.random.Generator" title="numpy.random.Generator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Generator</span></code></a> and its associated infrastructure was introduced in NumPy version
 1.17.0. There is still a lot of code that uses the older <a class="reference internal" href="legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RandomState</span></code></a> and the

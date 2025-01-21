@@ -45,7 +45,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=56e54f54"></script>
+    <script src="../../_static/documentation_options.js?v=953d3030"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,7 +68,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="2.3.dev0" />
-    <meta name="docbuild:last-update" content="Jan 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jan 21, 2025"/>
   </head>
   
   
@@ -653,6 +653,8 @@ wrap around, providing array alignment information – still apply.</p>
 <span class="k">from</span><span class="w"> </span><span class="nn">numpy.random.c_distributions</span><span class="w"> </span><span class="k">cimport</span> <span class="p">(</span>
       <span class="n">random_standard_uniform_fill</span><span class="p">,</span> <span class="n">random_standard_uniform_fill_f</span><span class="p">)</span>
 
+<span class="n">np</span><span class="o">.</span><span class="n">import_array</span><span class="p">()</span>
+
 
 <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
@@ -793,7 +795,8 @@ file is required:</p>
 </div>
 <p>Once the header is parsed by <code class="docutils literal notranslate"><span class="pre">ffi.cdef</span></code>, the functions can be accessed
 directly from the <code class="docutils literal notranslate"><span class="pre">_generator</span></code> shared object, using the <a class="reference internal" href="bit_generators/generated/numpy.random.BitGenerator.cffi.html#numpy.random.BitGenerator.cffi" title="numpy.random.BitGenerator.cffi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BitGenerator.cffi</span></code></a> interface.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lib</span> <span class="o">=</span> <span class="n">ffi</span><span class="o">.</span><span class="n">dlopen</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">_generator</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+
 <span class="c1"># Compare the distributions.h random_standard_normal_fill to</span>
 <span class="c1"># Generator.standard_random</span>
 <span class="n">bit_gen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">PCG64</span><span class="p">()</span>

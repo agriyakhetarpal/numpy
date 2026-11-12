@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build-wasm-emscripten:
-    name: ${{ matrix.os }} (${{ matrix.variant }})
+    name: ${{ matrix.os }} ${{ matrix.build }} (${{ matrix.variant }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -32,21 +32,38 @@ jobs:
         include:
           # The job as it runs today, on both images
           - os: ubuntu-24.04
+            build: cp314
             variant: baseline
           - os: ubuntu-26.04
+            build: cp314
             variant: baseline
-          # Give 24.04 the system python-3.14.pc that 26.04 has
+          # Drop LIBPC from the sysconfigdata of the xbuildenv
+          - os: ubuntu-26.04
+            build: cp314
+            variant: no-libpc
+          # Let pywasmcross add the Python include to preprocess-only calls
+          - os: ubuntu-26.04
+            build: cp314
+            variant: pywasmcross-E
+          # Both changes together, with the test suite
+          - os: ubuntu-26.04
+            build: cp314
+            variant: no-libpc pywasmcross-E
+            run-tests: true
+          # An older Pyodide whose Python matches the system one on 24.04
+          - os: ubuntu-22.04
+            build: cp312
+            variant: baseline
           - os: ubuntu-24.04
-            variant: fake-system-pc
-          # Take the system python-3.14.pc away from 26.04
-          - os: ubuntu-26.04
-            variant: no-system-pc
-          # Keep pkg-config out of the system directories
-          - os: ubuntu-26.04
-            variant: pkg-config-libdir
-          # Put a python-3.14.pc where LIBPC of the xbuildenv points
-          - os: ubuntu-26.04
-            variant: xbuildenv-pc
+            build: cp312
+            variant: baseline
+          - os: ubuntu-24.04
+            build: cp312
+            variant: no-libpc
+          # A host where pkg-config may know a Python outside /usr
+          - os: macos-latest
+            build: cp314
+            variant: baseline
     steps:
       - name: Checkout NumPy
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -56,9 +73,12 @@ jobs:
           persist-credentials: false
 
       - name: Show the host Python and pkg-config state
+        env:
+          BUILD: ${{ matrix.build }}
         run: |
           set +e
-          head -n 4 /etc/os-release
+          target="3.${BUILD#cp3}"
+          echo "Target Python: ${target}"
           echo "Runner image version: ${ImageVersion}"
           which -a python3
           python3 --version
@@ -67,49 +87,33 @@ jobs:
           echo "::group::pkg-config default search path"
           pkg-config --variable pc_path pkg-config
           echo "::endgroup::"
-          echo "::group::Python pkg-config files under /usr"
-          find /usr -name 'python*.pc' -exec ls -la {} +
-          echo "::endgroup::"
-          echo "::group::Package that owns the system python-3.14.pc"
-          dpkg -S /usr/lib/x86_64-linux-gnu/pkgconfig/python-3.14.pc
-          echo "::endgroup::"
-          echo "::group::Installed Python development packages"
-          dpkg -l | grep -E 'python3[0-9.]*-dev|libpython3'
-          echo "::endgroup::"
-          echo "pkg-config answer for python-3.14:"
-          pkg-config --cflags python-3.14
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            head -n 4 /etc/os-release
+            echo "::group::Python pkg-config files in the default search path"
+            ls -la /usr/lib/x86_64-linux-gnu/pkgconfig/ | grep -i python
+            echo "::endgroup::"
+            echo "::group::Installed Python development packages"
+            dpkg -l | grep -E 'python3[0-9.]*-dev|libpython3'
+            echo "::endgroup::"
+          else
+            sw_vers
+            echo "::group::Python pkg-config files that Homebrew provides"
+            ls -la "$(brew --prefix)"/lib/pkgconfig/ | grep -i python
+            echo "::endgroup::"
+          fi
+          echo "pkg-config answer for python-${target}:"
+          pkg-config --cflags "python-${target}"
           echo "exit code: $?"
-
-      - name: Add a stand-in system python-3.14.pc
-        if: matrix.variant == 'fake-system-pc'
-        run: |
-          sudo tee /usr/lib/x86_64-linux-gnu/pkgconfig/python-3.14.pc << 'EOF'
-          Name: Python
-          Description: Stand-in for the file that ubuntu-26.04 has
-          Version: 3.14
-          Cflags: -I/usr/include/python3.14 -I/usr/include/x86_64-linux-gnu/python3.14
-          EOF
-          pkg-config --cflags python-3.14
-
-      - name: Remove the system python-3.14.pc
-        if: matrix.variant == 'no-system-pc'
-        run: sudo find /usr -name 'python-3.14*.pc' -print -delete
-
-      - name: Restrict pkg-config to an empty directory
-        if: matrix.variant == 'pkg-config-libdir'
-        run: |
-          mkdir -p /tmp/empty-pkgconfig
-          echo "PKG_CONFIG_LIBDIR=/tmp/empty-pkgconfig" >> "$GITHUB_ENV"
 
       - uses: pypa/cibuildwheel@f9b966cfadf4109556cadc5bb39ddb72d0ce664e # v4.3.5
         env:
           CIBW_PLATFORM: pyodide
-          CIBW_BUILD: cp314-pyodide_wasm32
-          CIBW_ENABLE: pyodide-prerelease
+          CIBW_BUILD: ${{ matrix.build }}-pyodide_wasm32
+          CIBW_ENABLE: pyodide-prerelease pyodide-eol
           CIBW_BUILD_VERBOSITY: 3
           CIBW_BEFORE_BUILD: bash {project}/tools/ci/emscripten/debug_before_build.sh
-          # Only the build is under test here
-          CIBW_TEST_SKIP: "*"
+          # Only the build is under test, except where the matrix says so
+          CIBW_TEST_SKIP: ${{ matrix.run-tests && ' ' || '*' }}
           DEBUG_VARIANT: ${{ matrix.variant }}
 
       - name: Show how meson looked for Python

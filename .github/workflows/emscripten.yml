@@ -24,10 +24,45 @@ concurrency:
 
 jobs:
   build-wasm-emscripten:
-    name: Pyodide test
-    runs-on: ubuntu-22.04
-    # To enable this workflow on a fork, comment out:
-    if: github.repository == 'numpy/numpy'
+    name: >-
+      ${{ matrix.os }} ${{ matrix.build }}
+      (${{ matrix.variant }}${{ matrix.pkg-config-path && ', PKG_CONFIG_PATH' || '' }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Drop LIBPC from the sysconfigdata of the xbuildenv
+          - os: macos-latest
+            build: cp314
+            variant: no-libpc
+            run-tests: true
+          # Put a relocatable python-3.x.pc where LIBPC points
+          - os: macos-latest
+            build: cp314
+            variant: xbuildenv-pc
+          - os: ubuntu-26.04
+            build: cp314
+            variant: xbuildenv-pc
+            run-tests: true
+          # The same two changes when PKG_CONFIG_PATH names a directory
+          # that holds a host python-3.x.pc
+          - os: macos-latest
+            build: cp314
+            variant: no-libpc
+            pkg-config-path: true
+          - os: macos-latest
+            build: cp314
+            variant: xbuildenv-pc
+            pkg-config-path: true
+          - os: ubuntu-26.04
+            build: cp314
+            variant: no-libpc
+            pkg-config-path: true
+          - os: ubuntu-26.04
+            build: cp314
+            variant: xbuildenv-pc
+            pkg-config-path: true
     steps:
       - name: Checkout NumPy
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -35,9 +70,81 @@ jobs:
           submodules: recursive
           fetch-tags: true
           persist-credentials: false
+
+      - name: Show the host Python and pkg-config state
+        env:
+          BUILD: ${{ matrix.build }}
+        run: |
+          set +e
+          target="3.${BUILD#cp3}"
+          echo "Target Python: ${target}"
+          echo "Runner image version: ${ImageVersion}"
+          which -a pkg-config
+          pkg-config --version
+          echo "pkg-config default search path:"
+          pkg-config --variable pc_path pkg-config
+          echo "pkg-config answer for python-${target}:"
+          pkg-config --cflags "python-${target}"
+          echo "exit code: $?"
+
+      - name: Point PKG_CONFIG_PATH at the host pkg-config directory
+        if: matrix.pkg-config-path
+        run: |
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            dir=/usr/lib/x86_64-linux-gnu/pkgconfig
+          else
+            dir="$(brew --prefix)/lib/pkgconfig"
+          fi
+          ls -la "$dir" | grep -i python
+          echo "PKG_CONFIG_PATH=$dir" >> "$GITHUB_ENV"
+
+      - uses: pypa/cibuildwheel@f9b966cfadf4109556cadc5bb39ddb72d0ce664e # v4.3.5
+        env:
+          CIBW_PLATFORM: pyodide
+          CIBW_BUILD: ${{ matrix.build }}-pyodide_wasm32
+          CIBW_ENABLE: pyodide-prerelease pyodide-eol
+          CIBW_BUILD_VERBOSITY: 3
+          CIBW_BEFORE_BUILD: bash {project}/tools/ci/emscripten/debug_before_build.sh
+          # Only the build is under test, except where the matrix says so
+          CIBW_TEST_SKIP: ${{ matrix.run-tests && ' ' || '*' }}
+          DEBUG_VARIANT: ${{ matrix.variant }}
+
+      - name: Show how meson looked for Python
+        if: always()
+        run: |
+          log=build/meson-logs/meson-log.txt
+          if [ ! -f "$log" ]; then
+            echo "No meson log found"
+            exit 0
+          fi
+          awk '/pkgconfig lookup/,/Has header "Python.h"/' "$log"
+
+  # A project that has NumPy as a build dependency, on the image where
+  # the NumPy build itself fails
+  build-pywavelets:
+    name: PyWavelets on ubuntu-26.04 cp314 (baseline)
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout PyWavelets
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          repository: PyWavelets/pywt
+          persist-credentials: false
+
       - uses: pypa/cibuildwheel@f9b966cfadf4109556cadc5bb39ddb72d0ce664e # v4.3.5
         env:
           CIBW_PLATFORM: pyodide
           CIBW_BUILD: cp314-pyodide_wasm32
-          CIBW_ENABLE: pyodide-prerelease
           CIBW_BUILD_VERBOSITY: 3
+          CIBW_CONFIG_SETTINGS: build-dir=build
+          CIBW_TEST_SKIP: "*"
+
+      - name: Show how meson looked for Python
+        if: always()
+        run: |
+          log=build/meson-logs/meson-log.txt
+          if [ ! -f "$log" ]; then
+            echo "No meson log found"
+            exit 0
+          fi
+          awk '/pkgconfig lookup/,/Run-time dependency python found/' "$log"

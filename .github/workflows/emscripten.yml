@@ -24,46 +24,45 @@ concurrency:
 
 jobs:
   build-wasm-emscripten:
-    name: ${{ matrix.os }} ${{ matrix.build }} (${{ matrix.variant }})
+    name: >-
+      ${{ matrix.os }} ${{ matrix.build }}
+      (${{ matrix.variant }}${{ matrix.pkg-config-path && ', PKG_CONFIG_PATH' || '' }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         include:
-          # The job as it runs today, on both images
-          - os: ubuntu-24.04
-            build: cp314
-            variant: baseline
-          - os: ubuntu-26.04
-            build: cp314
-            variant: baseline
           # Drop LIBPC from the sysconfigdata of the xbuildenv
-          - os: ubuntu-26.04
-            build: cp314
-            variant: no-libpc
-          # Let pywasmcross add the Python include to preprocess-only calls
-          - os: ubuntu-26.04
-            build: cp314
-            variant: pywasmcross-E
-          # Both changes together, with the test suite
-          - os: ubuntu-26.04
-            build: cp314
-            variant: no-libpc pywasmcross-E
-            run-tests: true
-          # An older Pyodide whose Python matches the system one on 24.04
-          - os: ubuntu-22.04
-            build: cp312
-            variant: baseline
-          - os: ubuntu-24.04
-            build: cp312
-            variant: baseline
-          - os: ubuntu-24.04
-            build: cp312
-            variant: no-libpc
-          # A host where pkg-config may know a Python outside /usr
           - os: macos-latest
             build: cp314
-            variant: baseline
+            variant: no-libpc
+            run-tests: true
+          # Put a relocatable python-3.x.pc where LIBPC points
+          - os: macos-latest
+            build: cp314
+            variant: xbuildenv-pc
+          - os: ubuntu-26.04
+            build: cp314
+            variant: xbuildenv-pc
+            run-tests: true
+          # The same two changes when PKG_CONFIG_PATH names a directory
+          # that holds a host python-3.x.pc
+          - os: macos-latest
+            build: cp314
+            variant: no-libpc
+            pkg-config-path: true
+          - os: macos-latest
+            build: cp314
+            variant: xbuildenv-pc
+            pkg-config-path: true
+          - os: ubuntu-26.04
+            build: cp314
+            variant: no-libpc
+            pkg-config-path: true
+          - os: ubuntu-26.04
+            build: cp314
+            variant: xbuildenv-pc
+            pkg-config-path: true
     steps:
       - name: Checkout NumPy
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -80,30 +79,24 @@ jobs:
           target="3.${BUILD#cp3}"
           echo "Target Python: ${target}"
           echo "Runner image version: ${ImageVersion}"
-          which -a python3
-          python3 --version
           which -a pkg-config
           pkg-config --version
-          echo "::group::pkg-config default search path"
+          echo "pkg-config default search path:"
           pkg-config --variable pc_path pkg-config
-          echo "::endgroup::"
-          if [ "$RUNNER_OS" = "Linux" ]; then
-            head -n 4 /etc/os-release
-            echo "::group::Python pkg-config files in the default search path"
-            ls -la /usr/lib/x86_64-linux-gnu/pkgconfig/ | grep -i python
-            echo "::endgroup::"
-            echo "::group::Installed Python development packages"
-            dpkg -l | grep -E 'python3[0-9.]*-dev|libpython3'
-            echo "::endgroup::"
-          else
-            sw_vers
-            echo "::group::Python pkg-config files that Homebrew provides"
-            ls -la "$(brew --prefix)"/lib/pkgconfig/ | grep -i python
-            echo "::endgroup::"
-          fi
           echo "pkg-config answer for python-${target}:"
           pkg-config --cflags "python-${target}"
           echo "exit code: $?"
+
+      - name: Point PKG_CONFIG_PATH at the host pkg-config directory
+        if: matrix.pkg-config-path
+        run: |
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            dir=/usr/lib/x86_64-linux-gnu/pkgconfig
+          else
+            dir="$(brew --prefix)/lib/pkgconfig"
+          fi
+          ls -la "$dir" | grep -i python
+          echo "PKG_CONFIG_PATH=$dir" >> "$GITHUB_ENV"
 
       - uses: pypa/cibuildwheel@f9b966cfadf4109556cadc5bb39ddb72d0ce664e # v4.3.5
         env:
@@ -125,3 +118,33 @@ jobs:
             exit 0
           fi
           awk '/pkgconfig lookup/,/Has header "Python.h"/' "$log"
+
+  # A project that has NumPy as a build dependency, on the image where
+  # the NumPy build itself fails
+  build-pywavelets:
+    name: PyWavelets on ubuntu-26.04 cp314 (baseline)
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Checkout PyWavelets
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          repository: PyWavelets/pywt
+          persist-credentials: false
+
+      - uses: pypa/cibuildwheel@f9b966cfadf4109556cadc5bb39ddb72d0ce664e # v4.3.5
+        env:
+          CIBW_PLATFORM: pyodide
+          CIBW_BUILD: cp314-pyodide_wasm32
+          CIBW_BUILD_VERBOSITY: 3
+          CIBW_CONFIG_SETTINGS: build-dir=build
+          CIBW_TEST_SKIP: "*"
+
+      - name: Show how meson looked for Python
+        if: always()
+        run: |
+          log=build/meson-logs/meson-log.txt
+          if [ ! -f "$log" ]; then
+            echo "No meson log found"
+            exit 0
+          fi
+          awk '/pkgconfig lookup/,/Run-time dependency python found/' "$log"

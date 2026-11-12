@@ -21,6 +21,21 @@ if [[ "${DEBUG_VARIANT}" == *no-libpc* ]]; then
     echo "Dropped LIBPC from ${sysconfigdata}"
 fi
 
+if [[ "${DEBUG_VARIANT}" == *xbuildenv-pc* ]]; then
+    mkdir -p "${libpc}"
+    cat > "${libpc}/python-${pyver}.pc" << EOF
+prefix=\${pcfiledir}/../..
+includedir=\${prefix}/include
+
+Name: Python
+Description: Build a C extension for Python
+Version: ${pyver}
+Cflags: -I\${includedir}/python${pyver}
+EOF
+    echo "Wrote ${libpc}/python-${pyver}.pc:"
+    cat "${libpc}/python-${pyver}.pc"
+fi
+
 if [[ "${DEBUG_VARIANT}" == *pywasmcross-E* ]]; then
     python "$(dirname "$0")/debug_patch_pywasmcross.py"
 fi
